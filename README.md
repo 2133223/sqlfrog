@@ -10,6 +10,6 @@ https://github.com/sqlparser/sqlfrog/wiki
 ## How this tool works
 
 - Read and parse input SQL query, turn SQL text into a parse tree.
-- Scan the generated parse tree node to find out SQL syntax that need to be converted from the source database to the target database.
-- Modify the parse tree node to meet the syntax requirement of the target database.
+- Scan the generated parse tree nodes to find out SQL syntax that need to be converted from the source database to the target database.
+- Modify the parse tree nodes to meet the syntax requirement of the target database.
 - Rebuild the SQL query from the parse tree for the target database.

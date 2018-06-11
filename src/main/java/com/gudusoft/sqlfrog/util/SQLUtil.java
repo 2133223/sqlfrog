@@ -570,7 +570,11 @@ public class SQLUtil
 	public static EDbVendor getVendor( String venderValue )
 	{
 		EDbVendor vendor = null;
-		if ( venderValue.equalsIgnoreCase( "mssql" ) )
+		if ( venderValue.equalsIgnoreCase( "ansi" ) )
+		{
+			vendor = EDbVendor.dbvansi;
+		}
+		else if ( venderValue.equalsIgnoreCase( "mssql" ) )
 		{
 			vendor = EDbVendor.dbvmssql;
 		}

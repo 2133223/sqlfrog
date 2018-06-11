@@ -35,10 +35,12 @@ import gudusoft.gsqlparser.nodes.TGroupingExpressionItem;
 import gudusoft.gsqlparser.nodes.TGroupingSet;
 import gudusoft.gsqlparser.nodes.THierarchical;
 import gudusoft.gsqlparser.nodes.TInExpr;
+import gudusoft.gsqlparser.nodes.TInformixOuterClause;
 import gudusoft.gsqlparser.nodes.TJoin;
 import gudusoft.gsqlparser.nodes.TJoinItem;
 import gudusoft.gsqlparser.nodes.TJoinList;
 import gudusoft.gsqlparser.nodes.TKeepDenseRankClause;
+import gudusoft.gsqlparser.nodes.TLimitClause;
 import gudusoft.gsqlparser.nodes.TMergeDeleteClause;
 import gudusoft.gsqlparser.nodes.TMergeInsertClause;
 import gudusoft.gsqlparser.nodes.TMergeUpdateClause;
@@ -63,6 +65,7 @@ import gudusoft.gsqlparser.nodes.TRollupCube;
 import gudusoft.gsqlparser.nodes.TSequenceOption;
 import gudusoft.gsqlparser.nodes.TTable;
 import gudusoft.gsqlparser.nodes.TTableHint;
+import gudusoft.gsqlparser.nodes.TTopClause;
 import gudusoft.gsqlparser.nodes.TTrimArgument;
 import gudusoft.gsqlparser.nodes.TTypeAttribute;
 import gudusoft.gsqlparser.nodes.TTypeAttributeList;
@@ -147,10 +150,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.gudusoft.sqlfrog.model.ConvertPoint;
+import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
 import com.gudusoft.sqlfrog.model.Function;
 import com.gudusoft.sqlfrog.model.Identifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
+import com.gudusoft.sqlfrog.model.LimitResultSet;
 
 public class CommonScanner extends TParseTreeVisitor implements Scanner
 {
@@ -189,6 +194,32 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 					convertPoints.add( new JoinCondition( expression ) );
 				}
 			}
+		}
+	}
+
+	public void postVisit( TLimitClause limit )
+	{
+		convertPoints.add( new LimitResultSet( limit ) );
+	}
+
+	public void postVisit( TTopClause top )
+	{
+		convertPoints.add( new LimitResultSet( top ) );
+	}
+
+	public void postVisit( TSelectSqlStatement select )
+	{
+		if ( select.getIntoClause( ) != null )
+		{
+			convertPoints.add( new CopyingStructure( select ) );
+		}
+	}
+
+	public void postVisit( TCreateTableSqlStatement create )
+	{
+		if ( create.getSubQuery( ) != null )
+		{
+			convertPoints.add( new CopyingStructure( create ) );
 		}
 	}
 
@@ -413,7 +444,7 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 		switch ( node.getKind( ) )
 		{
 			case TBaseType.join_source_fake :
-				node.getTable( ).accept( this );
+				// node.getTable( ).accept( this );
 				break;
 			case TBaseType.join_source_table :
 			case TBaseType.join_source_join :
@@ -618,7 +649,7 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 			}
 			case informixOuter :
 			{
-				node.getOuterClause( ).accept( this );
+				preVisit( node.getOuterClause( ) );
 				break;
 			}
 			case table_ref_list :
@@ -644,6 +675,11 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 				tableHint.accept( this );
 			}
 		}
+	}
+
+	public void preVisit( TInformixOuterClause node )
+	{
+		System.out.println( node );
 	}
 
 	public void preVisit( TTableHint node )

@@ -22,10 +22,12 @@ import com.gudusoft.sqlfrog.converter.exception.ConvertException;
 import com.gudusoft.sqlfrog.converter.join.AnsiJoinConverter;
 import com.gudusoft.sqlfrog.model.ConvertInfo;
 import com.gudusoft.sqlfrog.model.ConvertPoint;
+import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
 import com.gudusoft.sqlfrog.model.FrogResult;
 import com.gudusoft.sqlfrog.model.Identifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
+import com.gudusoft.sqlfrog.model.LimitResultSet;
 import com.gudusoft.sqlfrog.scanner.ScannerFactory;
 import com.gudusoft.sqlfrog.util.SQLUtil;
 
@@ -215,6 +217,32 @@ public class SqlFrog
 					}
 				}
 			}
+			if ( point instanceof LimitResultSet )
+			{
+				ConvertException e = new ConvertException( "F856, limiting result sets is incompatible with ANSI SQL, line:"
+						+ point.getPosition( ).getX( )
+						+ ", column:"
+						+ point.getPosition( ).getY( )
+						+ "." );
+				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+				if ( !ignoreConvertException )
+				{
+					return convertResult;
+				}
+			}
+			if ( point instanceof CopyingStructure )
+			{
+				ConvertException e = new ConvertException( "F031-01, copying structure is incompatible with ANSI SQL, line:"
+						+ point.getPosition( ).getX( )
+						+ ", column:"
+						+ point.getPosition( ).getY( )
+						+ "." );
+				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+				if ( !ignoreConvertException )
+				{
+					return convertResult;
+				}
+			}
 		}
 
 		TScriptGenerator generator = new TScriptGenerator( );
@@ -285,6 +313,24 @@ public class SqlFrog
 				{
 					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
 				}
+			}
+			if ( point instanceof LimitResultSet )
+			{
+				ConvertException e = new ConvertException( "F856, limiting result sets is incompatible with ANSI SQL, line:"
+						+ point.getPosition( ).getX( )
+						+ ", column:"
+						+ point.getPosition( ).getY( )
+						+ "." );
+				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+			}
+			if ( point instanceof CopyingStructure )
+			{
+				ConvertException e = new ConvertException( "F031-01, copying structure is incompatible with ANSI SQL, line:"
+						+ point.getPosition( ).getX( )
+						+ ", column:"
+						+ point.getPosition( ).getY( )
+						+ "." );
+				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
 			}
 		}
 		return convertResult;

@@ -25,6 +25,7 @@ import com.gudusoft.sqlfrog.model.ConvertPoint;
 import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
 import com.gudusoft.sqlfrog.model.FrogResult;
+import com.gudusoft.sqlfrog.model.Function;
 import com.gudusoft.sqlfrog.model.Identifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
@@ -305,6 +306,22 @@ public class SqlFrog
 					ConvertInfo info = ConverterFactory.getJoinConditionConverter( point.getVender( ) )
 							.scan( (JoinCondition) point, target );
 					if ( info.isNeedConvert( ) )
+					{
+						convertResult.appendResult( info.toString( ) );
+					}
+				}
+				catch ( ConvertException e )
+				{
+					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+				}
+			}
+			if ( point instanceof Function )
+			{
+				try
+				{
+					ConvertInfo info = ConverterFactory.getFunctionConverter( point.getVender( ) )
+							.scan( (Function) point, target );
+					if ( info != null )
 					{
 						convertResult.appendResult( info.toString( ) );
 					}

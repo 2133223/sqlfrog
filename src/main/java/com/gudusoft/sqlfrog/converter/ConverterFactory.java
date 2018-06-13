@@ -7,6 +7,7 @@ import com.gudusoft.sqlfrog.converter.datatype.AnsiDataTypeConverter;
 import com.gudusoft.sqlfrog.converter.datatype.OracleDataTypeConverter;
 import com.gudusoft.sqlfrog.converter.datatype.SqlServerDataTypeConverter;
 import com.gudusoft.sqlfrog.converter.exception.ConvertException;
+import com.gudusoft.sqlfrog.converter.function.CommonFunctionConverter;
 import com.gudusoft.sqlfrog.converter.identifier.CommonIdentifierConverter;
 import com.gudusoft.sqlfrog.converter.identifier.MysqlIdentifierConverter;
 import com.gudusoft.sqlfrog.converter.identifier.SqlServerIdentifierConverter;
@@ -60,6 +61,15 @@ public class ConverterFactory
 				return new MysqlIdentifierConverter( );
 			default :
 				return new CommonIdentifierConverter( );
+		}
+	}
+
+	public static FunctionConverter getFunctionConverter( EDbVendor vender )
+	{
+		switch ( vender )
+		{
+			default :
+				return new CommonFunctionConverter( );
 		}
 	}
 }

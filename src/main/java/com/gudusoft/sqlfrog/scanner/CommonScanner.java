@@ -2444,6 +2444,11 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 		{
 			expr.getCaseExpression( ).accept( this );
 		}
+
+		if ( expr.getFunctionCall( ) != null )
+		{
+			expr.getFunctionCall( ).accept( this );
+		}
 	}
 
 	protected void handleDataType( )

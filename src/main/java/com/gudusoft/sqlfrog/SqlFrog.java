@@ -20,6 +20,8 @@ import java.util.List;
 import com.gudusoft.sqlfrog.converter.ConverterFactory;
 import com.gudusoft.sqlfrog.converter.exception.ConvertException;
 import com.gudusoft.sqlfrog.converter.join.AnsiJoinConverter;
+import com.gudusoft.sqlfrog.model.AutomaticKey;
+import com.gudusoft.sqlfrog.model.Concatenation;
 import com.gudusoft.sqlfrog.model.ConvertInfo;
 import com.gudusoft.sqlfrog.model.ConvertPoint;
 import com.gudusoft.sqlfrog.model.CopyingStructure;
@@ -29,6 +31,8 @@ import com.gudusoft.sqlfrog.model.Function;
 import com.gudusoft.sqlfrog.model.Identifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
+import com.gudusoft.sqlfrog.model.LocalTimestamp;
+import com.gudusoft.sqlfrog.model.Tuple;
 import com.gudusoft.sqlfrog.scanner.ScannerFactory;
 import com.gudusoft.sqlfrog.util.SQLUtil;
 
@@ -331,26 +335,54 @@ public class SqlFrog
 					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
 				}
 			}
+			if ( point instanceof Concatenation )
+			{
+				ConvertInfo info = getConvertPointMessage( point,
+						"E021-07, concatenation." );
+				convertResult.appendResult( info.toString( ) );
+			}
+			if ( point instanceof LocalTimestamp )
+			{
+				ConvertInfo info = getConvertPointMessage( point,
+						"F051-08, localtimestamp." );
+				convertResult.appendResult( info.toString( ) );
+			}
 			if ( point instanceof LimitResultSet )
 			{
-				ConvertException e = new ConvertException( "F856, limiting result sets is incompatible with ANSI SQL, line:"
-						+ point.getPosition( ).getX( )
-						+ ", column:"
-						+ point.getPosition( ).getY( )
-						+ "." );
-				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+				ConvertInfo info = getConvertPointMessage( point,
+						"F856, limiting result sets." );
+				convertResult.appendResult( info.toString( ) );
 			}
 			if ( point instanceof CopyingStructure )
 			{
-				ConvertException e = new ConvertException( "F031-01, copying structure is incompatible with ANSI SQL, line:"
-						+ point.getPosition( ).getX( )
-						+ ", column:"
-						+ point.getPosition( ).getY( )
-						+ "." );
-				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+				ConvertInfo info = getConvertPointMessage( point,
+						"F031-01, copying structure." );
+				convertResult.appendResult( info.toString( ) );
+			}
+			if ( point instanceof AutomaticKey )
+			{
+				ConvertInfo info = getConvertPointMessage( point,
+						"T175, automatic key generation." );
+				convertResult.appendResult( info.toString( ) );
 			}
 		}
 		return convertResult;
+	}
+
+	private ConvertInfo getConvertPointMessage(
+			ConvertPoint<? extends TParseTreeNode> point, String message )
+	{
+		ConvertInfo info = new ConvertInfo( );
+		info.setInfo( message );
+		info.setPosition( new Tuple<Long>( point.getPosition( ).getX( ),
+				point.getPosition( ).getY( ) ) );
+		String filePath = point.getElement( ).getStartToken( ).container.getGsqlparser( )
+				.getSqlfilename( );
+		if ( !SQLUtil.isEmpty( filePath ) )
+		{
+			info.setFilePath( filePath );
+		}
+		return info;
 	}
 
 	public static void main( String[] args )

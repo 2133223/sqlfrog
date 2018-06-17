@@ -149,6 +149,8 @@ import gudusoft.gsqlparser.stmt.oracle.TSqlplusCmdStatement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.gudusoft.sqlfrog.model.AutomaticKey;
+import com.gudusoft.sqlfrog.model.Concatenation;
 import com.gudusoft.sqlfrog.model.ConvertPoint;
 import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
@@ -156,6 +158,7 @@ import com.gudusoft.sqlfrog.model.Function;
 import com.gudusoft.sqlfrog.model.Identifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
+import com.gudusoft.sqlfrog.model.LocalTimestamp;
 
 public class CommonScanner extends TParseTreeVisitor implements Scanner
 {
@@ -172,14 +175,47 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 		return convertPoints;
 	}
 
+	public void postVisit( TConstraint node )
+	{
+		switch ( node.getConstraint_type( ) )
+		{
+			case primary_key :
+				convertPoints.add( new AutomaticKey( node ) );
+				break;
+			default :
+				break;
+		}
+	}
+	
 	public void postVisit( TExpression expression )
 	{
+		if ( "CURRENT_TIMESTAMP".equalsIgnoreCase( expression.toString( )
+				.toUpperCase( ) ) )
+		{
+			if ( expression.getGsqlparser( ).getDbVendor( ) == EDbVendor.dbvdb2
+					|| expression.getGsqlparser( ).getDbVendor( ) == EDbVendor.dbvmssql )
+			{
+				convertPoints.add( new LocalTimestamp( expression ) );
+			}
+		}
 		if ( expression.getGsqlparser( ).getDbVendor( ) == EDbVendor.dbvmssql )
 		{
 			if ( expression.getExpressionType( ) == EExpressionType.left_join_t
 					|| expression.getExpressionType( ) == EExpressionType.right_join_t )
 			{
 				convertPoints.add( new JoinCondition( expression ) );
+			}
+
+			if ( expression.getExpressionType( ) == EExpressionType.arithmetic_plus_t )
+			{
+				TExpression slexpr = expression.getLeftOperand( );
+				TExpression srexpr = expression.getRightOperand( );
+
+				if ( slexpr.getExpressionType( ) != EExpressionType.simple_constant_t
+						|| srexpr.getExpressionType( ) != EExpressionType.simple_constant_t )
+				{
+					convertPoints.add( new Concatenation( expression ) );
+				}
 			}
 		}
 		else if ( expression.getGsqlparser( ).getDbVendor( ) == EDbVendor.dbvoracle )

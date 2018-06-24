@@ -23,13 +23,24 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 		}
 
 		TFunctionCall functionCall = function.getElement( );
+		EDbVendor vendor = functionCall.getFunctionName( ).getStartToken( ).container.getGsqlparser( )
+				.getDbVendor( );
 
 		if ( !convert )
 		{
 			if ( isSubStringFunction( functionCall ) )
 			{
-				return handleFunctionConvertPoint( functionCall,
-						"E021-06, substring." );
+				if ( getFunctionName( functionCall ).equals( "SUBSTRING" )
+						&& vendor == EDbVendor.dbvoracle )
+				{
+					return handleFunctionConvertPoint( functionCall,
+							"E021-06, SUBSTRING function: use SUBSTR function instead." );
+				}
+				else
+				{
+					return handleFunctionConvertPoint( functionCall,
+							"E021-06, substring." );
+				}
 			}
 			if ( isTrimFunction( functionCall ) )
 			{
@@ -39,8 +50,17 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 
 			if ( isLengthFunction( functionCall ) )
 			{
-				return handleFunctionConvertPoint( functionCall,
-						"E021-04, character_length." );
+				if ( getFunctionName( functionCall ).equals( "CHARACTER_LENGTH" )
+						&& vendor == EDbVendor.dbvoracle )
+				{
+					return handleFunctionConvertPoint( functionCall,
+							"E021-04, CHARACTER_LENGTH function: use LENGTH function instead." );
+				}
+				else
+				{
+					return handleFunctionConvertPoint( functionCall,
+							"E021-04, character_length." );
+				}
 			}
 
 			if ( isConcatFunction( functionCall ) )
@@ -54,9 +74,28 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 				return handleFunctionConvertPoint( functionCall,
 						"F051-08, localtimestamp." );
 			}
+
+			if ( getFunctionName( functionCall ).equals( "OCTET_LENGTH" )
+					&& vendor == EDbVendor.dbvoracle )
+			{
+				return handleFunctionConvertPoint( functionCall,
+						"E021-05, OCTET_LENGTH function: use LENGTHB function instead." );
+			}
+
+			if ( getFunctionName( functionCall ).equals( "POSITION" )
+					&& vendor == EDbVendor.dbvoracle )
+			{
+				return handleFunctionConvertPoint( functionCall,
+						"E021-11, POSITION function: use INSTR function instead." );
+			}
 		}
 
 		return null;
+	}
+
+	private String getFunctionName( TFunctionCall functionCall )
+	{
+		return functionCall.getFunctionName( ).toString( ).toUpperCase( );
 	}
 
 	private ConvertInfo handleFunctionConvertPoint( TFunctionCall functionCall,
@@ -77,15 +116,12 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 
 	private boolean isLocalTimestampFunction( TFunctionCall functionCall )
 	{
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	private boolean isConcatFunction( TFunctionCall functionCall )
 	{
-		String functionName = functionCall.getFunctionName( )
-				.toString( )
-				.toUpperCase( );
+		String functionName = getFunctionName( functionCall );
 		EDbVendor vendor = functionCall.getFunctionName( ).getStartToken( ).container.getGsqlparser( )
 				.getDbVendor( );
 
@@ -101,9 +137,7 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 
 	private boolean isSubStringFunction( TFunctionCall functionCall )
 	{
-		String functionName = functionCall.getFunctionName( )
-				.toString( )
-				.toUpperCase( );
+		String functionName = getFunctionName( functionCall );
 		EDbVendor vendor = functionCall.getFunctionName( ).getStartToken( ).container.getGsqlparser( )
 				.getDbVendor( );
 
@@ -135,9 +169,7 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 
 	private boolean isTrimFunction( TFunctionCall functionCall )
 	{
-		String functionName = functionCall.getFunctionName( )
-				.toString( )
-				.toUpperCase( );
+		String functionName = getFunctionName( functionCall );
 		EDbVendor vendor = functionCall.getFunctionName( ).getStartToken( ).container.getGsqlparser( )
 				.getDbVendor( );
 		if ( "LTRIM".equals( functionName ) || "RTRIM".equals( functionName ) )
@@ -152,9 +184,7 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 
 	private boolean isLengthFunction( TFunctionCall functionCall )
 	{
-		String functionName = functionCall.getFunctionName( )
-				.toString( )
-				.toUpperCase( );
+		String functionName = getFunctionName( functionCall );
 		EDbVendor vendor = functionCall.getFunctionName( ).getStartToken( ).container.getGsqlparser( )
 				.getDbVendor( );
 		if ( "CHARACTER_LENGTH".equals( functionName )

@@ -186,7 +186,7 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 				break;
 		}
 	}
-	
+
 	public void postVisit( TExpression expression )
 	{
 		if ( "CURRENT_TIMESTAMP".equalsIgnoreCase( expression.toString( )
@@ -248,6 +248,14 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 		if ( select.getIntoClause( ) != null )
 		{
 			convertPoints.add( new CopyingStructure( select ) );
+		}
+
+		if ( select.getJoins( ).size( ) > 1
+				&& select.dbvendor == EDbVendor.dbvoracle
+				&& select.getJoins( ).getJoin( 0 ).getJoinItems( ).size( ) == 0 )
+		{
+			convertPoints.add( new JoinCondition( select.getWhereClause( )
+					.getCondition( ) ) );
 		}
 	}
 

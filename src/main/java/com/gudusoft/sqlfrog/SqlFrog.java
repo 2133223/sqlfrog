@@ -369,7 +369,7 @@ public class SqlFrog
 		return convertResult;
 	}
 
-	private ConvertInfo getConvertPointMessage(
+	public static ConvertInfo getConvertPointMessage(
 			ConvertPoint<? extends TParseTreeNode> point, String message )
 	{
 		ConvertInfo info = new ConvertInfo( );

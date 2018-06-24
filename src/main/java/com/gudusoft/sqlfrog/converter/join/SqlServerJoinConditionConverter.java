@@ -7,6 +7,7 @@ import gudusoft.gsqlparser.EExpressionType;
 import gudusoft.gsqlparser.TSourceToken;
 import gudusoft.gsqlparser.nodes.TExpression;
 
+import com.gudusoft.sqlfrog.SqlFrog;
 import com.gudusoft.sqlfrog.converter.exception.ConvertException;
 import com.gudusoft.sqlfrog.model.ConvertInfo;
 import com.gudusoft.sqlfrog.model.JoinCondition;
@@ -55,10 +56,19 @@ public class SqlServerJoinConditionConverter extends
 		if ( ansi )
 		{
 			info.setNeedAnsiJoin( true );
-			info.setInfo( "Only can convert the sql server join "
-					+ " to "
+			info.setInfo( "Only can convert the sql server join to "
 					+ SQLUtil.getVendorName( targetVendor )
 					+ " ansi join automatically." );
+		}
+
+		if ( !convert )
+		{
+			ConvertInfo appendInfo = SqlFrog.getConvertPointMessage( join,
+					"F401, SQL Server proprietary join syntax." );
+			if ( info != null )
+			{
+				info.setInfo( appendInfo.getInfo( ) + "\n" + info.getInfo( ) );
+			}
 		}
 
 		return info;

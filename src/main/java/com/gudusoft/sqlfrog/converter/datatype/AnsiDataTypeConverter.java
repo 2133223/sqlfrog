@@ -40,7 +40,9 @@ public class AnsiDataTypeConverter extends AbstractDataTypeConverter
 				throw generateConvertException( typeName, targetVendor );
 			}
 
-			ConvertInfo info = generateConvertInfo( typeName, targetVendor );
+			ConvertInfo info = generateConvertInfo( typeName,
+					targetVendor,
+					convert );
 			switch ( typeName.getDataType( ) )
 			{
 				case character_t :

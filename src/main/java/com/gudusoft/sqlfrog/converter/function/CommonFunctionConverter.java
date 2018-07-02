@@ -152,7 +152,8 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 			}
 		}
 
-		if ( "SUBSTR".equals( functionName )
+		if ( "SUBSTRING".equals( functionName )
+				|| "SUBSTR".equals( functionName )
 				|| "SUBSTRB".equals( functionName )
 				|| "SUBSTRC".equals( functionName )
 				|| "SUBSTR2".equals( functionName )

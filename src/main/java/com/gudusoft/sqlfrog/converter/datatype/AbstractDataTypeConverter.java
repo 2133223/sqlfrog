@@ -32,24 +32,27 @@ public abstract class AbstractDataTypeConverter implements DataTypeConverter
 			EDbVendor targetVendor, boolean convert ) throws ConvertException;
 
 	protected ConvertInfo generateConvertInfo( TTypeName dataType,
-			EDbVendor targetVendor )
+			EDbVendor targetVendor, boolean convert )
 	{
 		ConvertInfo info = new ConvertInfo( );
-		info.setInfo( "Can convert the "
-				+ SQLUtil.getVendorName( dataType.getStartToken( )
-						.getDbvendor( ) )
-				+ " data type "
-				+ dataType.toString( )
-				+ " to "
-				+ SQLUtil.getVendorName( targetVendor )
-				+ " automatically." );
-		info.setPosition( new Tuple<Long>( dataType.getLineNo( ),
-				dataType.getColumnNo( ) ) );
-		String filePath = dataType.getStartToken( ).container.getGsqlparser( )
-				.getSqlfilename( );
-		if ( !SQLUtil.isEmpty( filePath ) )
+		if ( convert )
 		{
-			info.setFilePath( filePath );
+			info.setInfo( "Can convert the "
+					+ SQLUtil.getVendorName( dataType.getStartToken( )
+							.getDbvendor( ) )
+					+ " data type "
+					+ dataType.toString( )
+					+ " to "
+					+ SQLUtil.getVendorName( targetVendor )
+					+ " automatically." );
+			info.setPosition( new Tuple<Long>( dataType.getLineNo( ),
+					dataType.getColumnNo( ) ) );
+			String filePath = dataType.getStartToken( ).container.getGsqlparser( )
+					.getSqlfilename( );
+			if ( !SQLUtil.isEmpty( filePath ) )
+			{
+				info.setFilePath( filePath );
+			}
 		}
 		return info;
 	}

@@ -33,24 +33,27 @@ public abstract class AbstractJoinConditionConverter implements
 			EDbVendor targetVendor, boolean convert ) throws ConvertException;
 
 	protected ConvertInfo generateConvertInfo( TExpression joinCondition,
-			EDbVendor targetVendor )
+			EDbVendor targetVendor, boolean convert )
 	{
 		ConvertInfo info = new ConvertInfo( );
-		info.setInfo( "Can convert the "
-				+ SQLUtil.getVendorName( joinCondition.getStartToken( )
-						.getDbvendor( ) )
-				+ " join "
-				+ joinCondition.toString( )
-				+ " to "
-				+ SQLUtil.getVendorName( targetVendor )
-				+ " automatically." );
-		info.setPosition( new Tuple<Long>( joinCondition.getLineNo( ),
-				joinCondition.getColumnNo( ) ) );
-		String filePath = joinCondition.getStartToken( ).container.getGsqlparser( )
-				.getSqlfilename( );
-		if ( !SQLUtil.isEmpty( filePath ) )
+		if ( convert )
 		{
-			info.setFilePath( filePath );
+			info.setInfo( "Can convert the "
+					+ SQLUtil.getVendorName( joinCondition.getStartToken( )
+							.getDbvendor( ) )
+					+ " join "
+					+ joinCondition.toString( )
+					+ " to "
+					+ SQLUtil.getVendorName( targetVendor )
+					+ " automatically." );
+			info.setPosition( new Tuple<Long>( joinCondition.getLineNo( ),
+					joinCondition.getColumnNo( ) ) );
+			String filePath = joinCondition.getStartToken( ).container.getGsqlparser( )
+					.getSqlfilename( );
+			if ( !SQLUtil.isEmpty( filePath ) )
+			{
+				info.setFilePath( filePath );
+			}
 		}
 		return info;
 	}

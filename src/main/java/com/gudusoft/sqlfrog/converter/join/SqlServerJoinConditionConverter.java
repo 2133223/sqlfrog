@@ -37,7 +37,8 @@ public class SqlServerJoinConditionConverter extends
 		}
 
 		ConvertInfo info = generateConvertInfo( join.getElement( ),
-				targetVendor );
+				targetVendor,
+				convert );
 		boolean ansi = true;
 
 		switch ( targetVendor )
@@ -65,10 +66,8 @@ public class SqlServerJoinConditionConverter extends
 		{
 			ConvertInfo appendInfo = SqlFrog.getConvertPointMessage( join,
 					"F401, SQL Server proprietary join syntax." );
-			if ( info != null )
-			{
-				info.setInfo( appendInfo.getInfo( ) + "\n" + info.getInfo( ) );
-			}
+			appendInfo.setNeedAnsiJoin( ansi );
+			return appendInfo;
 		}
 
 		return info;

@@ -26,7 +26,8 @@ public class CommonIdentifierConverter extends AbstractIndentifierConverter
 		TSourceTokenList tokens = identifier.getElement( ).getStartToken( ).container;
 
 		ConvertInfo info = generateConvertInfo( identifier.getElement( ),
-				targetVendor );
+				targetVendor,
+				convert );
 		info.setNeedConvert( false );
 
 		for ( int i = startTokenIndex; i <= endTokenIndex; i++ )

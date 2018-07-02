@@ -33,24 +33,27 @@ public abstract class AbstractIndentifierConverter implements
 			EDbVendor targetVendor, boolean convert ) throws ConvertException;
 
 	protected ConvertInfo generateConvertInfo( TObjectName identifier,
-			EDbVendor targetVendor )
+			EDbVendor targetVendor, boolean convert )
 	{
 		ConvertInfo info = new ConvertInfo( );
-		info.setInfo( "Can convert the "
-				+ SQLUtil.getVendorName( identifier.getStartToken( )
-						.getDbvendor( ) )
-				+ " identifier "
-				+ identifier.toString( )
-				+ " to "
-				+ SQLUtil.getVendorName( targetVendor )
-				+ " automatically." );
-		info.setPosition( new Tuple<Long>( identifier.getLineNo( ),
-				identifier.getColumnNo( ) ) );
-		String filePath = identifier.getStartToken( ).container.getGsqlparser( )
-				.getSqlfilename( );
-		if ( !SQLUtil.isEmpty( filePath ) )
+		if ( convert )
 		{
-			info.setFilePath( filePath );
+			info.setInfo( "Can convert the "
+					+ SQLUtil.getVendorName( identifier.getStartToken( )
+							.getDbvendor( ) )
+					+ " identifier "
+					+ identifier.toString( )
+					+ " to "
+					+ SQLUtil.getVendorName( targetVendor )
+					+ " automatically." );
+			info.setPosition( new Tuple<Long>( identifier.getLineNo( ),
+					identifier.getColumnNo( ) ) );
+			String filePath = identifier.getStartToken( ).container.getGsqlparser( )
+					.getSqlfilename( );
+			if ( !SQLUtil.isEmpty( filePath ) )
+			{
+				info.setFilePath( filePath );
+			}
 		}
 		return info;
 	}

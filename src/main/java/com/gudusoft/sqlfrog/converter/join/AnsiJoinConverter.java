@@ -62,6 +62,16 @@ public class AnsiJoinConverter
 					|| ( t == EExpressionType.group_comparison_t ) || ( t == EExpressionType.in_t ) );
 		}
 
+		TExpression getCompareCondition( TExpression expr )
+		{
+			if ( is_compare_condition( expr.getExpressionType( ) ) )
+				return expr;
+			TExpression parentExpr = expr.getParentExpr( );
+			if ( parentExpr == null )
+				return null;
+			return getCompareCondition( parentExpr );
+		}
+
 		private void analyzeJoinCondition( TExpression expr,
 				TExpression parent_expr )
 		{
@@ -134,6 +144,36 @@ public class AnsiJoinConverter
 				}
 
 			}
+			else if ( lc_expr.isOracleOuterJoin( )
+					&& !is_compare_condition( parent_expr.getExpressionType( ) ) )
+			{
+				TExpression expression = getCompareCondition( parent_expr );
+				if ( expression != null )
+				{
+					slexpr = expression.getLeftOperand( );
+					srexpr = expression.getRightOperand( );
+
+					JoinCondition jr = new JoinCondition( );
+					jr.used = false;
+					jr.lexpr = slexpr;
+					jr.rexpr = srexpr;
+					jr.expr = expression;
+					lc_expr.getEndToken( ).setString( "" );
+					if ( slexpr.getEndToken( ).posinlist >= lc_expr.getStartToken( ).posinlist )
+					{
+						jr.jt = jointype.right;
+					}
+					else
+					{
+						jr.jt = jointype.left;
+					}
+
+					jr.lefttable = getExpressionTable( slexpr );
+					jr.righttable = getExpressionTable( srexpr );
+
+					jrs.add( jr );
+				}
+			}
 
 		}
 
@@ -166,7 +206,19 @@ public class AnsiJoinConverter
 		public boolean exprVisit( TParseTreeNode pNode, boolean isLeafNode )
 		{
 			TExpression expr = (TExpression) pNode;
-			analyzeJoinCondition( expr, expr );
+			if ( expr.getExpressionType( ) == EExpressionType.function_t )
+			{
+				for ( int i = 0; i < expr.getFunctionCall( ).getArgs( ).size( ); i++ )
+				{
+					analyzeJoinCondition( expr.getFunctionCall( )
+							.getArgs( )
+							.getExpression( i ), expr );
+				}
+			}
+			else
+			{
+				analyzeJoinCondition( expr, expr );
+			}
 			return true;
 
 		}
@@ -696,10 +748,14 @@ public class AnsiJoinConverter
 	{
 		if ( expr.getExpressionType( ) == EExpressionType.function_t )
 		{
-			if ( expr.getFunctionCall( ).getArgs( ).size( ) == 1 )
-				return getExpressionTable( expr.getFunctionCall( )
+			for ( int i = 0; i < expr.getFunctionCall( ).getArgs( ).size( ); i++ )
+			{
+				String table = getExpressionTable( expr.getFunctionCall( )
 						.getArgs( )
-						.getExpression( 0 ) );
+						.getExpression( i ) );
+				if ( table != null )
+					return table;
+			}
 		}
 		else if ( expr.getObjectOperand( ) != null )
 			return expr.getObjectOperand( ).getObjectString( );

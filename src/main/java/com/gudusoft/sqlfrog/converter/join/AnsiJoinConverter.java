@@ -145,6 +145,7 @@ public class AnsiJoinConverter
 
 			}
 			else if ( lc_expr.isOracleOuterJoin( )
+					&& parent_expr != null
 					&& !is_compare_condition( parent_expr.getExpressionType( ) ) )
 			{
 				TExpression expression = getCompareCondition( parent_expr );
@@ -217,7 +218,7 @@ public class AnsiJoinConverter
 			}
 			else
 			{
-				analyzeJoinCondition( expr, expr );
+				analyzeJoinCondition( expr, null );
 			}
 			return true;
 

@@ -214,6 +214,12 @@ public class AnsiJoinConverter
 					analyzeJoinCondition( expr.getFunctionCall( )
 							.getArgs( )
 							.getExpression( i ), expr );
+					if ( isLeafNode )
+					{
+						exprVisit( expr.getFunctionCall( )
+								.getArgs( )
+								.getExpression( i ), isLeafNode );
+					}
 				}
 			}
 			else

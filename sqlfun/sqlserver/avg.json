@@ -1,7 +1,22 @@
 {
 	"funcName": "AVG",
-	"allDistinct": "optional",
 	"arguments": [
+	  {
+	  	"argument": {
+		  "arguName": "all",
+		  "dataTypes": [],
+		  "optional": true,
+		  "description": "Applies the aggregate function to all values. ALL is the default"
+		}
+	  },
+	  {
+	  	"argument": {
+		  "arguName": "distinct",
+		  "dataTypes": [],
+		  "optional": true,
+		  "description": "Specifies that AVG operates only on one unique instance of each value, regardless of how many times that value occurs"
+		}
+	  },
 	  {
 		"argument": {
 		  "arguName": "expression",

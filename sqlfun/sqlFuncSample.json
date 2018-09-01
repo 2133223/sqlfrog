@@ -81,7 +81,7 @@
                 "integer",
                 "bigint"
               ],
-              "required": "optional",
+              "optional": true,
               "description": "The number of rows back from the current row from which to obtain a value"
             }
           },
@@ -89,7 +89,7 @@
             "argument": {
               "arguName": "default",
               "dataTypes": [],
-              "required": "optional",
+              "optional": true,
               "description": "The value to return when scalar_expression at offset is NULL"
             }
           }

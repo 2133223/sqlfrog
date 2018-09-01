@@ -2,11 +2,54 @@ This document explains the structure used to document a database function in the
 
 ### funcName
 Name of the function. Function has the same name but has the different arguments syntax will be documented
-in a different file. 
+in the different file. 
 
 funcName can't be null.
 
-### arguments
+### *arguments
+Array of the argument object. This list is empty when a function has no argument.
+
+### argument
+Function argument with below properties.
+
+	#### *arguName
+	argument name. 
+
+	#### *dataTypes
+	dataType of the argument, an argument may has more than one dataType, so this property is array.
+
+	#### description
+	Explanation of this argument.
+
+	#### optional
+	Is this argument optional in the argument list.
+
+### clauses
+SQL clauses used in the function, such as over clause in analytic function.
+
+### *returnType
+return dataType of this function.
+
+### description
+Explanation of this function.
+
+### *targetDBs
+The database version this function is applied to.
+
+### *category
+The category this function belongs to, such as string function.
+
+### ansiCompatible
+Compatible with ANSI SQL.
+
+### package
+The package this function belongs to, usually, it's Oracle plsql function.
+
+### docLink
+The online document for this function.
+
+### sample
+Sample SQL including this function.
 
 ```json
 {

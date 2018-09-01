@@ -1,0 +1,54 @@
+{
+	"funcName": "COUNT",
+	"arguments": [{
+		"argument": {
+			"arguName": "all",
+			"dataTypes": [],
+			"optional": true,
+			"description": "Applies the aggregate function to all values. ALL serves as the default"
+		}
+	},
+	{
+		"argument": {
+			"arguName": "distinct",
+			"dataTypes": [],
+			"optional": true,
+			"description": "Specifies that COUNT returns the number of unique nonnull values"
+		}
+	},
+	{
+		"argument": {
+			"arguName": "expression",
+			"dataTypes": [],
+			"optional": true,
+			"description": "An expression of any type, except image, ntext, or text"
+		}
+	},
+	{
+		"argument": {
+			"arguName": "*",
+			"dataTypes": [],
+			"optional": true,
+			"description": "Specifies that COUNT should count all rows to determine the total table row count to return"
+		}
+	}
+],
+"clauses": [{
+	"clause": {
+		"clauseName": "over",
+		"clauseContent": "[ partition_by_clause ] [order_by_clause] [ ROW_or_RANGE_clause ] ) "
+	}
+}],
+"returnType": "int",
+"description": "This function returns the number of items found in a group",
+"comment": "-- Syntax for SQL Server and Azure SQL Database",
+"targetDBs": ["2008+",
+"Azure SQL Database",
+"Azure SQL Warehouse",
+"Parallel Data Warehouse"],
+"category": "Aggregate",
+"ansiCompatible": "",
+"package": "",
+"docLink": "https://docs.microsoft.com/en-us/sql/t-sql/functions/count-transact-sql?view=sql-server-2017",
+"sample": "SELECT COUNT(DISTINCT Title) FROM HumanResources.Employee;"
+}

@@ -1,6 +1,6 @@
 This document explains the structure used to document a database function in the JSON format.
 
-### funcName
+### *funcName
 Name of the function. Function has the same name but has the different arguments syntax will be documented
 in the different file. 
 
@@ -12,20 +12,32 @@ Array of the argument object. This list is empty when a function has no argument
 ### argument
 Function argument with below properties.
 
-	#### *arguName
-	argument name. 
+#### *arguName
+argument name. 
 
-	#### *dataTypes
-	dataType of the argument, an argument may has more than one dataType, so this property is array.
+#### *dataTypes
+dataType of the argument, an argument may has more than one dataType, so this property is array.
 
-	#### description
-	Explanation of this argument.
+#### description
+Explanation of this argument.
 
-	#### optional
-	Is this argument optional in the argument list.
+#### optional
+Is this argument optional in the argument list.
 
 ### clauses
 SQL clauses used in the function, such as over clause in analytic function.
+
+#### clauseName
+Name of this clause.
+
+#### clauseContext
+
+```json
+	"clause": {
+		"clauseName": "over",
+		"clauseContent": "[ partition_by_clause ] [order_by_clause] [ ROW_or_RANGE_clause ] ) "
+	}
+```
 
 ### *returnType
 return dataType of this function.

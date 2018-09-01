@@ -1,0 +1,175 @@
+{
+  "sqlFun": {
+    "database": "sqlserver",
+    "functions": [
+      {
+        "funcName": "ASCII",
+        "arguments": [
+          {
+            "argument": {
+              "arguName": "character_expression",
+              "dataTypes": [
+                "char",
+                "varchar"
+              ],
+              "description": "An expression of type char or varchar"
+            }
+          }
+        ],
+        "returnType": "int",
+        "description": "Returns the ASCII code value of the leftmost character of a character expression",
+        "versions": [
+          "2008+",
+          "Azure SQL Database",
+          "Azure SQL Warehouse",
+          "Parallel Data Warehouse"
+        ],
+        "category": "String",
+        "ansiCompatible": "",
+        "package": "",
+        "docLink": "",
+        "sample": "SELECT ASCII('A') AS A, ASCII('B') AS B,   \nASCII('a') AS a, ASCII('b') AS b,  \nASCII(1) AS [1], ASCII(2) AS [2];"
+      },
+      {
+        "funcName": "AVG",
+        "allDistinct": "optional",
+        "arguments": [
+          {
+            "argument": {
+              "arguName": "expression",
+              "dataTypes": [],
+              "description": "An expression of the exact numeric or approximate numeric data type category, except for the bit data type"
+            }
+          }
+        ],
+        "clauses": [
+          {
+            "clause": {
+              "clauseName": "over",
+              "clauseContent": "[ partition_by_clause ] order_by_clause ) "
+            }
+          }
+        ],
+        "returnType": "The evaluated result of expression determines the return type",
+        "description": "This function returns the average of the values in a group. It ignores null values",
+        "versions": [
+          "2008+",
+          "Azure SQL Database",
+          "Azure SQL Warehouse",
+          "Parallel Data Warehouse"
+        ],
+        "category": "Aggregate",
+        "ansiCompatible": "",
+        "package": "",
+        "docLink": "https://docs.microsoft.com/en-us/sql/t-sql/functions/avg-transact-sql?view=sql-server-2017",
+        "sample": "SELECT AVG(DISTINCT ListPrice) FROM Production.Product;"
+      },
+      {
+        "funcName": "LAG",
+        "arguments": [
+          {
+            "argument": {
+              "arguName": "scalar_expression",
+              "dataTypes": [],
+              "description": "The value to be returned based on the specified offset"
+            }
+          },
+          {
+            "argument": {
+              "arguName": "offset",
+              "dataTypes": [
+                "integer",
+                "bigint"
+              ],
+              "required": "optional",
+              "description": "The number of rows back from the current row from which to obtain a value"
+            }
+          },
+          {
+            "argument": {
+              "arguName": "default",
+              "dataTypes": [],
+              "required": "optional",
+              "description": "The value to return when scalar_expression at offset is NULL"
+            }
+          }
+        ],
+        "clauses": [
+          {
+            "clause": {
+              "clauseName": "over",
+              "clauseContent": "[ partition_by_clause ] order_by_clause ) "
+            }
+          }
+        ],
+        "returnType": "The data type of the specified scalar_expression",
+        "description": "Accesses data from a previous row in the same result set without the use of a self-join starting with SQL Server 2012 (11.x).",
+        "versions": [
+          "2012+",
+          "Azure SQL Database",
+          "Azure SQL Warehouse",
+          "Parallel Data Warehouse"
+        ],
+        "category": "Analytic",
+        "ansiCompatible": "",
+        "package": "",
+        "docLink": "https://docs.microsoft.com/en-us/sql/t-sql/functions/lag-transact-sql?view=sql-server-2017",
+        "sample": "SELECT b, c,LAG(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) OVER (ORDER BY a) AS i   FROM T; "
+      },
+      {
+        "funcName": "OPENXML",
+        "arguments": [
+          {
+            "argument": {
+              "arguName": "idoc",
+              "dataTypes": [
+                "int"
+              ],
+              "inoutMode": "in",
+              "description": ""
+            }
+          },
+          {
+            "argument": {
+              "arguName": "rowpattern",
+              "dataTypes": [
+                "nvarchar"
+              ],
+              "inoutMode": "in",
+              "description": ""
+            }
+          },
+          {
+            "argument": {
+              "arguName": "flags",
+              "dataTypes": [
+                "byte"
+              ],
+              "inoutMode": "in",
+              "description": ""
+            }
+          }
+        ],
+        "clauses": [
+          {
+            "clause": {
+              "clauseName": "with",
+              "clauseContent": "SchemaDeclaration|TableName"
+            }
+          }
+        ],
+        "returnType": "void",
+        "description": "OPENXML provides a rowset view over an XML document",
+        "versions": [
+          "2008+",
+          "Azure SQL Database"
+        ],
+        "category": "Rowset",
+        "ansiCompatible": "",
+        "package": "",
+        "docLink": "https://docs.microsoft.com/en-us/sql/t-sql/functions/openxml-transact-sql?view=sql-server-2017",
+        "sample": "SELECT    *  \nFROM       OPENXML (@idoc, '/ROOT/Customer',1)  \n            WITH (CustomerID  varchar(10),  \n                  ContactName varchar(20));"
+      }
+    ]
+  }
+}

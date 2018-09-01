@@ -1,0 +1,52 @@
+{
+	"funcName": "LAG",
+	"arguments": [
+	  {
+		"argument": {
+		  "arguName": "scalar_expression",
+		  "dataTypes": [],
+		  "description": "The value to be returned based on the specified offset"
+		}
+	  },
+	  {
+		"argument": {
+		  "arguName": "offset",
+		  "dataTypes": [
+			"integer",
+			"bigint"
+		  ],
+		  "required": "optional",
+		  "description": "The number of rows back from the current row from which to obtain a value"
+		}
+	  },
+	  {
+		"argument": {
+		  "arguName": "default",
+		  "dataTypes": [],
+		  "required": "optional",
+		  "description": "The value to return when scalar_expression at offset is NULL"
+		}
+	  }
+	],
+	"clauses": [
+	  {
+		"clause": {
+		  "clauseName": "over",
+		  "clauseContent": "[ partition_by_clause ] order_by_clause ) "
+		}
+	  }
+	],
+	"returnType": "The data type of the specified scalar_expression",
+	"description": "Accesses data from a previous row in the same result set without the use of a self-join starting with SQL Server 2012 (11.x).",
+	"versions": [
+	  "2012+",
+	  "Azure SQL Database",
+	  "Azure SQL Warehouse",
+	  "Parallel Data Warehouse"
+	],
+	"category": "Analytic",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "https://docs.microsoft.com/en-us/sql/t-sql/functions/lag-transact-sql?view=sql-server-2017",
+	"sample": "SELECT b, c,LAG(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) OVER (ORDER BY a) AS i   FROM T; "
+}

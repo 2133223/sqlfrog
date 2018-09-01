@@ -1,0 +1,54 @@
+{
+	"funcName": "OPENXML",
+	"arguments": [
+	  {
+		"argument": {
+		  "arguName": "idoc",
+		  "dataTypes": [
+			"int"
+		  ],
+		  "inoutMode": "in",
+		  "description": ""
+		}
+	  },
+	  {
+		"argument": {
+		  "arguName": "rowpattern",
+		  "dataTypes": [
+			"nvarchar"
+		  ],
+		  "inoutMode": "in",
+		  "description": ""
+		}
+	  },
+	  {
+		"argument": {
+		  "arguName": "flags",
+		  "dataTypes": [
+			"byte"
+		  ],
+		  "inoutMode": "in",
+		  "description": ""
+		}
+	  }
+	],
+	"clauses": [
+	  {
+		"clause": {
+		  "clauseName": "with",
+		  "clauseContent": "SchemaDeclaration|TableName"
+		}
+	  }
+	],
+	"returnType": "void",
+	"description": "OPENXML provides a rowset view over an XML document",
+	"versions": [
+	  "2008+",
+	  "Azure SQL Database"
+	],
+	"category": "Rowset",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "https://docs.microsoft.com/en-us/sql/t-sql/functions/openxml-transact-sql?view=sql-server-2017",
+	"sample": "SELECT    *  \nFROM       OPENXML (@idoc, '/ROOT/Customer',1)  \n            WITH (CustomerID  varchar(10),  \n                  ContactName varchar(20));"
+}

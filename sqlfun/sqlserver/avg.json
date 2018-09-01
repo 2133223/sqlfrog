@@ -1,0 +1,34 @@
+{
+	"funcName": "AVG",
+	"allDistinct": "optional",
+	"arguments": [
+	  {
+		"argument": {
+		  "arguName": "expression",
+		  "dataTypes": [],
+		  "description": "An expression of the exact numeric or approximate numeric data type category, except for the bit data type"
+		}
+	  }
+	],
+	"clauses": [
+	  {
+		"clause": {
+		  "clauseName": "over",
+		  "clauseContent": "[ partition_by_clause ] order_by_clause ) "
+		}
+	  }
+	],
+	"returnType": "The evaluated result of expression determines the return type",
+	"description": "This function returns the average of the values in a group. It ignores null values",
+	"targetDBs": [
+	  "2008+",
+	  "Azure SQL Database",
+	  "Azure SQL Warehouse",
+	  "Parallel Data Warehouse"
+	],
+	"category": "Aggregate",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "https://docs.microsoft.com/en-us/sql/t-sql/functions/avg-transact-sql?view=sql-server-2017",
+	"sample": "SELECT AVG(DISTINCT ListPrice) FROM Production.Product;"
+}

@@ -1,0 +1,24 @@
+{
+	"funcName": "xmlconcat",
+	"arguments": [
+	  {
+		"argument": {
+		  "arguName": "xml",
+		  "dataTypes": [
+		  ],
+		  "description": "XML value",
+		  "repeated":true
+		}
+	  }
+	],
+	"returnType": "a single value containing an XML content fragment",
+	"description": "concatenates a list of individual XML values to create a single value containing an XML content fragment",
+	"targetDBs": [
+	  "8.3+"
+	],
+	"category": "XML",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "",
+	"sample": "SELECT xmlconcat('<abc/>', '<bar>foo</bar>')"
+}

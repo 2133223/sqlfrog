@@ -1,0 +1,12 @@
+{
+	"funcName": "user",
+	"arguments": [],
+	"returnType": "VARCHAR2",
+	"description": "returns the name of the session user (the user who logged on) with the datatype VARCHAR2",
+	"targetDBs": [],
+	"category": "Environment and Identifier",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "",
+	"sample": "SELECT USER, UID FROM DUAL;"
+}

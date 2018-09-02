@@ -1,40 +1,22 @@
 This document explains the structure used to document a database function in the JSON format.
+The property suffixed with * is required in the document.
 
 ### funcName*
 Name of the function. Function has the same name but has the different arguments syntax will be documented
 in the different file. 
 
-funcName can't be null.
-
 ### arguments*
 Array of the argument object. This list is empty when a function has no argument.
 
-### argument
+### argument*
 Function argument includes the following properties.
 
-* arguName*
-
-argument name. 
-
-* dataTypes
-
-dataType of the argument, an argument may has more than one dataType, so this property is array.
-
-* description
-
-Explanation of this argument.
-
-* optional
-
-Is this argument optional in the argument list.
-
-* repeated
-
-This argument can repeated in the list.
-
-* inoutMode
-
-Values are passed to a function in three modes; IN, OUT and INOUT.  
+* arguName*, argument name. 
+* dataTypes, dataType of the argument, an argument may has more than one dataType, so this property is type of array.
+* description, explanation of this argument.
+* optional, is this argument optional in the argument list.
+* repeated, is this argument should be repeated in the list.
+* inoutMode, values are passed to a function in three modes; IN, OUT and INOUT.  
 The mode which a variable is passed defines how the variables can be used inside the function. 
 
 ### clauses
@@ -44,10 +26,7 @@ A list of clause.
 SQL clause used in the function, such as over clause in analytic function.
 The clause includes the following properties:
 
-* clauseName*
-
-Name of this clause.
-
+* clauseName*, Name of this clause.
 * clauseContext
 
 ```json
@@ -58,7 +37,7 @@ Name of this clause.
 ```
 
 ### returnType
-return dataType of this function.
+Return dataType of this function.
 
 ### description
 Explanation of this function.

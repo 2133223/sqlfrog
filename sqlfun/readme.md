@@ -1,6 +1,8 @@
 This document explains the structure used to document a database function in the JSON format.
 The property suffixed with * is required in the document.
 
+Under the database vendor directory, Each json file describles the syntax of a function.
+
 ### funcName*
 Name of the function. Function has the same name but has the different arguments syntax will be documented
 in the different file. 
@@ -59,6 +61,9 @@ The online document for this function.
 
 ### sample
 Sample SQL including this function.
+
+
+This is an example of the json code that represents the ASCII function in SQL Server database.
 
 ```json
 {

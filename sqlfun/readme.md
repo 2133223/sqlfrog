@@ -12,24 +12,24 @@ Array of the argument object. This list is empty when a function has no argument
 ### argument
 Function argument with below properties.
 
-	* arguName
-	argument name. 
+* arguName
+argument name. 
 
-	* dataTypes
-	dataType of the argument, an argument may has more than one dataType, so this property is array.
+* dataTypes
+dataType of the argument, an argument may has more than one dataType, so this property is array.
 
-	* description
-	Explanation of this argument.
+* description
+Explanation of this argument.
 
-	* optional
-	Is this argument optional in the argument list.
+* optional
+Is this argument optional in the argument list.
 
-	* repeated
-	This argument can repeated in the list.
+* repeated
+This argument can repeated in the list.
 
-	* inoutMode
-	Values are passed to a function in three modes; IN, OUT and INOUT.  
-	The mode which a variable is passed defines how the variables can be used inside the function. 
+* inoutMode
+Values are passed to a function in three modes; IN, OUT and INOUT.  
+The mode which a variable is passed defines how the variables can be used inside the function. 
 
 ### clauses
 SQL clauses used in the function, such as over clause in analytic function.

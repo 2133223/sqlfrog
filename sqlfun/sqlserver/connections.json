@@ -1,0 +1,12 @@
+{
+	"funcName": "@@CONNECTIONS",
+	"arguments": [],
+	"returnType": "integer",
+	"description": "This function returns the number of attempted connections - both successful and unsuccessful - since SQL Server was last started",
+	"targetDBs": ["2008+"],
+	"category": "System Statistical",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "",
+	"sample": "SELECT GETDATE() AS 'Today''s Date and Time',   @@CONNECTIONS AS 'Login Attempts';"
+}

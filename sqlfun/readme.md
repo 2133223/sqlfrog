@@ -1,7 +1,7 @@
 This document explains the structure used to document a database function in the JSON format.
-The property suffixed with * is required in the document.
+The property suffixed with * is required in the json document.
 
-Under the database vendor directory, Each json file describles the syntax of a function.
+Under the database vendor directory, each json file describles the syntax of a function.
 
 ### funcName*
 Name of the function. Function has the same name but has the different arguments syntax will be documented
@@ -45,7 +45,16 @@ Return dataType of this function.
 Explanation of this function.
 
 ### targetDBs
-The database version this function is applied to.
+The database version this function is applied to. "+" after the version number means 
+all version including and after this version.
+```json
+	"targetDBs": [
+	  "2008+",
+	  "Azure SQL Database",
+	  "Azure SQL Warehouse",
+	  "Parallel Data Warehouse"
+	],
+```
 
 ### category*
 The category this function belongs to, such as string function.

@@ -1,0 +1,25 @@
+{
+	"funcName": "convert",
+	"arguments": [
+	  {
+		"argument": {
+		  "arguName": "string",
+		  "description": ""
+		}
+	  },
+	  {
+		"argument": {
+		  "arguName": "CHAR[(N)] CHARACTER SET charset_name",
+		  "description": ""
+		}
+	  }	  
+	],
+	"returnType": "",
+	"description": "convert strings between different character sets",
+	"targetDBs": ["5.5+"],
+	"category": "Cast",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "",
+	"sample": "SELECT CONVERT('test', CHAR CHARACTER SET utf8);"
+}

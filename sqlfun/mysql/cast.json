@@ -1,0 +1,28 @@
+{
+	"funcName": "cast",
+	"arguments": [
+	  {
+		"argument": {
+		  "arguName": "string",
+		  "dataTypes": [
+			"string"
+		  ],
+		  "description": ""
+		}
+	  },
+	  {
+		"argument": {
+		  "arguName": "AS CHAR[(N)] CHARACTER SET charset_name",
+		  "description": ""
+		}
+	  }	  
+	],
+	"returnType": "",
+	"description": "conversion of values from one data type to another",
+	"targetDBs": ["5.5+"],
+	"category": "Cast",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "",
+	"sample": "SELECT CAST('test' AS CHAR CHARACTER SET utf8);"
+}

@@ -1,0 +1,25 @@
+{
+	"funcName": "convert",
+	"arguments": [
+	  {
+		"argument": {
+		  "arguName": "expr",
+		  "description": ""
+		}
+	  },
+	  {
+		"argument": {
+		  "arguName": "USING transcoding_name",
+		  "description": "transcoding names are the same as the corresponding character set names"
+		}
+	  }	  
+	],
+	"returnType": "",
+	"description": "conversion of values from one data type to another",
+	"targetDBs": ["5.5+"],
+	"category": "Cast",
+	"ansiCompatible": "",
+	"package": "",
+	"docLink": "",
+	"sample": "SELECT CONVERT(_latin1'Müller' USING utf8);"
+}

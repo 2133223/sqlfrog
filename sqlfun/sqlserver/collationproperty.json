@@ -1,0 +1,32 @@
+{
+  "funcName": "COLLATIONPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "collation_name",
+        "dataTypes": [],
+        "description": "The name of the collation. The collation_name argument has an nvarchar(128) data type, with no default value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "The collation property. The property argument has a varchar(128) data type, and can have any one of the following values:"
+      }
+    }
+  ],
+  "returnType": "sql_variant",
+  "description": "This function returns the property of a specified collation in SQL Server 2017.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Collation",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/collation-functions-collationproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT COLLATIONPROPERTY(\u0027Traditional_Spanish_CS_AS_KS_WS\u0027, \u0027CodePage\u0027);"
+}

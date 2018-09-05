@@ -1,0 +1,32 @@
+{
+  "funcName": "IS_MEMBER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 group \u0027",
+        "dataTypes": [],
+        "description": "Applies to: SQL Server 2008 through SQL Server 2017"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 role \u0027",
+        "dataTypes": [],
+        "description": "Is the name of the SQL Server role that is being checked. role is sysname and can include the database fixed roles or user-defined roles, but not server roles."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Indicates whether the current user is a member of the specified Microsoft Windows group or SQL Server database role.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/is-member-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Test membership in db_owner and print appropriate message.  \nIF IS_MEMBER (\u0027db_owner\u0027) \u003d 1  \n   PRINT \u0027Current user is a member of the db_owner role\u0027  \nELSE IF IS_MEMBER (\u0027db_owner\u0027) \u003d 0  \n   PRINT \u0027Current user is NOT a member of the db_owner role\u0027  \nELSE IF IS_MEMBER (\u0027db_owner\u0027) IS NULL  \n   PRINT \u0027ERROR: Invalid group / role specified\u0027;  \nGO  \n\n-- Execute SELECT if user is a member of ADVWORKS\\Shipping.  \nIF IS_MEMBER (\u0027ADVWORKS\\Shipping\u0027) \u003d 1  \n   SELECT \u0027User \u0027 + USER + \u0027 is a member of ADVWORKS\\Shipping.\u0027;   \nGO"
+}

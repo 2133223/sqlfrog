@@ -1,0 +1,29 @@
+{
+  "funcName": "JSON_QUERY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "An expression. Typically the name of a variable or a column that contains JSON text."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "path",
+        "dataTypes": [],
+        "description": "A JSON path that specifies the object or the array to extract."
+      }
+    }
+  ],
+  "description": "Extracts an object or an array from a JSON string.",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "JSON",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/json-query-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT PersonID,FullName,\n JSON_QUERY(CustomFields,\u0027$.OtherLanguages\u0027) AS Languages\nFROM Application.People"
+}

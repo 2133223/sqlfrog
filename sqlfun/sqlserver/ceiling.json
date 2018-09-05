@@ -1,0 +1,27 @@
+{
+  "funcName": "CEILING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "numeric_expression",
+        "dataTypes": [
+          "bit"
+        ],
+        "description": "An expression of the exact numeric or approximate numeric data type category. For this function, the bit data type is invalid."
+      }
+    }
+  ],
+  "returnType": "Return values have the same type as numeric_expression.",
+  "description": "This function returns the smallest integer greater than, or equal to, the specified numeric expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/ceiling-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT CEILING($123.45), CEILING($-123.45), CEILING($0.0);  \nGO"
+}

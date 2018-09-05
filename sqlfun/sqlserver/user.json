@@ -1,0 +1,16 @@
+{
+  "funcName": "USER",
+  "returnType": "char",
+  "description": "Allows a system-supplied value for the database user name of the current user to be inserted into a table when no default value is specified.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/user-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @usr char(30)  \nSET @usr \u003d user  \nSELECT \u0027The current user\u0027\u0027s database username is: \u0027+ @usr  \nGO"
+}

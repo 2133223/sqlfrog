@@ -1,0 +1,36 @@
+{
+  "funcName": "OBJECT_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "object_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of the object to be used. object_id is int and is assumed to be a schema-scoped object in the specified database, or in the current database context."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "database_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of the database where the object is to be looked up. database_id is int."
+      }
+    }
+  ],
+  "returnType": "sysname",
+  "description": "Returns the database object name for schema-scoped objects. For a list of schema-scoped objects, see sys.objects (Transact-SQL).",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/object-name-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nDECLARE @MyID int;  \nSET @MyID \u003d (SELECT OBJECT_ID(\u0027AdventureWorks2012.Production.Product\u0027,  \n    \u0027U\u0027));  \nSELECT name, object_id, type_desc  \nFROM sys.objects  \nWHERE name \u003d OBJECT_NAME(@MyID);  \nGO"
+}

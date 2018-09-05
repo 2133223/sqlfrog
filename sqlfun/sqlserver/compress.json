@@ -1,0 +1,23 @@
+{
+  "funcName": "COMPRESS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "A"
+      }
+    }
+  ],
+  "returnType": "varbinary(max) representing the compressed content of the input.",
+  "description": "This function compresses the input expression, using the GZIP algorithm. The function returns a byte array of type varbinary(max).",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/compress-transact-sql?view\u003dsql-server-2017",
+  "sample": "INSERT INTO player (name, surname, info )  \nVALUES (N\u0027Ovidiu\u0027, N\u0027Cracium\u0027,   \n        COMPRESS(N\u0027{\"sport\":\"Tennis\",\"age\": 28,\"rank\":1,\"points\":15258, turn\":17}\u0027));  \n\nINSERT INTO player (name, surname, info )  \nVALUES (N\u0027Michael\u0027, N\u0027Raheem\u0027, compress(@info));"
+}

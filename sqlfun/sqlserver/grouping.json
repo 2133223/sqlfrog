@@ -1,0 +1,23 @@
+{
+  "funcName": "GROUPING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0026lt;column_expression\u0026gt;",
+        "dataTypes": [],
+        "description": "Is a column or an expression that contains a column in a GROUP BY clause."
+      }
+    }
+  ],
+  "returnType": "tinyint",
+  "description": "Indicates whether a specified column expression in a GROUP BY list is aggregated or not. GROUPING returns 1 for aggregated or 0 for not aggregated in the result set. GROUPING can be used only in the SELECT \u003cselect\u003e list, HAVING, and ORDER BY clauses when GROUP BY is specified.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Aggregate",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/grouping-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SalesQuota, SUM(SalesYTD) \u0027TotalSalesYTD\u0027, GROUPING(SalesQuota) AS \u0027Grouping\u0027  \nFROM Sales.SalesPerson  \nGROUP BY SalesQuota WITH ROLLUP;  \nGO"
+}

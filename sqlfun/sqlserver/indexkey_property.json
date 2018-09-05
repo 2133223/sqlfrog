@@ -1,0 +1,49 @@
+{
+  "funcName": "INDEXKEY_PROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "object_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the object identification number of the table or indexed view. object_ID is int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "index_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the index identification number. index_ID is int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "key_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the index key column position. key_ID is int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "Is the name of the property for which information will be returned. property is a character string and can be one of the following values."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns information about the index key. Returns NULL for XML indexes.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/indexkey-property-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT   \n    INDEXKEY_PROPERTY(OBJECT_ID(\u0027Production.Location\u0027, \u0027U\u0027),  \n        1,1,\u0027ColumnId\u0027) AS [Column ID],  \n    INDEXKEY_PROPERTY(OBJECT_ID(\u0027Production.Location\u0027, \u0027U\u0027),  \n        1,1,\u0027IsDescending\u0027) AS [Asc or Desc order];"
+}

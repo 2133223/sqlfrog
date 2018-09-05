@@ -1,0 +1,28 @@
+{
+  "funcName": "IDENT_INCR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 table_or_view \u0027",
+        "dataTypes": [
+          "char",
+          "nchar",
+          "varchar",
+          "nvarchar"
+        ],
+        "description": "Is an expression specifying the table or view to check for a valid identity increment value. table_or_view can be a character string constant enclosed in quotation marks, a variable, a function, or a column name. table_or_view is char, nchar, varchar, or nvarchar."
+      }
+    }
+  ],
+  "returnType": "numeric",
+  "description": "Returns the increment value (returned as numeric (@@MAXPRECISION,0)) specified during the creation of an identity column in a table or view that has an identity column.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Data type",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/ident-incr-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT IDENT_INCR(\u0027Person.Address\u0027) AS Identity_Increment;  \nGO"
+}

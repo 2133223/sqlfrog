@@ -1,0 +1,35 @@
+{
+  "funcName": "STRING_SPLIT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "dataTypes": [
+          "nvarchar",
+          "varchar",
+          "nchar",
+          "char"
+        ],
+        "description": "Is an expression of any character type (for example, nvarchar, varchar, nchar, or char)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "separator",
+        "dataTypes": [],
+        "description": "Is a single character expression of any character type (for example, nvarchar(1), varchar(1), nchar(1), or char(1)) that is used as separator for concatenated strings."
+      }
+    }
+  ],
+  "returnType": "Returns a single-column table with fragments. The name of the column is value. Returns nvarchar if any of the input arguments are either nvarchar or nchar. Otherwise returns varchar. The length of the return type is the same as the length of the string argument.",
+  "description": "Splits the character expression using specified separator.",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/string-split-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @tags NVARCHAR(400) \u003d \u0027clothing,road,,touring,bike\u0027  \n\nSELECT value  \nFROM STRING_SPLIT(@tags, \u0027,\u0027)  \nWHERE RTRIM(value) \u003c\u003e \u0027\u0027;"
+}

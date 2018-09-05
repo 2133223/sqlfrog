@@ -1,0 +1,23 @@
+{
+  "funcName": "DECOMPRESS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "A varbinary(n), varbinary(max), or binary(n) value. See Expressions (Transact-SQL) for more information."
+      }
+    }
+  ],
+  "returnType": "A value of data type varbinary(max). DECOMPRESS will use the ZIP algorithm to decompress the input argument. The user should explicitly cast result to a target type if necessary.",
+  "description": "This function will decompress an input expression value, using the GZIP algorithm. DECOMPRESS will return a byte array (VARBINARY(MAX) type).",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/decompress-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT _id, name, surname, datemodified,  \n             CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  \nFROM player;"
+}

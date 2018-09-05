@@ -1,0 +1,16 @@
+{
+  "funcName": "@@VERSION",
+  "returnType": "nvarchar",
+  "description": "Returns system and build information for the current installation of SQL Server.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/version-transact-sql-configuration-functions?view\u003dsql-server-2017",
+  "sample": "SELECT @@VERSION AS \u0027SQL Server Version\u0027;"
+}

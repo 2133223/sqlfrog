@@ -1,0 +1,15 @@
+{
+  "funcName": "FULLTEXTCATALOGPROPERTY",
+  "arguments": [],
+  "returnType": "int",
+  "description": "Returns information about full-text catalog properties in SQL Server 2017.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/fulltextcatalogproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT fulltextcatalogproperty(\u0027Cat_Desc\u0027, \u0027ItemCount\u0027);  \nGO"
+}

@@ -1,0 +1,14 @@
+{
+  "funcName": "@@SERVICENAME",
+  "returnType": "nvarchar",
+  "description": "Returns the name of the registry key under which SQL Server is running. @@SERVICENAME returns \u0027MSSQLSERVER\u0027 if the current instance is the default instance; this function returns the instance name if the current instance is a named instance.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database (Managed Instance only)"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/servicename-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@SERVICENAME AS \u0027Service Name\u0027;"
+}

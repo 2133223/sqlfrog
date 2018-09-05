@@ -1,0 +1,15 @@
+{
+  "funcName": "XACT_STATE",
+  "description": "Is a scalar function that reports the user transaction state of a current running request. XACT_STATE indicates whether the request has an active user transaction, and whether the transaction is capable of being committed.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/xact-state-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \n\n-- SET XACT_ABORT ON will render the transaction uncommittable  \n-- when the constraint violation occurs.  \nSET XACT_ABORT ON;  \n\nBEGIN TRY  \n    BEGIN TRANSACTION;  \n        -- A FOREIGN KEY constraint exists on this table. This   \n        -- statement will generate a constraint violation error.  \n        DELETE FROM Production.Product  \n            WHERE ProductID \u003d 980;  \n\n    -- If the delete operation succeeds, commit the transaction. The CATCH  \n    -- block will not execute.  \n    COMMIT TRANSACTION;  \nEND TRY  \nBEGIN CATCH  \n    -- Test XACT_STATE for 0, 1, or -1.  \n    -- If 1, the transaction is committable.  \n    -- If -1, the transaction is uncommittable and should   \n    --     be rolled back.  \n    -- XACT_STATE \u003d 0 means there is no transaction and  \n    --     a commit or rollback operation would generate an error.  \n\n    -- Test whether the transaction is uncommittable.  \n    IF (XACT_STATE()) \u003d -1  \n    BEGIN  \n        PRINT \u0027The transaction is in an uncommittable state.\u0027 +  \n              \u0027 Rolling back transaction.\u0027  \n        ROLLBACK TRANSACTION;  \n    END;  \n\n    -- Test whether the transaction is active and valid.  \n    IF (XACT_STATE()) \u003d 1  \n    BEGIN  \n        PRINT \u0027The transaction is committable.\u0027 +   \n              \u0027 Committing transaction.\u0027  \n        COMMIT TRANSACTION;     \n    END;  \nEND CATCH;  \nGO"
+}

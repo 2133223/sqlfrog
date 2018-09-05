@@ -1,0 +1,39 @@
+{
+  "funcName": "PARSE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string_value",
+        "dataTypes": [
+          "nvarchar"
+        ],
+        "description": "nvarchar(4000) value representing the formatted value to parse into the specified data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "data_type",
+        "dataTypes": [],
+        "description": "Literal value representing the data type requested for the result."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "culture",
+        "dataTypes": [],
+        "description": "Optional string that identifies the culture in which string_value is formatted."
+      }
+    }
+  ],
+  "returnType": "Returns the result of the expression, translated to the requested data type.",
+  "description": "Returns the result of an expression, translated to the requested data type in SQL Server.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Conversion",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/parse-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT PARSE(\u0027Monday, 13 December 2010\u0027 AS datetime2 USING \u0027en-US\u0027) AS Result;"
+}

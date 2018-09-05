@@ -1,0 +1,24 @@
+{
+  "funcName": "BINARY_CHECKSUM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "***",
+        "dataTypes": [],
+        "description": "Specifies that the computation covers all the table columns. BINARY_CHECKSUM ignores columns of noncomparable data types in its computation. Noncomparable data types include"
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the binary checksum value computed over a row of a table or over a list of expressions.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/binary-checksum-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nCREATE TABLE myTable (column1 int, column2 varchar(256));  \nGO  \nINSERT INTO myTable VALUES (1, \u0027test\u0027);  \nGO  \nSELECT BINARY_CHECKSUM(*) from myTable;  \nGO  \nUPDATE myTable set column2 \u003d \u0027TEST\u0027;  \nGO  \nSELECT BINARY_CHECKSUM(*) from myTable;  \nGO"
+}

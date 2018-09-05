@@ -1,0 +1,13 @@
+{
+  "funcName": "HOST_ID",
+  "returnType": "char(10)",
+  "description": "Returns the workstation identification number. The workstation identification number is the process ID (PID) of the application on the client computer that is connecting to SQL Server.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/host-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE TABLE Orders  \n   (OrderID     int       PRIMARY KEY,  \n    CustomerID  nchar(5)  REFERENCES Customers(CustomerID),  \n    TerminalID  char(8)   NOT NULL DEFAULT HOST_ID(),  \n    OrderDate   datetime  NOT NULL,  \n    ShipDate    datetime  NULL,  \n    ShipperID   int       NULL REFERENCES Shippers(ShipperID));  \nGO"
+}

@@ -1,0 +1,13 @@
+{
+  "funcName": "@@MAX_CONNECTIONS",
+  "returnType": "integer",
+  "description": "Returns the maximum number of simultaneous user connections allowed on an instance of SQL Server. The number returned is not necessarily the number currently configured.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/max-connections-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@MAX_CONNECTIONS AS \u0027Max Connections\u0027;"
+}

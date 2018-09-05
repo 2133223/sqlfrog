@@ -1,0 +1,28 @@
+{
+  "funcName": "IDENT_SEED",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 table_or_view \u0027",
+        "dataTypes": [
+          "char",
+          "nchar",
+          "varchar",
+          "nvarchar"
+        ],
+        "description": "Is an expression that specifies the table or view to check for a identity seed value. table_or_view can be a character string constant enclosed in quotation marks, a variable, a function, or a column name. table_or_view is char, nchar, varchar, or nvarchar."
+      }
+    }
+  ],
+  "returnType": "numeric",
+  "description": "Returns the original seed value (returned as numeric(@@MAXPRECISION,0)) that was specified when an identity column in a table or a view was created. Changing the current value of an identity column by using DBCC CHECKIDENT does not change the value returned by this function.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Data type",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/ident-seed-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT IDENT_SEED(\u0027Person.Address\u0027) AS Identity_Seed;  \nGO"
+}

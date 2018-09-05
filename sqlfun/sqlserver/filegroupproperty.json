@@ -1,0 +1,29 @@
+{
+  "funcName": "FILEGROUPPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "filegroup_name",
+        "dataTypes": [],
+        "description": "An expression of type sysname that represents the filegroup name for which FILEGROUPPROPERTY returns the named property information."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "An expression of type varchar(128) that returns the name of the filegroup property. Property can return one of these values:"
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "This function returns the filegroup property value for a specified name and filegroup value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/filegroupproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT FILEGROUPPROPERTY(\u0027PRIMARY\u0027, \u0027IsDefault\u0027) AS \u0027Default Filegroup\u0027;  \nGO"
+}

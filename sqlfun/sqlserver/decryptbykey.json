@@ -1,0 +1,57 @@
+{
+  "funcName": "DECRYPTBYKEY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ciphertext",
+        "dataTypes": [
+          "varbinary"
+        ],
+        "description": "A variable of type varbinary containing data encrypted with the key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@ciphertext",
+        "dataTypes": [
+          "varbinary"
+        ],
+        "description": "A variable of type varbinary containing data encrypted with the key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "add_authenticator",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Indicates whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Must match the value passed to ENCRYPTBYKEY (Transact-SQL) during the data encryption process. add_authenticator has an int data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "authenticator",
+        "dataTypes": [],
+        "description": "The data used as the basis for the generation of the authenticator. Must match the value supplied to ENCRYPTBYKEY (Transact-SQL). authenticator has a sysname data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@authenticator",
+        "dataTypes": [],
+        "description": "A variable containing data from which an authenticator generates. Must match the value supplied to ENCRYPTBYKEY (Transact-SQL). @authenticator has a sysname data type."
+      }
+    }
+  ],
+  "returnType": "varbinary, with a maximum size of 8,000 bytes. DECRYPTBYKEY returns NULL if the symmetric key used for data encryption is not open or if ciphertext is NULL.",
+  "description": "This function uses a symmetric key to decrypt data.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/decryptbykey-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- First, open the symmetric key with which to decrypt the data.  \nOPEN SYMMETRIC KEY SSN_Key_01  \n   DECRYPTION BY CERTIFICATE HumanResources037;  \nGO  \n\n-- Now list the original ID, the encrypted ID, and the   \n-- decrypted ciphertext. If the decryption worked, the original  \n-- and the decrypted ID will match.  \nSELECT NationalIDNumber, EncryptedNationalID   \n    AS \u0027Encrypted ID Number\u0027,  \n    CONVERT(nvarchar, DecryptByKey(EncryptedNationalID))   \n    AS \u0027Decrypted ID Number\u0027  \n    FROM HumanResources.Employee;  \nGO"
+}

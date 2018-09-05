@@ -1,0 +1,28 @@
+{
+  "funcName": "APPROX_COUNT_DISTINCT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [
+          "image",
+          "ntext",
+          "text"
+        ],
+        "description": "An expression of any type, except image, sql_variant, ntext, or text."
+      }
+    }
+  ],
+  "returnType": "bigint",
+  "description": "This function returns the approximate number of unique non-null values in a group.",
+  "targetDBs": [
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Aggregate",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/approx-count-distinct-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT APPROX_COUNT_DISTINCT(O_OrderKey) AS Approx_Distinct_OrderKey\nFROM dbo.Orders;"
+}

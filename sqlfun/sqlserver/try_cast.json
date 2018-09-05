@@ -1,0 +1,37 @@
+{
+  "funcName": "TRY_CAST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "The value to be cast. Any valid expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "data_type",
+        "dataTypes": [],
+        "description": "The data type into which to cast expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "dataTypes": [],
+        "description": "Optional integer that specifies the length of the target data type."
+      }
+    }
+  ],
+  "returnType": "Returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.",
+  "description": "Returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Conversion",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/try-cast-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT   \n    CASE WHEN TRY_CAST(\u0027test\u0027 AS float) IS NULL   \n    THEN \u0027Cast failed\u0027  \n    ELSE \u0027Cast succeeded\u0027  \nEND AS Result;  \nGO"
+}

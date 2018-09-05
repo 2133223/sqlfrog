@@ -1,0 +1,16 @@
+{
+  "funcName": "GETUTCDATE",
+  "returnType": "datetime",
+  "description": "Returns the current database system timestamp as a datetime value. The database time zone offset is not included. This value represents the current UTC time (Coordinated Universal Time). This value is derived from the operating system of the computer on which the instance of SQL Server is running.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/getutcdate-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT \u0027SYSDATETIME()      \u0027, SYSDATETIME();  \nSELECT \u0027SYSDATETIMEOFFSET()\u0027, SYSDATETIMEOFFSET();  \nSELECT \u0027SYSUTCDATETIME()   \u0027, SYSUTCDATETIME();  \nSELECT \u0027CURRENT_TIMESTAMP  \u0027, CURRENT_TIMESTAMP;  \nSELECT \u0027GETDATE()          \u0027, GETDATE();  \nSELECT \u0027GETUTCDATE()       \u0027, GETUTCDATE();  \n/* Returned:  \nSYSDATETIME()            2007-05-03 18:34:11.9351421  \nSYSDATETIMEOFFSET()      2007-05-03 18:34:11.9351421 -07:00  \nSYSUTCDATETIME()         2007-05-04 01:34:11.9351421  \nCURRENT_TIMESTAMP        2007-05-03 18:34:11.933  \nGETDATE()                2007-05-03 18:34:11.933  \nGETUTCDATE()             2007-05-04 01:34:11.933  \n*/"
+}

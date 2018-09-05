@@ -1,0 +1,15 @@
+{
+  "funcName": "ERROR_SEVERITY",
+  "returnType": "int",
+  "description": "This function returns the severity value of the error where an error occurs, if that error caused the CATCH block of a TRY…CATCH construct to execute.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/error-severity-transact-sql?view\u003dsql-server-2017"
+}

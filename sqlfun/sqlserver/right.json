@@ -1,0 +1,39 @@
+{
+  "funcName": "RIGHT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character_expression",
+        "dataTypes": [
+          "text",
+          "ntext",
+          "varchar",
+          "nvarchar"
+        ],
+        "description": "Is an expression of character or binary data. character_expression can be a constant, variable, or column. character_expression can be of any data type, except text or ntext, that can be implicitly converted to varchar or nvarchar. Otherwise, use the CAST function to explicitly convert character_expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "integer_expression",
+        "dataTypes": [
+          "bigint"
+        ],
+        "description": "Is a positive integer that specifies how many characters of character_expression will be returned. If integer_expression is negative, an error is returned. If integer_expression is type bigint and contains a large value, character_expression must be of a large data type such as varchar(max)."
+      }
+    }
+  ],
+  "returnType": "Returns varchar when character_expression is a non-Unicode character data type.",
+  "description": "Returns the right part of a character string with the specified number of characters.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/right-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT RIGHT(FirstName, 5) AS \u0027First Name\u0027  \nFROM Person.Person  \nWHERE BusinessEntityID \u003c 5  \nORDER BY FirstName;  \nGO"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "SUSER_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "server_user_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the login identification number of the user. server_user_id, which is optional, is int. server_user_id can be the login identification number of any SQL Server login or Microsoft Windows user or group that has permission to connect to an instance of SQL Server. If server_user_id is not specified, the login identification name for the current user is returned. If the parameter contains the word NULL will return NULL."
+      }
+    }
+  ],
+  "returnType": "nvarchar(128)",
+  "description": "Returns the login identification name of the user.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/suser-name-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SUSER_NAME(1);"
+}

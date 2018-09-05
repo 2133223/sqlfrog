@@ -1,0 +1,25 @@
+{
+  "funcName": "SOUNDEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character_expression",
+        "dataTypes": [],
+        "description": "Is an alphanumeric expression of character data. character_expression can be a constant, variable, or column."
+      }
+    }
+  ],
+  "returnType": "varchar",
+  "description": "Returns a four-character (SOUNDEX) code to evaluate the similarity of two strings.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/soundex-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Using SOUNDEX  \nSELECT SOUNDEX (\u0027Smith\u0027), SOUNDEX (\u0027Smythe\u0027);"
+}

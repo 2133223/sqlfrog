@@ -1,0 +1,16 @@
+{
+  "funcName": "@@ERROR",
+  "returnType": "integer",
+  "description": "Returns the error number for the last Transact-SQL statement executed.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/error-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nUPDATE HumanResources.EmployeePayHistory  \n    SET PayFrequency \u003d 4  \n    WHERE BusinessEntityID \u003d 1;  \nIF @@ERROR \u003d 547  \n    PRINT N\u0027A check constraint violation occurred.\u0027;  \nGO"
+}

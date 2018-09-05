@@ -1,0 +1,13 @@
+{
+  "funcName": "APP_NAME",
+  "returnType": "nvarchar(128)",
+  "description": "This function returns the application name for the current session, if the application sets that name value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/app-name-transact-sql?view\u003dsql-server-2017"
+}

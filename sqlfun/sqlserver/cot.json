@@ -1,0 +1,28 @@
+{
+  "funcName": "COT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float",
+          "float"
+        ],
+        "description": "An expression of type float, or of a type that can implicitly convert to float."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "A mathematical function that returns the trigonometric cotangent of the specified angle - in radians - in the specified float expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/cot-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @angle float;  \nSET @angle \u003d 124.1332;  \nSELECT \u0027The COT of the angle is: \u0027 + CONVERT(varchar,COT(@angle));  \nGO"
+}

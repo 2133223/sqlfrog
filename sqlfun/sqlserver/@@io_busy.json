@@ -1,0 +1,13 @@
+{
+  "funcName": "@@IO_BUSY",
+  "returnType": "integer",
+  "description": "Returns the time that SQL Server has spent performing input and output operations since SQL Server was last started. The result is in CPU time increments (\"ticks\"), and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System Statistical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/io-busy-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@IO_BUSY*@@TIMETICKS AS \u0027IO microseconds\u0027,   \n   GETDATE() AS \u0027as of\u0027;"
+}

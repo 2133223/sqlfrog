@@ -1,0 +1,37 @@
+{
+  "funcName": "CHECKSUM_AGG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ALL",
+        "dataTypes": [],
+        "description": "Applies the aggregate function to all values. ALL is the default argument."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "DISTINCT",
+        "dataTypes": [],
+        "description": "Specifies that CHECKSUM_AGG returns the checksum of unique values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "An integer expression. CHECKSUM_AGG does not allow use of aggregate functions or subqueries."
+      }
+    }
+  ],
+  "returnType": "Returns the checksum of all expression values as int.",
+  "description": "This function returns the checksum of the values in a group. CHECKSUM_AGG ignores null values. The OVER clause can follow CHECKSUM_AGG.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Aggregate",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/checksum-agg-transact-sql?view\u003dsql-server-2017",
+  "sample": "--Get the checksum value before the column value is changed.  \nSELECT CHECKSUM_AGG(CAST(Quantity AS int))  \nFROM Production.ProductInventory;  \nGO"
+}

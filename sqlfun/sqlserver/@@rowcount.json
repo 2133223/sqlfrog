@@ -1,0 +1,14 @@
+{
+  "funcName": "@@ROWCOUNT",
+  "returnType": "int",
+  "description": "Returns the number of rows affected by the last statement. If the number of rows is more than 2 billion, use ROWCOUNT_BIG.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/rowcount-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nUPDATE HumanResources.Employee   \nSET JobTitle \u003d N\u0027Executive\u0027  \nWHERE NationalIDNumber \u003d 123456789  \nIF @@ROWCOUNT \u003d 0  \nPRINT \u0027Warning: No rows were updated\u0027;  \nGO"
+}

@@ -1,0 +1,15 @@
+{
+  "funcName": "NEWID",
+  "returnType": "uniqueidentifier",
+  "description": "Creates a unique value of type uniqueidentifier.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/newid-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Creating a local variable with DECLARE/SET syntax.  \nDECLARE @myid uniqueidentifier  \nSET @myid \u003d NEWID()  \nPRINT \u0027Value of @myid is: \u0027+ CONVERT(varchar(255), @myid)"
+}

@@ -1,0 +1,14 @@
+{
+  "funcName": "@@LANGID",
+  "returnType": "smallint",
+  "description": "Returns the local language identifier (ID) of the language that is currently being used.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/langid-transact-sql?view\u003dsql-server-2017",
+  "sample": "SET LANGUAGE \u0027Italian\u0027  \nSELECT @@LANGID AS \u0027Language ID\u0027"
+}

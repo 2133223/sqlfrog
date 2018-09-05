@@ -1,0 +1,39 @@
+{
+  "funcName": "VERIFYSIGNEDBYASYMKEY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "Asym_Key_ID",
+        "dataTypes": [],
+        "description": "Is the ID of an asymmetric key certificate in the database."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "clear_text",
+        "dataTypes": [],
+        "description": "Is clear text data that is being verified."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "signature",
+        "dataTypes": [
+          "varbinary"
+        ],
+        "description": "Is the signature that was attached to the signed data. signature is varbinary."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Tests whether digitally signed data has been changed since it was signed.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/verifysignedbyasymkey-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT Data,  \n     VerifySignedByAsymKey( AsymKey_Id( \u0027WillisKey74\u0027 ), SignedData,  \n     DataSignature ) as IsSignatureValid  \nFROM [AdventureWorks2012].[SignedData04]   \nWHERE Description \u003d N\u0027data encrypted by asymmetric key \u0027\u0027WillisKey74\u0027\u0027\u0027;  \nGO  \nRETURN;"
+}

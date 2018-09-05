@@ -1,0 +1,41 @@
+{
+  "funcName": "FORMAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "value",
+        "dataTypes": [],
+        "description": "Expression of a supported data type to format. For a list of valid types, see the table in the following Remarks section."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format",
+        "dataTypes": [
+          "nvarchar"
+        ],
+        "description": "nvarchar format pattern."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "culture",
+        "dataTypes": [
+          "nvarchar"
+        ],
+        "description": "Optional nvarchar argument specifying a culture."
+      }
+    }
+  ],
+  "returnType": "nvarchar or null",
+  "description": "Returns a value formatted with the specified format and optional culture in SQL Server 2017. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/format-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @d DATETIME \u003d \u002710/01/2011\u0027;  \nSELECT FORMAT ( @d, \u0027d\u0027, \u0027en-US\u0027 ) AS \u0027US English Result\u0027  \n      ,FORMAT ( @d, \u0027d\u0027, \u0027en-gb\u0027 ) AS \u0027Great Britain English Result\u0027  \n      ,FORMAT ( @d, \u0027d\u0027, \u0027de-de\u0027 ) AS \u0027German Result\u0027  \n      ,FORMAT ( @d, \u0027d\u0027, \u0027zh-cn\u0027 ) AS \u0027Simplified Chinese (PRC) Result\u0027;   \n\nSELECT FORMAT ( @d, \u0027D\u0027, \u0027en-US\u0027 ) AS \u0027US English Result\u0027  \n      ,FORMAT ( @d, \u0027D\u0027, \u0027en-gb\u0027 ) AS \u0027Great Britain English Result\u0027  \n      ,FORMAT ( @d, \u0027D\u0027, \u0027de-de\u0027 ) AS \u0027German Result\u0027  \n      ,FORMAT ( @d, \u0027D\u0027, \u0027zh-cn\u0027 ) AS \u0027Chinese (Simplified PRC) Result\u0027;"
+}

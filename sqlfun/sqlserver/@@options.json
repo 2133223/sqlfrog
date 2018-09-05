@@ -1,0 +1,14 @@
+{
+  "funcName": "@@OPTIONS",
+  "returnType": "integer",
+  "description": "Returns information about the current SET options.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/options-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@OPTIONS AS OriginalOptionsValue;  \nSET CONCAT_NULL_YIELDS_NULL OFF;  \nSELECT \u0027abc\u0027 + NULL AS ResultWhen_OFF, @@OPTIONS AS OptionsValueWhen_OFF;  \n\nSET CONCAT_NULL_YIELDS_NULL ON;  \nSELECT \u0027abc\u0027 + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;"
+}

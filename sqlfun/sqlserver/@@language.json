@@ -1,0 +1,16 @@
+{
+  "funcName": "@@LANGUAGE",
+  "returnType": "nvarchar",
+  "description": "Returns the name of the language currently being used.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/language-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@LANGUAGE AS \u0027Language Name\u0027;"
+}

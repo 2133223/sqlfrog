@@ -1,0 +1,12 @@
+{
+  "funcName": "CURRENT_REQUEST_ID",
+  "returnType": "smallint",
+  "description": "This function returns the ID of the current request within the current session.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/current-request-id-transact-sql?view\u003dsql-server-2017"
+}

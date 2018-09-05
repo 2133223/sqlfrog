@@ -1,0 +1,39 @@
+{
+  "funcName": "REPLACE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string_expression",
+        "dataTypes": [],
+        "description": "Is the string expression to be searched. string_expression can be of a character or binary data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string_pattern",
+        "dataTypes": [],
+        "description": "Is the substring to be found. string_pattern can be of a character or binary data type. string_pattern cannot be an empty string (\u0027\u0027), and must not exceed the maximum number of bytes that fits on a page."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string_replacement",
+        "dataTypes": [],
+        "description": "Is the replacement string. string_replacement can be of a character or binary data type."
+      }
+    }
+  ],
+  "returnType": "Returns nvarchar if one of the input arguments is of the nvarchar data type; otherwise, REPLACE returns varchar.",
+  "description": "Replaces all occurrences of a specified string value with another string value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/replace-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT REPLACE(\u0027abcdefghicde\u0027,\u0027cde\u0027,\u0027xxx\u0027);  \nGO"
+}

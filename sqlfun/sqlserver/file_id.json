@@ -1,0 +1,22 @@
+{
+  "funcName": "FILE_ID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "file_name",
+        "dataTypes": [],
+        "description": "An expression of type sysname, representing the logical name of the file whose file ID value FILE_ID will return."
+      }
+    }
+  ],
+  "returnType": "smallint",
+  "description": "For the given logical name for a component file of the current database, this function returns the file identification (ID) number.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/file-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT FILE_ID(\u0027AdventureWorks2012_Data\u0027)AS \u0027File ID\u0027;  \nGO"
+}

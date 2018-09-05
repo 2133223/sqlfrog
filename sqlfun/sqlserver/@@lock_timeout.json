@@ -1,0 +1,14 @@
+{
+  "funcName": "@@LOCK_TIMEOUT",
+  "returnType": "integer",
+  "description": "Returns the current lock time-out setting in milliseconds for the current session.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/lock-timeout-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  \nGO"
+}

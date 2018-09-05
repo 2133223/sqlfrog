@@ -1,0 +1,37 @@
+{
+  "funcName": "STRING_AGG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "Is an expression of any type. Expressions are converted to NVARCHAR or VARCHAR types during concatenation. Non-string types are converted to NVARCHAR type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "separator",
+        "dataTypes": [],
+        "description": "Is an expression of NVARCHAR or VARCHAR type that is used as separator for concatenated strings. It can be literal or variable."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0026lt;order_clause\u0026gt;",
+        "dataTypes": [],
+        "description": "Optionally specify order of concatenated results using WITHIN GROUP clause:"
+      }
+    }
+  ],
+  "returnType": "Return type is depends on first argument (expression). If input argument is string type (NVARCHAR, VARCHAR), result type will be same as input type. The following table lists automatic conversions:",
+  "description": "Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string.",
+  "targetDBs": [
+    "SQL Server (starting with 2017)",
+    "Azure SQL Database"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/string-agg-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT STRING_AGG (FirstName, CHAR(13)) AS csv \nFROM Person.Person;"
+}

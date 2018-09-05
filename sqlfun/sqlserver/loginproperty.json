@@ -1,0 +1,28 @@
+{
+  "funcName": "LOGINPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "login_name",
+        "dataTypes": [],
+        "description": "Is the name of a SQL Server login for which login property status will be returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "propertyname",
+        "dataTypes": [],
+        "description": "Is an expression that contains the property information to be returned for the login. propertyname can be one of the following values."
+      }
+    }
+  ],
+  "description": "Returns information about login policy settings.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/loginproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT LOGINPROPERTY(\u0027John3\u0027, \u0027IsMustChange\u0027);  \nGO"
+}

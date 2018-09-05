@@ -1,0 +1,53 @@
+{
+  "funcName": "SMALLDATETIMEFROMPARTS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "year",
+        "dataTypes": [],
+        "description": "Integer expression specifying a year."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "month",
+        "dataTypes": [],
+        "description": "Integer expression specifying a month."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "day",
+        "dataTypes": [],
+        "description": "Integer expression specifying a day."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "hour",
+        "dataTypes": [],
+        "description": "Integer expression specifying hours."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "minute",
+        "dataTypes": [],
+        "description": "Integer expression specifying minutes."
+      }
+    }
+  ],
+  "returnType": "smalldatetime",
+  "description": "Returns a smalldatetime value for the specified date and time.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/smalldatetimefromparts-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result"
+}

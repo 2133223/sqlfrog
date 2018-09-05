@@ -1,0 +1,24 @@
+{
+  "funcName": "PERCENT_RANK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "OVER ( [ partition_by_clause ] order_by_clause)",
+        "dataTypes": [],
+        "description": "partition_by_clause divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. order_by_clause determines the logical order in which the operation is performed. The order_by_clause is required. The \u0026lt;rows or range clause\u0026gt; of the OVER syntax cannot be specified in a PERCENT_RANK function. For more information, see OVER Clause (Transact-SQL)."
+      }
+    }
+  ],
+  "returnType": "float(53)",
+  "description": "Calculates the relative rank of a row within a group of rows in SQL Server 2017. Use PERCENT_RANK to evaluate the relative standing of a value within a query result set or partition. PERCENT_RANK is similar to the CUME_DIST function.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "Analytic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/percent-rank-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT Department, LastName, Rate,   \n       CUME_DIST () OVER (PARTITION BY Department ORDER BY Rate) AS CumeDist,   \n       PERCENT_RANK() OVER (PARTITION BY Department ORDER BY Rate ) AS PctRank  \nFROM HumanResources.vEmployeeDepartmentHistory AS edh  \n    INNER JOIN HumanResources.EmployeePayHistory AS e    \n    ON e.BusinessEntityID \u003d edh.BusinessEntityID  \nWHERE Department IN (N\u0027Information Services\u0027,N\u0027Document Control\u0027)   \nORDER BY Department, Rate DESC;"
+}

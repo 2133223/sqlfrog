@@ -1,0 +1,13 @@
+{
+  "funcName": "@@TOTAL_READ",
+  "returnType": "integer",
+  "description": "Returns the number of disk reads, not cache reads, by SQL Server since SQL Server was last started.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System Statistical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/total-read-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@TOTAL_READ AS \u0027Reads\u0027, @@TOTAL_WRITE AS \u0027Writes\u0027, GETDATE() AS \u0027As of\u0027;"
+}

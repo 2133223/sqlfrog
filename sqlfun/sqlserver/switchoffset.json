@@ -1,0 +1,31 @@
+{
+  "funcName": "SWITCHOFFSET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "DATETIMEOFFSET",
+        "dataTypes": [],
+        "description": "Is an expression that can be resolved to a datetimeoffset(n) value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "time_zone",
+        "dataTypes": [],
+        "description": "Is a character string in the format [+|-]TZH:TZM or a signed integer (of minutes) that represents the time zone offset, and is assumed to be daylight-saving aware and adjusted."
+      }
+    }
+  ],
+  "description": "Returns a datetimeoffset value that is changed from the stored time zone offset to a specified new time zone offset.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/switchoffset-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE TABLE dbo.test   \n    (  \n    ColDatetimeoffset datetimeoffset  \n    );  \nGO  \nINSERT INTO dbo.test   \nVALUES (\u00271998-09-20 7:45:50.71345 -5:00\u0027);  \nGO  \nSELECT SWITCHOFFSET (ColDatetimeoffset, \u0027-08:00\u0027)   \nFROM dbo.test;  \nGO  \n--Returns: 1998-09-20 04:45:50.7134500 -08:00  \nSELECT ColDatetimeoffset  \nFROM dbo.test;  \n--Returns: 1998-09-20 07:45:50.7134500 -05:00"
+}

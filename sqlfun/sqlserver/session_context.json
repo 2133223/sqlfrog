@@ -1,0 +1,22 @@
+{
+  "funcName": "SESSION_CONTEXT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027key\u0027",
+        "dataTypes": [],
+        "description": "The key (type sysname) of the value being retrieved."
+      }
+    }
+  ],
+  "description": "Returns the value of the specified key in the current session context. The value is set by using the sp_set_session_context (Transact-SQL) procedure.",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/session-context-transact-sql?view\u003dsql-server-2017",
+  "sample": "EXEC sp_set_session_context \u0027user_id\u0027, 4;  \nSELECT SESSION_CONTEXT(N\u0027user_id\u0027);"
+}

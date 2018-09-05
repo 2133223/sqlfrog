@@ -1,0 +1,36 @@
+{
+  "funcName": "TRANSLATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "inputString",
+        "dataTypes": [],
+        "description": "Is an expression of any character type (nvarchar, varchar, nchar, char)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "characters",
+        "dataTypes": [],
+        "description": "Is a expression of any character type containing characters that should be replaced."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "translations",
+        "dataTypes": [],
+        "description": "Is a character expression that matches second argument by type and length."
+      }
+    }
+  ],
+  "returnType": "Returns a character expression of the same type as inputString where characters from the second argument are replaced with the matching characters from third argument.",
+  "description": "Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters.",
+  "targetDBs": [
+    "SQL Server (starting with 2017)"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/translate-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT TRANSLATE(\u00272*[3+4]/{7-2}\u0027, \u0027[]{}\u0027, \u0027()()\u0027);"
+}

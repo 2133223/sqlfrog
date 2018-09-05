@@ -1,0 +1,15 @@
+{
+  "funcName": "CERT_ID",
+  "arguments": [],
+  "returnType": "int",
+  "description": "This function returns the ID value of a certificate.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/cert-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT Cert_ID(\u0027ABerglundCert3\u0027);  \nGO"
+}

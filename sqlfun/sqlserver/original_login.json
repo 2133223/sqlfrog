@@ -1,0 +1,13 @@
+{
+  "funcName": "ORIGINAL_LOGIN",
+  "returnType": "sysname",
+  "description": "Returns the name of the login that connected to the instance of SQL Server. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/original-login-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \n--Create a temporary login and user.  \nCREATE LOGIN login1 WITH PASSWORD \u003d \u0027J345#$)thb\u0027;  \nCREATE USER user1 FOR LOGIN login1;  \nGO  \n--Execute a context switch to the temporary login account.  \nDECLARE @original_login sysname;  \nDECLARE @current_context sysname;  \nEXECUTE AS LOGIN \u003d \u0027login1\u0027;  \nSET @original_login \u003d ORIGINAL_LOGIN();  \nSET @current_context \u003d SUSER_SNAME();  \nSELECT \u0027The current executing context is: \u0027+ @current_context;  \nSELECT \u0027The original login in this session was: \u0027+ @original_login  \nGO  \n-- Return to the original execution context  \n-- and remove the temporary principal.  \nREVERT;  \nGO  \nDROP LOGIN login1;  \nDROP USER user1;  \nGO"
+}

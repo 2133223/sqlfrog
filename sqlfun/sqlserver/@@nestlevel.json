@@ -1,0 +1,14 @@
+{
+  "funcName": "@@NESTLEVEL",
+  "returnType": "int",
+  "description": "Returns the nesting level of the current stored procedure execution (initially 0) on the local server.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/nestlevel-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nIF OBJECT_ID (N\u0027usp_OuterProc\u0027, N\u0027P\u0027)IS NOT NULL  \n    DROP PROCEDURE usp_OuterProc;  \nGO  \nIF OBJECT_ID (N\u0027usp_InnerProc\u0027, N\u0027P\u0027)IS NOT NULL  \n    DROP PROCEDURE usp_InnerProc;  \nGO  \nCREATE PROCEDURE usp_InnerProc AS   \n    SELECT @@NESTLEVEL AS \u0027Inner Level\u0027;  \nGO  \nCREATE PROCEDURE usp_OuterProc AS   \n    SELECT @@NESTLEVEL AS \u0027Outer Level\u0027;  \n    EXEC usp_InnerProc;  \nGO  \nEXECUTE usp_OuterProc;  \nGO"
+}

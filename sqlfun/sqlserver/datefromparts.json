@@ -1,0 +1,39 @@
+{
+  "funcName": "DATEFROMPARTS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "year",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a year."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "month",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a month, from 1 to 12."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "day",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a day."
+      }
+    }
+  ],
+  "returnType": "date",
+  "description": "This function returns a date value that maps to the specified year, month, and day values.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/datefromparts-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;"
+}

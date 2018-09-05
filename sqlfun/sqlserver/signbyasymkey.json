@@ -1,0 +1,44 @@
+{
+  "funcName": "SIGNBYASYMKEY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "Asym_Key_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of an asymmetric key in the current database. Asym_Key_ID isint."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@plaintext",
+        "dataTypes": [
+          "nvarchar",
+          "char",
+          "varchar",
+          "nchar"
+        ],
+        "description": "Is a variable of type nvarchar, char, varchar, or nchar containing data that will be signed with the asymmetric key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "password",
+        "dataTypes": [],
+        "description": "Is the password with which the private key is protected. password is nvarchar(128)."
+      }
+    }
+  ],
+  "returnType": "varbinary with a maximum size of 8,000 bytes.",
+  "description": "Signs plaintext with an asymmetric key",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/signbyasymkey-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Create a table in which to store the data  \nCREATE TABLE [SignedData04](Description nvarchar(max), Data nvarchar(max), DataSignature varbinary(8000));  \nGO  \n-- Store data together with its signature  \nDECLARE @clear_text_data nvarchar(max);  \nset @clear_text_data \u003d N\u0027Important numbers 2, 3, 5, 7, 11, 13, 17,   \n      19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,  \n      83, 89, 97\u0027;  \nINSERT INTO [SignedData04]   \n    VALUES( N\u0027data encrypted by asymmetric key \u0027\u0027PrimeKey\u0027\u0027\u0027,  \n    @clear_text_data, SignByAsymKey( AsymKey_Id( \u0027PrimeKey\u0027 ),  \n    @clear_text_data, N\u0027pGFD4bb925DGvbd2439587y\u0027 ));  \nGO"
+}

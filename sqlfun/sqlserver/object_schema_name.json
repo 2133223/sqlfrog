@@ -1,0 +1,35 @@
+{
+  "funcName": "OBJECT_SCHEMA_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "object_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of the object to be used. object_id is int and is assumed to be a schema-scoped object in the specified database, or in the current database context."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "database_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of the database where the object is to be looked up. database_id is int."
+      }
+    }
+  ],
+  "returnType": "sysname",
+  "description": "Returns the database schema name for schema-scoped objects. For a list of schema-scoped objects, see sys.objects (Transact-SQL).",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/object-schema-name-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DB_NAME(st.dbid) AS database_name,   \n    OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  \n    OBJECT_NAME(st.objectid, st.dbid) AS object_name,   \n    st.text AS query_statement  \nFROM sys.dm_exec_query_stats AS qs  \nCROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st  \nWHERE st.objectid IS NOT NULL;  \nGO"
+}

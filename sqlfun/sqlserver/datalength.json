@@ -1,0 +1,25 @@
+{
+  "funcName": "DATALENGTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "An expression of any data type."
+      }
+    }
+  ],
+  "returnType": "bigint if expression has an nvarchar(max), varbinary(max), or varchar(max) data type; otherwise int.",
+  "description": "This function returns the number of bytes used to represent any expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Data type",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/datalength-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Uses AdventureWorks  \n\nSELECT length \u003d DATALENGTH(EnglishProductName), EnglishProductName  \nFROM dbo.DimProduct  \nORDER BY EnglishProductName;  \nGO"
+}

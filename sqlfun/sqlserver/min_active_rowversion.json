@@ -1,0 +1,14 @@
+{
+  "funcName": "MIN_ACTIVE_ROWVERSION",
+  "returnType": "Returns a binary(8) value.",
+  "description": "Returns the lowest active rowversion value in the current database. A rowversion value is active if it is used in a transaction that has not yet been committed. For more information, see rowversion (Transact-SQL).",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/min-active-rowversion-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Create a table that has a ROWVERSION column in it.  \nCREATE TABLE RowVersionTestTable (rv ROWVERSION)  \nGO  \n\n-- Print the current values for the database.  \nPRINT \u0027\u0027  \nPRINT \u0027DBTS\u0027  \nPRINT @@DBTS  \nPRINT \u0027MIN_ACTIVE_ROWVERSION\u0027  \nPRINT MIN_ACTIVE_ROWVERSION()   \nGO  \n---------------- Results ----------------  \n--DBTS  \n--0x00000000000007E2  \n--MIN_ACTIVE_ROWVERSION  \n--0x00000000000007E3  \n\n-- Insert a row.  \nINSERT INTO RowVersionTestTable VALUES (DEFAULT)  \nSELECT * FROM RowVersionTestTable  \nGO  \n---------------- Results ----------------  \n--rv  \n--0x00000000000007E3  \n\n-- Print the current values for the database.  \nPRINT \u0027\u0027  \nPRINT \u0027DBTS\u0027  \nPRINT @@DBTS  \nPRINT \u0027MIN_ACTIVE_ROWVERSION\u0027  \nPRINT MIN_ACTIVE_ROWVERSION()  \nGO  \n---------------- Results ----------------  \n--DBTS  \n--0x00000000000007E3  \n--MIN_ACTIVE_ROWVERSION  \n--0x00000000000007E4  \n\n-- Insert a new row inside a transaction but do not commit.  \nBEGIN TRAN  \nINSERT INTO RowVersionTestTable VALUES (DEFAULT)  \nSELECT * FROM RowVersionTestTable  \nGO  \n---------------- Results ----------------  \n--rv  \n--0x00000000000007E3  \n--0x00000000000007E4  \n\n-- Print the current values for the database.  \nPRINT \u0027\u0027  \nPRINT \u0027DBTS\u0027  \nPRINT @@DBTS  \nPRINT \u0027MIN_ACTIVE_ROWVERSION\u0027  \nPRINT MIN_ACTIVE_ROWVERSION()   \nGO  \n---------------- Results ----------------  \n--DBTS  \n--0x00000000000007E4  \n--MIN_ACTIVE_ROWVERSION  \n--0x00000000000007E4  \n\n-- Commit the transaction.  \nCOMMIT  \nGO  \n\n-- Print the current values for the database.  \nPRINT \u0027\u0027  \nPRINT \u0027DBTS\u0027  \nPRINT @@DBTS  \nPRINT \u0027MIN_ACTIVE_ROWVERSION\u0027  \nPRINT MIN_ACTIVE_ROWVERSION()  \nGO  \n---------------- Results ----------------  \n--DBTS  \n--0x00000000000007E4  \n--MIN_ACTIVE_ROWVERSION  \n--0x00000000000007E5"
+}

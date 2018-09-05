@@ -1,0 +1,48 @@
+{
+  "funcName": "SUM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ALL",
+        "dataTypes": [],
+        "description": "Applies the aggregate function to all values. ALL is the default."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "DISTINCT",
+        "dataTypes": [],
+        "description": "Specifies that SUM return the sum of unique values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [
+          "bit"
+        ],
+        "description": "Is a constant, column, or function, and any combination of arithmetic, bitwise, and string operators. expression is an expression of the exact numeric or approximate numeric data type category, except for the bit data type. Aggregate functions and subqueries are not permitted. For more information, see Expressions (Transact-SQL)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "OVER ( [ partition_by_clause ] order_by_clause)",
+        "dataTypes": [],
+        "description": "partition_by_clause divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. order_by_clause determines the logical order in which the operation is performed. order_by_clause is required. For more information, see OVER Clause (Transact-SQL)."
+      }
+    }
+  ],
+  "returnType": "Returns the summation of all expression values in the most precise expression data type.",
+  "description": "Returns the sum of all the values, or only the DISTINCT values, in the expression. SUM can be used with numeric columns only. Null values are ignored.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Aggregate",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/sum-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT Color, SUM(ListPrice), SUM(StandardCost)  \nFROM Production.Product  \nWHERE Color IS NOT NULL   \n    AND ListPrice !\u003d 0.00   \n    AND Name LIKE \u0027Mountain%\u0027  \nGROUP BY Color  \nORDER BY Color;  \nGO"
+}

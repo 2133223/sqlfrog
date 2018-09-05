@@ -1,0 +1,51 @@
+{
+  "funcName": "CURSOR_STATUS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027local\u0027",
+        "dataTypes": [],
+        "description": "Specifies a constant indicating that the cursor source is a local cursor name."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027cursor_name\u0027",
+        "dataTypes": [],
+        "description": "The name of the cursor. A cursor name must conform to the database identifier rules."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027global\u0027",
+        "dataTypes": [],
+        "description": "Specifies a constant indicating that the source of the cursor is a global cursor name."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027variable\u0027",
+        "dataTypes": [],
+        "description": "Specifies a constant indicating that the source of the cursor is a local variable."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027cursor_variable\u0027",
+        "dataTypes": [],
+        "description": "The name of the cursor variable. A cursor variable must be defined using the cursor data type."
+      }
+    }
+  ],
+  "returnType": "smallint",
+  "description": "For a given parameter, CURSOR_STATUS shows whether or not a cursor declaration has returned a cursor and result set.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cursor",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/cursor-status-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE TABLE #TMP  \n(  \n   ii int  \n)  \nGO  \n\nINSERT INTO #TMP(ii) VALUES(1)  \nINSERT INTO #TMP(ii) VALUES(2)  \nINSERT INTO #TMP(ii) VALUES(3)  \n\nGO  \n\n--Create a cursor.  \nDECLARE cur CURSOR  \nFOR SELECT * FROM #TMP  \n\n--Display the status of the cursor before and after opening  \n--closing the cursor.  \n\nSELECT CURSOR_STATUS(\u0027global\u0027,\u0027cur\u0027) AS \u0027After declare\u0027  \nOPEN cur  \nSELECT CURSOR_STATUS(\u0027global\u0027,\u0027cur\u0027) AS \u0027After Open\u0027  \nCLOSE cur  \nSELECT CURSOR_STATUS(\u0027global\u0027,\u0027cur\u0027) AS \u0027After Close\u0027  \n\n--Remove the cursor.  \nDEALLOCATE cur  \n\n--Drop the table.  \nDROP TABLE #TMP"
+}

@@ -1,0 +1,14 @@
+{
+  "funcName": "@@CURSOR_ROWS",
+  "returnType": "integer",
+  "description": "This returns the number of qualifying rows currently in the last cursor opened on the connection. To improve performance, SQL Server can populate large keyset and static cursors asynchronously. @@CURSOR_ROWS can be called to determine that the number of the rows that qualify for a cursor are retrieved at the time of the @@CURSOR_ROWS call.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cursor",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/cursor-rows-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT @@CURSOR_ROWS;  \nDECLARE Name_Cursor CURSOR FOR  \nSELECT LastName ,@@CURSOR_ROWS FROM Person.Person;  \nOPEN Name_Cursor;  \nFETCH NEXT FROM Name_Cursor;  \nSELECT @@CURSOR_ROWS;  \nCLOSE Name_Cursor;  \nDEALLOCATE Name_Cursor;  \nGO"
+}

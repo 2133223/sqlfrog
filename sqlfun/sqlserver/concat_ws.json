@@ -1,0 +1,31 @@
+{
+  "funcName": "CONCAT_WS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "separator",
+        "dataTypes": [],
+        "description": "An expression of any character type (char\u0027, nchar\u0027, nvarchar, or varchar)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "argument1, argument2, argumentN",
+        "dataTypes": [],
+        "description": "An expression of any type."
+      }
+    }
+  ],
+  "returnType": "A string value whose length and type depend on the input.",
+  "description": "This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. It separates those concatenated string values with the delimiter specified in the first function argument. (CONCAT_WS indicates concatenate with separator.)",
+  "targetDBs": [
+    "SQL Server (starting with 2017)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/concat-ws-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT CONCAT_WS( \u0027 - \u0027, database_id, recovery_model_desc, containment_desc) AS DatabaseInfo\nFROM sys.databases;"
+}

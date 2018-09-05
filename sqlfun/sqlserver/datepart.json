@@ -1,0 +1,26 @@
+{
+  "funcName": "DATEPART",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "dataTypes": [
+          "integer"
+        ],
+        "description": "The specific part of the date argument for which DATEPART will return an integer. This table lists all valid datepart arguments."
+      }
+    }
+  ],
+  "description": "This function returns an integer representing the specified datepart of the specified date.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/datepart-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);  \n-- Returns: 1900    1    1 */"
+}

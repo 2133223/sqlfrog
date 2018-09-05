@@ -1,0 +1,25 @@
+{
+  "funcName": "DB_ID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027database_name\u0027",
+        "dataTypes": [],
+        "description": "The name of the database whose database ID number DB_ID will return. If the call to DB_ID omits database_name, DB_ID returns the ID of the current database."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "This function returns the database identification (ID) number of a specified database.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/db-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DB_ID() AS [Database ID];  \nGO"
+}

@@ -1,0 +1,15 @@
+{
+  "funcName": "GETDATE",
+  "description": "Returns the current database system timestamp as a datetime value without the database time zone offset. This value is derived from the operating system of the computer on which the instance of SQL Server is running.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/getdate-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SYSDATETIME()  \n    ,SYSDATETIMEOFFSET()  \n    ,SYSUTCDATETIME()  \n    ,CURRENT_TIMESTAMP  \n    ,GETDATE()  \n    ,GETUTCDATE();"
+}

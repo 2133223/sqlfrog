@@ -1,0 +1,85 @@
+{
+  "funcName": "OPENROWSET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027provider_name\u0027",
+        "dataTypes": [],
+        "description": "Is a character string that represents the friendly name (or PROGID) of the OLE DB provider as specified in the registry. provider_name has no default value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027datasource\u0027",
+        "dataTypes": [],
+        "description": "Is a string constant that corresponds to a particular OLE DB data source. datasource is the DBPROP_INIT_DATASOURCE property to be passed to the IDBProperties interface of the provider to initialize the provider. Typically, this string includes the name of the database file, the name of a database server, or a name that the provider understands to locate the database or databases."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027user_id\u0027",
+        "dataTypes": [],
+        "description": "Is a string constant that is the user name passed to the specified OLE DB provider. user_id specifies the security context for the connection and is passed in as the DBPROP_AUTH_USERID property to initialize the provider. user_id cannot be a Microsoft Windows login name."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027password\u0027",
+        "dataTypes": [],
+        "description": "Is a string constant that is the user password to be passed to the OLE DB provider. password is passed in as the DBPROP_AUTH_PASSWORD property when initializing the provider. password cannot be a Microsoft Windows password."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027provider_string\u0027",
+        "dataTypes": [],
+        "description": "Is a provider-specific connection string that is passed in as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. provider_string typically encapsulates all the connection information required to initialize the provider. For a list of keywords that are recognized by the SQL Server Native Client OLE DB provider, see Initialization and Authorization Properties."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "catalog",
+        "dataTypes": [],
+        "description": "Is the name of the catalog or database in which the specified object resides."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "schema",
+        "dataTypes": [],
+        "description": "Is the name of the schema or object owner for the specified object."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "object",
+        "dataTypes": [],
+        "description": "Is the object name that uniquely identifies the object to work with."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027query\u0027",
+        "dataTypes": [],
+        "description": "Is a string constant sent to and executed by the provider. The local instance of SQL Server does not process this query, but processes query results returned by the provider, a pass-through query. Pass-through queries are useful when used on providers that do not make available their tabular data through table names, but only through a command language. Pass-through queries are supported on the remote server, as long as the query provider supports the OLE DB Command object and its mandatory interfaces. For more information, see SQL Server Native Client (OLE DB) Reference."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "BULK",
+        "dataTypes": [],
+        "description": "Uses the BULK rowset provider for OPENROWSET to read data from a file. In SQL Server, OPENROWSET can read from a data file without loading the data into a target table. This lets you use OPENROWSET with a simple SELECT statement."
+      }
+    }
+  ],
+  "description": "Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see Linked Servers (Database Engine). The OPENROWSET function can be referenced in the FROM clause of a query as if it were a table name. The OPENROWSET function can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, OPENROWSET returns only the first one.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database (Managed Instance only)"
+  ],
+  "category": "Rowset",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/openrowset-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT a.*  \nFROM OPENROWSET(\u0027SQLNCLI\u0027, \u0027Server\u003dSeattle1;Trusted_Connection\u003dyes;\u0027,  \n     \u0027SELECT GroupName, Name, DepartmentID  \n      FROM AdventureWorks2012.HumanResources.Department  \n      ORDER BY GroupName, Name\u0027) AS a;"
+}

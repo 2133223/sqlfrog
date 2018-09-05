@@ -1,0 +1,24 @@
+{
+  "funcName": "CHECKSUM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "*",
+        "dataTypes": [],
+        "description": "This argument specifies that the checksum computation covers all table columns. CHECKSUM returns an error if any column has a noncomparable data type. Noncomparable data types include:"
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "The CHECKSUM function returns the checksum value computed over a table row, or over an expression list. Use CHECKSUM to build hash indexes.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/checksum-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Create a checksum index.  \nSET ARITHABORT ON;  \nUSE AdventureWorks2012;   \nGO  \nALTER TABLE Production.Product  \nADD cs_Pname AS CHECKSUM(Name);  \nGO  \nCREATE INDEX Pname_index ON Production.Product (cs_Pname);  \nGO"
+}

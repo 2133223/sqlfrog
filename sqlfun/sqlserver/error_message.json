@@ -1,0 +1,16 @@
+{
+  "funcName": "ERROR_MESSAGE",
+  "returnType": "nvarchar(4000)",
+  "description": "This function returns the message text of the error that caused the CATCH block of a TRY…CATCH construct to execute.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/error-message-transact-sql?view\u003dsql-server-2017",
+  "sample": "BEGIN TRY  \n    -- Generate a divide-by-zero error.  \n    SELECT 1/0;  \nEND TRY  \nBEGIN CATCH  \n    SELECT ERROR_MESSAGE() AS ErrorMessage;  \nEND CATCH;  \nGO  \n\n-----------\n\n(0 row(s) affected)\n\nErrorMessage\n----------------------------------\nDivide by zero error encountered.\n\n(1 row(s) affected)"
+}

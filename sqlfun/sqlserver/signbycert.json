@@ -1,0 +1,44 @@
+{
+  "funcName": "SIGNBYCERT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "certificate_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of a certificate in the current database. certificate_ID is int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@cleartext",
+        "dataTypes": [
+          "nvarchar",
+          "char",
+          "varchar",
+          "nchar"
+        ],
+        "description": "Is a variable of type nvarchar, char, varchar, or nchar that contains data that will be signed."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 password \u0027",
+        "dataTypes": [],
+        "description": "Is the password with which the certificate\u0027s private key was encrypted. password is nvarchar(128)."
+      }
+    }
+  ],
+  "returnType": "varbinary with a maximum size of 8,000 bytes.",
+  "description": "Signs text with a certificate and returns the signature.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/signbycert-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @SensitiveData nvarchar(max);  \nSET @SensitiveData \u003d N\u0027Saddle Price Points are   \n    2, 3, 5, 7, 11, 13, 17, 19, 23, 29\u0027;  \nINSERT INTO [SignedData04]  \n    VALUES( N\u0027data signed by certificate \u0027\u0027ABerglundCert07\u0027\u0027\u0027,  \n    @SensitiveData, SignByCert( Cert_Id( \u0027ABerglundCert07\u0027 ),   \n    @SensitiveData, N\u0027pGFD4bb925DGvbd2439587y\u0027 ));  \nGO"
+}

@@ -1,0 +1,76 @@
+{
+  "funcName": "ENCRYPTBYKEY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "key_GUID",
+        "dataTypes": [],
+        "description": "Is the GUID of the key to be used to encrypt the cleartext. uniqueidentifier."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027cleartext\u0027",
+        "dataTypes": [],
+        "description": "Is the data that is to be encrypted with the key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@cleartext",
+        "dataTypes": [
+          "nvarchar",
+          "char",
+          "varchar",
+          "binary",
+          "varbinary",
+          "nchar"
+        ],
+        "description": "Is a variable of type nvarchar, char, varchar, binary, varbinary, or nchar that contains data that is to be encrypted with the key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "add_authenticator",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Indicates whether an authenticator will be encrypted together with the cleartext. Must be 1 when using an authenticator. int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@add_authenticator",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Indicates whether an authenticator will be encrypted together with the cleartext. Must be 1 when using an authenticator. int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "authenticator",
+        "dataTypes": [],
+        "description": "Is the data from which to derive an authenticator. sysname."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@authenticator",
+        "dataTypes": [],
+        "description": "Is a variable that contains data from which to derive an authenticator."
+      }
+    }
+  ],
+  "returnType": "varbinary with a maximum size of 8,000 bytes.",
+  "description": "Encrypts data by using a symmetric key.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/encryptbykey-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \n\n-- Create a column in which to store the encrypted data.  \nALTER TABLE HumanResources.Employee  \n    ADD EncryptedNationalIDNumber varbinary(128);   \nGO  \n\n-- Open the symmetric key with which to encrypt the data.  \nOPEN SYMMETRIC KEY SSN_Key_01  \n   DECRYPTION BY CERTIFICATE HumanResources037;  \n\n-- Encrypt the value in column NationalIDNumber with symmetric key  \n-- SSN_Key_01. Save the result in column EncryptedNationalIDNumber.  \nUPDATE HumanResources.Employee  \nSET EncryptedNationalIDNumber  \n    \u003d EncryptByKey(Key_GUID(\u0027SSN_Key_01\u0027), NationalIDNumber);  \nGO"
+}

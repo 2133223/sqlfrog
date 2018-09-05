@@ -1,0 +1,39 @@
+{
+  "funcName": "CERTPRIVATEKEY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "certificate_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "The certificate_id of the certificate. Obtain this value from sys.certificates or from the CERT_ID (Transact-SQL) function. cert_id has data type int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "encryption_password",
+        "dataTypes": [],
+        "description": "The password used to encrypt the returned binary value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "decryption_password",
+        "dataTypes": [],
+        "description": "The password used to decrypt the returned binary value."
+      }
+    }
+  ],
+  "returnType": "varbinary",
+  "description": "This function returns the private key of a certificate in binary format. This function takes three arguments.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/certprivatekey-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE DATABASE TEST1;  \nGO  \nUSE TEST1  \nCREATE MASTER KEY ENCRYPTION BY PASSWORD \u003d \u0027Use 5tr0ng P^55Words\u0027  \nGO  \nCREATE CERTIFICATE Shipping04   \nWITH SUBJECT \u003d \u0027Sammamish Shipping Records\u0027,   \nEXPIRY_DATE \u003d \u002720401031\u0027;  \nGO  \nSELECT CERTPRIVATEKEY(CERT_ID(\u0027Shipping04\u0027), \u0027jklalkaa/; uia3dd\u0027);"
+}

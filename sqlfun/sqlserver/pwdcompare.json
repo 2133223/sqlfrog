@@ -1,0 +1,38 @@
+{
+  "funcName": "PWDCOMPARE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 clear_text_password \u0027",
+        "dataTypes": [],
+        "description": "Is the unencrypted password. clear_text_password is sysname (nvarchar(128))."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "password_hash",
+        "dataTypes": [],
+        "description": "Is the encryption hash of a password. password_hash is varbinary(128)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "version",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Obsolete parameter that can be set to 1 if password_hash represents a value from a login earlier than SQL Server 2000 (8.x) that was migrated to SQL Server 2005 (9.x) or later but never converted to the SQL Server 2000 (8.x) system. version is int."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Hashes a password and compares the hash to the hash of an existing password. PWDCOMPARE can be used to search for blank SQL Server login passwords or common weak passwords.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/pwdcompare-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT name FROM sys.sql_logins   \nWHERE PWDCOMPARE(\u0027\u0027, password_hash) \u003d 1 ;"
+}

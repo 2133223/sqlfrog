@@ -1,0 +1,15 @@
+{
+  "funcName": "SYSTEM_USER",
+  "returnType": "nchar",
+  "description": "Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/system-user-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @sys_usr char(30);  \nSET @sys_usr \u003d SYSTEM_USER;  \nSELECT \u0027The current system user is: \u0027+ @sys_usr;  \nGO"
+}

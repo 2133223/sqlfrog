@@ -1,0 +1,14 @@
+{
+  "funcName": "@@PROCID",
+  "returnType": "int",
+  "description": "Returns the object identifier (ID) of the current Transact-SQL module. A Transact-SQL module can be a stored procedure, user-defined function, or trigger. @@PROCID cannot be specified in CLR modules or the in-process data access provider.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/procid-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nIF OBJECT_ID ( \u0027usp_FindName\u0027, \u0027P\u0027 ) IS NOT NULL   \nDROP PROCEDURE usp_FindName;  \nGO  \nCREATE PROCEDURE usp_FindName  \n    @lastname varchar(40) \u003d \u0027%\u0027,   \n    @firstname varchar(20) \u003d \u0027%\u0027  \nAS  \nDECLARE @Count int;  \nDECLARE @ProcName nvarchar(128);  \nSELECT LastName, FirstName  \nFROM Person.Person   \nWHERE FirstName LIKE @firstname AND LastName LIKE @lastname;  \nSET @Count \u003d @@ROWCOUNT;  \nSET @ProcName \u003d OBJECT_NAME(@@PROCID);  \nRAISERROR (\u0027Stored procedure %s returned %d rows.\u0027, 16,10, @ProcName, @Count);  \nGO  \nEXECUTE dbo.usp_FindName \u0027P%\u0027, \u0027A%\u0027;"
+}

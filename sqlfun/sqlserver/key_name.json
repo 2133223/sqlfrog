@@ -1,0 +1,29 @@
+{
+  "funcName": "KEY_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ciphertext",
+        "dataTypes": [],
+        "description": "Is the text encrypted by the symmetric key. cyphertext is type varbinary(8000)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "key_guid",
+        "dataTypes": [],
+        "description": "Is the GUID of the symmetric key. key_guid is type uniqueidentifier."
+      }
+    }
+  ],
+  "description": "Returns the name of the symmetric key from either a symmetric key GUID or cipher text.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/key-name-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE master;  \nGO  \nDECLARE @guid uniqueidentifier ;  \nSELECT @guid \u003d key_guid FROM sys.symmetric_keys  \nWHERE name \u003d \u0027##MS_ServiceMasterKey##\u0027 ;  \n-- Demonstration of passing a GUID to KEY_NAME to receive a name  \nSELECT KEY_NAME(@guid) AS [Name of Key];"
+}

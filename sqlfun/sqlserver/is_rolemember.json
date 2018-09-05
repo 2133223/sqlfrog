@@ -1,0 +1,32 @@
+{
+  "funcName": "IS_ROLEMEMBER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 role \u0027",
+        "dataTypes": [],
+        "description": "Is the name of the database role that is being checked. role is sysname."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 database_principal \u0027",
+        "dataTypes": [],
+        "description": "Is the name of the database user, database role, or application role to check. database_principal is sysname, with a default of NULL. If no value is specified, the result is based on the current execution context. If the parameter contains the word NULL will return NULL."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Indicates whether a specified database principle is a member of the specified database role.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/is-rolemember-transact-sql?view\u003dsql-server-2017",
+  "sample": "IF IS_ROLEMEMBER (\u0027db_datareader\u0027) \u003d 1  \n   print \u0027Current user is a member of the db_datareader role\u0027  \nELSE IF IS_ROLEMEMBER (\u0027db_datareader\u0027) \u003d 0  \n   print \u0027Current user is NOT a member of the db_datareader role\u0027  \nELSE IF IS_ROLEMEMBER (\u0027db_datareader\u0027) IS NULL  \n   print \u0027ERROR: The database role specified is not valid.\u0027;"
+}

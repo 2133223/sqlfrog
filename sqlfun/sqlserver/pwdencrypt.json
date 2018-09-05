@@ -1,0 +1,21 @@
+{
+  "funcName": "PWDENCRYPT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "password",
+        "dataTypes": [],
+        "description": "Is the password to be encrypted. password is sysname."
+      }
+    }
+  ],
+  "returnType": "varbinary(128)",
+  "description": "Returns the SQL Server password hash of the input value that uses the current version of the password hashing algorithm.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/pwdencrypt-transact-sql?view\u003dsql-server-2017"
+}

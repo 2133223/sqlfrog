@@ -1,0 +1,25 @@
+{
+  "funcName": "RTRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character_expression",
+        "dataTypes": [],
+        "description": "Is an expression of character data. character_expression can be a constant, variable, or column of either character or binary data."
+      }
+    }
+  ],
+  "returnType": "varchar or nvarchar",
+  "description": "Returns a character string after truncating all trailing spaces.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/rtrim-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT RTRIM(\u0027Removes trailing spaces.   \u0027);"
+}

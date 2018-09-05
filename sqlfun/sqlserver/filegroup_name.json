@@ -1,0 +1,14 @@
+{
+  "funcName": "FILEGROUP_NAME",
+  "arguments": [],
+  "returnType": "nvarchar(128)",
+  "description": "This function returns the filegroup name for the specified filegroup identification (ID) number.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/filegroup-name-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  \nGO"
+}

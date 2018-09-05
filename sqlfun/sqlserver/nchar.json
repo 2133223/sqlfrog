@@ -1,0 +1,25 @@
+{
+  "funcName": "NCHAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "integer_expression",
+        "dataTypes": [],
+        "description": "When the collation of the database does not contain the supplementary character (SC) flag, this is a positive whole number from 0 through 65535 (0 through 0xFFFF). If a value outside this range is specified, NULL is returned. For more information about supplementary characters, see Collation and Unicode Support."
+      }
+    }
+  ],
+  "returnType": "nchar(1) when the default database collation does not support supplementary characters.",
+  "description": "Returns the Unicode character with the specified integer code, as defined by the Unicode standard.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/nchar-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @nstring nchar(8);  \nSET @nstring \u003d N\u0027København\u0027;  \nSELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   \n   NCHAR(UNICODE(SUBSTRING(@nstring, 2, 1)));  \nGO"
+}

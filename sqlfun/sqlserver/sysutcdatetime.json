@@ -1,0 +1,15 @@
+{
+  "funcName": "SYSUTCDATETIME",
+  "description": "Returns a datetime2 value that contains the date and time of the computer on which the instance of SQL Server is running. The date and time is returned as UTC time (Coordinated Universal Time). The fractional second precision specification has a range from 1 to 7 digits. The default precision is 7 digits.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/sysutcdatetime-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SYSDATETIME() AS SYSDATETIME  \n    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  \n    ,SYSUTCDATETIME() AS SYSUTCDATETIME  \n    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  \n    ,GETDATE() AS GETDATE  \n    ,GETUTCDATE() AS GETUTCDATE;"
+}

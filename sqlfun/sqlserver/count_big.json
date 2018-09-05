@@ -1,0 +1,52 @@
+{
+  "funcName": "COUNT_BIG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ALL",
+        "dataTypes": [],
+        "description": "Applies the aggregate function to all values. ALL serves as the default."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "DISTINCT",
+        "dataTypes": [],
+        "description": "Specifies that COUNT_BIG returns the number of unique nonnull values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "An expression of any type. Note that COUNT_BIG does not support aggregate functions or subqueries in an expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "***",
+        "dataTypes": [],
+        "description": "Specifies that COUNT_BIG should count all rows to determine the total table row count to return. COUNT_BIG(*) takes no parameters and does not support the use of DISTINCT. COUNT_BIG(*) does not require an expression parameter because by definition, it does not use information about any particular column. COUNT_BIG(*) returns the number of rows in a specified table, and it preserves duplicate rows. It counts each row separately. This includes rows that contain null values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "OVER ( [ partition_by_clause ] [ order_by_clause ] )",
+        "dataTypes": [],
+        "description": "The partition_by_clause divides the result set produced by the FROM clause into partitions to which the COUNT_BIG function is applied. If not specified, the function treats all rows of the query result set as a single group. The order_by_clause determines the logical order of the operation. See OVER Clause (Transact-SQL) for more information."
+      }
+    }
+  ],
+  "returnType": "bigint",
+  "description": "This function returns the number of items found in a group. COUNT_BIG operates like the COUNT function. These functions differ only in the data types of their return values. COUNT_BIG always returns a bigint data type value. COUNT always returns an int data type value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Aggregate",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/count-big-transact-sql?view\u003dsql-server-2017"
+}

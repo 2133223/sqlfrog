@@ -1,0 +1,14 @@
+{
+  "funcName": "@@TEXTSIZE",
+  "returnType": "integer",
+  "description": "Returns the current value of the TEXTSIZE option.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/textsize-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Set the TEXTSIZE option to the default size of 4096 bytes.  \nSET TEXTSIZE 0  \nSELECT @@TEXTSIZE AS \u0027Text Size\u0027  \nSET TEXTSIZE 2048  \nSELECT @@TEXTSIZE AS \u0027Text Size\u0027"
+}

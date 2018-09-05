@@ -1,0 +1,13 @@
+{
+  "funcName": "EVENTDATA",
+  "description": "This function returns information about server or database events. When an event notification fires, and the specified service broker receives the results, EVENTDATA is called. A DDL or logon trigger also support internal use of EVENTDATA.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Trigger",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/eventdata-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nCREATE TRIGGER safety   \nON DATABASE   \nFOR CREATE_TABLE   \nAS   \n    PRINT \u0027CREATE TABLE Issued.\u0027  \n    SELECT EVENTDATA().value  \n        (\u0027(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]\u0027,\u0027nvarchar(max)\u0027)  \n   RAISERROR (\u0027New tables cannot be created in this database.\u0027, 16, 1)   \n   ROLLBACK  \n;  \nGO  \n--Test the trigger.  \nCREATE TABLE NewTable (Column1 int);  \nGO  \n--Drop the trigger.  \nDROP TRIGGER safety  \nON DATABASE;  \nGO"
+}

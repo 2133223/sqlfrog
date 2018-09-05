@@ -1,0 +1,11 @@
+{
+  "funcName": "ORIGINAL_DB_NAME",
+  "description": "Returns the database name that is specified by the user in the database connection string. This is the database that is specified by using the sqlcmd-d option (USE database) or the ODBC data source expression (initial catalog \u003ddatabasename).",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/original-db-name-transact-sql?view\u003dsql-server-2017"
+}

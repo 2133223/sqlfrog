@@ -1,0 +1,13 @@
+{
+  "funcName": "@@PACK_RECEIVED",
+  "returnType": "integer",
+  "description": "Returns the number of input packets read from the network by SQL Server since it was last started.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/pack-received-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@PACK_RECEIVED AS \u0027Packets Received\u0027;"
+}

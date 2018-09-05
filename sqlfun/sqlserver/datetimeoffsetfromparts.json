@@ -1,0 +1,90 @@
+{
+  "funcName": "DATETIMEOFFSETFROMPARTS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "year",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a year."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "month",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a month."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "day",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a day."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "hour",
+        "dataTypes": [],
+        "description": "An integer expression that specifies the hours."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "minute",
+        "dataTypes": [],
+        "description": "An integer expression that specifies the minutes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "seconds",
+        "dataTypes": [],
+        "description": "An integer expression that specifies the seconds."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "fractions",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a fractional seconds value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "hour_offset",
+        "dataTypes": [],
+        "description": "An integer expression that specifies the hour portion of the time zone offset."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "minute_offset",
+        "dataTypes": [],
+        "description": "An integer expression that specifies the minute portion of the time zone offset."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "precision",
+        "dataTypes": [
+          "datetimeoffset"
+        ],
+        "description": "An integer literal value that specifies the precision of the datetimeoffset value that DATETIMEOFFSETFROMPARTS will return."
+      }
+    }
+  ],
+  "returnType": "datetimeoffset( precision )",
+  "description": "Returns a datetimeoffset value for the specified date and time arguments. The returned value has a precision specified by the precision argument, and an offset as specified by the offset arguments.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/datetimeoffsetfromparts-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;"
+}

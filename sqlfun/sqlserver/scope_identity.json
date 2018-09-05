@@ -1,0 +1,14 @@
+{
+  "funcName": "SCOPE_IDENTITY",
+  "returnType": "numeric(38,0)",
+  "description": "Returns the last identity value inserted into an identity column in the same scope. A scope is a module: a stored procedure, trigger, function, or batch. Therefore, if two statements are in the same stored procedure, function, or batch, they are in the same scope.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/scope-identity-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE tempdb;  \nGO  \nCREATE TABLE TZ (  \n   Z_id  int IDENTITY(1,1)PRIMARY KEY,  \n   Z_name varchar(20) NOT NULL);  \n\nINSERT TZ  \n   VALUES (\u0027Lisa\u0027),(\u0027Mike\u0027),(\u0027Carla\u0027);  \n\nSELECT * FROM TZ;"
+}

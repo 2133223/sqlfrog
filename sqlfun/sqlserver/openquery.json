@@ -1,0 +1,28 @@
+{
+  "funcName": "OPENQUERY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "linked_server",
+        "dataTypes": [],
+        "description": "Is an identifier representing the name of the linked server."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 query \u0027",
+        "dataTypes": [],
+        "description": "Is the query string executed in the linked server. The maximum length of the string is 8 KB."
+      }
+    }
+  ],
+  "description": "Executes the specified pass-through query on the specified linked server. This server is an OLE DB data source. OPENQUERY can be referenced in the FROM clause of a query as if it were a table name. OPENQUERY can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement. This is subject to the capabilities of the OLE DB provider. Although the query may return multiple result sets, OPENQUERY returns only the first one.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Rowset",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/openquery-transact-sql?view\u003dsql-server-2017",
+  "sample": "UPDATE OPENQUERY (OracleSvr, \u0027SELECT name FROM joe.titles WHERE id \u003d 101\u0027)   \nSET name \u003d \u0027ADifferentName\u0027;"
+}

@@ -1,0 +1,29 @@
+{
+  "funcName": "FILEPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "file_name",
+        "dataTypes": [],
+        "description": "Is an expression that contains the name of the file associated with the current database for which to return property information. file_name is nchar(128)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "Is an expression that contains the name of the file property to return. property is varchar(128), and can be one of the following values."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the specified file name property value when a file name in the current database and a property name are specified. Returns NULL for files that are not in the current database.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/fileproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT FILEPROPERTY(\u0027AdventureWorks2012_Data\u0027, \u0027IsPrimaryFile\u0027)AS [Primary File];  \nGO"
+}

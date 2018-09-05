@@ -1,0 +1,30 @@
+{
+  "funcName": "TRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "characters",
+        "dataTypes": [],
+        "description": "Is a literal, variable, or function call of any non-LOB character type (nvarchar, varchar, nchar, or char) containing characters that should be removed. nvarchar(max) and varchar(max) types are not allowed."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string",
+        "dataTypes": [],
+        "description": "Is an expression of any character type (nvarchar, varchar, nchar, or char) where characters should be removed."
+      }
+    }
+  ],
+  "returnType": "Returns a character expression with a type of string argument where the space character char(32) or other specified characters are removed from both sides. Returns NULL if input string is NULL.",
+  "description": "Removes the space character char(32) or other specified characters from the start or end of a string.",
+  "targetDBs": [
+    "SQL Server (starting with 2017)",
+    "Azure SQL Database"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/trim-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT TRIM( \u0027     test    \u0027) AS Result;"
+}

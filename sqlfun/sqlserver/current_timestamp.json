@@ -1,0 +1,16 @@
+{
+  "funcName": "CURRENT_TIMESTAMP",
+  "arguments": [],
+  "description": "This function returns the current database system timestamp as a datetime value, without the database time zone offset. CURRENT_TIMESTAMP derives this value from the operating system of the computer on which the instance of SQL Server runs.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/current-timestamp-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SYSDATETIME()  \n    ,SYSDATETIMEOFFSET()  \n    ,SYSUTCDATETIME()  \n    ,CURRENT_TIMESTAMP  \n    ,GETDATE()  \n    ,GETUTCDATE();  \n/* Returned:  \nSYSDATETIME()      2007-04-30 13:10:02.0474381  \nSYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00  \nSYSUTCDATETIME()   2007-04-30 20:10:02.0474381  \nCURRENT_TIMESTAMP  2007-04-30 13:10:02.047  \nGETDATE()          2007-04-30 13:10:02.047  \nGETUTCDATE()       2007-04-30 20:10:02.047  \n*/"
+}

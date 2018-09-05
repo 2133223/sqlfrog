@@ -1,0 +1,15 @@
+{
+  "funcName": "SYSDATETIMEOFFSET",
+  "description": "Returns a datetimeoffset(7) value that contains the date and time of the computer on which the instance of SQL Server is running. The time zone offset is included.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/sysdatetimeoffset-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SYSDATETIME() AS SYSDATETIME  \n    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  \n    ,SYSUTCDATETIME() AS SYSUTCDATETIME  \n    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  \n    ,GETDATE() AS GETDATE  \n    ,GETUTCDATE() AS GETUTCDATE;"
+}

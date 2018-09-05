@@ -1,0 +1,42 @@
+{
+  "funcName": "NTILE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "integer_expression",
+        "dataTypes": [
+          "int",
+          "bigint"
+        ],
+        "description": "Is a positive integer expression that specifies the number of groups into which each partition must be divided. integer_expression can be of type int, or bigint."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0026lt;partition_by_clause\u0026gt;",
+        "dataTypes": [],
+        "description": "Divides the result set produced by the FROM clause into partitions to which the function is applied. For the PARTITION BY syntax, see OVER Clause (Transact-SQL)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0026lt;order_by_clause\u0026gt;",
+        "dataTypes": [],
+        "description": "Determines the order in which the NTILE values are assigned to the rows in a partition. An integer cannot represent a column when the \u0026lt;order_by_clause\u0026gt; is used in a ranking function."
+      }
+    }
+  ],
+  "returnType": "bigint",
+  "description": "Distributes the rows in an ordered partition into a specified number of groups. The groups are numbered, starting at one. For each row, NTILE returns the number of the group to which the row belongs.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Ranking",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/ntile-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;   \nGO  \nSELECT p.FirstName, p.LastName  \n    ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  \n    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  \n    , a.PostalCode  \nFROM Sales.SalesPerson AS s   \nINNER JOIN Person.Person AS p   \n    ON s.BusinessEntityID \u003d p.BusinessEntityID  \nINNER JOIN Person.Address AS a   \n    ON a.AddressID \u003d p.BusinessEntityID  \nWHERE TerritoryID IS NOT NULL   \n    AND SalesYTD \u003c\u003e 0;  \nGO"
+}

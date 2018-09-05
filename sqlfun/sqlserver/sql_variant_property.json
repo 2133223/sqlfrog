@@ -1,0 +1,32 @@
+{
+  "funcName": "SQL_VARIANT_PROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "Is an expression of type sql_variant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "Contains the name of the sql_variant property for which information is to be provided. property is varchar(128), and can be any one of the following values:"
+      }
+    }
+  ],
+  "returnType": "sql_variant",
+  "description": "Returns the base data type and other information about a sql_variant value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Data type",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/sql-variant-property-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE   TABLE tableA(colA sql_variant, colB int)  \nINSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  \nSELECT   SQL_VARIANT_PROPERTY(colA,\u0027BaseType\u0027) AS \u0027Base Type\u0027,  \n         SQL_VARIANT_PROPERTY(colA,\u0027Precision\u0027) AS \u0027Precision\u0027,  \n         SQL_VARIANT_PROPERTY(colA,\u0027Scale\u0027) AS \u0027Scale\u0027  \nFROM      tableA  \nWHERE      colB \u003d 1689"
+}

@@ -1,0 +1,30 @@
+{
+  "funcName": "SUSER_SID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 login \u0027",
+        "dataTypes": [],
+        "description": "Applies to: SQL Server 2008 through SQL Server 2017"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Param2",
+        "dataTypes": [],
+        "description": "Applies to: SQL Server 2012 (11.x) through SQL Server 2017"
+      }
+    }
+  ],
+  "returnType": "varbinary(85)",
+  "description": "Returns the security identification number (SID) for the specified login name.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/suser-sid-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SUSER_SID();"
+}

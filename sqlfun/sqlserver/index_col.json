@@ -1,0 +1,55 @@
+{
+  "funcName": "INDEX_COL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "database_name",
+        "dataTypes": [],
+        "description": "Is the name of the database."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "schema_name",
+        "dataTypes": [],
+        "description": "Is the name of the schema to which the index belongs."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "table_or_view_name",
+        "dataTypes": [],
+        "description": "Is the name of the table or indexed view. table_or_view_name must be delimited by single quotation marks and can be fully qualified by database name and schema name."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "index_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of the index. index_ID is int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "key_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the index key column position. key_ID is int."
+      }
+    }
+  ],
+  "returnType": "nvarchar (128 )",
+  "description": "Returns the indexed column name. Returns NULL for XML indexes.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/index-col-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT   \n    INDEX_COL (N\u0027AdventureWorks2012.Sales.SalesOrderDetail\u0027, 1,1) AS  \n        [Index Column 1],   \n    INDEX_COL (N\u0027AdventureWorks2012.Sales.SalesOrderDetail\u0027, 1,2) AS  \n        [Index Column 2]  \n;  \nGO"
+}

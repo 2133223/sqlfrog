@@ -1,0 +1,34 @@
+{
+  "funcName": "OBJECTPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is an expression that represents the ID of the object in the current database. id is int and is assumed to be a schema-scoped object in the current database context."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "Is an expression that represents the information to be returned for the object specified by id. property can be one of the following values."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns information about schema-scoped objects in the current database. For a list of schema-scoped objects, see sys.objects (Transact-SQL). This function cannot be used for objects that are not schema-scoped, such as data definition language (DDL) triggers and event notifications.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/objectproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nIF OBJECTPROPERTY (OBJECT_ID(N\u0027Production.UnitMeasure\u0027),\u0027ISTABLE\u0027) \u003d 1  \n   PRINT \u0027UnitMeasure is a table.\u0027  \nELSE IF OBJECTPROPERTY (OBJECT_ID(N\u0027Production.UnitMeasure\u0027),\u0027ISTABLE\u0027) \u003d 0  \n   PRINT \u0027UnitMeasure is not a table.\u0027  \nELSE IF OBJECTPROPERTY (OBJECT_ID(N\u0027Production.UnitMeasure\u0027),\u0027ISTABLE\u0027) IS NULL  \n   PRINT \u0027ERROR: UnitMeasure is not a valid object.\u0027;  \nGO"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "RANK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "OVER ( [ partition_by_clause ] order_by_clause)",
+        "dataTypes": [],
+        "description": "partition_by_clause divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. order_by_clause determines the order of the data before the function is applied. The order_by_clause is required. The \u0026lt;rows or range clause\u0026gt; of the OVER clause cannot be specified for the RANK function. For more information, see OVER Clause (Transact-SQL)."
+      }
+    }
+  ],
+  "returnType": "bigint",
+  "description": "Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks that come before the row in question.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Ranking",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/rank-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT i.ProductID, p.Name, i.LocationID, i.Quantity  \n    ,RANK() OVER   \n    (PARTITION BY i.LocationID ORDER BY i.Quantity DESC) AS Rank  \nFROM Production.ProductInventory AS i   \nINNER JOIN Production.Product AS p   \n    ON i.ProductID \u003d p.ProductID  \nWHERE i.LocationID BETWEEN 3 AND 4  \nORDER BY i.LocationID;  \nGO"
+}

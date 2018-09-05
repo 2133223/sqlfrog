@@ -1,0 +1,16 @@
+{
+  "funcName": "ERROR_NUMBER",
+  "returnType": "int",
+  "description": "This function returns the error number of the error that caused the CATCH block of a TRY…CATCH construct to execute.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/error-number-transact-sql?view\u003dsql-server-2017",
+  "sample": "BEGIN TRY  \n    -- Generate a divide-by-zero error.  \n    SELECT 1/0;  \nEND TRY  \nBEGIN CATCH  \n    SELECT ERROR_NUMBER() AS ErrorNumber;  \nEND CATCH;  \nGO  \n\n-----------\n\n(0 row(s) affected)\n\nErrorNumber\n-----------\n8134\n\n(1 row(s) affected)"
+}

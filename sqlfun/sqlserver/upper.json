@@ -1,0 +1,25 @@
+{
+  "funcName": "UPPER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character_expression",
+        "dataTypes": [],
+        "description": "Is an expression of character data. character_expression can be a constant, variable, or column of either character or binary data."
+      }
+    }
+  ],
+  "returnType": "varchar or nvarchar",
+  "description": "Returns a character expression with lowercase character data converted to uppercase.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/upper-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Uses AdventureWorks  \n\nSELECT UPPER(RTRIM(LastName)) + \u0027, \u0027 + FirstName AS Name  \nFROM dbo.DimEmployee  \nORDER BY LastName;"
+}

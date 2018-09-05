@@ -1,0 +1,44 @@
+{
+  "funcName": "NEXT VALUE FOR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "database_name",
+        "dataTypes": [],
+        "description": "The name of the database that contains the sequence object."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "schema_name",
+        "dataTypes": [],
+        "description": "The name of the schema that contains the sequence object."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sequence_name",
+        "dataTypes": [],
+        "description": "The name of the sequence object that generates the number."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "over_order_by_clause",
+        "dataTypes": [],
+        "description": "Determines the order in which the sequence value is assigned to the rows in a partition. For more information, see OVER Clause (Transact-SQL)."
+      }
+    }
+  ],
+  "returnType": "Returns a number using the type of the sequence.",
+  "description": "Generates a sequence number from the specified sequence object.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/next-value-for-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012 ;  \nGO  \n\nCREATE SCHEMA Test;  \nGO  \n\nCREATE SEQUENCE Test.CountBy1  \n    START WITH 1  \n    INCREMENT BY 1 ;  \nGO"
+}

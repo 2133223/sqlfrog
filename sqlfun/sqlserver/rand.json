@@ -1,0 +1,28 @@
+{
+  "funcName": "RAND",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "seed",
+        "dataTypes": [
+          "tinyint",
+          "smallint",
+          "int"
+        ],
+        "description": "Is an integer expression (tinyint, smallint, or int) that gives the seed value. If seed is not specified, the SQL Server Database Engine assigns a seed value at random. For a specified seed value, the result returned is always the same."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "Returns a pseudo-random float value from 0 through 1, exclusive.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/rand-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @counter smallint;  \nSET @counter \u003d 1;  \nWHILE @counter \u003c 5  \n   BEGIN  \n      SELECT RAND() Random_Number  \n      SET @counter \u003d @counter + 1  \n   END;  \nGO"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "CERTENCODED",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "cert_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "The certificate_id of the certificate. Find this value in sys.certificates; the CERT_ID (Transact-SQL) function will return it as well. cert_id has data type int."
+      }
+    }
+  ],
+  "returnType": "varbinary",
+  "description": "This function returns the public portion of a certificate in binary format. This function takes a certificate ID as an argument, and returns the encoded certificate. To create a new certificate, pass the binary result to CREATE CERTIFICATE … WITH BINARY.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/certencoded-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE DATABASE TEST1;\nGO\nUSE TEST1\nCREATE CERTIFICATE Shipping04\nENCRYPTION BY PASSWORD \u003d \u0027pGFD4bb925DGvbd2439587y\u0027\nWITH SUBJECT \u003d \u0027Sammamish Shipping Records\u0027,\nEXPIRY_DATE \u003d \u002720401031\u0027;\nGO\nSELECT CERTENCODED(CERT_ID(\u0027Shipping04\u0027));"
+}

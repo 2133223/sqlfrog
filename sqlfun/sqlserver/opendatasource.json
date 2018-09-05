@@ -1,0 +1,31 @@
+{
+  "funcName": "OPENDATASOURCE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "provider_name",
+        "dataTypes": [
+          "char"
+        ],
+        "description": "Is the name registered as the PROGID of the OLE DB provider used to access the data source. provider_name is a char data type, with no default value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "init_string",
+        "dataTypes": [],
+        "description": "Is the connection string passed to the IDataInitialize interface of the destination provider. The provider string syntax is based on keyword-value pairs separated by semicolons, such as: \u0027keyword1\u003dvalue;keyword2\u003dvalue\u0027."
+      }
+    }
+  ],
+  "description": "Provides ad hoc connection information as part of a four-part object name without using a linked server name.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database (Managed Instance only)"
+  ],
+  "category": "Rowset",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/opendatasource-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT *  \nFROM OPENDATASOURCE(\u0027SQLNCLI\u0027,  \n    \u0027Data Source\u003dLondon\\Payroll;Integrated Security\u003dSSPI\u0027)  \n    .AdventureWorks2012.HumanResources.Employee"
+}

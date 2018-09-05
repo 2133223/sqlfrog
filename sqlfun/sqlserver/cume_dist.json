@@ -1,0 +1,16 @@
+{
+  "funcName": "CUME_DIST",
+  "arguments": [],
+  "returnType": "float(53)",
+  "description": "For SQL Server, this function calculates the cumulative distribution of a value within a group of values. In other words, CUME_DIST calculates the relative position of a specified value in a group of values. Assuming ascending ordering, the CUME_DIST of a value in row r is defined as the number of rows with values less than or equal to that value in row r, divided by the number of rows evaluated in the partition or query result set. CUME_DIST is similar to the PERCENT_RANK function.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "Analytic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/cume-dist-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT Department, LastName, Rate,   \n       CUME_DIST () OVER (PARTITION BY Department ORDER BY Rate) AS CumeDist,   \n       PERCENT_RANK() OVER (PARTITION BY Department ORDER BY Rate ) AS PctRank  \nFROM HumanResources.vEmployeeDepartmentHistory AS edh  \n    INNER JOIN HumanResources.EmployeePayHistory AS e    \n    ON e.BusinessEntityID \u003d edh.BusinessEntityID  \nWHERE Department IN (N\u0027Information Services\u0027,N\u0027Document Control\u0027)   \nORDER BY Department, Rate DESC;"
+}

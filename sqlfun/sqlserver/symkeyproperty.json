@@ -1,0 +1,32 @@
+{
+  "funcName": "SYMKEYPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "Key_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the Key_ID of a symmetric key in the database. To find the Key_ID when you only know the key name, use SYMKEY_ID. Key_ID is data type int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027algorithm_desc\u0027",
+        "dataTypes": [],
+        "description": "Specifies that the output returns the algorithm description of the symmetric key. Only available for symmetric keys created from an EKM module."
+      }
+    }
+  ],
+  "returnType": "sql_variant",
+  "description": "Returns the algorithm of a symmetric key created from an EKM module.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/symkeyproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SYMKEYPROPERTY(256, \u0027algorithm_desc\u0027) AS Algorithm ;  \nGO"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "CONNECTIONPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "The property of the connection. property can have one of these values:"
+      }
+    }
+  ],
+  "description": "For a request that comes in to the server, this function returns information about the connection properties of the unique connection which supports that request.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/connectionproperty-transact-sql?view\u003dsql-server-2017"
+}

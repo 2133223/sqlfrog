@@ -1,0 +1,24 @@
+{
+  "funcName": "TODATETIMEOFFSET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "Is an expression that resolves to a datetime2 value."
+      }
+    }
+  ],
+  "description": "Returns a datetimeoffset value that is translated from a datetime2 expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/todatetimeoffset-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @todaysDateTime datetime2;  \nSET @todaysDateTime \u003d GETDATE();  \nSELECT TODATETIMEOFFSET (@todaysDateTime, \u0027-07:00\u0027);  \n-- RETURNS 2007-08-30 15:51:34.7030000 -07:00"
+}

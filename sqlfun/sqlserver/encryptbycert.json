@@ -1,0 +1,46 @@
+{
+  "funcName": "ENCRYPTBYCERT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "certificate_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "The ID of a certificate in the database. int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "cleartext",
+        "dataTypes": [],
+        "description": "A string of data that will be encrypted with the certificate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@cleartext",
+        "dataTypes": [
+          "nvarchar",
+          "char",
+          "varchar",
+          "binary",
+          "varbinary",
+          "nchar"
+        ],
+        "description": "A variable of type nvarchar, char, varchar, binary, varbinary, or nchar containing data that will be encrypted with the public key of the certificate."
+      }
+    }
+  ],
+  "returnType": "varbinary with a maximum size of 8,000 bytes.",
+  "description": "Encrypts data with the public key of a certificate.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/encryptbycert-transact-sql?view\u003dsql-server-2017",
+  "sample": "INSERT INTO [AdventureWorks2012].[ProtectedData04]   \n    VALUES ( N\u0027Data encrypted by certificate \u0027\u0027Shipping04\u0027\u0027\u0027,  \n    EncryptByCert(Cert_ID(\u0027JanainaCert02\u0027), @cleartext) );  \nGO"
+}

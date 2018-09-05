@@ -1,0 +1,23 @@
+{
+  "funcName": "UPDATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "column",
+        "dataTypes": [],
+        "description": "Is the name of the column to test for either an INSERT or UPDATE action. Because the table name is specified in the ON clause of the trigger, do not include the table name before the column name. The column can be of any data type supported by SQL Server. However, computed columns cannot be used in this context."
+      }
+    }
+  ],
+  "returnType": "Boolean",
+  "description": "Returns a Boolean value that indicates whether an INSERT or UPDATE attempt was made on a specified column of a table or view. UPDATE() is used anywhere inside the body of a Transact-SQL INSERT or UPDATE trigger to test whether the trigger should execute certain actions.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Trigger",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/update-trigger-functions-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nIF EXISTS (SELECT name FROM sys.objects  \n      WHERE name \u003d \u0027reminder\u0027 AND type \u003d \u0027TR\u0027)  \n   DROP TRIGGER Person.reminder;  \nGO  \nCREATE TRIGGER reminder  \nON Person.Address  \nAFTER UPDATE   \nAS   \nIF ( UPDATE (StateProvinceID) OR UPDATE (PostalCode) )  \nBEGIN  \nRAISERROR (50009, 16, 10)  \nEND;  \nGO  \n-- Test the trigger.  \nUPDATE Person.Address  \nSET PostalCode \u003d 99999  \nWHERE PostalCode \u003d \u002712345\u0027;  \nGO"
+}

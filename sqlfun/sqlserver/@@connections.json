@@ -1,0 +1,13 @@
+{
+  "funcName": "@@CONNECTIONS",
+  "returnType": "integer",
+  "description": "This function returns the number of attempted connections - both successful and unsuccessful - since SQL Server was last started.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System Statistical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/connections-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT GETDATE() AS \u0027Today\u0027\u0027s Date and Time\u0027,   \n@@CONNECTIONS AS \u0027Login Attempts\u0027;"
+}

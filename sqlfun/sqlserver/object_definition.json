@@ -1,0 +1,25 @@
+{
+  "funcName": "OBJECT_DEFINITION",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "object_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of the object to be used. object_id is int, and assumed to represent an object in the current database context."
+      }
+    }
+  ],
+  "returnType": "nvarchar(max)",
+  "description": "Returns the Transact-SQL source text of the definition of a specified object.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/object-definition-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT OBJECT_DEFINITION (OBJECT_ID(N\u0027Person.uAddress\u0027)) AS [Trigger Definition];   \nGO"
+}

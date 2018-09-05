@@ -1,0 +1,37 @@
+{
+  "funcName": "FORMATMESSAGE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "msg_number",
+        "dataTypes": [],
+        "description": "Is the ID of the message stored in sys.messages. If msg_number is \u0026lt;\u003d 13000, or if the message does not exist in sys.messages, NULL is returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "msg_string",
+        "dataTypes": [],
+        "description": "Applies to: SQL Server ( SQL Server 2016 (13.x) through current version)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "param_value",
+        "dataTypes": [],
+        "description": "Is a parameter value for use in the message. Can be more than one parameter value. The values must be specified in the order in which the placeholder variables appear in the message. The maximum number of values is 20."
+      }
+    }
+  ],
+  "returnType": "nvarchar",
+  "description": "Constructs a message from an existing message in sys.messages or from a provided string. The functionality of FORMATMESSAGE resembles that of the RAISERROR statement. However, RAISERROR prints the message immediately, while FORMATMESSAGE returns the formatted message for further processing.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/formatmessage-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT text FROM sys.messages WHERE message_id \u003d 20009 AND language_id \u003d 1033;  \nDECLARE @var1 VARCHAR(200);   \nSELECT @var1 \u003d FORMATMESSAGE(20009, \u0027First Variable\u0027, \u0027Second Variable\u0027);   \nSELECT @var1;"
+}

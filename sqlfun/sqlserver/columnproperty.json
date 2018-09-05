@@ -1,0 +1,37 @@
+{
+  "funcName": "COLUMNPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "id",
+        "dataTypes": [],
+        "description": "An expression containing the identifier (ID) of the table or procedure."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "column",
+        "dataTypes": [],
+        "description": "An expression containing the name of the column or parameter."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "For the id argument, the property argument specifies the information type that the COLUMNPROPERTY function will return. The property argument can have any one of these values:"
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "This function returns column or parameter information.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/columnproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT COLUMNPROPERTY( OBJECT_ID(\u0027Person.Person\u0027),\u0027LastName\u0027,\u0027PRECISION\u0027)AS \u0027Column Length\u0027;  \nGO"
+}

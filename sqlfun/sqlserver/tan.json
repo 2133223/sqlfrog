@@ -1,0 +1,28 @@
+{
+  "funcName": "TAN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float",
+          "float"
+        ],
+        "description": "Is an expression of type float or of a type that can be implicitly converted to float, interpreted as number of radians."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "Returns the tangent of the input expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/tan-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT TAN(PI()/2);"
+}

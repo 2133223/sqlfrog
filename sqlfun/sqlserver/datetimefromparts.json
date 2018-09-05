@@ -1,0 +1,67 @@
+{
+  "funcName": "DATETIMEFROMPARTS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "year",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a year."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "month",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a month."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "day",
+        "dataTypes": [],
+        "description": "An integer expression that specifies a day."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "hour",
+        "dataTypes": [],
+        "description": "An integer expression that specifies hours."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "minute",
+        "dataTypes": [],
+        "description": "An integer expression that specifies minutes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "seconds",
+        "dataTypes": [],
+        "description": "An integer expression that specifies seconds."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "milliseconds",
+        "dataTypes": [],
+        "description": "An integer expression that specifies milliseconds."
+      }
+    }
+  ],
+  "returnType": "datetime",
+  "description": "This function returns a datetime value for the specified date and time arguments.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/datetimefromparts-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;"
+}

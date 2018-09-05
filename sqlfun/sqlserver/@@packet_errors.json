@@ -1,0 +1,13 @@
+{
+  "funcName": "@@PACKET_ERRORS",
+  "returnType": "integer",
+  "description": "Returns the number of network packet errors that have occurred on SQL Server connections since SQL Server was last started.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System Statistical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/packet-errors-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@PACKET_ERRORS AS \u0027Packet Errors\u0027;"
+}

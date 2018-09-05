@@ -1,0 +1,30 @@
+{
+  "funcName": "CHOOSE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "index",
+        "dataTypes": [],
+        "description": "Is an integer expression that represents a 1-based index into the list of the items following it."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "val_1 … val_n",
+        "dataTypes": [],
+        "description": "List of comma separated values of any data type."
+      }
+    }
+  ],
+  "returnType": "Returns the data type with the highest precedence from the set of types passed to the function. For more information, see Data Type Precedence (Transact-SQL).",
+  "description": "Returns the item at the specified index from a list of values in SQL Server.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Logical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/logical-functions-choose-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT CHOOSE ( 3, \u0027Manager\u0027, \u0027Director\u0027, \u0027Developer\u0027, \u0027Tester\u0027 ) AS Result;"
+}

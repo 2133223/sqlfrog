@@ -1,0 +1,30 @@
+{
+  "funcName": "DECRYPTBYPASSPHRASE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "passphrase",
+        "dataTypes": [],
+        "description": "The passphrase used to generate the decryption key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@passphrase",
+        "dataTypes": [],
+        "description": "A variable of type"
+      }
+    }
+  ],
+  "returnType": "varbinary, with a maximum size of 8,000 bytes.",
+  "description": "This function decrypts data originally encrypted with a passphrase.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/decryptbypassphrase-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \n-- Get the pass phrase from the user.  \nDECLARE @PassphraseEnteredByUser nvarchar(128);  \nSET @PassphraseEnteredByUser   \n\u003d \u0027A little learning is a dangerous thing!\u0027;  \n\n-- Decrypt the encrypted record.  \nSELECT CardNumber, CardNumber_EncryptedbyPassphrase   \n    AS \u0027Encrypted card number\u0027, CONVERT(nvarchar,  \n    DecryptByPassphrase(@PassphraseEnteredByUser, CardNumber_EncryptedbyPassphrase, 1   \n    , CONVERT(varbinary, CreditCardID)))  \n    AS \u0027Decrypted card number\u0027 FROM Sales.CreditCard   \n    WHERE CreditCardID \u003d \u00273681\u0027;  \nGO"
+}

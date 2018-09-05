@@ -1,0 +1,32 @@
+{
+  "funcName": "STRING_ESCAPE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "text",
+        "dataTypes": [
+          "nvarchar"
+        ],
+        "description": "Is a nvarcharexpression expression representing the object that should be escaped."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "type",
+        "dataTypes": [],
+        "description": "Escaping rules that will be applied. Currently the value supported is \u0027json\u0027."
+      }
+    }
+  ],
+  "returnType": "nvarchar(max) text with escaped special and control characters. Currently STRING_ESCAPE can only escape JSON special characters shown in the following tables.",
+  "description": "Escapes special characters in texts and returns text with escaped characters. STRING_ESCAPE is a deterministic function.",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/string-escape-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT STRING_ESCAPE(\u0027\\   /  \n\\\\    \"     \u0027, \u0027json\u0027) AS escapedText;"
+}

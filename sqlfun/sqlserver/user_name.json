@@ -1,0 +1,27 @@
+{
+  "funcName": "USER_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the identification number associated with a database user. id is int. The parentheses are required."
+      }
+    }
+  ],
+  "returnType": "nvarchar(256)",
+  "description": "Returns a database user name from a specified identification number.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/user-name-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT USER_NAME(13);  \nGO"
+}

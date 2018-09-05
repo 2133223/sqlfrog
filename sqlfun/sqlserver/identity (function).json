@@ -1,0 +1,46 @@
+{
+  "funcName": "IDENTITY (Function)",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "data_type",
+        "dataTypes": [
+          "bit",
+          "decimal"
+        ],
+        "description": "Is the data type of the identity column. Valid data types for an identity column are any data types of the integer data type category, except for the bit data type, or decimal data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "seed",
+        "dataTypes": [],
+        "description": "Is the integer value to be assigned to the first row in the table. Each subsequent row is assigned the next identity value, which is equal to the last IDENTITY value plus the increment value. If neither seed nor increment is specified, both default to 1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "increment",
+        "dataTypes": [],
+        "description": "Is the integer value to add to the seed value for successive rows in the table."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "column_name",
+        "dataTypes": [],
+        "description": "Is the name of the column that is to be inserted into the new table."
+      }
+    }
+  ],
+  "returnType": "Returns the same as data_type.",
+  "description": "Is used only in a SELECT statement with an INTO table clause to insert an identity column into a new table. Although similar, the IDENTITY function is not the IDENTITY property that is used with CREATE TABLE and ALTER TABLE.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Data type",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/identity-function-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nIF OBJECT_ID (N\u0027Person.NewContact\u0027, N\u0027U\u0027) IS NOT NULL  \n    DROP TABLE Person.NewContact;  \nGO  \nALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  \nGO  \nSELECT  IDENTITY(smallint, 100, 1) AS ContactNum,  \n        FirstName AS First,  \n        LastName AS Last  \nINTO Person.NewContact  \nFROM Person.Person;  \nGO  \nALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  \nGO  \nSELECT ContactNum, First, Last FROM Person.NewContact;  \nGO"
+}

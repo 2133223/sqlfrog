@@ -1,0 +1,25 @@
+{
+  "funcName": "CHAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "integer_expression",
+        "dataTypes": [],
+        "description": "An integer from 0 through 255. CHAR returns a NULL value for integer expressions outside this range."
+      }
+    }
+  ],
+  "returnType": "char(1)",
+  "description": "This function converts an int ASCII code to a character value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/char-transact-sql?view\u003dsql-server-2017",
+  "sample": "SET TEXTSIZE 0;  \n-- Create variables for the character string and for the current   \n-- position in the string.  \nDECLARE @position int, @string char(8);  \n-- Initialize the current position and the string variables.  \nSET @position \u003d 1;  \nSET @string \u003d \u0027New Moon\u0027;  \nWHILE @position \u003c\u003d DATALENGTH(@string)  \n   BEGIN  \n   SELECT ASCII(SUBSTRING(@string, @position, 1)),   \n      CHAR(ASCII(SUBSTRING(@string, @position, 1)))  \n   SET @position \u003d @position + 1  \n   END;  \nGO"
+}

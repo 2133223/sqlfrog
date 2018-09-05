@@ -1,0 +1,23 @@
+{
+  "funcName": "FULLTEXTSERVICEPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "Is an expression containing the name of the full-text service-level property. The table lists the properties and provides descriptions of the information returned."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns information related to the properties of the Full-Text Engine. These properties can be set and retrieved by using sp_fulltext_service.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/fulltextserviceproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT fulltextserviceproperty(\u0027VerifySignature\u0027);"
+}

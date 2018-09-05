@@ -1,0 +1,22 @@
+{
+  "funcName": "GROUPING_ID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0026lt;column_expression\u0026gt;",
+        "dataTypes": [],
+        "description": "Is a column_expression in a GROUP BY clause."
+      }
+    }
+  ],
+  "description": "Is a function that computes the level of grouping. GROUPING_ID can be used only in the SELECT \u003cselect\u003e list, HAVING, or ORDER BY clauses when GROUP BY is specified.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Aggregate",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/grouping-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT D.Name  \n    ,CASE   \n    WHEN GROUPING_ID(D.Name, E.JobTitle) \u003d 0 THEN E.JobTitle  \n    WHEN GROUPING_ID(D.Name, E.JobTitle) \u003d 1 THEN N\u0027Total: \u0027 + D.Name   \n    WHEN GROUPING_ID(D.Name, E.JobTitle) \u003d 3 THEN N\u0027Company Total:\u0027  \n        ELSE N\u0027Unknown\u0027  \n    END AS N\u0027Job Title\u0027  \n    ,COUNT(E.BusinessEntityID) AS N\u0027Employee Count\u0027  \nFROM HumanResources.Employee E  \n    INNER JOIN HumanResources.EmployeeDepartmentHistory DH  \n        ON E.BusinessEntityID \u003d DH.BusinessEntityID  \n    INNER JOIN HumanResources.Department D  \n        ON D.DepartmentID \u003d DH.DepartmentID       \nWHERE DH.EndDate IS NULL  \n    AND D.DepartmentID IN (12,14)  \nGROUP BY ROLLUP(D.Name, E.JobTitle);"
+}

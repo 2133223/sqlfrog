@@ -1,0 +1,22 @@
+{
+  "funcName": "DATEDIFF_BIG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "dataTypes": [],
+        "description": "The part of startdate and enddate that specifies the type of boundary crossed. DATEDIFF_BIG will not accept user-defined variable equivalents. This table lists all valid datepart arguments."
+      }
+    }
+  ],
+  "description": "This function returns the count (as a signed big integer value) of the specified datepart boundaries crossed between the specified startdate and enddate.",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/datediff-big-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE TABLE dbo.Duration  \n    (startDate datetime2, endDate datetime2);  \n\nINSERT INTO dbo.Duration(startDate,endDate)  \n    VALUES(\u00272007-05-06 12:10:09\u0027, \u00272007-05-07 12:10:09\u0027);  \n\nSELECT DATEDIFF_BIG(day, startDate, endDate) AS \u0027Duration\u0027  \n    FROM dbo.Duration;  \n-- Returns: 1"
+}

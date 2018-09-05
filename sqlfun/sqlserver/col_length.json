@@ -1,0 +1,33 @@
+{
+  "funcName": "COL_LENGTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 table \u0027",
+        "dataTypes": [
+          "nvarchar"
+        ],
+        "description": "The name of the table whose column length information we want to determine. table is an expression of type nvarchar."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 column \u0027",
+        "dataTypes": [
+          "nvarchar"
+        ],
+        "description": "The column name whose length we want to determine. column is an expression of type nvarchar."
+      }
+    }
+  ],
+  "description": "This function returns the defined length of a column, in bytes.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/col-length-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nCREATE TABLE t1(c1 varchar(40), c2 nvarchar(40) );  \nGO  \nSELECT COL_LENGTH(\u0027t1\u0027,\u0027c1\u0027)AS \u0027VarChar\u0027,  \n      COL_LENGTH(\u0027t1\u0027,\u0027c2\u0027)AS \u0027NVarChar\u0027;  \nGO  \nDROP TABLE t1;"
+}

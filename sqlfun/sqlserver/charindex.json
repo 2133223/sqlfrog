@@ -1,0 +1,42 @@
+{
+  "funcName": "CHARINDEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expressionToFind",
+        "dataTypes": [],
+        "description": "A character expression containing the sequence to find. expressionToFind has an 8000 character limit."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expressionToSearch",
+        "dataTypes": [],
+        "description": "A character expression to search."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_location",
+        "dataTypes": [
+          "integer",
+          "bigint"
+        ],
+        "description": "An integer or bigint expression at which the search starts. If start_location is not specified, has a negative value, or has a zero (0) value, the search starts at the beginning of expressionToSearch."
+      }
+    }
+  ],
+  "returnType": "bigint if expressionToSearch has an nvarchar(max), varbinary(max), or varchar(max) data type; int otherwise.",
+  "description": "This function searches for one character expression inside a second character expression, returning the starting position of the first expression if found.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/charindex-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @document varchar(64);  \nSELECT @document \u003d \u0027Reflectors are vital safety\u0027 +  \n                   \u0027 components of your bicycle.\u0027;  \nSELECT CHARINDEX(\u0027bicycle\u0027, @document);  \nGO"
+}

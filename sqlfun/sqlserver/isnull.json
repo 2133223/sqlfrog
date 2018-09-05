@@ -1,0 +1,32 @@
+{
+  "funcName": "ISNULL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "check_expression",
+        "dataTypes": [],
+        "description": "Is the expression to be checked for NULL. check_expression can be of any type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "replacement_value",
+        "dataTypes": [],
+        "description": "Is the expression to be returned if check_expression is NULL. replacement_value must be of a type that is implicitly convertible to the type of check_expresssion."
+      }
+    }
+  ],
+  "returnType": "Returns the same type as check_expression. If a literal NULL is provided as check_expression, returns the datatype of the replacement_value. If a literal NULL is provided as check_expression and no replacement_value is provided, returns an int.",
+  "description": "Replaces NULL with the specified replacement value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/isnull-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT AVG(ISNULL(Weight, 50))  \nFROM Production.Product;  \nGO"
+}

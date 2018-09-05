@@ -1,0 +1,55 @@
+{
+  "funcName": "TIMEFROMPARTS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "hour",
+        "dataTypes": [],
+        "description": "Integer expression specifying hours."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "minute",
+        "dataTypes": [],
+        "description": "Integer expression specifying minutes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "seconds",
+        "dataTypes": [],
+        "description": "Integer expression specifying seconds."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "fractions",
+        "dataTypes": [],
+        "description": "Integer expression specifying fractions."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "precision",
+        "dataTypes": [
+          "time"
+        ],
+        "description": "Integer literal specifying the precision of the time value to be returned."
+      }
+    }
+  ],
+  "returnType": "time( precision )",
+  "description": "Returns a time value for the specified time and with the specified precision.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/timefromparts-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;"
+}

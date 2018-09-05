@@ -1,0 +1,47 @@
+{
+  "funcName": "CAST and CONVERT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "Any valid expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "data_type",
+        "dataTypes": [
+          "bigint"
+        ],
+        "description": "The target data type. This includes xml, bigint, and sql_variant. Alias data types cannot be used."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "dataTypes": [],
+        "description": "An optional integer that specifies the length of the target data type. The default value is 30."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "style",
+        "dataTypes": [],
+        "description": "An integer expression that specifies how the CONVERT function will translate expression. For a style value of NULL, NULL is returned. data_type determines the range."
+      }
+    }
+  ],
+  "returnType": "Returns expression, translated to data_type.",
+  "description": "These functions convert an expression of one data type to another.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Conversion",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/cast-and-convert-transact-sql?view\u003dsql-server-2017"
+}

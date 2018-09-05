@@ -1,0 +1,88 @@
+{
+  "funcName": "ENCRYPTBYPASSPHRASE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "passphrase",
+        "dataTypes": [],
+        "description": "A passphrase from which to generate a symmetric key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@passphrase",
+        "dataTypes": [
+          "nvarchar",
+          "char",
+          "varchar",
+          "binary",
+          "varbinary",
+          "nchar"
+        ],
+        "description": "A variable of type nvarchar, char, varchar, binary, varbinary, or nchar containing a passphrase from which to generate a symmetric key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "cleartext",
+        "dataTypes": [],
+        "description": "The cleartext to be encrypted."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@cleartext",
+        "dataTypes": [
+          "nvarchar",
+          "char",
+          "varchar",
+          "binary",
+          "varbinary",
+          "nchar"
+        ],
+        "description": "A variable of type nvarchar, char, varchar, binary, varbinary, or nchar containing the cleartext. Maximum size is 8,000 bytes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "add_authenticator",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Indicates whether an authenticator will be encrypted together with the cleartext. 1 if an authenticator will be added. int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@add_authenticator",
+        "dataTypes": [],
+        "description": "Indicates whether a hash will be encrypted together with the cleartext."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "authenticator",
+        "dataTypes": [],
+        "description": "Data from which to derive an authenticator. sysname."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@authenticator",
+        "dataTypes": [],
+        "description": "A variable containing data from which to derive an authenticator."
+      }
+    }
+  ],
+  "returnType": "varbinary with maximum size of 8,000 bytes.",
+  "description": "Encrypt data with a passphrase using the TRIPLE DES algorithm with a 128 key bit length.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/encryptbypassphrase-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \n-- Create a column in which to store the encrypted data.  \nALTER TABLE Sales.CreditCard   \n    ADD CardNumber_EncryptedbyPassphrase varbinary(256);   \nGO  \n-- First get the passphrase from the user.  \nDECLARE @PassphraseEnteredByUser nvarchar(128);  \nSET @PassphraseEnteredByUser   \n    \u003d \u0027A little learning is a dangerous thing!\u0027;  \n\n-- Update the record for the user\u0027s credit card.  \n-- In this case, the record is number 3681.  \nUPDATE Sales.CreditCard  \nSET CardNumber_EncryptedbyPassphrase \u003d EncryptByPassPhrase(@PassphraseEnteredByUser  \n    , CardNumber, 1, CONVERT( varbinary, CreditCardID))  \nWHERE CreditCardID \u003d \u00273681\u0027;  \nGO"
+}

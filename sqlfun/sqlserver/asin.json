@@ -1,0 +1,27 @@
+{
+  "funcName": "ASIN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float"
+        ],
+        "description": "An expression of either type float or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. Values outside this range return NULL, and ASIN will report a domain error."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "A function that returns the angle, in radians, whose sine is the specified float expression. This is also called arcsine.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/asin-transact-sql?view\u003dsql-server-2017",
+  "sample": "/* The first value will be -1.01. This fails because the value is   \noutside the range.*/  \nDECLARE @angle float  \nSET @angle \u003d -1.01  \nSELECT \u0027The ASIN of the angle is: \u0027 + CONVERT(varchar, ASIN(@angle))  \nGO  \n\n-- The next value is -1.00.  \nDECLARE @angle float  \nSET @angle \u003d -1.00  \nSELECT \u0027The ASIN of the angle is: \u0027 + CONVERT(varchar, ASIN(@angle))  \nGO  \n\n-- The next value is 0.1472738.  \nDECLARE @angle float  \nSET @angle \u003d 0.1472738  \nSELECT \u0027The ASIN of the angle is: \u0027 + CONVERT(varchar, ASIN(@angle))  \nGO"
+}

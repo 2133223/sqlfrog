@@ -1,0 +1,58 @@
+{
+  "funcName": "DECRYPTBYCERT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "certificate_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "The ID of a certificate in the database. certificate_ID has an int data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "ciphertext",
+        "dataTypes": [],
+        "description": "The string of data encrypted with the public key of the certificate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@ciphertext",
+        "dataTypes": [
+          "varbinary"
+        ],
+        "description": "A variable of type varbinary containing data encrypted with the certificate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "cert_password",
+        "dataTypes": [],
+        "description": "The password used to encrypt the private key of the certificate. cert_password must have a Unicode data format."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@cert_password",
+        "dataTypes": [
+          "nchar",
+          "nvarchar"
+        ],
+        "description": "A variable of type nchar or nvarchar containing the password used to encrypt the private key of the certificate. @cert_password must have a Unicode data format."
+      }
+    }
+  ],
+  "returnType": "varbinary, with a maximum size of 8,000 bytes.",
+  "description": "This function uses the private key of a certificate to decrypt encrypted data.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/decryptbycert-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT convert(nvarchar(max), DecryptByCert(Cert_Id(\u0027JanainaCert02\u0027),  \n    ProtectedData, N\u0027pGFD4bb925DGvbd2439587y\u0027))  \nFROM [AdventureWorks2012].[ProtectedData04]   \nWHERE Description   \n    \u003d N\u0027data encrypted by certificate \u0027\u0027 JanainaCert02\u0027\u0027\u0027;  \nGO"
+}

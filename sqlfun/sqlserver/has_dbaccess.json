@@ -1,0 +1,24 @@
+{
+  "funcName": "HAS_DBACCESS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027database_name\u0027",
+        "dataTypes": [],
+        "description": "The name of the database for which the user wants access information. database_name is sysname."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns information about whether the user has access to the specified database.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/has-dbaccess-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT HAS_DBACCESS(\u0027AdventureWorks2012\u0027);  \nGO"
+}

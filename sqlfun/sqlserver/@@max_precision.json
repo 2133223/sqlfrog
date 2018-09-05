@@ -1,0 +1,14 @@
+{
+  "funcName": "@@MAX_PRECISION",
+  "returnType": "tinyint",
+  "description": "Returns the precision level used by decimal and numeric data types as currently set in the server.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/max-precision-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@MAX_PRECISION AS \u0027Max Precision\u0027"
+}

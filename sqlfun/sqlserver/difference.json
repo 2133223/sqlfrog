@@ -1,0 +1,25 @@
+{
+  "funcName": "DIFFERENCE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character_expression",
+        "dataTypes": [],
+        "description": "An alphanumeric expression of character data. character_expression can be a constant, variable, or column."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "This function returns an integer value measuring the difference between the SOUNDEX() values of two different character expressions.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/difference-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Returns a DIFFERENCE value of 4, the least possible difference.  \nSELECT SOUNDEX(\u0027Green\u0027), SOUNDEX(\u0027Greene\u0027), DIFFERENCE(\u0027Green\u0027,\u0027Greene\u0027);  \nGO  \n-- Returns a DIFFERENCE value of 0, the highest possible difference.  \nSELECT SOUNDEX(\u0027Blotchet-Halls\u0027), SOUNDEX(\u0027Greene\u0027), DIFFERENCE(\u0027Blotchet-Halls\u0027, \u0027Greene\u0027);  \nGO"
+}

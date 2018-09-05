@@ -1,0 +1,37 @@
+{
+  "funcName": "IIF",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "boolean_expression",
+        "dataTypes": [],
+        "description": "A valid Boolean expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "true_value",
+        "dataTypes": [],
+        "description": "Value to return if boolean_expression evaluates to true."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "false_value",
+        "dataTypes": [],
+        "description": "Value to return if boolean_expression evaluates to false."
+      }
+    }
+  ],
+  "returnType": "Returns the data type with the highest precedence from the types in true_value and false_value. For more information, see Data Type Precedence (Transact-SQL).",
+  "description": "Returns one of two values, depending on whether the Boolean expression evaluates to true or false in SQL Server.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Logical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/logical-functions-iif-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @a int \u003d 45, @b int \u003d 40;  \nSELECT IIF ( @a \u003e @b, \u0027TRUE\u0027, \u0027FALSE\u0027 ) AS Result;"
+}

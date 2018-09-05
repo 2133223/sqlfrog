@@ -1,0 +1,28 @@
+{
+  "funcName": "TERTIARY_WEIGHTS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "non_Unicode_character_string_expression",
+        "dataTypes": [
+          "char",
+          "varchar"
+        ],
+        "description": "A string expression of type char, varchar, or varchar(max) defined on a tertiary SQL collation. For a list of these collations, see Remarks."
+      }
+    }
+  ],
+  "returnType": "TERTIARY_WEIGHTS returns varbinary when non_Unicode_character_string_expression is char or varchar, and it returns varbinary(max) when the non_Unicode_character_string_expression has a varchar(max) data type.",
+  "description": "For each character in a non-Unicode string expression - defined with a SQL tertiary collation - this function returns a binary string of weights.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Collation",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/collation-functions-tertiary-weights-transact-sql?view\u003dsql-server-2017",
+  "sample": "CREATE TABLE TertColTable  \n(Col1 char(15) COLLATE SQL_Latin1_General_Pref_CP437_CI_AS,  \nCol2 AS TERTIARY_WEIGHTS(Col1));  \nGO"
+}

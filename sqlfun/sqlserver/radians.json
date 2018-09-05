@@ -1,0 +1,27 @@
+{
+  "funcName": "RADIANS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "numeric_expression",
+        "dataTypes": [
+          "bit"
+        ],
+        "description": "Is an expression of the exact numeric or approximate numeric data type category, except for the bit data type."
+      }
+    }
+  ],
+  "returnType": "Returns the same type as numeric_expression.",
+  "description": "Returns radians when a numeric expression, in degrees, is entered.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/radians-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT RADIANS(1e-307)  \nGO"
+}

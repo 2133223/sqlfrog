@@ -1,0 +1,25 @@
+{
+  "funcName": "ISNUMERIC",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "Is the expression to be evaluated."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Determines whether an expression is a valid numeric type.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/isnumeric-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT City, PostalCode  \nFROM Person.Address   \nWHERE ISNUMERIC(PostalCode)\u003c\u003e 1;  \nGO"
+}

@@ -1,0 +1,27 @@
+{
+  "funcName": "DATEADD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "dataTypes": [
+          "integer"
+        ],
+        "description": "The part of date to which DATEADD adds an integer number. This table lists all valid datepart arguments."
+      }
+    }
+  ],
+  "returnType": "The date argument data type becomes the DATEADD return value data type, except for string literal date values. For a string literal, DATEADD returns a datetime value. DATEADD will raise an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.",
+  "description": "This function adds a specified number value (as a signed integer) to a specified datepart of an input date value, and then returns that modified value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/dateadd-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @datetime2 datetime2 \u003d \u00272007-01-01 13:10:10.1111111\u0027;  \nSELECT \u0027year\u0027, DATEADD(year,1,@datetime2)  \nUNION ALL  \nSELECT \u0027quarter\u0027,DATEADD(quarter,1,@datetime2)  \nUNION ALL  \nSELECT \u0027month\u0027,DATEADD(month,1,@datetime2)  \nUNION ALL  \nSELECT \u0027dayofyear\u0027,DATEADD(dayofyear,1,@datetime2)  \nUNION ALL  \nSELECT \u0027day\u0027,DATEADD(day,1,@datetime2)  \nUNION ALL  \nSELECT \u0027week\u0027,DATEADD(week,1,@datetime2)  \nUNION ALL  \nSELECT \u0027weekday\u0027,DATEADD(weekday,1,@datetime2)  \nUNION ALL  \nSELECT \u0027hour\u0027,DATEADD(hour,1,@datetime2)  \nUNION ALL  \nSELECT \u0027minute\u0027,DATEADD(minute,1,@datetime2)  \nUNION ALL  \nSELECT \u0027second\u0027,DATEADD(second,1,@datetime2)  \nUNION ALL  \nSELECT \u0027millisecond\u0027,DATEADD(millisecond,1,@datetime2)  \nUNION ALL  \nSELECT \u0027microsecond\u0027,DATEADD(microsecond,1,@datetime2)  \nUNION ALL  \nSELECT \u0027nanosecond\u0027,DATEADD(nanosecond,1,@datetime2);"
+}

@@ -1,0 +1,72 @@
+{
+  "funcName": "CERTPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "Cert_ID",
+        "dataTypes": [],
+        "description": "The certificate ID value, of data type int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Expiry_Date",
+        "dataTypes": [],
+        "description": "The certificate expiration date."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Start_Date",
+        "dataTypes": [],
+        "description": "The date when the certificate becomes valid."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Issuer_Name",
+        "dataTypes": [],
+        "description": "The name of the certificate issuer."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Cert_Serial_Number",
+        "dataTypes": [],
+        "description": "The certificate serial number."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Subject",
+        "dataTypes": [],
+        "description": "The certificate subject."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "SID",
+        "dataTypes": [],
+        "description": "The certificate SID. This is also the SID of any login or user mapped to this certificate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "String_SID",
+        "dataTypes": [],
+        "description": "The SID of the certificate as a character string. This is also the SID of any login or user mapped to the certificate."
+      }
+    }
+  ],
+  "returnType": "Single quotation marks must enclose the property specification.",
+  "description": "Returns the value of a specified certificate property.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/certproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- First create a certificate.  \nCREATE CERTIFICATE Marketing19 WITH   \n    START_DATE \u003d \u002704/04/2004\u0027 ,  \n    EXPIRY_DATE \u003d \u002707/07/2040\u0027 ,  \n    SUBJECT \u003d \u0027Marketing Print Division\u0027;  \nGO  \n\n-- Now use CertProperty to examine certificate  \n-- Marketing19\u0027s properties.  \nDECLARE @CertSubject sql_variant;  \nset @CertSubject \u003d CertProperty( Cert_ID(\u0027Marketing19\u0027), \u0027Subject\u0027);  \nPRINT CONVERT(nvarchar, @CertSubject);  \nGO"
+}

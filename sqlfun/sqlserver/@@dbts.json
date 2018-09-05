@@ -1,0 +1,14 @@
+{
+  "funcName": "@@DBTS",
+  "returnType": "varbinary",
+  "description": "This function returns the value of the current timestamp data type for the current database. The current database will have a guaranteed unique timestamp value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/dbts-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT @@DBTS;"
+}

@@ -1,0 +1,36 @@
+{
+  "funcName": "TRIGGER_NESTLEVEL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "object_id",
+        "dataTypes": [],
+        "description": "Is the object ID of a trigger. If object_id is specified, the number of times the specified trigger has been executed for the statement is returned. If object_id is not specified, the number of times all triggers have been executed for the statement is returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 trigger_type \u0027",
+        "dataTypes": [],
+        "description": "Specifies whether to apply TRIGGER_NESTLEVEL to AFTER triggers or INSTEAD OF triggers. Specify AFTER for AFTER triggers. Specify IOT for INSTEAD OF triggers. If trigger_type is specified, trigger_event_category must also be specified."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 trigger_event_category \u0027",
+        "dataTypes": [],
+        "description": "Specifies whether to apply TRIGGER_NESTLEVEL to DML or DDL triggers. Specify DML for DML triggers. Specify DDL for DDL triggers. If trigger_event_category is specified, trigger_type must also be specified. Note that only AFTER can be specified with DDL, because DDL triggers can only be AFTER triggers."
+      }
+    }
+  ],
+  "description": "Returns the number of triggers executed for the statement that fired the trigger. TRIGGER_NESTLEVEL is used in DML and DDL triggers to determine the current level of nesting.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Trigger",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/trigger-nestlevel-transact-sql?view\u003dsql-server-2017",
+  "sample": "IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID(\u0027xyz\u0027) , \u0027AFTER\u0027 , \u0027DML\u0027 ) ) \u003e 5 )  \n   RAISERROR(\u0027Trigger xyz nested more than 5 levels.\u0027,16,-1)"
+}

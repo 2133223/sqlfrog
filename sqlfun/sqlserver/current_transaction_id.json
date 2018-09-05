@@ -1,0 +1,14 @@
+{
+  "funcName": "CURRENT_TRANSACTION_ID",
+  "returnType": "bigint",
+  "description": "This function returns the transaction ID of the current transaction in the current session.",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/current-transaction-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT CURRENT_TRANSACTION_ID();"
+}

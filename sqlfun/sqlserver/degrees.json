@@ -1,0 +1,26 @@
+{
+  "funcName": "DEGREES",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "numeric_expression",
+        "dataTypes": [
+          "bit"
+        ],
+        "description": "An expression of the exact numeric or approximate numeric data type category, except for the bit data type."
+      }
+    }
+  ],
+  "description": "This function returns the corresponding angle, in degrees, for an angle specified in radians.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/degrees-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT \u0027The number of degrees in PI/2 radians is: \u0027 +   \nCONVERT(varchar, DEGREES((PI()/2)));  \nGO"
+}

@@ -1,0 +1,42 @@
+{
+  "funcName": "HASHBYTES",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027\u0026lt;algorithm\u0026gt;\u0027",
+        "dataTypes": [],
+        "description": "Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with SQL Server 2016 (13.x), all algorithms other than SHA2_256, and SHA2_512 are deprecated. Older algorithms (not recommended) will continue working, but they will raise a deprecation event."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@input",
+        "dataTypes": [
+          "varchar",
+          "nvarchar",
+          "varbinary"
+        ],
+        "description": "Specifies a variable containing the data to be hashed. @input is varchar, nvarchar, or varbinary."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 input \u0027",
+        "dataTypes": [],
+        "description": "Specifies an expression that evaluates to a character or binary string to be hashed."
+      }
+    }
+  ],
+  "description": "Returns the MD2, MD4, MD5, SHA, SHA1, or SHA2 hash of its input in SQL Server.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/hashbytes-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @HashThis nvarchar(4000);  \nSET @HashThis \u003d CONVERT(nvarchar(4000),\u0027dslfdkjLK85kldhnv$n000#knf\u0027);  \nSELECT HASHBYTES(\u0027SHA1\u0027, @HashThis);"
+}

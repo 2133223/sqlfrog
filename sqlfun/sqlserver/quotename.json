@@ -1,0 +1,32 @@
+{
+  "funcName": "QUOTENAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027character_string\u0027",
+        "dataTypes": [],
+        "description": "Is a string of Unicode character data. character_string is sysname and is limited to 128 characters. Inputs greater than 128 characters return NULL."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027quote_character\u0027",
+        "dataTypes": [],
+        "description": "Is a one-character string to use as the delimiter. Can be a single quotation mark ( \u0027 ), a left or right bracket ( [] ), a double quotation mark ( \" ), a left or right parenthesis ( () ), a greater than or less than sign ( \u003e\u003c ), a left or right brace ( {} ) or a backtick ( ` ). NULL returns if an unacceptable character is supplied. If quote_character is not specified, brackets are used."
+      }
+    }
+  ],
+  "returnType": "nvarchar(258)",
+  "description": "Returns a Unicode string with the delimiters added to make the input string a valid SQL Server delimited identifier.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/quotename-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT QUOTENAME(\u0027abc[]def\u0027);"
+}

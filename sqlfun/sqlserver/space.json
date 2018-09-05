@@ -1,0 +1,25 @@
+{
+  "funcName": "SPACE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "integer_expression",
+        "dataTypes": [],
+        "description": "Is a positive integer that indicates the number of spaces. If integer_expression is negative, a null string is returned."
+      }
+    }
+  ],
+  "returnType": "varchar",
+  "description": "Returns a string of repeated spaces.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/space-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT RTRIM(LastName) + \u0027,\u0027 + SPACE(2) +  LTRIM(FirstName)  \nFROM Person.Person  \nORDER BY LastName, FirstName;  \nGO"
+}

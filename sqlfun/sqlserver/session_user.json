@@ -1,0 +1,16 @@
+{
+  "funcName": "SESSION_USER",
+  "returnType": "nvarchar(128)",
+  "description": "SESSION_USER returns the user name of the current context in the current database.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/session-user-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @session_usr nchar(30);  \nSET @session_usr \u003d SESSION_USER;  \nSELECT \u0027This session\u0027\u0027s current user is: \u0027+ @session_usr;  \nGO"
+}

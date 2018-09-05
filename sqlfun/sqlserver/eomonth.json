@@ -1,0 +1,31 @@
+{
+  "funcName": "EOMONTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "start_date",
+        "dataTypes": [],
+        "description": "A date expression that specifies the date for which to return the last day of the month."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "month_to_add",
+        "dataTypes": [],
+        "description": "An optional integer expression that specifies the number of months to add to start_date."
+      }
+    }
+  ],
+  "description": "This function returns the last day of the month containing a specified date, with an optional offset.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/eomonth-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @date DATETIME \u003d \u002712/1/2011\u0027;  \nSELECT EOMONTH ( @date ) AS Result;  \nGO"
+}

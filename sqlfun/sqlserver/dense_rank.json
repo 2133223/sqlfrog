@@ -1,0 +1,32 @@
+{
+  "funcName": "DENSE_RANK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0026lt;partition_by_clause\u0026gt;",
+        "dataTypes": [],
+        "description": "First divides the result set produced by the FROM clause into partitions, and then the DENSE_RANK function is applied to each partition. See OVER Clause (Transact-SQL) for the PARTITION BY syntax."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0026lt;order_by_clause\u0026gt;",
+        "dataTypes": [],
+        "description": "Determines the order in which the DENSE_RANK function applies to the rows in a partition."
+      }
+    }
+  ],
+  "returnType": "bigint",
+  "description": "This function returns the rank of each row within a result set partition, with no gaps in the ranking values. The rank of a specific row is one plus the number of distinct rank values that come before that specific row.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Ranking",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/dense-rank-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT i.ProductID, p.Name, i.LocationID, i.Quantity  \n    ,DENSE_RANK() OVER   \n    (PARTITION BY i.LocationID ORDER BY i.Quantity DESC) AS Rank  \nFROM Production.ProductInventory AS i   \nINNER JOIN Production.Product AS p   \n    ON i.ProductID \u003d p.ProductID  \nWHERE i.LocationID BETWEEN 3 AND 4  \nORDER BY i.LocationID;  \nGO"
+}

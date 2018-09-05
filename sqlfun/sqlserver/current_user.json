@@ -1,0 +1,16 @@
+{
+  "funcName": "CURRENT_USER",
+  "returnType": "sysname",
+  "description": "This function returns the name of the current user. This function is equivalent to USER_NAME().",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/current-user-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT CURRENT_USER;  \nGO"
+}

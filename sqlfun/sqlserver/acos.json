@@ -1,0 +1,27 @@
+{
+  "funcName": "ACOS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float"
+        ],
+        "description": "An expression of either type float or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. Values outside this range return NULL, and ASIN will report a domain error."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "A function that returns the angle, in radians, whose cosine is the specified float expression. This is also called arccosine.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/acos-transact-sql?view\u003dsql-server-2017",
+  "sample": "SET NOCOUNT OFF;  \nDECLARE @cos float;  \nSET @cos \u003d -1.0;  \nSELECT \u0027The ACOS of the number is: \u0027 + CONVERT(varchar, ACOS(@cos));"
+}

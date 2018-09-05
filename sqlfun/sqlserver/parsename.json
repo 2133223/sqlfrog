@@ -1,0 +1,34 @@
+{
+  "funcName": "PARSENAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027object_name\u0027",
+        "dataTypes": [],
+        "description": "Is the name of the object for which to retrieve the specified object part. object_name is sysname. This parameter is an optionally-qualified object name. If all parts of the object name are qualified, this name can have four parts: the server name, the database name, the owner name, and the object name."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "object_piece",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the object part to return. object_piece is of type int, and can have these values:"
+      }
+    }
+  ],
+  "returnType": "nchar",
+  "description": "Returns the specified part of an object name. The parts of an object that can be retrieved are the object name, owner name, database name, and server name.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/parsename-transact-sql?view\u003dsql-server-2017",
+  "sample": "-- Uses AdventureWorks  \n\nSELECT PARSENAME(\u0027AdventureWorksPDW2012.dbo.DimCustomer\u0027, 1) AS \u0027Object Name\u0027;  \nSELECT PARSENAME(\u0027AdventureWorksPDW2012.dbo.DimCustomer\u0027, 2) AS \u0027Schema Name\u0027;  \nSELECT PARSENAME(\u0027AdventureWorksPDW2012.dbo.DimCustomer\u0027, 3) AS \u0027Database Name\u0027;  \nSELECT PARSENAME(\u0027AdventureWorksPDW2012.dbo.DimCustomer\u0027, 4) AS \u0027Server Name\u0027;  \nGO"
+}

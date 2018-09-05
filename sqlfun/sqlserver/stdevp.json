@@ -1,0 +1,48 @@
+{
+  "funcName": "STDEVP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ALL",
+        "dataTypes": [],
+        "description": "Applies the function to all values. ALL is the default."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "DISTINCT",
+        "dataTypes": [],
+        "description": "Specifies that each unique value is considered."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [
+          "bit"
+        ],
+        "description": "Is a numeric expression. Aggregate functions and subqueries are not permitted. expression is an expression of the exact numeric or approximate numeric data type category, except for the bit data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "OVER ( [ partition_by_clause ] order_by_clause)",
+        "dataTypes": [],
+        "description": "partition_by_clause divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. order_by_clause determines the logical order in which the operation is performed. order_by_clause is required. For more information, see OVER Clause (Transact-SQL)."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "Returns the statistical standard deviation for the population for all values in the specified expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Aggregate",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/stdevp-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT STDEVP(Bonus)  \nFROM Sales.SalesPerson;  \nGO"
+}

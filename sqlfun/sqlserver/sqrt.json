@@ -1,0 +1,27 @@
+{
+  "funcName": "SQRT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float"
+        ],
+        "description": "Is an expression of type float or of a type that can be implicitly converted to float."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "Returns the square root of the specified float value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/sqrt-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @myvalue float;  \nSET @myvalue \u003d 1.00;  \nWHILE @myvalue \u003c 10.00  \n   BEGIN  \n      SELECT SQRT(@myvalue);  \n      SET @myvalue \u003d @myvalue + 1  \n   END;  \nGO"
+}

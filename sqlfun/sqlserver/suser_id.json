@@ -1,0 +1,27 @@
+{
+  "funcName": "SUSER_ID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 login \u0027",
+        "dataTypes": [
+          "nchar",
+          "char",
+          "nchar"
+        ],
+        "description": "Is the login name of the user. login is nchar. If login is specified as char, login is implicitly converted to nchar. login can be any SQL Server login or Windows user or group that has permission to connect to an instance of SQL Server. If login is not specified, the login identification number for the current user is returned. If the parameter contains the word NULL will return NULL."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the login identification number of the user.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database (Managed Instance only)"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/suser-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SUSER_ID(\u0027sa\u0027);"
+}

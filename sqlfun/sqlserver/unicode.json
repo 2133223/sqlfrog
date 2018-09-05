@@ -1,0 +1,28 @@
+{
+  "funcName": "UNICODE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 ncharacter_expression \u0027",
+        "dataTypes": [
+          "nchar",
+          "nvarchar"
+        ],
+        "description": "Is an nchar or nvarchar expression."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the integer value, as defined by the Unicode standard, for the first character of the input expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/unicode-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @nstring nchar(12);  \nSET @nstring \u003d N\u0027Åkergatan 24\u0027;  \nSELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));"
+}

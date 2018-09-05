@@ -1,0 +1,42 @@
+{
+  "funcName": "OBJECT_ID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 object_name \u0027",
+        "dataTypes": [
+          "varchar",
+          "nvarchar",
+          "varchar",
+          "nvarchar"
+        ],
+        "description": "Is the object to be used. object_name is either varchar or nvarchar. If object_name is varchar, it is implicitly converted to nvarchar. Specifying the database and schema names is optional."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 object_type \u0027",
+        "dataTypes": [
+          "varchar",
+          "nvarchar",
+          "varchar",
+          "nvarchar"
+        ],
+        "description": "Is the schema-scoped object type. object_type is either varchar or nvarchar. If object_type is varchar, it is implicitly converted to nvarchar. For a list of object types, see the type column in sys.objects (Transact-SQL)."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the database object identification number of a schema-scoped object.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/object-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE master;  \nGO  \nSELECT OBJECT_ID(N\u0027AdventureWorks2012.Production.WorkOrder\u0027) AS \u0027Object ID\u0027;  \nGO"
+}

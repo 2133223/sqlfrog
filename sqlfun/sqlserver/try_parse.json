@@ -1,0 +1,37 @@
+{
+  "funcName": "TRY_PARSE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string_value",
+        "dataTypes": [],
+        "description": "nvarchar(4000) value representing the formatted value to parse into the specified data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "data_type",
+        "dataTypes": [],
+        "description": "Literal representing the data type requested for the result."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "culture",
+        "dataTypes": [],
+        "description": "Optional string that identifies the culture in which string_value is formatted."
+      }
+    }
+  ],
+  "returnType": "Returns the result of the expression, translated to the requested data type, or null if the cast fails.",
+  "description": "Returns the result of an expression, translated to the requested data type, or null if the cast fails in SQL Server. Use TRY_PARSE only for converting from string to date/time and number types.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database"
+  ],
+  "category": "Conversion",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/try-parse-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT TRY_PARSE(\u0027Jabberwokkie\u0027 AS datetime2 USING \u0027en-US\u0027) AS Result;"
+}

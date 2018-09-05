@@ -1,0 +1,25 @@
+{
+  "funcName": "REPLICATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string_expression",
+        "dataTypes": [],
+        "description": "Is an expression of a character string or binary data type. string_expression can be either character or binary data."
+      }
+    }
+  ],
+  "returnType": "Returns the same type as string_expression.",
+  "description": "Repeats a string value a specified number of times.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/replicate-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT [Name]  \n, REPLICATE(\u00270\u0027, 4) + [ProductLine] AS \u0027Line Code\u0027  \nFROM [Production].[Product]  \nWHERE [ProductLine] \u003d \u0027T\u0027  \nORDER BY [Name];  \nGO"
+}

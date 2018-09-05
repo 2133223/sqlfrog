@@ -1,0 +1,38 @@
+{
+  "funcName": "IS_OBJECTSIGNED",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027OBJECT\u0027",
+        "dataTypes": [],
+        "description": "The type of securable class."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@object_id",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "The object_id of the object being tested. @object_id is type int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@class",
+        "dataTypes": [],
+        "description": "The class of the object:"
+      }
+    }
+  ],
+  "description": "Indicates whether an object is signed by a specified certificate or asymmetric key.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/is-objectsigned-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE master;  \n-- Declare a variable to hold a thumbprint and an object name  \nDECLARE @thumbprint varbinary(20), @objectname sysname;  \n\n-- Populate the thumbprint variable with the thumbprint of   \n-- the master database schema signing certificate  \nSELECT @thumbprint \u003d thumbprint   \nFROM sys.certificates   \nWHERE name LIKE \u0027%SchemaSigningCertificate%\u0027;  \n\n-- Populate the object name variable with a table name in master  \nSELECT @objectname \u003d \u0027spt_fallback_db\u0027;  \n\n-- Query to see if the table is signed by the thumbprint  \nSELECT @objectname AS [object name],  \nIS_OBJECTSIGNED(  \n\u0027OBJECT\u0027, OBJECT_ID(@objectname), \u0027certificate\u0027, @thumbprint  \n) AS [Is the object signed?] ;"
+}

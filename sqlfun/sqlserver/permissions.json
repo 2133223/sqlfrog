@@ -1,0 +1,30 @@
+{
+  "funcName": "PERMISSIONS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "objectid",
+        "dataTypes": [],
+        "description": "Is the ID of a securable. If objectid is not specified, the bitmap value contains statement permissions for the current user; otherwise, the bitmap contains permissions on the securable for the current user. The securable specified must be in the current database. Use the OBJECT_ID function to determine the objectid value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "\u0027 column \u0027",
+        "dataTypes": [],
+        "description": "Is the optional name of a column for which permission information is being returned. The column must be a valid column name in the table specified by objectid."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns a value containing a bitmap that indicates the statement, object, or column permissions of the current user.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/permissions-transact-sql?view\u003dsql-server-2017",
+  "sample": "IF PERMISSIONS()\u00262\u003d2  \n   CREATE TABLE test_table (col1 INT)  \nELSE  \n   PRINT \u0027ERROR: The current user cannot create a table.\u0027;"
+}

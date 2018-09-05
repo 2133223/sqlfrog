@@ -1,0 +1,32 @@
+{
+  "funcName": "DATABASEPROPERTYEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "database",
+        "dataTypes": [],
+        "description": "An expression specifying the name of the database for which DATABASEPROPERTYEX will return the named property information. database has an nvarchar(128) data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "An expression specifying the name of the database property to return. property has a varchar(128) data type, and supports one of the values in this table:"
+      }
+    }
+  ],
+  "returnType": "sql_variant",
+  "description": "For a specified database in SQL Server, this function returns the current setting of the specified database option or property.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/databasepropertyex-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DATABASEPROPERTYEX(\u0027AdventureWorks2014\u0027, \u0027IsAutoShrink\u0027);"
+}

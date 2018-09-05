@@ -1,0 +1,27 @@
+{
+  "funcName": "TYPE_ID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "type_name",
+        "dataTypes": [
+          "nvarchar"
+        ],
+        "description": "Is the name of the data type. type_name is of type nvarchar. type_name can be a system or user-defined data type."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the ID for a specified data type name.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/type-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE tempdb;  \nGO  \nCREATE TYPE NewType FROM int;  \nGO  \nCREATE SCHEMA NewSchema;  \nGO  \nCREATE TYPE NewSchema.NewType FROM int;  \nGO  \nSELECT TYPE_ID(\u0027NewType\u0027) AS [1 Part Data Type ID],  \n       TYPE_ID(\u0027NewSchema.NewType\u0027) AS [2 Part Data Type ID];  \nGO"
+}

@@ -1,0 +1,39 @@
+{
+  "funcName": "PERCENTILE_DISC",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "literal",
+        "dataTypes": [],
+        "description": "The percentile to compute. The value must range between 0.0 and 1.0."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ])",
+        "dataTypes": [],
+        "description": "Specifies a list of values to sort and compute the percentile over. Only one order_by_expression is allowed. The default sort order is ascending. The list of values can be of any of the data types that are valid for the sort operation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "OVER ( \u0026lt;partition_by_clause\u0026gt; )",
+        "dataTypes": [],
+        "description": "Divides the result set produced by the FROM clause into partitions to which the percentile function is applied. For more information, see OVER Clause (Transact-SQL). The \u0026lt;ORDER BY clause\u0026gt; and \u0026lt;rows or range clause\u0026gt;cannot be specified in a PERCENTILE_DISC function."
+      }
+    }
+  ],
+  "returnType": "The return type is determined by the order_by_expression type.",
+  "description": "Computes a specific percentile for sorted values in an entire rowset or within distinct partitions of a rowset in SQL Server. For a given percentile value P, PERCENTILE_DISC sorts the values of the expression in the ORDER BY clause and returns the value with the smallest CUME_DIST value (with respect to the same sort specification) that is greater than or equal to P. For example, PERCENTILE_DISC (0.5) will compute the 50th percentile (that is, the median) of an expression. PERCENTILE_DISC calculates the percentile based on a discrete distribution of the column values; the result is equal to a specific value in the column.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Analytic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/percentile-disc-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \n\nSELECT DISTINCT Name AS DepartmentName  \n      ,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY ph.Rate)   \n                            OVER (PARTITION BY Name) AS MedianCont  \n      ,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY ph.Rate)   \n                            OVER (PARTITION BY Name) AS MedianDisc  \nFROM HumanResources.Department AS d  \nINNER JOIN HumanResources.EmployeeDepartmentHistory AS dh   \n    ON dh.DepartmentID \u003d d.DepartmentID  \nINNER JOIN HumanResources.EmployeePayHistory AS ph  \n    ON ph.BusinessEntityID \u003d dh.BusinessEntityID  \nWHERE dh.EndDate IS NULL;"
+}

@@ -1,0 +1,31 @@
+{
+  "funcName": "LAST_VALUE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "scalar_expression",
+        "dataTypes": [],
+        "description": "Is the value to be returned. scalar_expression can be a column, subquery, or other expression that results in a single value. Other analytic functions are not permitted."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )",
+        "dataTypes": [],
+        "description": "partition_by_clause divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group."
+      }
+    }
+  ],
+  "returnType": "Is the same type as scalar_expression.",
+  "description": "Returns the last value in an ordered set of values in SQL Server 2017.",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse"
+  ],
+  "category": "Analytic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/last-value-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT Department, LastName, Rate, HireDate,   \n    LAST_VALUE(HireDate) OVER (PARTITION BY Department ORDER BY Rate) AS LastValue  \nFROM HumanResources.vEmployeeDepartmentHistory AS edh  \nINNER JOIN HumanResources.EmployeePayHistory AS eph    \n    ON eph.BusinessEntityID \u003d edh.BusinessEntityID  \nINNER JOIN HumanResources.Employee AS e  \n    ON e.BusinessEntityID \u003d edh.BusinessEntityID  \nWHERE Department IN (N\u0027Information Services\u0027,N\u0027Document Control\u0027);"
+}

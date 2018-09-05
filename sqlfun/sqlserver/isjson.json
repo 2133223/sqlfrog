@@ -1,0 +1,22 @@
+{
+  "funcName": "ISJSON",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "The string to test."
+      }
+    }
+  ],
+  "description": "Tests whether a string contains valid JSON.",
+  "targetDBs": [
+    "SQL Server (starting with 2016)",
+    "Azure SQL Database"
+  ],
+  "category": "JSON",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/isjson-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @param \u003cdata type\u003e\nSET @param \u003d \u003cvalue\u003e\n\nIF (ISJSON(@param) \u003e 0)  \nBEGIN  \n     -- Do something with the valid JSON value of @param.  \nEND"
+}

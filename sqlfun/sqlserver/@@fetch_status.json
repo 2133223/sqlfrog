@@ -1,0 +1,13 @@
+{
+  "funcName": "@@FETCH_STATUS",
+  "description": "This function returns the status of the last cursor FETCH statement issued against any cursor currently opened by the connection.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cursor",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/fetch-status-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE Employee_Cursor CURSOR FOR  \nSELECT BusinessEntityID, JobTitle  \nFROM AdventureWorks2012.HumanResources.Employee;  \nOPEN Employee_Cursor;  \nFETCH NEXT FROM Employee_Cursor;  \nWHILE @@FETCH_STATUS \u003d 0  \n   BEGIN  \n      FETCH NEXT FROM Employee_Cursor;  \n   END;  \nCLOSE Employee_Cursor;  \nDEALLOCATE Employee_Cursor;  \nGO"
+}

@@ -1,0 +1,48 @@
+{
+  "funcName": "SUBSTRING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [
+          "binary",
+          "text",
+          "ntext",
+          "image"
+        ],
+        "description": "Is a character, binary, text, ntext, or image expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start",
+        "dataTypes": [
+          "bigint"
+        ],
+        "description": "Is an integer or bigint expression that specifies where the returned characters start. (The numbering is 1 based, meaning that the first character in the expression is 1). If start is less than 1, the returned expression will begin at the first character that is specified in expression. In this case, the number of characters that are returned is the largest value of either the sum of start + length- 1 or 0. If start is greater than the number of characters in the value expression, a zero-length expression is returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "dataTypes": [
+          "bigint"
+        ],
+        "description": "Is a positive integer or bigint expression that specifies how many characters of the expression will be returned. If length is negative, an error is generated and the statement is terminated. If the sum of start and length is greater than the number of characters in expression, the whole value expression beginning at start is returned."
+      }
+    }
+  ],
+  "returnType": "Returns character data if expression is one of the supported character data types. Returns binary data if expression is one of the supported binary data types. The returned string is the same type as the specified expression with the exceptions shown in the table.",
+  "description": "Returns part of a character, binary, text, or image expression in SQL Server.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/substring-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT name, SUBSTRING(name, 1, 1) AS Initial ,\nSUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters\nFROM sys.databases  \nWHERE database_id \u003c 5;"
+}

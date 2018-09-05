@@ -1,0 +1,27 @@
+{
+  "funcName": "ATN2",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float"
+        ],
+        "description": "An expression of data type float."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "Returns the angle, in radians, between the positive x-axis and the ray from the origin to the point (y, x), where x and y are the values of the two specified float expressions.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/atn2-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @x float \u003d 35.175643, @y float \u003d 129.44;  \nSELECT \u0027The ATN2 of the angle is: \u0027 + CONVERT(varchar, ATN2(@y, @x));  \nGO"
+}

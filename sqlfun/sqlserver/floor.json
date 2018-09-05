@@ -1,0 +1,26 @@
+{
+  "funcName": "FLOOR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "numeric_expression",
+        "dataTypes": [
+          "bit"
+        ],
+        "description": "Is an expression of the exact numeric or approximate numeric data type category, except for the bit data type."
+      }
+    }
+  ],
+  "returnType": "Returns the same type as numeric_expression.",
+  "description": "Returns the largest integer less than or equal to the specified numeric expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/floor-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);"
+}

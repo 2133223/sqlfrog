@@ -1,0 +1,44 @@
+{
+  "funcName": "HAS_PERMS_BY_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "securable",
+        "dataTypes": [],
+        "description": "Is the name of the securable. If the securable is the server itself, this value should be set to NULL. securable is a scalar expression of type sysname. There is no default."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "securable_class",
+        "dataTypes": [],
+        "description": "Is the name of the class of securable against which the permission is tested. securable_class is a scalar expression of type nvarchar(60)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "permission",
+        "dataTypes": [],
+        "description": "A nonnull scalar expression of type sysname that represents the permission name to be checked. There is no default. The permission name ANY is a wildcard."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sub-securable",
+        "dataTypes": [],
+        "description": "An optional scalar expression of type sysname that represents the name of the securable sub-entity against which the permission is tested. The default is NULL."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Evaluates the effective permission of the current user on a securable. A related function is fn_my_permissions.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/has-perms-by-name-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT HAS_PERMS_BY_NAME(null, null, \u0027VIEW SERVER STATE\u0027);"
+}

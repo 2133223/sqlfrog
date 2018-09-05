@@ -1,0 +1,23 @@
+{
+  "funcName": "SESSIONPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "option",
+        "dataTypes": [],
+        "description": "Is the current option setting for this session. option can be any of the following values."
+      }
+    }
+  ],
+  "returnType": "sql_variant",
+  "description": "Returns the SET options settings of a session.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/sessionproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT   SESSIONPROPERTY (\u0027CONCAT_NULL_YIELDS_NULL\u0027)"
+}

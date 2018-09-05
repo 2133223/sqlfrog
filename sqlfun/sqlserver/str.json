@@ -1,0 +1,41 @@
+{
+  "funcName": "STR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float"
+        ],
+        "description": "Is an expression of approximate numeric (float) data type with a decimal point."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "dataTypes": [],
+        "description": "Is the total length. This includes decimal point, sign, digits, and spaces. The default is 10."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "decimal",
+        "dataTypes": [],
+        "description": "Is the number of places to the right of the decimal point. decimal must be less than or equal to 16. If decimal is more than 16 then the result is truncated to sixteen places to the right of the decimal point."
+      }
+    }
+  ],
+  "returnType": "varchar",
+  "description": "Returns character data converted from numeric data.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/str-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT STR(123.45, 6, 1);  \nGO"
+}

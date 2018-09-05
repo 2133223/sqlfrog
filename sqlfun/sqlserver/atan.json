@@ -1,0 +1,28 @@
+{
+  "funcName": "ATAN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float",
+          "float"
+        ],
+        "description": "An expression of either type float or of a type that implicitly convert to float."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "A function that returns the angle, in radians, whose tangent is a specified float expression. This is also called arctangent.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/atan-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT \u0027The ATAN of -45.01 is: \u0027 + CONVERT(varchar, ATAN(-45.01))  \nSELECT \u0027The ATAN of -181.01 is: \u0027 + CONVERT(varchar, ATAN(-181.01))  \nSELECT \u0027The ATAN of 0 is: \u0027 + CONVERT(varchar, ATAN(0))  \nSELECT \u0027The ATAN of 0.1472738 is: \u0027 + CONVERT(varchar, ATAN(0.1472738))  \nSELECT \u0027The ATAN of 197.1099392 is: \u0027 + CONVERT(varchar, ATAN(197.1099392))  \nGO"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "SERVERPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "propertyname",
+        "dataTypes": [],
+        "description": "Is an expression that contains the property information to be returned for the server. propertyname can be one of the following values."
+      }
+    }
+  ],
+  "returnType": "sql_variant",
+  "description": "Returns property information about the server instance.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/serverproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT  \n  SERVERPROPERTY(\u0027MachineName\u0027) AS ComputerName,\n  SERVERPROPERTY(\u0027ServerName\u0027) AS InstanceName,  \n  SERVERPROPERTY(\u0027Edition\u0027) AS Edition,\n  SERVERPROPERTY(\u0027ProductVersion\u0027) AS ProductVersion,  \n  SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel;  \nGO"
+}

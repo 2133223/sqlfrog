@@ -1,0 +1,13 @@
+{
+  "funcName": "@@TOTAL_ERRORS",
+  "returnType": "integer",
+  "description": "Returns the number of disk write errors encountered by SQL Server since SQL Server last started.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System Statistical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/total-errors-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@TOTAL_ERRORS AS \u0027Errors\u0027, GETDATE() AS \u0027As of\u0027;"
+}

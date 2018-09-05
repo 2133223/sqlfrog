@@ -1,0 +1,23 @@
+{
+  "funcName": "KEY_GUID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027 Key_Name \u0027",
+        "dataTypes": [],
+        "description": "The name of a symmetric key in the database."
+      }
+    }
+  ],
+  "returnType": "uniqueidentifier",
+  "description": "Returns the GUID of a symmetric key in the database.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/key-guid-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT Key_GUID(\u0027ABerglundKey1\u0027);"
+}

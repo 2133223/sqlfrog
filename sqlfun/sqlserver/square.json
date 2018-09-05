@@ -1,0 +1,26 @@
+{
+  "funcName": "SQUARE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float"
+        ],
+        "description": "Is an expression of type float or of a type that can be implicitly converted to float."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "Returns the square of the specified float value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/square-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @h float, @r float;  \nSET @h \u003d 5;  \nSET @r \u003d 1;  \nSELECT PI()* SQUARE(@r)* @h AS \u0027Cyl Vol\u0027;"
+}

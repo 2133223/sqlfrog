@@ -1,0 +1,25 @@
+{
+  "funcName": "CONCAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string_value",
+        "dataTypes": [],
+        "description": "A string value to concatenate to the other values. The CONCAT function requires at least two string_value arguments, and no more than 254 string_value arguments."
+      }
+    }
+  ],
+  "returnType": "string_value A string value whose length and type depend on the input.",
+  "description": "This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. (To add a separating value during concatenation, see CONCAT_WS.)",
+  "targetDBs": [
+    "SQL Server (starting with 2012)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/concat-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT CONCAT ( \u0027Happy \u0027, \u0027Birthday \u0027, 11, \u0027/\u0027, \u002725\u0027 ) AS Result;"
+}

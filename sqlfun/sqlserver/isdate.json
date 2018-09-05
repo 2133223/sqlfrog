@@ -1,0 +1,24 @@
+{
+  "funcName": "ISDATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "Is a character string or expression that can be converted to a character string. The expression must be less than 4,000 characters. Date and time data types, except datetime and smalldatetime, are not allowed as the argument for ISDATE."
+      }
+    }
+  ],
+  "description": "Returns 1 if the expression is a valid date, time, or datetime value; otherwise, 0.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/isdate-transact-sql?view\u003dsql-server-2017",
+  "sample": "IF ISDATE(\u00272009-05-12 10:19:41.177\u0027) \u003d 1  \n    PRINT \u0027VALID\u0027  \nELSE  \n    PRINT \u0027INVALID\u0027;"
+}

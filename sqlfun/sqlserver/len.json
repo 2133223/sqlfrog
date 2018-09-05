@@ -1,0 +1,25 @@
+{
+  "funcName": "LEN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string_expression",
+        "dataTypes": [],
+        "description": "Is the string expression to be evaluated. string_expression can be a constant, variable, or column of either character or binary data."
+      }
+    }
+  ],
+  "returnType": "bigint if expression is of the varchar(max), nvarchar(max) or varbinary(max) data types; otherwise, int.",
+  "description": "Returns the number of characters of the specified string expression, excluding trailing blanks.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "String",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/len-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT LEN(FirstName) AS Length, FirstName, LastName   \nFROM Sales.vIndividualCustomer  \nWHERE CountryRegionName \u003d \u0027Australia\u0027;  \nGO"
+}

@@ -1,0 +1,16 @@
+{
+  "funcName": "@@SPID",
+  "returnType": "smallint",
+  "description": "Returns the session ID of the current user process.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Configuration",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/spid-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@SPID AS \u0027ID\u0027, SYSTEM_USER AS \u0027Login Name\u0027, USER AS \u0027User Name\u0027;"
+}

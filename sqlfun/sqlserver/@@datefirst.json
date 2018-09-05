@@ -1,0 +1,15 @@
+{
+  "funcName": "@@DATEFIRST",
+  "description": "This function returns the current value of SET DATEFIRST, for a specific session.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/datefirst-transact-sql?view\u003dsql-server-2017",
+  "sample": "SET DATEFIRST 5;  \nSELECT @@DATEFIRST AS \u0027First Day\u0027  \n    ,DATEPART(dw, SYSDATETIME()) AS \u0027Today\u0027;"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "SUSER_SNAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "server_user_sid",
+        "dataTypes": [],
+        "description": "Applies to: SQL Server 2008 through SQL Server 2017"
+      }
+    }
+  ],
+  "returnType": "nvarchar(128)",
+  "description": "Returns the login name associated with a security identification number (SID).",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Security",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/suser-sname-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT SUSER_SNAME();  \nGO"
+}

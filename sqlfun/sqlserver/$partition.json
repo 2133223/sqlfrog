@@ -1,0 +1,36 @@
+{
+  "funcName": "$PARTITION",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "database_name",
+        "dataTypes": [],
+        "description": "Is the name of the database that contains the partition function."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "partition_function_name",
+        "dataTypes": [],
+        "description": "Is the name of any existing partition function against which a set of partitioning column values are being applied."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "dataTypes": [],
+        "description": "Is an expression whose data type must either match or be implicitly convertible to the data type of its corresponding partitioning column. expression can also be the name of a partitioning column that currently participates in partition_function_name."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in SQL Server 2017.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/partition-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nCREATE PARTITION FUNCTION RangePF1 ( int )  \nAS RANGE FOR VALUES (10, 100, 1000) ;  \nGO  \nSELECT $PARTITION.RangePF1 (10) ;  \nGO"
+}

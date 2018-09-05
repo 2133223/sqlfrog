@@ -1,0 +1,46 @@
+{
+  "funcName": "VERIFYSIGNEDBYCERT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "Cert_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "Is the ID of a certificate in the database. Cert_ID is int."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "signed_data",
+        "dataTypes": [
+          "nvarchar",
+          "char",
+          "varchar",
+          "nchar"
+        ],
+        "description": "Is a variable of type nvarchar, char, varchar, or nchar that contains data that has been signed with a certificate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "signature",
+        "dataTypes": [
+          "varbinary"
+        ],
+        "description": "Is the signature that was attached to the signed data. signature is varbinary."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Tests whether digitally signed data has been changed since it was signed.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/verifysignedbycert-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT Data, VerifySignedByCert( Cert_Id( \u0027Shipping04\u0027 ),  \n    Signed_Data, DataSignature ) AS IsSignatureValid  \nFROM [AdventureWorks2012].[SignedData04]   \nWHERE Description \u003d N\u0027data signed by certificate \u0027\u0027Shipping04\u0027\u0027\u0027;  \nGO"
+}

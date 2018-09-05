@@ -1,0 +1,28 @@
+{
+  "funcName": "ASSEMBLYPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "assembly_name",
+        "dataTypes": [],
+        "description": "The name of the assembly."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property_name",
+        "dataTypes": [],
+        "description": "The name of a property about which to retrieve information. property_name can have one of the following values:"
+      }
+    }
+  ],
+  "description": "This function returns information about a property of an assembly.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/assemblyproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT ASSEMBLYPROPERTY (\u0027HelloWorld\u0027 , \u0027PublicKey\u0027);"
+}

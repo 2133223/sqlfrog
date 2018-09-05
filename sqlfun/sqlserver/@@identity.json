@@ -1,0 +1,14 @@
+{
+  "funcName": "@@IDENTITY",
+  "returnType": "numeric(38,0)",
+  "description": "Is a system function that returns the last-inserted identity value.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/identity-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \n--Display the value of LocationID in the last row in the table.  \nSELECT MAX(LocationID) FROM Production.Location;  \nGO  \nINSERT INTO Production.Location (Name, CostRate, Availability, ModifiedDate)  \nVALUES (\u0027Damaged Goods\u0027, 5, 2.5, GETDATE());  \nGO  \nSELECT @@IDENTITY AS \u0027Identity\u0027;  \nGO  \n--Display the value of LocationID of the newly inserted row.  \nSELECT MAX(LocationID) FROM Production.Location;  \nGO"
+}

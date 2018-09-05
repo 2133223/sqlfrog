@@ -1,0 +1,13 @@
+{
+  "funcName": "@@IDLE",
+  "returnType": "integer",
+  "description": "Returns the time that SQL Server has been idle since it was last started. The result is in CPU time increments, or \"ticks,\" and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System Statistical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/idle-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@IDLE * CAST(@@TIMETICKS AS float) AS \u0027Idle microseconds\u0027,  \n   GETDATE() AS \u0027as of\u0027;"
+}

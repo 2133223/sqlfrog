@@ -1,0 +1,23 @@
+{
+  "funcName": "DATABASE_PRINCIPAL_ID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "principal_name",
+        "dataTypes": [],
+        "description": "An expression of type sysname, that represents the principal. When principal_name is omitted, DATABASE_PRINCIPAL_ID returns the ID of the current user. DATABASE_PRINCIPAL_ID requires the parentheses."
+      }
+    }
+  ],
+  "returnType": "int NULL if the database principal does not exist.",
+  "description": "This function returns the ID number of a principal in the current database. See Principals (Database Engine) for more information about principals.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/database-principal-id-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DATABASE_PRINCIPAL_ID();  \nGO"
+}

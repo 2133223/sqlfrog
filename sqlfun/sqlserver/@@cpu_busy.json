@@ -1,0 +1,13 @@
+{
+  "funcName": "@@CPU_BUSY",
+  "returnType": "integer",
+  "description": "This function returns the amount of time that SQL Server has spent in active operation since its latest start. @@CPU_BUSY returns a result measured in CPU time increments, or \"ticks.\" This value is cumulative for all CPUs, so it may exceed the actual elapsed time. To convert to microseconds, multiply by @@TIMETICKS.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)"
+  ],
+  "category": "System Statistical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/cpu-busy-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS \u0027CPU microseconds\u0027,   \n   GETDATE() AS \u0027As of\u0027 ;"
+}

@@ -1,0 +1,32 @@
+{
+  "funcName": "ENCRYPTBYASYMKEY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "asym_key_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "The ID of an asymmetric key in the database. asym_key_ID has an int data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "cleartext",
+        "dataTypes": [],
+        "description": "A string of data that ENCRYPTBYASYMKEY will encrypt with the asymmetric key. cleartext can have a"
+      }
+    }
+  ],
+  "returnType": "varbinary, with a maximum size of 8,000 bytes.",
+  "description": "This function encrypts data with an asymmetric key.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/encryptbyasymkey-transact-sql?view\u003dsql-server-2017",
+  "sample": "INSERT INTO AdventureWorks2012.Sales.ProtectedData04   \n    VALUES( N\u0027Data encrypted by asymmetric key \u0027\u0027JanainaAsymKey02\u0027\u0027\u0027,  \n    EncryptByAsymKey(AsymKey_ID(\u0027JanainaAsymKey02\u0027), @cleartext) );  \nGO"
+}

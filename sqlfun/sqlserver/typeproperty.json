@@ -1,0 +1,32 @@
+{
+  "funcName": "TYPEPROPERTY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "type",
+        "dataTypes": [],
+        "description": "Is the name of the data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "property",
+        "dataTypes": [],
+        "description": "Is the type of information to be returned for the data type. property can be one of the following values."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns information about a data type.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Metadata",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/typeproperty-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT TYPEPROPERTY(SCHEMA_NAME(schema_id) + \u0027.\u0027 + name, \u0027OwnerId\u0027) AS owner_id, name, system_type_id, user_type_id, schema_id  \nFROM sys.types;"
+}

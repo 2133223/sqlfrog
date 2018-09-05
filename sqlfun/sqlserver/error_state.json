@@ -1,0 +1,15 @@
+{
+  "funcName": "ERROR_STATE",
+  "returnType": "int",
+  "description": "Returns the state number of the error that caused the CATCH block of a TRY…CATCH construct to be run.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/error-state-transact-sql?view\u003dsql-server-2017",
+  "sample": "BEGIN TRY  \n    -- Generate a divide by zero error  \n    SELECT 1/0;  \nEND TRY  \nBEGIN CATCH  \n    SELECT ERROR_STATE() AS ErrorState;  \nEND CATCH;  \nGO"
+}

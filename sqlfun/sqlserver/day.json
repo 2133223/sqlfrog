@@ -1,0 +1,24 @@
+{
+  "funcName": "DAY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "dataTypes": [],
+        "description": "An expression that resolves to one of the following data types:"
+      }
+    }
+  ],
+  "description": "This function returns an integer that represents the day (day of the month) of the specified date.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Date and time",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/day-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT DAY(\u00272015-04-30 01:01:01.1234567\u0027);"
+}

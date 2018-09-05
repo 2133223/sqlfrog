@@ -1,0 +1,48 @@
+{
+  "funcName": "DECRYPTBYASYMKEY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "Asym_Key_ID",
+        "dataTypes": [
+          "int"
+        ],
+        "description": "The ID of an asymmetric key in the database. Asym_Key_ID has an int data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "ciphertext",
+        "dataTypes": [],
+        "description": "The string of data encrypted with the asymmetric key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "@ciphertext",
+        "dataTypes": [
+          "varbinary"
+        ],
+        "description": "A variable of type varbinary, containing data encrypted with the asymmetric key."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Asym_Key_Password",
+        "dataTypes": [],
+        "description": "The password used to encrypt the asymmetric key in the database."
+      }
+    }
+  ],
+  "returnType": "varbinary, with a maximum size of 8,000 bytes.",
+  "description": "This function uses an asymmetric key to decrypt encrypted data.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "Cryptographic",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/decryptbyasymkey-transact-sql?view\u003dsql-server-2017",
+  "sample": "SELECT CONVERT(nvarchar(max),  \n    DecryptByAsymKey( AsymKey_Id(\u0027JanainaAsymKey02\u0027),   \n    ProtectedData, N\u0027pGFD4bb925DGvbd2439587y\u0027 ))   \nAS DecryptedData   \nFROM [AdventureWorks2012].[Sales].[ProtectedData04]   \nWHERE Description \u003d N\u0027encrypted by asym key\u0027\u0027JanainaAsymKey02\u0027\u0027\u0027;  \nGO"
+}

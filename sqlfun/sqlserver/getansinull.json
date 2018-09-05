@@ -1,0 +1,28 @@
+{
+  "funcName": "GETANSINULL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "\u0027database\u0027",
+        "dataTypes": [
+          "char",
+          "nchar",
+          "char",
+          "nchar"
+        ],
+        "description": "Is the name of the database for which to return nullability information. databaseis either char or nchar. If char, database is implicitly converted to nchar."
+      }
+    }
+  ],
+  "returnType": "int",
+  "description": "Returns the default nullability for the database for this session.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database"
+  ],
+  "category": "System",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/getansinull-transact-sql?view\u003dsql-server-2017",
+  "sample": "USE AdventureWorks2012;  \nGO  \nSELECT GETANSINULL(\u0027AdventureWorks2012\u0027)  \nGO"
+}

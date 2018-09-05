@@ -1,0 +1,27 @@
+{
+  "funcName": "SIN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "float_expression",
+        "dataTypes": [
+          "float"
+        ],
+        "description": "Is an expression of type float or of a type that can be implicitly converted to float."
+      }
+    }
+  ],
+  "returnType": "float",
+  "description": "Returns the trigonometric sine of the specified angle, in radians, and in an approximate numeric, float, expression.",
+  "targetDBs": [
+    "SQL Server (starting with 2008)",
+    "Azure SQL Database",
+    "Azure SQL Data Warehouse",
+    "Parallel Data Warehouse"
+  ],
+  "category": "Mathematical",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/sin-transact-sql?view\u003dsql-server-2017",
+  "sample": "DECLARE @angle float;  \nSET @angle \u003d 45.175643;  \nSELECT \u0027The SIN of the angle is: \u0027 + CONVERT(varchar,SIN(@angle));  \nGO"
+}

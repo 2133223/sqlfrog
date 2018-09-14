@@ -1,0 +1,14 @@
+{
+  "funcName": "LAST_INSERT_ID",
+  "description": "Value of the AUTOINCREMENT column for the last INSERT",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_last-insert-id",
+  "sample": "SELECT LAST_INSERT_ID();"
+}

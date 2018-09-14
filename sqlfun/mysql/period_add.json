@@ -1,0 +1,27 @@
+{
+  "funcName": "PERIOD_ADD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "P"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    }
+  ],
+  "returnType": "Returns a value in the format YYYYMM.",
+  "description": "Add a period to a year-month",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_period-add",
+  "sample": "SELECT PERIOD_ADD(200801,2);"
+}

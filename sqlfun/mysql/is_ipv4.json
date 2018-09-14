@@ -1,0 +1,20 @@
+{
+  "funcName": "IS_IPV4",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "returnType": "Returns 1 if the argument is a valid IPv4 address specified as a string, 0 otherwise.",
+  "description": "Whether argument is an IPv4 address",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_is-ipv4",
+  "sample": "SELECT IS_IPV4(\u002710.0.5.9\u0027), IS_IPV4(\u002710.0.5.256\u0027);"
+}

@@ -1,0 +1,13 @@
+{
+  "funcName": "DAYOFMONTH",
+  "description": "Return the day of the month (0-31)",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_dayofmonth"
+}

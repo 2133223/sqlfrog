@@ -1,0 +1,14 @@
+{
+  "funcName": "DAYOFYEAR",
+  "description": "Return the day of the year (1-366)",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_dayofyear",
+  "sample": "SELECT something FROM tbl_name  WHERE DATE_SUB(CURDATE(),INTERVAL 30 DAY) \u003c\u003d date_col;"
+}

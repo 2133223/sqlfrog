@@ -1,0 +1,27 @@
+{
+  "funcName": "NULLIF",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2"
+      }
+    }
+  ],
+  "returnType": "Returns NULL if expr1 \u003d expr2 is true, otherwise returns expr1.",
+  "description": "Return NULL if expr1 \u003d expr2",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Flow Control Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/control-flow-functions.htmll#function_nullif",
+  "sample": "SELECT NULLIF(1,1);"
+}

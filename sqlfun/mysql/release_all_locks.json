@@ -1,0 +1,11 @@
+{
+  "funcName": "RELEASE_ALL_LOCKS",
+  "description": "Releases all current named locks",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_release-all-locks"
+}

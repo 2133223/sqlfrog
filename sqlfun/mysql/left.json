@@ -1,0 +1,27 @@
+{
+  "funcName": "LEFT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "len"
+      }
+    }
+  ],
+  "returnType": "Returns the leftmost len characters from the string str, or NULL if any argument is NULL.",
+  "description": "Return the leftmost number of characters as specified",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_left",
+  "sample": "SELECT LEFT(\u0027foobarbar\u0027, 5);"
+}

@@ -1,0 +1,15 @@
+{
+  "funcName": "SYSDATE",
+  "returnType": "Returns the current date and time as a value in \u0027YYYY-MM-DD HH:MM:SS\u0027 or YYYYMMDDHHMMSS format, depending on whether the function is used in a string or numeric context.",
+  "description": "Return the time at which the function executes",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_sysdate",
+  "sample": "SELECT NOW();"
+}

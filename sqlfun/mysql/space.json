@@ -1,0 +1,22 @@
+{
+  "funcName": "SPACE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    }
+  ],
+  "returnType": "Returns a string consisting of N space characters.",
+  "description": "Return a string of the specified number of spaces",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_space",
+  "sample": "SELECT SPACE(6);"
+}

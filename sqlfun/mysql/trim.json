@@ -1,0 +1,22 @@
+{
+  "funcName": "TRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "[{BOTH | LEADING | TRAILING} [remstr] FROM] str"
+      }
+    }
+  ],
+  "returnType": "Returns the string str with all remstr prefixes or suffixes removed.",
+  "description": "Remove leading and trailing spaces",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_trim",
+  "sample": "SELECT TRIM(\u0027  bar   \u0027);"
+}

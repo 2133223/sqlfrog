@@ -1,0 +1,31 @@
+{
+  "funcName": "FORMAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "X"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "D["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "locale]"
+      }
+    }
+  ],
+  "description": "Return a number formatted to specified number of decimal places",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_format",
+  "sample": "SELECT FORMAT(12332.123456, 4);"
+}

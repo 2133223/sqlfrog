@@ -1,0 +1,22 @@
+{
+  "funcName": "SECOND",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "time"
+      }
+    }
+  ],
+  "returnType": "Returns the second for time, in the range 0 to 59.",
+  "description": "Return the second (0-59)",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_second",
+  "sample": "SELECT SECOND(\u002710:05:03\u0027);"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "ASCII",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "returnType": "Returns the numeric value of the leftmost character of the string str.",
+  "description": "Return numeric value of left-most character",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_ascii",
+  "sample": "SELECT ASCII(\u00272\u0027);"
+}

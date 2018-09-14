@@ -1,0 +1,12 @@
+{
+  "funcName": "DENSE_RANK",
+  "returnType": "Returns the rank of the current row within its partition, without gaps.",
+  "description": "Rank of current row within its partition, without gaps",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.htmll#function_dense-rank"
+}

@@ -1,0 +1,32 @@
+{
+  "funcName": "CONV",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "from_base"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "to_base"
+      }
+    }
+  ],
+  "returnType": "Returns a string representation of the number N, converted from base from_base to base to_base.",
+  "description": "Convert numbers between different number bases",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_conv",
+  "sample": "SELECT CONV(\u0027a\u0027,16,2);"
+}

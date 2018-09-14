@@ -1,0 +1,12 @@
+{
+  "funcName": "STATEMENT_DIGEST",
+  "description": "Compute statement digest hash value",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Encryption Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.htmll#function_statement-digest",
+  "sample": "CREATE TABLE md5_tbl (md5_val CHAR(32), ...);"
+}

@@ -1,0 +1,14 @@
+{
+  "funcName": "BIT_COUNT",
+  "description": "Return the number of bits that are set",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Bit Functions and Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/bit-functions.htmll#function_bit-count",
+  "sample": "SELECT 127 | 128, 128 \u003c\u003c 2, BIT_COUNT(15);"
+}

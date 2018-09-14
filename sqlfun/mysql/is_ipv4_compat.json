@@ -1,0 +1,19 @@
+{
+  "funcName": "IS_IPV4_COMPAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "Whether argument is an IPv4-compatible address",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_is-ipv4-compat",
+  "sample": "SELECT IS_IPV4_COMPAT(INET6_ATON(\u0027::10.0.5.9\u0027));"
+}

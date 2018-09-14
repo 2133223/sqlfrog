@@ -1,0 +1,22 @@
+{
+  "funcName": "MINUTE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "time"
+      }
+    }
+  ],
+  "returnType": "Returns the minute for time, in the range 0 to 59.",
+  "description": "Return the minute from the argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_minute",
+  "sample": "SELECT MINUTE(\u00272008-02-03 10:05:03\u0027);"
+}

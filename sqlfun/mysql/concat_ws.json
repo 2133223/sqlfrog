@@ -1,0 +1,36 @@
+{
+  "funcName": "CONCAT_WS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "separator"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str2"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "..."
+      }
+    }
+  ],
+  "description": "Return concatenate with separator",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_concat-ws",
+  "sample": "SELECT CONCAT_WS(\u0027,\u0027,\u0027First name\u0027,\u0027Second name\u0027,\u0027Last Name\u0027);"
+}

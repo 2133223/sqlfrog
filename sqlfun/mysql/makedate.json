@@ -1,0 +1,27 @@
+{
+  "funcName": "MAKEDATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "year"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "dayofyear"
+      }
+    }
+  ],
+  "returnType": "Returns a date, given year and day-of-year values.",
+  "description": "Create a date from the year and day of year",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_makedate",
+  "sample": "SELECT MAKEDATE(2011,31), MAKEDATE(2011,32);"
+}

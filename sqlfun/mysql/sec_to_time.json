@@ -1,0 +1,22 @@
+{
+  "funcName": "SEC_TO_TIME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "seconds"
+      }
+    }
+  ],
+  "returnType": "Returns the seconds argument, converted to hours, minutes, and seconds, as a TIME value.",
+  "description": "Converts seconds to \u0027HH:MM:SS\u0027 format",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_sec-to-time",
+  "sample": "SELECT SEC_TO_TIME(2378);"
+}

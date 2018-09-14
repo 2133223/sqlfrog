@@ -1,0 +1,22 @@
+{
+  "funcName": "REVERSE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "returnType": "Returns the string str with the order of the characters reversed.",
+  "description": "Reverse the characters in a string",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_reverse",
+  "sample": "SELECT REVERSE(\u0027abc\u0027);"
+}

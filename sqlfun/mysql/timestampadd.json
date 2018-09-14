@@ -1,0 +1,31 @@
+{
+  "funcName": "TIMESTAMPADD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "unit"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "interval"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "datetime_expr"
+      }
+    }
+  ],
+  "description": "Add an interval to a datetime expression",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_timestampadd",
+  "sample": "SELECT TIMESTAMPADD(MINUTE,1,\u00272003-01-02\u0027);"
+}

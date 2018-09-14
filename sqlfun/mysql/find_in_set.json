@@ -1,0 +1,27 @@
+{
+  "funcName": "FIND_IN_SET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "strlist"
+      }
+    }
+  ],
+  "returnType": "Returns a value in the range of 1 to N if the string str is in the string list strlist consisting of N substrings.",
+  "description": "Return the index position of the first argument within the second argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_find-in-set",
+  "sample": "SELECT FIND_IN_SET(\u0027b\u0027,\u0027a,b,c,d\u0027);"
+}

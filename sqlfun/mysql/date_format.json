@@ -1,0 +1,26 @@
+{
+  "funcName": "DATE_FORMAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format"
+      }
+    }
+  ],
+  "description": "Format date as specified",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_date-format",
+  "sample": "SELECT DATE_FORMAT(\u00272009-10-04 22:23:00\u0027, \u0027%W %M %Y\u0027);"
+}

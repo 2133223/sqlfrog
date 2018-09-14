@@ -1,0 +1,19 @@
+{
+  "funcName": "INET6_NTOA",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "Return the IPv6 address from a numeric value",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_inet6-ntoa",
+  "sample": "CREATE TABLE t AS SELECT INET6_NTOA(expr) AS c1;"
+}

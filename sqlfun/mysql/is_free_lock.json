@@ -1,0 +1,21 @@
+{
+  "funcName": "IS_FREE_LOCK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "returnType": "Returns 1 if the lock is free (no one is using the lock), 0 if the lock is in use, and NULL if an error occurs (such as an incorrect argument).",
+  "description": "Whether the named lock is free",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_is-free-lock"
+}

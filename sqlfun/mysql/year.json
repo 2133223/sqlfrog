@@ -1,0 +1,22 @@
+{
+  "funcName": "YEAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date"
+      }
+    }
+  ],
+  "returnType": "Returns the year for date, in the range 1000 to 9999, or 0 for the “zero” date.",
+  "description": "Return the year",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_year",
+  "sample": "SELECT YEAR(\u00271987-01-01\u0027);"
+}

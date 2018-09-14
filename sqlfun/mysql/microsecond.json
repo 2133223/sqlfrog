@@ -1,0 +1,22 @@
+{
+  "funcName": "MICROSECOND",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "returnType": "Returns the microseconds from the time or datetime expression expr as a number in the range from 0 to 999999.",
+  "description": "Return the microseconds from argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_microsecond",
+  "sample": "SELECT MICROSECOND(\u002712:00:00.123456\u0027);"
+}

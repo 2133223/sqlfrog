@@ -1,0 +1,26 @@
+{
+  "funcName": "ADDDATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "INTERVAL expr unit"
+      }
+    }
+  ],
+  "description": "Add time values (intervals) to a date value",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_adddate",
+  "sample": "SELECT DATE_ADD(\u00272008-01-02\u0027, INTERVAL 31 DAY);"
+}

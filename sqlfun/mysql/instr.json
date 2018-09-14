@@ -1,0 +1,27 @@
+{
+  "funcName": "INSTR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "substr"
+      }
+    }
+  ],
+  "returnType": "Returns the position of the first occurrence of substring substr in string str.",
+  "description": "Return the index of the first occurrence of substring",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_instr",
+  "sample": "SELECT INSTR(\u0027foobarbar\u0027, \u0027bar\u0027);"
+}

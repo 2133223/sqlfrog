@@ -1,0 +1,32 @@
+{
+  "funcName": "SUBSTRING_INDEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "delim"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "count"
+      }
+    }
+  ],
+  "returnType": "Returns the substring from string str before count occurrences of the delimiter delim.",
+  "description": "Return a substring from a string before the specified number of occurrences of the delimiter",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_substring-index",
+  "sample": "SELECT SUBSTRING_INDEX(\u0027www.mysql.com\u0027, \u0027.\u0027, 2);"
+}

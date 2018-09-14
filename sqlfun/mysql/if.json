@@ -1,0 +1,31 @@
+{
+  "funcName": "IF",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr3"
+      }
+    }
+  ],
+  "description": "If/else construct",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Flow Control Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/control-flow-functions.htmll#function_if",
+  "sample": "SELECT IF(1\u003e2,2,3);"
+}

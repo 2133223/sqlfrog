@@ -1,0 +1,22 @@
+{
+  "funcName": "COS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "X"
+      }
+    }
+  ],
+  "returnType": "Returns the cosine of X, where X is given in radians.",
+  "description": "Return the cosine",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_cos",
+  "sample": "SELECT COS(PI());"
+}

@@ -1,0 +1,45 @@
+{
+  "funcName": "REGEXP_INSTR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pat["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pos["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "occurrence["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "return_option["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "match_type]]]]"
+      }
+    }
+  ],
+  "returnType": "Returns the starting index of the substring of the string expr that matches the regular expression specified by the pattern pat, 0 if there is no match.",
+  "description": "Starting index of substring matching regular expression",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Regular Expression Functions and Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/regexp.htmll#function_regexp-instr",
+  "sample": "SELECT REGEXP_INSTR(\u0027dog cat dog\u0027, \u0027dog\u0027);"
+}

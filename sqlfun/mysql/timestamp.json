@@ -1,0 +1,21 @@
+{
+  "funcName": "TIMESTAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "With a single argument, this function returns the date or datetime expression; with two arguments, the sum of the arguments",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_timestamp",
+  "sample": "SELECT TIMESTAMP(\u00272003-12-31\u0027);"
+}

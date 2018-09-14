@@ -1,0 +1,21 @@
+{
+  "funcName": "INET_NTOA",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "Return the IP address from a numeric value",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_inet-ntoa",
+  "sample": "SELECT INET_NTOA(167773449);"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "GTID_SUBSET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "subset"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "set"
+      }
+    }
+  ],
+  "returnType": "Returns false otherwise.",
+  "description": "Return true if all GTIDs in subset are also in set; otherwise false.",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "GTID Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/gtid-functions.htmll#function_gtid-subset",
+  "sample": ""
+}

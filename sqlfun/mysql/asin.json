@@ -1,0 +1,22 @@
+{
+  "funcName": "ASIN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "X"
+      }
+    }
+  ],
+  "returnType": "Returns the arc sine of X, that is, the value whose sine is X.",
+  "description": "Return the arc sine",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_asin",
+  "sample": "SELECT ASIN(0.2);"
+}

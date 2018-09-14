@@ -1,0 +1,27 @@
+{
+  "funcName": "POW",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "X"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Y"
+      }
+    }
+  ],
+  "returnType": "Returns the value of X raised to the power of Y.",
+  "description": "Return the argument raised to the specified power",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_pow",
+  "sample": "SELECT POW(2,2);"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "SIGN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "X"
+      }
+    }
+  ],
+  "returnType": "Returns the sign of the argument as -1, 0, or 1, depending on whether X is negative, zero, or positive.",
+  "description": "Return the sign of the argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_sign",
+  "sample": "SELECT SIGN(-32);"
+}

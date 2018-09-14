@@ -1,0 +1,20 @@
+{
+  "funcName": "IS_UUID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string_uuid"
+      }
+    }
+  ],
+  "returnType": "Returns 1 if the argument is a valid string-format UUID, 0 if the argument is not a valid UUID, and NULL if the argument is NULL.",
+  "description": "Whether argument is a valid UUID",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_is-uuid",
+  "sample": ""
+}

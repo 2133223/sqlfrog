@@ -1,0 +1,13 @@
+{
+  "funcName": "CURRENT_ROLE",
+  "returnType": "Returns a utf8 string containing the current active roles for the current session, separated by commas, or NONE if there are none.",
+  "description": "Returns the current active roles",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_current-role",
+  "sample": "GRANT \u0027r1\u0027, \u0027r2\u0027 TO \u0027u1\u0027@\u0027localhost\u0027;"
+}

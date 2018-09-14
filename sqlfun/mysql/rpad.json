@@ -1,0 +1,32 @@
+{
+  "funcName": "RPAD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "len"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "padstr"
+      }
+    }
+  ],
+  "returnType": "Returns the string str, right-padded with the string padstr to a length of len characters.",
+  "description": "Append string the specified number of times",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_rpad",
+  "sample": "SELECT RPAD(\u0027hi\u0027,5,\u0027?\u0027);"
+}

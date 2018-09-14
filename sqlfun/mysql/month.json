@@ -1,0 +1,22 @@
+{
+  "funcName": "MONTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date"
+      }
+    }
+  ],
+  "returnType": "Returns the month for date, in the range 1 to 12 for January to December, or 0 for dates such as \u00270000-00-00\u0027 or \u00272008-00-00\u0027 that have a zero month part.",
+  "description": "Return the month from the date passed",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_month",
+  "sample": "SELECT MONTH(\u00272008-02-03\u0027);"
+}

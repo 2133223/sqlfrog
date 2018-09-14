@@ -1,0 +1,14 @@
+{
+  "funcName": "SHA2",
+  "description": "Calculate an SHA-2 checksum",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Encryption Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.htmll#function_sha2",
+  "sample": "CREATE TABLE md5_tbl (md5_val CHAR(32), ...);"
+}

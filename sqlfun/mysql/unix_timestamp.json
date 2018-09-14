@@ -1,0 +1,14 @@
+{
+  "funcName": "UNIX_TIMESTAMP",
+  "description": "Return a Unix timestamp",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_unix-timestamp",
+  "sample": "SELECT something FROM tbl_name  WHERE DATE_SUB(CURDATE(),INTERVAL 30 DAY) \u003c\u003d date_col;"
+}

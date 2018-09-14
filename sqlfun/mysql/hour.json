@@ -1,0 +1,22 @@
+{
+  "funcName": "HOUR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "time"
+      }
+    }
+  ],
+  "returnType": "Returns the hour for time.",
+  "description": "Extract the hour",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_hour",
+  "sample": "SELECT HOUR(\u002710:05:03\u0027);"
+}

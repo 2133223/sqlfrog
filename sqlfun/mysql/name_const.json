@@ -1,0 +1,27 @@
+{
+  "funcName": "NAME_CONST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "name"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "value"
+      }
+    }
+  ],
+  "returnType": "Returns the given value.",
+  "description": "Causes the column to have the given name",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_name-const",
+  "sample": "SELECT NAME_CONST(\u0027myname\u0027, 14);"
+}

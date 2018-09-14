@@ -1,0 +1,18 @@
+{
+  "funcName": "INTERNAL_DD_CHAR_LENGTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ARGS"
+      }
+    }
+  ],
+  "description": "Internal use only",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Internal Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/internal-functions.htmll#function_internal-dd-char-length"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "UNCOMPRESSED_LENGTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "compressed_string"
+      }
+    }
+  ],
+  "returnType": "Returns the length that the compressed string had before being compressed.",
+  "description": "Return the length of a string before compression",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Encryption Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.htmll#function_uncompressed-length",
+  "sample": "SELECT UNCOMPRESSED_LENGTH(COMPRESS(REPEAT(\u0027a\u0027,30)));"
+}

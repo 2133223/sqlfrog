@@ -1,0 +1,20 @@
+{
+  "funcName": "FIRST_VALUE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "returnType": "Returns the value of expr from the first row of the window frame.",
+  "description": "Value of argument from first row of window frame",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.htmll#function_first-value",
+  "sample": "SELECT\n         time, subject, val,\n         FIRST_VALUE(val)  OVER w AS \u0027first\u0027,\n         LAST_VALUE(val)   OVER w AS \u0027last\u0027,\n         NTH_VALUE(val, 2) OVER w AS \u0027second\u0027,\n         NTH_VALUE(val, 4) OVER w AS \u0027fourth\u0027\n       FROM observations\n       WINDOW w AS (PARTITION BY subject ORDER BY time\n                    ROWS UNBOUNDED PRECEDING);"
+}

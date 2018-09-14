@@ -1,0 +1,30 @@
+{
+  "funcName": "LAG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr ["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "N["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "default]]"
+      }
+    }
+  ],
+  "returnType": "Returns the value of expr from the row that lags (precedes) the current row by N rows within its partition.",
+  "description": "Value of argument from row lagging current row within partition",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.htmll#function_lag",
+  "sample": "SELECT\n         t, val,\n         LAG(val)        OVER w AS \u0027lag\u0027,\n         LEAD(val)       OVER w AS \u0027lead\u0027,\n         val - LAG(val)  OVER w AS \u0027lag diff\u0027,\n         val - LEAD(val) OVER w AS \u0027lead diff\u0027\n       FROM series\n       WINDOW w AS (ORDER BY t);"
+}

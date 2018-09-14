@@ -1,0 +1,15 @@
+{
+  "funcName": "UUID_SHORT",
+  "returnType": "Returns a “short” universal identifier as a 64-bit unsigned integer.",
+  "description": "Return an integer-valued universal identifier",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_uuid-short",
+  "sample": "(server_id \u0026 255) \u003c\u003c 56\n+ (server_startup_time_in_seconds \u003c\u003c 24)\n+ incremented_variable++;"
+}

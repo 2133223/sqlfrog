@@ -1,0 +1,13 @@
+{
+  "funcName": "ROLES_GRAPHML",
+  "returnType": "Returns a utf8 string containing a GraphML document representing memory role subgraphs.",
+  "description": "Returns a GraphML document representing memory role subgraphs",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_roles-graphml",
+  "sample": "SELECT ROLES_GRAPHML();"
+}

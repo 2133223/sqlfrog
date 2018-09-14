@@ -1,0 +1,21 @@
+{
+  "funcName": "CRC32",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "Compute a cyclic redundancy check value",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_crc32",
+  "sample": "SELECT CRC32(\u0027MySQL\u0027);"
+}

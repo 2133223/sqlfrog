@@ -1,0 +1,14 @@
+{
+  "funcName": "LENGTH",
+  "returnType": "Returns the length of the string str, measured in characters.",
+  "description": "Return the length of a string in bytes",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_length"
+}

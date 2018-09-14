@@ -1,0 +1,30 @@
+{
+  "funcName": "SUBSTRING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pos"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "len"
+      }
+    }
+  ],
+  "description": "Return the substring as specified",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_substring"
+}

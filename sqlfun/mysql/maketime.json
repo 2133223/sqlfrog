@@ -1,0 +1,32 @@
+{
+  "funcName": "MAKETIME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "hour"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "minute"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "second"
+      }
+    }
+  ],
+  "returnType": "Returns a time value calculated from the hour, minute, and second arguments.",
+  "description": "Create time from hour, minute, second",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_maketime",
+  "sample": "SELECT MAKETIME(12,15,30);"
+}

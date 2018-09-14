@@ -1,0 +1,20 @@
+{
+  "funcName": "IS_USED_LOCK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "description": "Whether the named lock is in use; return connection identifier if true",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_is-used-lock"
+}

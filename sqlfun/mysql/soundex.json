@@ -1,0 +1,22 @@
+{
+  "funcName": "SOUNDEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "returnType": "Returns a soundex string from str.",
+  "description": "Return a soundex string",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_soundex",
+  "sample": "SELECT SOUNDEX(\u0027Hello\u0027);"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "DEFAULT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "col_name"
+      }
+    }
+  ],
+  "returnType": "Returns the default value for a table column.",
+  "description": "Return the default value for a table column",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_default",
+  "sample": "UPDATE t SET i \u003d DEFAULT(i)+1 WHERE id \u003c 100;"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "TIME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "Extract the time portion of the expression passed",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_time",
+  "sample": "SELECT TIME(\u00272003-12-31 01:02:03\u0027);"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "LTRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "returnType": "Returns the string str with leading space characters removed.",
+  "description": "Remove leading spaces",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_ltrim",
+  "sample": "SELECT LTRIM(\u0027  barbar\u0027);"
+}

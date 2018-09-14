@@ -1,0 +1,31 @@
+{
+  "funcName": "UpdateXML",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "xml_target"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "xpath_expr"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "new_xml"
+      }
+    }
+  ],
+  "description": "Return replaced XML fragment",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "XML Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/xml-functions.htmll#function_updatexml",
+  "sample": ""
+}

@@ -1,0 +1,14 @@
+{
+  "funcName": "FOUND_ROWS",
+  "description": "For a SELECT with a LIMIT clause, the number of rows that would be returned were there no LIMIT clause",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_found-rows",
+  "sample": "SELECT SQL_CALC_FOUND_ROWS * FROM tbl_name  WHERE id \u003e 100 LIMIT 10;"
+}

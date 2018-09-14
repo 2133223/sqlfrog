@@ -1,0 +1,19 @@
+{
+  "funcName": "FROM_BASE64",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "description": "Decode base64 encoded string and return result",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_from-base64",
+  "sample": "SELECT TO_BASE64(\u0027abc\u0027), FROM_BASE64(TO_BASE64(\u0027abc\u0027));"
+}

@@ -1,0 +1,28 @@
+{
+  "funcName": "WAIT_UNTIL_SQL_THREAD_AFTER_GTIDS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "gtid_set["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timeout]["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "channel]"
+      }
+    }
+  ],
+  "description": "Wait until the given GTIDs have executed on slave.",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "GTID Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/gtid-functions.htmll#function_wait-until-sql-thread-after-gtids"
+}

@@ -1,0 +1,19 @@
+{
+  "funcName": "NTILE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    }
+  ],
+  "description": "Bucket number of current row within its partition.",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.htmll#function_ntile",
+  "sample": "SELECT\n         val,\n         ROW_NUMBER() OVER w AS \u0027row_number\u0027,\n         NTILE(2)     OVER w AS \u0027ntile2\u0027,\n         NTILE(4)     OVER w AS \u0027ntile4\u0027\n       FROM numbers\n       WINDOW w AS (ORDER BY val);"
+}

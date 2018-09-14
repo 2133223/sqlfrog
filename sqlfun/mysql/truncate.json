@@ -1,0 +1,27 @@
+{
+  "funcName": "TRUNCATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "X"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "D"
+      }
+    }
+  ],
+  "returnType": "Returns the number X, truncated to D decimal places.",
+  "description": "Truncate to specified number of decimal places",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_truncate",
+  "sample": "SELECT TRUNCATE(1.223,1);"
+}

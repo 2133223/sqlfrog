@@ -1,0 +1,37 @@
+{
+  "funcName": "INSERT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pos"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "len"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "newstr"
+      }
+    }
+  ],
+  "returnType": "Returns the string str, with the substring beginning at position pos and len characters long replaced by the string newstr.",
+  "description": "Insert a substring at the specified position up to the specified number of characters",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_insert",
+  "sample": "SELECT INSERT(\u0027Quadratic\u0027, 3, 4, \u0027What\u0027);"
+}

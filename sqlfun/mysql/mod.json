@@ -1,0 +1,27 @@
+{
+  "funcName": "MOD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "M"
+      }
+    }
+  ],
+  "returnType": "Returns the remainder of N divided by M.",
+  "description": "Return the remainder",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_mod",
+  "sample": "SELECT MOD(234, 10);"
+}

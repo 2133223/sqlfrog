@@ -1,0 +1,26 @@
+{
+  "funcName": "BENCHMARK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "count"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "Repeatedly execute an expression",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_benchmark",
+  "sample": "SELECT BENCHMARK(1000000,AES_ENCRYPT(\u0027hello\u0027,\u0027goodbye\u0027));"
+}

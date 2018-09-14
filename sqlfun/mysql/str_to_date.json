@@ -1,0 +1,15 @@
+{
+  "funcName": "STR_TO_DATE",
+  "returnType": "Returns a format string.",
+  "description": "Convert a string to a date",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_str-to-date",
+  "sample": "SELECT DATE_FORMAT(\u00272003-10-03\u0027,GET_FORMAT(DATE,\u0027EUR\u0027));"
+}

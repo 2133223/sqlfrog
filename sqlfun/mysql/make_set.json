@@ -1,0 +1,37 @@
+{
+  "funcName": "MAKE_SET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "bits"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str2"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "..."
+      }
+    }
+  ],
+  "returnType": "Returns a set value (a string containing substrings separated by , characters) consisting of the strings that have the corresponding bit in bits set.",
+  "description": "Return a set of comma-separated strings that have the corresponding bit in bits set",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_make-set",
+  "sample": "SELECT MAKE_SET(1,\u0027a\u0027,\u0027b\u0027,\u0027c\u0027);"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "WEIGHT_STRING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str [AS {CHAR|BINARY}(N"
+      }
+    }
+  ],
+  "description": "Return the weight string for a string",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_weight-string",
+  "sample": "SET @s \u003d _utf8mb4 \u0027AB\u0027 COLLATE utf8mb4_0900_ai_ci;"
+}

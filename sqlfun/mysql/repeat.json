@@ -1,0 +1,27 @@
+{
+  "funcName": "REPEAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "count"
+      }
+    }
+  ],
+  "returnType": "Returns a string consisting of the string str repeated count times.",
+  "description": "Repeat a string the specified number of times",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_repeat",
+  "sample": "SELECT REPEAT(\u0027MySQL\u0027, 3);"
+}

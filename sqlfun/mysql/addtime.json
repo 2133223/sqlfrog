@@ -1,0 +1,26 @@
+{
+  "funcName": "ADDTIME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2"
+      }
+    }
+  ],
+  "description": "Add time",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_addtime",
+  "sample": "SELECT ADDTIME(\u00272007-12-31 23:59:59.999999\u0027, \u00271 1:1:1.000002\u0027);"
+}

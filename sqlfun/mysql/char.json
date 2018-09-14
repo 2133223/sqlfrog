@@ -1,0 +1,26 @@
+{
+  "funcName": "CHAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "... [USING charset_name]"
+      }
+    }
+  ],
+  "description": "Return the character for each integer passed",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_char",
+  "sample": "SELECT CHAR(77,121,83,81,\u002776\u0027);"
+}

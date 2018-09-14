@@ -1,0 +1,12 @@
+{
+  "funcName": "TO_BASE64",
+  "description": "Return the argument converted to a base-64 string",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_to-base64",
+  "sample": "SELECT TO_BASE64(\u0027abc\u0027), FROM_BASE64(TO_BASE64(\u0027abc\u0027));"
+}

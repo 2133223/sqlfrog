@@ -1,0 +1,32 @@
+{
+  "funcName": "CONCAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str2"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "..."
+      }
+    }
+  ],
+  "returnType": "Returns the string that results from concatenating the arguments.",
+  "description": "Return concatenated string",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_concat",
+  "sample": "SELECT CONCAT(\u0027My\u0027, \u0027S\u0027, \u0027QL\u0027);"
+}

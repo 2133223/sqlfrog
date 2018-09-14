@@ -1,0 +1,42 @@
+{
+  "funcName": "ELT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str2"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "str3"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "..."
+      }
+    }
+  ],
+  "returnType": "Returns NULL if N is less than 1 or greater than the number of arguments.",
+  "description": "Return string at index number",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_elt",
+  "sample": "SELECT ELT(1, \u0027Aa\u0027, \u0027Bb\u0027, \u0027Cc\u0027, \u0027Dd\u0027);"
+}

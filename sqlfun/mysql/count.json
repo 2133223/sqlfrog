@@ -1,0 +1,22 @@
+{
+  "funcName": "COUNT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "returnType": "Returns a count of the number of non-NULL values of expr in the rows retrieved by a SELECT statement.",
+  "description": "Return a count of the number of rows returned",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Aggregate (GROUP BY) Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.htmll#function_count",
+  "sample": "SELECT student.student_name,COUNT(*)\n       FROM student,course\n       WHERE student.student_id\u003dcourse.student_id\n       GROUP BY student_name;"
+}

@@ -1,0 +1,35 @@
+{
+  "funcName": "MASTER_POS_WAIT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "log_name"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "log_pos["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timeout]["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "channel]"
+      }
+    }
+  ],
+  "description": "Block until the slave has read and applied all updates up to the specified position",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_master-pos-wait"
+}

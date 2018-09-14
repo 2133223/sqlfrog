@@ -1,0 +1,21 @@
+{
+  "funcName": "EXTRACT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "unit FROM date"
+      }
+    }
+  ],
+  "description": "Extract part of a date",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_extract",
+  "sample": "SELECT EXTRACT(YEAR FROM \u00272009-07-02\u0027);"
+}

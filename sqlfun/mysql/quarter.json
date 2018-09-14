@@ -1,0 +1,22 @@
+{
+  "funcName": "QUARTER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date"
+      }
+    }
+  ],
+  "returnType": "Returns the quarter of the year for date, in the range 1 to 4.",
+  "description": "Return the quarter from a date argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_quarter",
+  "sample": "SELECT QUARTER(\u00272008-04-01\u0027);"
+}

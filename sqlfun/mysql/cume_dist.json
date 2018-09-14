@@ -1,0 +1,13 @@
+{
+  "funcName": "CUME_DIST",
+  "returnType": "Returns the cumulative distribution of a value within a group of values; that is, the percentage of partition values less than or equal to the value in the current row.",
+  "description": "Cumulative distribution value",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.htmll#function_cume-dist",
+  "sample": "SELECT\n         val,\n         ROW_NUMBER()   OVER w AS \u0027row_number\u0027,\n         CUME_DIST()    OVER w AS \u0027cume_dist\u0027,\n         PERCENT_RANK() OVER w AS \u0027percent_rank\u0027\n       FROM numbers\n       WINDOW w AS (ORDER BY val);"
+}

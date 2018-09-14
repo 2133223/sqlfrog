@@ -1,0 +1,13 @@
+{
+  "funcName": "PERCENT_RANK",
+  "returnType": "Returns the the percentage of partition values less than the value in the current row, excluding the highest value.",
+  "description": "Percentage rank value",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.htmll#function_percent-rank",
+  "sample": ""
+}

@@ -1,0 +1,11 @@
+{
+  "funcName": "LOCALTIMESTAMP LOCALTIMESTAMP",
+  "description": "Synonym for NOW()",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_localtimestamp"
+}

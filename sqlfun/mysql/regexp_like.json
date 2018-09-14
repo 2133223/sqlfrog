@@ -1,0 +1,13 @@
+{
+  "funcName": "REGEXP_LIKE",
+  "returnType": "Returns 1 if the string expr matches the regular expression specified by the pattern pat, 0 otherwise.",
+  "description": "Whether string matches regular expression",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Regular Expression Functions and Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/regexp.htmll#function_regexp-like",
+  "sample": "SELECT \u0027Michael!\u0027 REGEXP \u0027.*\u0027;"
+}

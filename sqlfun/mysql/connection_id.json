@@ -1,0 +1,15 @@
+{
+  "funcName": "CONNECTION_ID",
+  "returnType": "Returns the connection ID (thread ID) for the connection.",
+  "description": "Return the connection ID (thread ID) for the connection",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_connection-id",
+  "sample": "SELECT CONNECTION_ID();"
+}

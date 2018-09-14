@@ -1,0 +1,14 @@
+{
+  "funcName": "BIT_OR",
+  "description": "Return bitwise OR",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Aggregate (GROUP BY) Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.htmll#function_bit-or",
+  "sample": "SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(time_col))) FROM tbl_name;"
+}

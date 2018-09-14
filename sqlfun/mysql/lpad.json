@@ -1,0 +1,32 @@
+{
+  "funcName": "LPAD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "len"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "padstr"
+      }
+    }
+  ],
+  "returnType": "Returns the string str, left-padded with the string padstr to a length of len characters.",
+  "description": "Return the string argument, left-padded with the specified string",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_lpad",
+  "sample": "SELECT LPAD(\u0027hi\u0027,4,\u0027??\u0027);"
+}

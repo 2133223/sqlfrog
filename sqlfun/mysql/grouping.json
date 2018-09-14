@@ -1,0 +1,24 @@
+{
+  "funcName": "GROUPING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr ["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr] ..."
+      }
+    }
+  ],
+  "description": "Distinguish super-aggregate ROLLUP rows from regular rows",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_grouping",
+  "sample": "SELECT * FROM t1;"
+}

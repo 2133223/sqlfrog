@@ -1,0 +1,15 @@
+{
+  "funcName": "CURRENT_USER",
+  "returnType": "Returns the user name and host name combination for the MySQL account that the server used to authenticate the current client.",
+  "description": "The authenticated user name and host name",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_current-user",
+  "sample": "SELECT USER();"
+}

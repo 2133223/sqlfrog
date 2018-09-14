@@ -1,0 +1,22 @@
+{
+  "funcName": "ABS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "X"
+      }
+    }
+  ],
+  "returnType": "Returns the absolute value of X.",
+  "description": "Return the absolute value",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_abs",
+  "sample": "SELECT ABS(2);"
+}

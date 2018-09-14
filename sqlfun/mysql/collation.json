@@ -1,0 +1,22 @@
+{
+  "funcName": "COLLATION",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "returnType": "Returns the collation of the string argument.",
+  "description": "Return the collation of the string argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_collation",
+  "sample": "SELECT COLLATION(\u0027abc\u0027);"
+}

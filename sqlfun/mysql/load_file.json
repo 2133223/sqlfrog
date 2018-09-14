@@ -1,0 +1,21 @@
+{
+  "funcName": "LOAD_FILE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "file_name"
+      }
+    }
+  ],
+  "description": "Load the named file",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_load-file",
+  "sample": "UPDATE t\n            SET blob_col\u003dLOAD_FILE(\u0027/tmp/picture\u0027)\n            WHERE id\u003d1;"
+}

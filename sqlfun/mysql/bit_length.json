@@ -1,0 +1,22 @@
+{
+  "funcName": "BIT_LENGTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    }
+  ],
+  "returnType": "Returns the length of the string str in bits.",
+  "description": "Return length of argument in bits",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_bit-length",
+  "sample": "SELECT BIT_LENGTH(\u0027text\u0027);"
+}

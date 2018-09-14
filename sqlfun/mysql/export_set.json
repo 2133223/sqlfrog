@@ -1,0 +1,42 @@
+{
+  "funcName": "EXPORT_SET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "bits"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "on"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "off["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "separator["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "number_of_bits]]"
+      }
+    }
+  ],
+  "returnType": "Returns a string such that for every bit set in the value bits, you get an on string and for every bit not set in the value, you get an off string.",
+  "description": "Return a string such that for every bit set in the value bits, you get an on string and for every unset bit, you get an off string",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_export-set",
+  "sample": "SELECT EXPORT_SET(5,\u0027Y\u0027,\u0027N\u0027,\u0027,\u0027,4);"
+}

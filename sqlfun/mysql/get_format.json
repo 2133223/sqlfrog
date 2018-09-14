@@ -1,0 +1,27 @@
+{
+  "funcName": "GET_FORMAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "{DATE|TIME|DATETIME}"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "{\u0027EUR\u0027|\u0027USA\u0027|\u0027JIS\u0027|\u0027ISO\u0027|\u0027INTERNAL\u0027}"
+      }
+    }
+  ],
+  "returnType": "Returns a format string.",
+  "description": "Return a date format string",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_get-format",
+  "sample": "SELECT DATE_FORMAT(\u00272003-10-03\u0027,GET_FORMAT(DATE,\u0027EUR\u0027));"
+}

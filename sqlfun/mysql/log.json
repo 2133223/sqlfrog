@@ -1,0 +1,15 @@
+{
+  "funcName": "LOG",
+  "returnType": "Returns the value of e (the base of natural logarithms) raised to the power of X.",
+  "description": "Return the natural logarithm of the first argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Mathematical Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.htmll#function_log",
+  "sample": "SELECT EXP(2);"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "STDDEV_SAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "returnType": "Returns the sample standard deviation of expr (the square root of VAR_SAMP().",
+  "description": "Return the sample standard deviation",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Aggregate (GROUP BY) Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.htmll#function_stddev-samp"
+}

@@ -1,0 +1,26 @@
+{
+  "funcName": "DATEDIFF",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2"
+      }
+    }
+  ],
+  "description": "Subtract two dates",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_datediff",
+  "sample": "SELECT DATEDIFF(\u00272007-12-31 23:59:59\u0027,\u00272007-12-30\u0027);"
+}

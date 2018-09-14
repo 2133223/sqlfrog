@@ -1,0 +1,25 @@
+{
+  "funcName": "JSON_OBJECTAGG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "key"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "value"
+      }
+    }
+  ],
+  "returnType": "Returns NULL if the result contains no rows, or in the event of an error.",
+  "description": "Return result set as a single JSON object",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Aggregate (GROUP BY) Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.htmll#function_json-objectagg",
+  "sample": "SELECT o_id, attribute, value FROM t3;"
+}

@@ -1,0 +1,26 @@
+{
+  "funcName": "IFNULL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2"
+      }
+    }
+  ],
+  "description": "Null if/else construct",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Flow Control Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/control-flow-functions.htmll#function_ifnull",
+  "sample": "SELECT IFNULL(1,0);"
+}

@@ -1,0 +1,40 @@
+{
+  "funcName": "REGEXP_SUBSTR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pat["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pos["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "occurrence["
+      }
+    },
+    {
+      "argument": {
+        "arguName": "match_type]]]"
+      }
+    }
+  ],
+  "returnType": "Returns the substring of the string expr that matches the regular expression specified by the pattern pat, NULL if there is no match.",
+  "description": "Return substring matching regular expression",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Regular Expression Functions and Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/regexp.htmll#function_regexp-substr",
+  "sample": "SELECT REGEXP_SUBSTR(\u0027abc def ghi\u0027, \u0027[a-z]+\u0027);"
+}

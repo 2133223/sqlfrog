@@ -1,0 +1,19 @@
+{
+  "funcName": "INET6_ATON",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr"
+      }
+    }
+  ],
+  "description": "Return the numeric value of an IPv6 address",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Miscellaneous Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.htmll#function_inet6-aton",
+  "sample": "SELECT HEX(INET6_ATON(\u0027fdfe::5a55:caff:fefa:9089\u0027));"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "DAYOFWEEK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date"
+      }
+    }
+  ],
+  "returnType": "Returns the weekday index for date (1 \u003d Sunday, 2 \u003d Monday, …, 7 \u003d Saturday).",
+  "description": "Return the weekday index of the argument",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_dayofweek",
+  "sample": "SELECT DAYOFWEEK(\u00272007-02-03\u0027);"
+}

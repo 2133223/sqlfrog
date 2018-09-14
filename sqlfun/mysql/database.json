@@ -1,0 +1,15 @@
+{
+  "funcName": "DATABASE",
+  "returnType": "Returns the default (current) database name as a string in the utf8 character set.",
+  "description": "Return the default (current) database name",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.htmll#function_database",
+  "sample": "SELECT DATABASE();"
+}

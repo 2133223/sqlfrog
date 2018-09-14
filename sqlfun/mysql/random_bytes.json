@@ -1,0 +1,19 @@
+{
+  "funcName": "RANDOM_BYTES",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "16"
+      }
+    }
+  ],
+  "description": "Return a random byte vector",
+  "targetDBs": [
+    "8.0"
+  ],
+  "category": "Encryption Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.htmll#function_random-bytes",
+  "sample": ""
+}

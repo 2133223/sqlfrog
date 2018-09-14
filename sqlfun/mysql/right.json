@@ -1,0 +1,27 @@
+{
+  "funcName": "RIGHT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "str"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "len"
+      }
+    }
+  ],
+  "returnType": "Returns the rightmost len characters from the string str, or NULL if any argument is NULL.",
+  "description": "Return the specified rightmost number of characters",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_right",
+  "sample": "SELECT RIGHT(\u0027foobarbar\u0027, 4);"
+}

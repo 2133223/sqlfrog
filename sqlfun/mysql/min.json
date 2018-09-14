@@ -1,0 +1,22 @@
+{
+  "funcName": "MIN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "[DISTINCT] expr"
+      }
+    }
+  ],
+  "returnType": "Returns the minimum value of expr.",
+  "description": "Return the minimum value",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Aggregate (GROUP BY) Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.htmll#function_min",
+  "sample": "SELECT student_name, MIN(test_score), MAX(test_score)\n       FROM student\n       GROUP BY student_name;"
+}

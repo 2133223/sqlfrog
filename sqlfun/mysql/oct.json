@@ -1,0 +1,22 @@
+{
+  "funcName": "OCT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N"
+      }
+    }
+  ],
+  "returnType": "Returns a string representation of the octal value of N, where N is a longlong (BIGINT) number.",
+  "description": "Return a string containing octal representation of a number",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_oct",
+  "sample": "SELECT OCT(12);"
+}

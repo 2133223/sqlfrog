@@ -1,0 +1,26 @@
+{
+  "funcName": "TIMEDIFF",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2"
+      }
+    }
+  ],
+  "description": "Subtract time",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_timediff",
+  "sample": "SELECT TIMEDIFF(\u00272000:01:01 00:00:00\u0027,                  \u00272000:01:01 00:00:00.000001\u0027);"
+}

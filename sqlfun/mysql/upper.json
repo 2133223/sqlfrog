@@ -1,0 +1,15 @@
+{
+  "funcName": "UPPER",
+  "returnType": "Returns the string str with all characters changed to lowercase according to the current character set mapping.",
+  "description": "Convert to uppercase",
+  "targetDBs": [
+    "6.0",
+    "7.0",
+    "8.0"
+  ],
+  "category": "String Operators",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.htmll#function_upper",
+  "sample": "SELECT LOWER(\u0027QUADRATICALLY\u0027);"
+}

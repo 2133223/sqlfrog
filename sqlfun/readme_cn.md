@@ -8,10 +8,10 @@
 [the structure used to document a database function in the JSON format](https://github.com/sqlparser/sqlfrog/tree/master/sqlfun)
 
 #### 已经完成的数据库
-[mysql](https://github.com/sqlparser/sqlfrog/tree/master/sqlfun/mysql), [oracle](https://github.com/sqlparser/sqlfrog/tree/master/sqlfun/oracle),
+[db2](https://github.com/sqlparser/sqlfrog/tree/master/sqlfun/db2), [mysql](https://github.com/sqlparser/sqlfrog/tree/master/sqlfun/mysql), [oracle](https://github.com/sqlparser/sqlfrog/tree/master/sqlfun/oracle),
 
 #### 待完成的数据库
-dax, db2, greenplum, hana, hive, impala, informix, mdx, netezza, postgresql, redshift, sqlserver, sybase, teradata, vertica,
+dax, greenplum, hana, hive, impala, informix, mdx, netezza, postgresql, redshift, sqlserver, sybase, teradata, vertica,
 
 如果你还熟悉其它的数据库，欢迎添加。
 

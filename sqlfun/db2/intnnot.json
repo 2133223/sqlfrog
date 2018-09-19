@@ -1,0 +1,39 @@
+{
+  "funcName": "INTNNOT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "N",
+        "description": "The arguments must be integer values represented by the data types SMALLINT, INTEGER, BIGINT, DECFLOAT, DECIMAL, REAL, or DOUBLE."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The arguments must be integer values represented by the data types SMALLINT, INTEGER, BIGINT, DECFLOAT, DECIMAL, REAL, or DOUBLE."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "The arguments must be integer values represented by the data types SMALLINT, INTEGER, BIGINT, DECFLOAT, DECIMAL, REAL, or DOUBLE."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "The arguments must be integer values represented by the data types SMALLINT, INTEGER, BIGINT, DECFLOAT, DECIMAL, REAL, or DOUBLE."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "These bitwise functions operate on the \"two\u0027s complement\" representation of the integer value of the input arguments and return the result as a corresponding base 10 integer value.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061948.html",
+  "sample": "select INT2AND(1234567,1) from SYSIBM.SYSDUMMY1\nSQL0413N  Overflow occurred during numeric data type conversion.  \nSQLSTATE\u003d22003"
+}

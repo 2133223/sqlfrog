@@ -1,0 +1,51 @@
+{
+  "funcName": "ARRAY_AGG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the element value for the array."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "row-expression",
+        "description": "An expression that specifies the element value for the array."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression,expression...",
+        "description": "An expression that specifies the element value for the array."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key",
+        "description": "The sort key can be a column name or a sort-key-expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key-expression",
+        "description": "The sort key can be a column name or a sort-key-expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "index-expression",
+        "description": "Specifies the index of an associative array."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The ARRAY_AGG function aggregates a set of elements into an array.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050494.html",
+  "sample": "CREATE TYPE PHONELIST AS DECIMAL(10, 0)ARRAY[10]\n\n CREATE TABLE EMPLOYEE (\n   ID          INTEGER NOT NULL,\n   PRIORITY    INTEGER NOT NULL,\n   PHONENUMBER DECIMAL(10, 0),\n   PRIMARY KEY(ID, PRIORITY))"
+}

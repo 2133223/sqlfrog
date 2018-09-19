@@ -1,0 +1,22 @@
+{
+  "funcName": "COUNT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "If ALL is implied or specified, an expression that returns a value of any built-in data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The COUNT function returns the number of rows or values in a set of rows or values.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000759.html",
+  "sample": "SELECT COUNT(*)\n     INTO :FEMALE\n     FROM EMPLOYEE\n     WHERE SEX \u003d \u0027F\u0027"
+}

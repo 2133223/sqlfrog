@@ -1,0 +1,22 @@
+{
+  "funcName": "COUNT_BIG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "If ALL is implied or specified, an expression that returns a value of any built-in data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The COUNT_BIG function returns the number of rows or values in a set of rows or values. It is similar to COUNT except that the result can be greater than the maximum value of integer.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000760.html",
+  "sample": "CREATE FUNCTION RICK.COUNT() RETURNS DECIMAL(15,0)\n     SOURCE SYSIBM.COUNT_BIG();\n   SET CURRENT PATH RICK, SYSTEM PATH;\n   SELECT COUNT(*) FROM EMPLOYEE;"
+}

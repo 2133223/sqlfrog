@@ -1,0 +1,13 @@
+{
+  "funcName": "INSTR",
+  "arguments": [],
+  "returnType": "",
+  "description": "The INSTR function returns the starting position of a string (the search string) within another string (the source string). The INSTR scalar function is a synonym for the LOCATE_IN_STRING scalar function.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Regular expression scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0054097.html"
+}

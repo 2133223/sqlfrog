@@ -1,0 +1,21 @@
+{
+  "funcName": "OCTET_LENGTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value that is a built-in string data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The OCTET_LENGTH function returns the length of expression in octets (bytes).",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0023194.html",
+  "sample": "SELECT OCTET_LENGTH(C1) FROM T1"
+}

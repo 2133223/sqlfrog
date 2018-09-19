@@ -1,0 +1,13 @@
+{
+  "funcName": "STRRIGHT",
+  "arguments": [],
+  "returnType": "",
+  "description": "The STRRIGHT function returns the right most string of string-expression of length length, expressed in the specified string unit.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061966.html"
+}

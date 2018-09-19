@@ -1,0 +1,40 @@
+{
+  "funcName": "MONTHS_BETWEEN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "Expressions that return a value of either a DATE or TIMESTAMP data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "Expressions that return a value of either a DATE or TIMESTAMP data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "e1",
+        "description": "Expressions that return a value of either a DATE or TIMESTAMP data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "e2",
+        "description": "Expressions that return a value of either a DATE or TIMESTAMP data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The MONTHS_BETWEEN function returns an estimate of the number of months between expression1 and expression2.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053631.html",
+  "sample": "SELECT MONTHS_BETWEEN (PRENDATE, PRSDATE)  \n       FROM PROJECT\n       WHERE PROJNO\u003d\u0027AD3100\u0027"
+}

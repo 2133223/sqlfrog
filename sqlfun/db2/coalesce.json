@@ -1,0 +1,28 @@
+{
+  "funcName": "COALESCE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "An expression that returns a value of any built-in or user-defined data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "An expression that returns a value of any built-in or user-defined data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The COALESCE function returns the first non-null expression in a list of expressions.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000780.html",
+  "sample": "SELECT DEPTNO, DEPTNAME, COALESCE(MGRNO, \u0027ABSENT\u0027), ADMRDEPT\n     FROM DEPARTMENT"
+}

@@ -1,0 +1,28 @@
+{
+  "funcName": "TIMESTAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "The rules for the arguments depend on whether expression2 is specified and the data type of expression2."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "The rules for the arguments depend on whether expression2 is specified and the data type of expression2."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TIMESTAMP function returns a timestamp from a value or a pair of values.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000859.html",
+  "sample": "TIMESTAMP(START_DATE, START_TIME)"
+}

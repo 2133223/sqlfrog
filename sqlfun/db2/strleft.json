@@ -1,0 +1,13 @@
+{
+  "funcName": "STRLEFT",
+  "arguments": [],
+  "returnType": "",
+  "description": "The STRLEFT function returns the leftmost string of string-expression of length length, expressed in the specified string unit.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061969.html"
+}

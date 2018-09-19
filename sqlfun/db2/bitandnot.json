@@ -1,0 +1,34 @@
+{
+  "funcName": "BITANDNOT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The arguments must be integer values represented by the data types SMALLINT, INTEGER, BIGINT, or DECFLOAT."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "The arguments must be integer values represented by the data types SMALLINT, INTEGER, BIGINT, or DECFLOAT."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "The arguments must be integer values represented by the data types SMALLINT, INTEGER, BIGINT, or DECFLOAT."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "These bitwise functions operate on the \"two\u0027s complement\" representation of the integer value of the input arguments and return the result as a corresponding base 10 integer value in a data type based on the data type of the input arguments.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0052628.html",
+  "sample": "SELECT ITEMID FROM ITEM\n     WHERE BITAND(PROPERTIES, 4) \u003d 4"
+}

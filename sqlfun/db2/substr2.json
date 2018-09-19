@@ -1,0 +1,32 @@
+{
+  "funcName": "SUBSTR2",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "An expression that specifies the string from which the resulting substring is derived."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start",
+        "description": "An expression that specifies the string from which the resulting substring is derived."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "An expression that specifies the string from which the resulting substring is derived."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SUBSTR2 function returns a substring from a string. The resulting substring starts at a specified position in the string and continues for a specified or default length. The start and length arguments are expressed in 16-bit UTF-16 string units (CODEUNITS16).",
+  "targetDBs": [
+    "11.1"
+  ],
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059483.html",
+  "sample": "SUBSTR2(:NAME, :SURNAME_POS)"
+}

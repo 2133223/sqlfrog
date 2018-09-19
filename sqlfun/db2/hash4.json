@@ -1,0 +1,27 @@
+{
+  "funcName": "HASH4",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that represents the string value to be hashed."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "algorithm",
+        "description": "An expression that represents the string value to be hashed."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "The HASH4 function returns the 32-bit checksum hash of the input data. The function provides 232 distinct return values and is intended for data retrieval (lookups).",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Partitioning scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061960.html",
+  "sample": "values hash4(\u0027Charlie at IBM\u0027, 0)\nThe result is 622396582"
+}

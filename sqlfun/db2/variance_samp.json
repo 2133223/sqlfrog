@@ -1,0 +1,28 @@
+{
+  "funcName": "VARIANCE_SAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The VARIANCE_SAMP function returns the sample variance (division by [n-1]) of a set of numbers.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061484.html",
+  "sample": "VARIANCE_SAMP \u003d ( SUM(expression**2) - ((SUM(expression)**2) / (COUNT(expression))) ) / \n                  (COUNT(expression) - 1)"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "NEXT_WEEK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datetime-expression",
+        "description": "An expression that specifies a date after which the first day of the next week is to be returned."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The NEXT_WEEK function returns the first day of the next week after the specified date. Sunday is considered the first day of that new week.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061958.html",
+  "sample": "values next_week(\u00272007-02-18\u0027)\n      Result: 2007-02-25"
+}

@@ -1,0 +1,39 @@
+{
+  "funcName": "UNNEST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "array-expression",
+        "description": "An expression that returns an array data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "correlation-clause",
+        "description": "An expression that returns an array data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "collection-derived-table",
+        "description": "An expression that returns an array data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "table-reference",
+        "description": "An expression that returns an array data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The UNNEST function returns a result table that includes a row for each element of the specified array. If there are multiple ordinary array arguments specified, the number of rows will match the array with the largest cardinality.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Array functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0055064.html",
+  "sample": "SELECT T.ID, T.NUM\nFROM UNNEST(RECENT_CALLS) WITH ORDINALITY AS T(NUM, ID)"
+}

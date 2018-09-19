@@ -1,0 +1,46 @@
+{
+  "funcName": "TRUNCATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "format-string",
+        "description": "If numeric-expression1 has a numeric data type, the TRUNCATE function returns numeric-expression1 truncated to numeric-expression2 places to the right of the decimal point if numeric-expression2 is positive, or to the left of the decimal point if numeric-expression2 is zero or negative."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "numeric-expression1",
+        "description": "If numeric-expression1 has a numeric data type, the TRUNCATE function returns numeric-expression1 truncated to numeric-expression2 places to the right of the decimal point if numeric-expression2 is positive, or to the left of the decimal point if numeric-expression2 is zero or negative."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "numeric-expression2",
+        "description": "If numeric-expression1 has a numeric data type, the TRUNCATE function returns numeric-expression1 truncated to numeric-expression2 places to the right of the decimal point if numeric-expression2 is positive, or to the left of the decimal point if numeric-expression2 is zero or negative."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "datetime-expression",
+        "description": "If datetime-expression has a datetime data type, the TRUNCATE function returns datetime-expression rounded to the unit specified by the format-string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "locale-name",
+        "description": "An expression that must return a value that is a DATE, a TIME, or a TIMESTAMP."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TRUNCATE function returns a truncated value of a number or a datetime value.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000863.html",
+  "sample": "TRUNCATE(748.58,-4) \u003d 0"
+}

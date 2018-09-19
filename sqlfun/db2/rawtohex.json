@@ -1,0 +1,21 @@
+{
+  "funcName": "RAWTOHEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the string for which the hexadecimal value is to be returned."
+      }
+    }
+  ],
+  "returnType": "VARCHAR",
+  "description": "The RAWTOHEX function returns a hexadecimal representation of a value as a character string.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061965.html",
+  "sample": "values rawtohex(\u0027hello\u0027)\n\treturns 68656C6C6F"
+}

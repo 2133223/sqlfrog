@@ -1,0 +1,51 @@
+{
+  "funcName": "XMLVALIDATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "XML-expression",
+        "description": "Specifies that the XML value resulting from XML-expression must be a well-formed XML document that conforms to XML Version 1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "XML-schema-name",
+        "description": "Specifies an SQL identifier for the XML schema that is to be used for validation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "XML-uri1",
+        "description": "Specifies an SQL identifier for the XML schema that is to be used for validation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "XML-uri2",
+        "description": "Specifies an SQL identifier for the XML schema that is to be used for validation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "XML-uri3",
+        "description": "Specifies the target namespace for the element that is to be validated."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "xml-element-name",
+        "description": "Specifies the namespace URI for the element that is to be validated."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLVALIDATE function returns a copy of the input XML value augmented with information obtained from XML schema validation, including default values.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022197.html",
+  "sample": "CREATE TRIGGER CUST_INSERT\n  AFTER INSERT ON CUSTOMER\n  REFERENCING NEW AS NEWROW\n  FOR EACH ROW MODE DB2SQL\nBEGIN ATOMIC\n  SELECT CASE WHEN X \u003c\u003d 6500 THEN \u0027OK - Do Nothing\u0027\n              ELSE RAISE_ERROR(\u002775000\u0027, \u0027TooManyPhones\u0027)  END\n  FROM (\n    SELECT XMLCAST(XMLQUERY(\u0027$INFO/customerinfo/count(phone)\u0027) AS INTEGER) AS X\n    FROM CUSTOMER\n    WHERE CUSTOMER.CID \u003d NEWROW.CID );\nEND"
+}

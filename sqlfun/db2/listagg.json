@@ -1,0 +1,39 @@
+{
+  "funcName": "LISTAGG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that specifies the string values to be aggregated."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "separator",
+        "description": "An expression that specifies the string values to be aggregated."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key",
+        "description": "Specifies the order of the rows from the same grouping set that are processed in the aggregation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key-expression",
+        "description": "The sort key can be a column name or a sort-key-expression."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The LISTAGG function aggregates a set of string elements into one string by concatenating the strings. Optionally, a separator string can be provided which is inserted between contiguous input strings.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0058709.html",
+  "sample": "LISTAGG(CAST(NAME AS VARCHAR(10000)), \u0027,\u0027)"
+}

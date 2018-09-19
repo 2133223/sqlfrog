@@ -1,0 +1,13 @@
+{
+  "funcName": "NVARCHAR",
+  "arguments": [],
+  "returnType": "",
+  "description": "The NVARCHAR function returns a varying-length national character string representation of a variety of data types.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0057008.html"
+}

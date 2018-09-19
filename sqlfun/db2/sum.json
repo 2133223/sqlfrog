@@ -1,0 +1,40 @@
+{
+  "funcName": "SUM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "p",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "s",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SUM function returns the sum of a set of numbers.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000765.html",
+  "sample": "SELECT SUM(BONUS)\n     INTO :JOB_BONUS\n     FROM EMPLOYEE\n     WHERE JOB \u003d \u0027CLERK\u0027"
+}

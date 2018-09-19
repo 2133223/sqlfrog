@@ -1,0 +1,27 @@
+{
+  "funcName": "DAYS_BETWEEN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "An expression that specifies the first datetime value to compute the number of full days between two datetime values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "An expression that specifies the first datetime value to compute the number of full days between two datetime values."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DAYS_BETWEEN function returns the number of full days between the specified arguments.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061477.html",
+  "sample": "SET :NUM_DAYS \u003d DAYS_BETWEEN(DATE \u00272012-03-03\u0027,\n      DATE \u00272012-02-28\u0027)"
+}

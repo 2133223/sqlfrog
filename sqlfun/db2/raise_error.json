@@ -1,0 +1,28 @@
+{
+  "funcName": "RAISE_ERROR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "sqlstate",
+        "description": "A character string containing exactly 5 bytes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "diagnostic-string",
+        "description": "A character string containing exactly 5 bytes."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The RAISE_ERROR function causes the statement that includes the function to return an error with the specified SQLSTATE, SQLCODE -438, and diagnostic-string.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000839.html",
+  "sample": "SELECT EMPNO,\n     CASE WHEN EDUCLVL \u003c 16 THEN \u0027Diploma\u0027\n          WHEN EDUCLVL \u003c 18 THEN \u0027Graduate\u0027\n          WHEN EDUCLVL \u003c 21 THEN \u0027Post Graduate\u0027\n          ELSE RAISE_ERROR(\u002770001\u0027,\n            \u0027EDUCLVL has a value greater than 20\u0027)\n     END\n   FROM EMPLOYEE"
+}

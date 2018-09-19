@@ -1,0 +1,28 @@
+{
+  "funcName": "BLOB",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that returns a value of a character string, graphic string, or binary string data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "integer",
+        "description": "An expression that returns a value of a character string, graphic string, or binary string data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The BLOB function returns a BLOB representation of a string of any type.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000775.html",
+  "sample": "SELECT BLOB(MAP_NAME  CONCAT \u0027:  \u0027) CONCAT TOPOGRAPHIC_MAP\n     FROM ONTARIO_SERIES_4\n     WHERE TOPOGRAPHIC_MAP LIKE BLOB(\u0027%Pellow Island%\u0027)"
+}

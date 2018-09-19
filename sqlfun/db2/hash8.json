@@ -1,0 +1,27 @@
+{
+  "funcName": "HASH8",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that represents the string value to be hashed."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "algorithm",
+        "description": "An expression that represents the string value to be hashed."
+      }
+    }
+  ],
+  "returnType": "BIGINT",
+  "description": "The HASH8 function returns the 64-bit hash of an input string. The function provides 264 distinct return values and is intended for data retrieval (that is, lookups). The result for a particular input string differs depending on the endianness (big-endian or little-endian) of your system.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Partitioning scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061970.html",
+  "sample": "values hash8(\u0027Charlie at IBM\u0027, 0)"
+}

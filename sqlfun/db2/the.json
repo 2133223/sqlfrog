@@ -1,0 +1,27 @@
+{
+  "funcName": "THE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "format-string",
+        "description": "An expression that returns a character string that does not exceed 254 bytes and that, after all leading and trailing blanks are removed, is one of the character strings listed in Table 1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "datetime-expression",
+        "description": "An expression that returns a character string that does not exceed 254 bytes and that, after all leading and trailing blanks are removed, is one of the character strings listed in Table 1."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "THE DATE_TRUNC function truncates a date, time, or timestamp value to the specified time unit.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061949.html",
+  "sample": "values date_trunc(\u0027MONTH\u0027, DATE(\u00272007-02-18\u0027))\n      Result: 2007-02-01 00:00:00"
+}

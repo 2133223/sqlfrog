@@ -1,0 +1,29 @@
+{
+  "funcName": "NVL2",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "result-expression"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "else-expression"
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The NVL2 function returns the second argument when the first argument is not NULL. If the first argument is NULL, the third argument is returned.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059482.html",
+  "sample": "CASE WHEN expression IS NOT NULL\n     THEN result-expression\n     ELSE else-expression"
+}

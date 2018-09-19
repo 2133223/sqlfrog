@@ -1,0 +1,28 @@
+{
+  "funcName": "CONCAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "An expression that returns a value of one of the following data types: Character, binary, or graphic string Numeric value (this is implicitly cast to VARCHAR) Datetime value (this is implicitly cast to VARCHAR) Boolean value (this is implicitly cast to VARCHAR) The following restrictions apply: A binary string can be concatenated only with another binary string or with a character string that is defined as FOR BIT DATA."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "An expression that returns a value of one of the following data types: Character, binary, or graphic string Numeric value (this is implicitly cast to VARCHAR) Datetime value (this is implicitly cast to VARCHAR) Boolean value (this is implicitly cast to VARCHAR) The following restrictions apply: A binary string can be concatenated only with another binary string or with a character string that is defined as FOR BIT DATA."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The CONCAT function combines two arguments to form a string expression.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000781.html",
+  "sample": "SELECT CONCAT(FIRSTNME, LASTNAME) \nFROM EMPLOYEE \nWHERE EMPNO \u003d \u0027000010\u0027"
+}

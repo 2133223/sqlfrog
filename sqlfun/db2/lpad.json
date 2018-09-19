@@ -1,0 +1,40 @@
+{
+  "funcName": "LPAD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that specifies the source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "integer",
+        "description": "An expression that specifies the source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pad",
+        "description": "An expression that specifies the source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that specifies the source string."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The LPAD function pads a string on the left with a specified character string or with blanks.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053529.html",
+  "sample": "SELECT LPAD(NAME,15,\u0027.\u0027 ) AS NAME FROM T1;"
+}

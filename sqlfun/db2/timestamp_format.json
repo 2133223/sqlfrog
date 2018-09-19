@@ -1,0 +1,40 @@
+{
+  "funcName": "TIMESTAMP_FORMAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "The expression must return a value that is a built-in CHAR or VARCHAR data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format-string",
+        "description": "The expression must return a value that is a built-in CHAR or VARCHAR data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "locale-name",
+        "description": "The expression must return a value that is a built-in CHAR or VARCHAR data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "precision-constant",
+        "description": "The expression must return a value that is a built-in CHAR or VARCHAR data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TIMESTAMP_FORMAT function returns a timestamp that is based on the interpretation of the input string using the specified format.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0007107.html",
+  "sample": "INSERT INTO IN_TRAY (RECEIVED)\n     VALUES (TIMESTAMP_FORMAT(\u00271999-12-31 23:59:59\u0027,\n       \u0027YYYY-MM-DD HH24:MI:SS\u0027))"
+}

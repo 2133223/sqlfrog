@@ -1,0 +1,33 @@
+{
+  "funcName": "PERCENT_RANK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies a row that is hypothetically inserted into a group of rows."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key",
+        "description": "Specifies the order of the rows from the same grouping set that are processed in the aggregation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key-expression",
+        "description": "The sort key can be a column name or a sort-key-expression."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The PERCENT_RANK function returns the relative percentile rank of a row that is hypothetically inserted into a group of rows.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061840.html",
+  "sample": "SELECT PERCENT_RANK(47000) WITHIN GROUP (ORDER BY SALARY) \n      INTO :PR FROM EMPLOYEE WHERE WORKDEPT \u003d \u0027A00\u0027"
+}

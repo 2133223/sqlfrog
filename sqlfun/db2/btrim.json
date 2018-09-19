@@ -1,0 +1,27 @@
+{
+  "funcName": "BTRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "source-string",
+        "description": "An expression that specifies the string from which characters are to be removed."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "trim-string",
+        "description": "An expression that specifies the string from which characters are to be removed."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The BTRIM function removes the characters that are specified in a trim string from the beginning and end of a source string.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061943.html",
+  "sample": "SELECT BTRIM(:BALANCE1, \u00270\u0027),\n   FROM SYSIBM.SYSDUMMY1"
+}

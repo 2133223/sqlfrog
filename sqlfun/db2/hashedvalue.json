@@ -1,0 +1,21 @@
+{
+  "funcName": "HASHEDVALUE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "column-name",
+        "description": "The qualified or unqualified name of a column in a table."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "The HASHEDVALUE function returns the distribution map index of the row obtained by applying the partitioning function on the distribution key value of the row.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Partitioning scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000834.html",
+  "sample": "SELECT EMPNO FROM EMPLOYEE\n     WHERE HASHEDVALUE(PHONENO) \u003d 100"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "DAYOFMONTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the datetime value from which the day of the month is determined."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DAYOFMONTH function returns an integer between 1 and 31 that represents the day of the month.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061475.html",
+  "sample": "SELECT DAYOFMONTH(PRENDATE) INTO :END_DAY \n      FROM PROJECT WHERE PROJNAME \u003d \u0027WELD LINE PLANNING\u0027"
+}

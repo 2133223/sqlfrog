@@ -1,0 +1,46 @@
+{
+  "funcName": "EXTRACT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date-expression",
+        "description": "The number of seconds since 1970-01-01 00:00:00."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp-expression",
+        "description": "The number of seconds since 1970-01-01 00:00:00."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The seconds portion of the specified time or timestamp expression is returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "s",
+        "description": "The seconds portion of the specified time or timestamp expression is returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "time-expression",
+        "description": "The hours portion of the specified time or timestamp expression is returned."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The EXTRACT function returns a portion of a datetime based on its arguments.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053629.html",
+  "sample": "SELECT EXTRACT(MONTH FROM col1) FROM PROJECT;"
+}

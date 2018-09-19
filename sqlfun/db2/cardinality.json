@@ -1,0 +1,21 @@
+{
+  "funcName": "CARDINALITY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "array-expression",
+        "description": "An SQL variable, SQL parameter, or global variable of an array type, or a CAST specification of a parameter marker to an array type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The CARDINALITY function returns a value of type BIGINT representing the number of elements of an array.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Array functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050495.html",
+  "sample": "SET HOWMANYCALLS \u003d CARDINALITY(RECENT_CALLS)"
+}

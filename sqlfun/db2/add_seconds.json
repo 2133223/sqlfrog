@@ -1,0 +1,27 @@
+{
+  "funcName": "ADD_SECONDS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the starting timestamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "numeric-expression",
+        "description": "An expression that specifies the starting timestamp."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The ADD_SECONDS function returns a timestamp value that represents the first argument plus a specified number of seconds and fractional seconds.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061472.html",
+  "sample": "SET :ADD_SECOND \u003d ADD_SECONDS(CURRENT TIMESTAMP, 1)"
+}

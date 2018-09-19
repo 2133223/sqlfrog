@@ -1,0 +1,22 @@
+{
+  "funcName": "GETHINT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "encrypted-data",
+        "description": "An expression that returns a CHAR FOR BIT DATA or VARCHAR FOR BIT DATA value that is a complete, encrypted data string."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The GETHINT function will return the password hint if one is found in the encrypted-data.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0004212.html",
+  "sample": "INSERT INTO EMP (SSN) VALUES ENCRYPT(\u0027289-46-8832\u0027, \u0027Pacific\u0027,\u0027Ocean\u0027);\n   SELECT GETHINT(SSN)\n     FROM EMP;"
+}

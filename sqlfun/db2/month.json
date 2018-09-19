@@ -1,0 +1,22 @@
+{
+  "funcName": "MONTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of one of the following built-in data types: DATE, TIMESTAMP, date duration, timestamp duration, or a valid character string representation of a date or timestamp that is not a CLOB."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The MONTH function returns the month part of a value.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000830.html",
+  "sample": "SELECT * FROM EMPLOYEE\n     WHERE MONTH(BIRTHDATE) \u003d 12"
+}

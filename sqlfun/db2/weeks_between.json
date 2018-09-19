@@ -1,0 +1,27 @@
+{
+  "funcName": "WEEKS_BETWEEN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "An expression that specifies the first datetime value to compute the number of full weeks between two datetime values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "An expression that specifies the first datetime value to compute the number of full weeks between two datetime values."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The WEEKS_BETWEEN function returns the number of full weeks between the specified arguments.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061544.html",
+  "sample": "SET :NUM_WEEKS \u003d WEEKS_BETWEEN(DATE \u00272012-03-06\u0027, DATE \u00272012-02-28\u0027)"
+}

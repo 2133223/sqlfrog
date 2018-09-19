@@ -1,0 +1,40 @@
+{
+  "funcName": "OVERLAY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "source-string",
+        "description": "An expression that specifies the source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "insert-string",
+        "description": "An expression that specifies the source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start",
+        "description": "An expression that specifies the string to be inserted into source-string, starting at the position identified by start."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "An expression that specifies the source string."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The OVERLAY function returns a string in which, beginning at start in source-string, length of the specified code units have been deleted and insert-string has been inserted.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050492.html",
+  "sample": "SELECT OVERLAY(\u0027INSERTING\u0027,\u0027IS\u0027,4,2,OCTETS),\n     OVERLAY(\u0027INSERTING\u0027,\u0027IS\u0027,4,0,OCTETS),\n     OVERLAY(\u0027INSERTING\u0027,\u0027\u0027,4,2,OCTETS)\n     FROM SYSIBM.SYSDUMMY1"
+}

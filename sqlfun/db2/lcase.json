@@ -1,0 +1,14 @@
+{
+  "funcName": "LCASE",
+  "arguments": [],
+  "returnType": "",
+  "description": "The LCASE function returns a string in which all the SBCS characters of the input string have been converted to lowercase characters. The LCASE scalar function is a synonym for the LOWER scalar function.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0052924.html"
+}

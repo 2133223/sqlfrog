@@ -1,0 +1,38 @@
+{
+  "funcName": "INSTRB",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "source-string",
+        "description": "An expression that specifies the string in which the search is to take place."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "search-string",
+        "description": "An expression that specifies the string in which the search is to take place."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start",
+        "description": "An expression that specifies the string in which the search is to take place."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "instance",
+        "description": "An expression that specifies the string in which the search is to take place."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The INSTRB function returns the starting position, in bytes, of a string within another string.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0058579.html"
+}

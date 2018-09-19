@@ -1,0 +1,39 @@
+{
+  "funcName": "PERCENTILE_CONT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "percentile",
+        "description": "An expression that specifies the percentile."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key",
+        "description": "Specifies the order of the rows from the same grouping set that are processed in the aggregation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that specifies the percentile."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window-partition-clause",
+        "description": "An expression that specifies the percentile."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The PERCENTILE_CONT function returns the value that corresponds to the specified percentile given a sort specification by using a continuous distribution model.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061836.html",
+  "sample": "SELECT PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY SALARY) \n   INTO :PC FROM EMPLOYEE \n   WHERE WORKDEPT \u003d \u0027E21\u0027"
+}

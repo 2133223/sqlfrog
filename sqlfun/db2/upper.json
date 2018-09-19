@@ -1,0 +1,21 @@
+{
+  "funcName": "UPPER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns either a Boolean value or a built-in character string that is not FOR BIT DATA."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The UPPER function is identical to the TRANSLATE function except that only the first argument (char-string-exp) is specified.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000867.html"
+}

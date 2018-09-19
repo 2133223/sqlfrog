@@ -1,0 +1,19 @@
+{
+  "funcName": "LENGTHB",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value that is a built-in data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The LENGTHB function returns the length of expression in bytes.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061184.html"
+}

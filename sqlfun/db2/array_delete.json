@@ -1,0 +1,33 @@
+{
+  "funcName": "ARRAY_DELETE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "array-expression",
+        "description": "An SQL variable, SQL parameter, or global variable of an array type, or a CAST specification of a parameter marker to an array type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "array-index1",
+        "description": "An SQL variable, SQL parameter, or global variable of an array type, or a CAST specification of a parameter marker to an array type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "array-index2",
+        "description": "An SQL variable, SQL parameter, or global variable of an array type, or a CAST specification of a parameter marker to an array type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The ARRAY_DELETE function deletes elements from an array.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Array functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0055034.html",
+  "sample": "SETRECENT_CALLS \u003d ARRAY_DELETE(RECENT_CALLS)"
+}

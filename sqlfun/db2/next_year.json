@@ -1,0 +1,21 @@
+{
+  "funcName": "NEXT_YEAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datetime-expression",
+        "description": "An expression that specifies a date after which first day of the next year is to be returned."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The NEXT_YEAR function returns the first day of the year follows the year containing the date specified by the input.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061979.html",
+  "sample": "values next_year(\u00272007-02-18\u0027)\n      Result: 2008-01-01"
+}

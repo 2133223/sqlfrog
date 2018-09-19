@@ -1,0 +1,22 @@
+{
+  "funcName": "MIDNIGHT_SECONDS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of one of the following built-in data types: DATE, TIME, TIMESTAMP, or a valid character string representation of a date, time, or timestamp that is not a CLOB."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns an integer value in the range 0 to 86 400, representing the number of seconds between midnight and the time value specified in the argument.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000827.html",
+  "sample": "VALUES (MIDNIGHT_SECONDS(\u002700:10:10\u0027), MIDNIGHT_SECONDS(\u002713:10:10\u0027))"
+}

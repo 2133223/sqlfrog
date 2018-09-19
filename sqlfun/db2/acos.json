@@ -1,0 +1,22 @@
+{
+  "funcName": "ACOS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of any built-in numeric data type except for DECFLOAT."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns the arccosine of the argument as an angle expressed in radians.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000769.html",
+  "sample": "SELECT ACOS(:ACOSINE)\n     FROM SYSIBM.SYSDUMMY1"
+}

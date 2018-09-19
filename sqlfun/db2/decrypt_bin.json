@@ -1,0 +1,27 @@
+{
+  "funcName": "DECRYPT_BIN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "password-string-expression",
+        "description": "An expression that returns a CHAR FOR BIT DATA or VARCHAR FOR BIT DATA value as a complete, encrypted data string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "encrypted-data",
+        "description": "An expression that returns a CHAR FOR BIT DATA or VARCHAR FOR BIT DATA value as a complete, encrypted data string."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DECRYPT_BIN and DECRYPT_CHAR functions both return a value that is the result of decrypting encrypted-data.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0004210.html",
+  "sample": "EXEC SQL BEGIN DECLARE SECTION;\n      char hostVarCreateTableStmt[100];\n      char hostVarSetEncPassStmt[200]; \n      char hostVarPassword[128];\n      char hostVarInsertStmt1[200];\n      char hostVarInsertStmt2[200];\n      char hostVarSelectStmt1[200];\n      char hostVarSelectStmt2[200];\nEXEC SQL END DECLARE SECTION; \n\n/* prepare the statement */ \nstrcpy(hostVarCreateTableStmt, \"CREATE TABLE EMP (SSN VARCHAR(24) FOR BIT DATA)\"); \nEXEC SQL PREPARE hostVarCreateTableStmt FROM :hostVarCreateTableStmt;\n\n/* execute the statement */ \nEXEC SQL EXECUTE hostVarCreateTableStmt;"
+}

@@ -1,0 +1,15 @@
+{
+  "funcName": "GENERATE_UNIQUE",
+  "arguments": [],
+  "returnType": "",
+  "description": "The GENERATE_UNIQUE function returns a bit data character string 13 bytes long (CHAR(13) FOR BIT DATA) that is unique compared to any other execution of the same function.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000809.html",
+  "sample": "CREATE TABLE EMP_UPDATE\n     (UNIQUE_ID CHAR(13) FOR BIT DATA,\n     EMPNO CHAR(6),\n     TEXT VARCHAR(1000))\n     INSERT INTO EMP_UPDATE\n       VALUES (GENERATE_UNIQUE(), \u0027000020\u0027, \u0027Update entry...\u0027),\n       (GENERATE_UNIQUE(), \u0027000050\u0027, \u0027Update entry...\u0027)"
+}

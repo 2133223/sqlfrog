@@ -1,0 +1,21 @@
+{
+  "funcName": "DATAPARTITIONNUM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "column-name",
+        "description": "The qualified or unqualified name of any column in the table."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "The DATAPARTITIONNUM function returns the sequence number (SYSDATAPARTITIONS.SEQNO) of the data partition in which the row resides.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Partitioning scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0021352.html",
+  "sample": "SELECT DATAPARTITIONNUM (EMPNO)\n   FROM EMPLOYEE"
+}

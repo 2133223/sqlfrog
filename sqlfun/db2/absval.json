@@ -1,0 +1,21 @@
+{
+  "funcName": "ABSVAL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns the absolute value of the argument.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000768.html",
+  "sample": "ABS(-51234)"
+}

@@ -1,0 +1,27 @@
+{
+  "funcName": "HOURS_BETWEEN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "An expression that specifies the first datetime value to compute the number of full hours between two datetime values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "An expression that specifies the first datetime value to compute the number of full hours between two datetime values."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The HOURS_BETWEEN function returns the number of full hours between the specified arguments.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061478.html",
+  "sample": "SET :NUM_HOURS \u003d HOURS_BETWEEN(TIMESTAMP \u00272012-03-01-01.00.00\u0027, \n                                  TIMESTAMP \u00272012-02-28-00.00.00\u0027)"
+}

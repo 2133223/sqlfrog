@@ -1,0 +1,21 @@
+{
+  "funcName": "FIRST_DAY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the datetime value to compute the first day of the month."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The FIRST_DAY function returns a date or timestamp that represents the first day of the month of the argument.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061474.html",
+  "sample": "SET :FIRST_OF_MONTH \u003d FIRST_DAY(CURRENT_DATE)"
+}

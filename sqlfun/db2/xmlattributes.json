@@ -1,0 +1,28 @@
+{
+  "funcName": "XMLATTRIBUTES",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "attribute-value-expression",
+        "description": "An expression whose result is the attribute value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "attribute-name",
+        "description": "An expression whose result is the attribute value."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLATTRIBUTES function constructs XML attributes from the arguments.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022184.html",
+  "sample": "SELECT E.EMPNO, XMLELEMENT(\n     NAME \"Emp\",\n     XMLATTRIBUTES(\n       E.EMPNO, E.FIRSTNME ||\u0027 \u0027|| E.LASTNAME AS \"name\"\n     )\n   )\n   AS \"Result\"\n   FROM EMPLOYEE E WHERE E.EDLEVEL \u003d 12"
+}

@@ -1,0 +1,27 @@
+{
+  "funcName": "DAYOFWEEK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the datetime value from which the day of the week is determined."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start-of-week",
+        "description": "An expression that specifies the datetime value from which the day of the week is determined."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DAYOFWEEK function returns the day of the week in the first argument as an integer value. The integer value is in the range 1-7, where 1 represents the first day of the week, as specified in the second argument.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000787.html"
+}

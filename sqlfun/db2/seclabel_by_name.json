@@ -1,0 +1,27 @@
+{
+  "funcName": "SECLABEL_BY_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "security-policy-name",
+        "description": "A string that specifies a security policy that exists at the current server (SQLSTATE 42704)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "security-label-name",
+        "description": "A string that specifies a security policy that exists at the current server (SQLSTATE 42704)."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SECLABEL_BY_NAME function returns the specified security label. The security label returned has a data type of DB2SECURITYLABEL. Use this function to insert a named security label.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Security scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0020036.html",
+  "sample": "INSERT INTO REGIONS\n   VALUES (CONTRIBUTIONS.EMPLOYEESECLABEL, 1, \u0027Southwest\u0027)   -- incorrect"
+}

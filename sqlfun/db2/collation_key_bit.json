@@ -1,0 +1,39 @@
+{
+  "funcName": "COLLATION_KEY_BIT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "collation-name",
+        "description": "An expression that returns a CHAR, VARCHAR, GRAPHIC, or VARGRAPHIC string for which the collation key should be determined."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that returns a CHAR, VARCHAR, GRAPHIC, or VARGRAPHIC string for which the collation key should be determined."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "An expression that returns a CHAR, VARCHAR, GRAPHIC, or VARGRAPHIC string for which the collation key should be determined."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that returns a CHAR, VARCHAR, GRAPHIC, or VARGRAPHIC string for which the collation key should be determined."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The COLLATION_KEY_BIT function returns a VARCHAR FOR BIT DATA string that represents the collation key of the string-expression in the specified collation-name.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050491.html",
+  "sample": "SELECT FIRSTNME, LASTNAME\n     FROM EMPLOYEE\n     ORDER BY COLLATION_KEY_BIT (LASTNAME, \u0027SYSTEM_923_DE\u0027)"
+}

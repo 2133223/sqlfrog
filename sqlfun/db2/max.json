@@ -1,0 +1,22 @@
+{
+  "funcName": "MAX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of any built-in data type or user-defined data type that is comparable with data type of the other arguments."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The MAX function returns the maximum value in a set of values.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0052625.html",
+  "sample": "SELECT EMPNO, MAX(SALARY * 0.05, 500)\n     FROM EMPLOYEE"
+}

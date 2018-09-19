@@ -1,0 +1,28 @@
+{
+  "funcName": "LN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The LN function returns the natural logarithm of a number. The LN and EXP functions are inverse operations.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000819.html",
+  "sample": "VALUES LN(:NATLOG)"
+}

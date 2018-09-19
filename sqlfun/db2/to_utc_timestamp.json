@@ -1,0 +1,27 @@
+{
+  "funcName": "TO_UTC_TIMESTAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the timestamp that is in the timezone-expression time zone."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timezone-expression",
+        "description": "An expression that specifies the timestamp that is in the timezone-expression time zone."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TO_UTC_TIMESTAMP scalar function returns a TIMESTAMP that is converted to Coordinated Universal Time from the timezone that is specified by the timezone string. TO_UTC_TIMESTAMP is a a statement deterministic function.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061917.html",
+  "sample": "TO_UTC_TIMESTAMP(TIMESTAMP\u00271970-01-01 00:00:00\u0027, \u0027America/Denver\u0027)"
+}

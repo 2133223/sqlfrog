@@ -1,0 +1,33 @@
+{
+  "funcName": "DATE_PART",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "format-string",
+        "description": "An expression that represents which unit of datetime is to be extracted from the date-expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "date-expression",
+        "description": "An expression that represents which unit of datetime is to be extracted from the date-expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "datetime-expression",
+        "description": "An expression that represents which unit of datetime is to be extracted from the date-expression."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DATE_PART function returns a portion of a datetime based on its arguments. It extracts the subfield that is specified from the date, time, timestamp, and duration values.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061971.html",
+  "sample": "values DATE_PART(\u0027DAY\u0027, DATE(\u00272007-02-18\u0027));\n    Result: 18"
+}

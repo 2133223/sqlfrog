@@ -1,0 +1,39 @@
+{
+  "funcName": "XMLSERIALIZE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "XML-expression",
+        "description": "Specifies that any XML value can be specified and the result of the serialization is based on this input value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "data-type",
+        "description": "Specifies that any XML value can be specified and the result of the serialization is based on this input value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "xml-document",
+        "description": "Specifies the result data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "xsl-stylesheet",
+        "description": "Specifies the result data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLSERIALIZE function returns a serialized XML value of the specified data type generated from the XML-expression argument.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022194.html"
+}

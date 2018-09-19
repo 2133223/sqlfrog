@@ -1,0 +1,27 @@
+{
+  "funcName": "MEDIAN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the set of values from which the median is determined."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that specifies the set of values from which the median is determined."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The MEDIAN function returns the median value in a set of values.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061839.html",
+  "sample": "PERCENTILE_CONT( 0.5 ) WITHIN GROUP( ORDER BY expression )"
+}

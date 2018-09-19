@@ -1,0 +1,33 @@
+{
+  "funcName": "CUME_DIST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies a row that is hypothetically inserted into a group of rows."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order-by-clause",
+        "description": "An expression that specifies a row that is hypothetically inserted into a group of rows."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key",
+        "description": "Specifies the order of the rows from the same grouping set that are processed in the aggregation."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The CUME_DIST function returns the cumulative distribution of a row that is hypothetically inserted into a group of rows.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0062050.html",
+  "sample": "SELECT CUME_DIST(47000) WITHIN GROUP (ORDER BY SALARY) \n      INTO :CD FROM EMPLOYEE WHERE WORKDEPT \u003d \u0027A00\u0027"
+}

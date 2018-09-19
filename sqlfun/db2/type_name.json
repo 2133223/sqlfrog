@@ -1,0 +1,21 @@
+{
+  "funcName": "TYPE_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of a user-defined structured data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TYPE_NAME function returns the unqualified name of the dynamic data type of the expression.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000865.html",
+  "sample": "SELECT TASK, WHO_RESPONSIBLE-\u003eNAME,\n       TYPE_NAME(DEREF(WHO_RESPONSIBLE)),\n       TYPE_SCHEMA(DEREF(WHO_RESPONSIBLE))\n     FROM ACTIVITIES"
+}

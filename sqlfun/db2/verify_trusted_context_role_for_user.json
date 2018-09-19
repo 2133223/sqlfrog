@@ -1,0 +1,22 @@
+{
+  "funcName": "VERIFY_TRUSTED_CONTEXT_ROLE_FOR_USER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "role-name-expression",
+        "description": "An expression that specifies a role name (SQLSTATE 42815)."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The VERIFY_TRUSTED_CONTEXT_ROLE_FOR_USER function returns a value that indicates whether the authorization ID identified by the SESSION_USER special register has acquired a role under a trusted connection associated with some trusted context and that role is in (or part of) the role names specified by the list of role-name-expression arguments.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Security scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0057434.html?pos\u003d2",
+  "sample": "CREATE PERMISSION TELLER_ROW_ACCESS ON CUSTOMER\n  FOR ROWS WHERE\n     VERIFY_TRUSTED_CONTEXT_ROLE_FOR_USER(SESSION_USER,\u0027TELLER\u0027) \u003d 1 AND\n         BRANCH \u003d (SELECT HOME_BRANCH FROM INTERNAL_INFO\n             WHERE EMP_ID \u003d USER)\nENFORCED FOR ALL ACCESS\nENABLE"
+}

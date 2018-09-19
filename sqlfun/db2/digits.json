@@ -1,0 +1,22 @@
+{
+  "funcName": "DIGITS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of one of the following built-in data types: SMALLINT, INTEGER, BIGINT, DECIMAL, CHAR, or VARCHAR."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DIGITS function returns a character-string representation of a number.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000795.html",
+  "sample": "SELECT DISTINCT SUBSTR(DIGITS(INTCOL),1,4)\n     FROM TABLEX"
+}

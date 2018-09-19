@@ -1,0 +1,28 @@
+{
+  "funcName": "REPEAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "An expression that specifies the string to be repeated."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "An expression that specifies the string to be repeated."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The REPEAT function returns a character string that is composed of the first argument repeated the number of times that are specified by the second argument.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061489.html",
+  "sample": "SELECT REPEAT(\u0027abc\u0027,2)\n     FROM SYSIBM.SYSDUMMY1"
+}

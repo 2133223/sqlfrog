@@ -1,0 +1,28 @@
+{
+  "funcName": "STRIP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that specifies the string from which the result is derived."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "strip-character",
+        "description": "An expression that specifies the string from which the result is derived."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The STRIP function removes blanks or another specified character from the end, the beginning, or both ends of a string expression.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0023197.html",
+  "sample": "SELECT STRIP(:BALANCE, LEADING, \u00270\u0027),\n   FROM SYSIBM.SYSDUMMY1"
+}

@@ -1,0 +1,52 @@
+{
+  "funcName": "SUBSTRING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the string from which the result is derived."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start",
+        "description": "An expression that specifies the string from which the result is derived."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "An expression that specifies the string from which the result is derived."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string-unit",
+        "description": "An expression that specifies the length of the result."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "An expression that specifies the length of the result."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "source-string",
+        "description": "Specifies the string units of start and length."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SUBSTRING function returns a substring of a string.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0023196.html",
+  "sample": "Function ...                          Returns ...\n------------------------------------  ------------------------------------\nSUBSTRING(FIRSTNAME,1,2,CODEUNITS32)  \u0027Jü\u0027 -- x\u00274AC3BC\u0027\nSUBSTRING(FIRSTNAME,1,2,CODEUNITS16)  \u0027Jü\u0027 -- x\u00274AC3BC\u0027\nSUBSTRING(FIRSTNAME,1,2,OCTETS)       \u0027J \u0027 -- x\u00274A20\u0027 (a truncated string)\nSUBSTRING(FIRSTNAME,8,CODEUNITS16)    a zero-length string\nSUBSTRING(FIRSTNAME,8,4,OCTETS)       a zero-length string\nSUBSTRING(FIRSTNAME,0,2,CODEUNITS32)  \u0027J\u0027 -- x\u00274AC3BC\u0027"
+}

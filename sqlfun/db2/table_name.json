@@ -1,0 +1,26 @@
+{
+  "funcName": "TABLE_NAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "object-name",
+        "description": "A character expression representing the unqualified name (usually of an existing alias) to be resolved."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "object-schema",
+        "description": "A character expression representing the unqualified name (usually of an existing alias) to be resolved."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TABLE_NAME function returns an unqualified name of the object found after any alias chains have been resolved.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000855.html"
+}

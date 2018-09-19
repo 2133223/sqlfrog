@@ -1,0 +1,22 @@
+{
+  "funcName": "XMLDOCUMENT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "XML-expression",
+        "description": "An expression that returns an XML value."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLDOCUMENT function returns an XML value with a single XQuery document node with zero or more children nodes.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022187.html",
+  "sample": "XMLQUERY(\u0027document {$E}\u0027 PASSING BY REF XML-expression AS \"E\")"
+}

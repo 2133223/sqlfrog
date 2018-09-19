@@ -1,0 +1,28 @@
+{
+  "funcName": "XMLPI",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "pi-name",
+        "description": "Specifies the name of a processing instruction."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "Specifies the name of a processing instruction."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLPI function returns an XML value with a single XQuery processing instruction node.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022192.html",
+  "sample": "SELECT XMLPI(\n     NAME \"Instruction\", \u0027Push the red button\u0027\n   )\n   FROM SYSIBM.SYSDUMMY1"
+}

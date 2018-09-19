@@ -1,0 +1,13 @@
+{
+  "funcName": "EMPTY_CLOB",
+  "arguments": [],
+  "returnType": "",
+  "description": "These functions return a zero-length value with a data type of BLOB, CLOB, or DBCLOB.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053106.html"
+}

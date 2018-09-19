@@ -1,0 +1,13 @@
+{
+  "funcName": "TO_CLOB",
+  "arguments": [],
+  "returnType": "",
+  "description": "The TO_CLOB function returns a CLOB representation of a character string type.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053528.html"
+}

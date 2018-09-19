@@ -1,0 +1,28 @@
+{
+  "funcName": "TRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "strip-character",
+        "description": "Specifies whether characters are removed from the beginning, the end, or from both ends of the string expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "A single-character constant that specifies the character that is to be removed."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TRIM function removes blanks or another specified character from the end, the beginning, or both ends of a string expression.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0023198.html",
+  "sample": "SELECT TRIM(:HELLO),\n     TRIM(TRAILING FROM :HELLO)\n   FROM SYSIBM.SYSDUMMY1"
+}

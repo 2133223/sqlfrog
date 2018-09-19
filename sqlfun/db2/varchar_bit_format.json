@@ -1,0 +1,26 @@
+{
+  "funcName": "VARCHAR_BIT_FORMAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character-expression",
+        "description": "An expression that returns a value that is a built-in character string that is not a CLOB (SQLSTATE 42815)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format-string",
+        "description": "An expression that returns a value that is a built-in character string that is not a CLOB (SQLSTATE 42815)."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The VARCHAR_BIT_FORMAT function returns a bit string representation of a character string that has been formatted using a character template.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0024845.html",
+  "sample": "VARCHAR_BIT_FORMAT(\u0027d83d6360-1818-11db-9804-b622a1ef5492\u0027, \n                   \u0027xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\u0027)"
+}

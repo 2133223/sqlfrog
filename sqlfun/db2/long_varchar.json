@@ -1,0 +1,12 @@
+{
+  "funcName": "LONG_VARCHAR",
+  "arguments": [],
+  "returnType": "",
+  "description": "The LONG_VARCHAR function is deprecated and might be removed in a future release.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000823.html"
+}

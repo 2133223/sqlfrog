@@ -1,0 +1,22 @@
+{
+  "funcName": "XMLPARSE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "Specifies that the character string expression to be parsed must evaluate to a well-formed XML document that conforms to XML 1."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLPARSE function parses the argument as an XML document and returns an XML value.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022191.html",
+  "sample": "INSERT INTO PRODUCT VALUES (\u0027100-103-99\u0027,\u0027Tool bag\u0027,14.95,NULL,NULL,NULL,\nXMLPARSE( DOCUMENT \n  \u0027\u003cproduce xmlns\u003d\"http://posample.org\" pid\u003d\"100-103-99\"\u003e\n    \u003cdescription\u003e\n     \u003cname\u003eTool bag\u003c/name\u003e\n     \u003cdetails\u003e\n      Super Deluxe tool bag:\n      - 26 inches long, 12 inches wide\n      - Curved padded handle\n      - Locking latch\n      - Reinforced exterior pockets\n     \u003c/details\u003e\n     \u003cprice\u003e14.95\u003c/price\u003e\n     \u003cweight\u003e3 kg\u003c/weight\u003e\n    \u003c/description\u003e\n  \u003c/product\u003e\u0027 PRESERVE WHITESPACE ));"
+}

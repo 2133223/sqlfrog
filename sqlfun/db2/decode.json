@@ -1,0 +1,36 @@
+{
+  "funcName": "DECODE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression2"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression1"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "result-expresssion"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "else-expression"
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DECODE function does equality comparisons between arguments, also treating null values as equal, to determine which argument to return as the result.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0052622.html",
+  "sample": "DECODE (c1, 7, \u0027a\u0027, 6, \u0027b\u0027, \u0027c\u0027)"
+}

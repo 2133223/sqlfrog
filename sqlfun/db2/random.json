@@ -1,0 +1,13 @@
+{
+  "funcName": "RANDOM",
+  "arguments": [],
+  "returnType": "",
+  "description": "The RANDOM function returns a floating point value between 0 and 1. RANDOM is a non-deterministic function.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061964.html"
+}

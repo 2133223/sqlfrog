@@ -1,0 +1,22 @@
+{
+  "funcName": "MICROSECOND",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of one of the following built-in data types: DATE, TIMESTAMP, timestamp duration, or a valid character string representation of a date or timestamp that is not a CLOB."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The MICROSECOND function returns the microsecond part of a value.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000826.html",
+  "sample": "SELECT * FROM TABLEA\n     WHERE MICROSECOND(TS1) \u003c\u003e 0\n       AND\n     SECOND(TS1) \u003d SECOND(TS2)"
+}

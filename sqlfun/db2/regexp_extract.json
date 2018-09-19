@@ -1,0 +1,13 @@
+{
+  "funcName": "REGEXP_EXTRACT",
+  "arguments": [],
+  "returnType": "",
+  "description": "The REGEXP_EXTRACT scalar function returns one occurrence of a substring of a string that matches the regular expression pattern.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Regular expression scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061492.html"
+}

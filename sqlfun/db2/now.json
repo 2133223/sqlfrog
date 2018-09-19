@@ -1,0 +1,21 @@
+{
+  "funcName": "NOW",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "integer",
+        "description": "Specifies the precision of the timestamp."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The NOW function returns a timestamp based on a reading of the time-of-day clock when the SQL statement is executed at the current server.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061945.html",
+  "sample": "values now().   \n\t\t\tResult: 2015-04-01-03.17.04.579645."
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "TO_HEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The expression must return a value that is a built-in character string, Boolean value, or numeric value."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TO_HEX function converts a numeric expression into the hexadecimal representation.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061961.html",
+  "sample": "values to_hex(565);\n     returns value 235."
+}

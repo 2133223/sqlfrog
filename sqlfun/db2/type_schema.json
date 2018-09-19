@@ -1,0 +1,20 @@
+{
+  "funcName": "TYPE_SCHEMA",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of a user-defined structured data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TYPE_SCHEMA function returns the schema name of the dynamic data type of the expression.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000866.html"
+}

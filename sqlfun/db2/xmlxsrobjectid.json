@@ -1,0 +1,22 @@
+{
+  "funcName": "XMLXSROBJECTID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "xml-value-expression",
+        "description": "Specifies an expression that results in a value with a data type of XML."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLXSROBJECTID function returns the XSR object identifier of the XML schema used to validate the XML document specified in the argument. The XSR object identifier is returned as a BIGINT value and provides the key to a single row in SYSCAT.XSROBJECTS.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0023740.html",
+  "sample": "SELECT XMLXSROBJECTID(XMLDOC) FROM MYTABLE"
+}

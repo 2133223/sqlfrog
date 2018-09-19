@@ -1,0 +1,21 @@
+{
+  "funcName": "MAX_CARDINALITY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "array-expression",
+        "description": "An SQL variable, SQL parameter, or global variable of an array type, or a CAST specification of a parameter marker to an array type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The MAX_CARDINALITY function returns a value of type BIGINT representing the maximum number of elements that an array can contain. This is the cardinality that was specified in the CREATE TYPE statement for the ordinary array type.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Array functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050496.html",
+  "sample": "SET LIST_SIZE \u003d MAX_CARDINALITY(RECENT_CALLS)"
+}

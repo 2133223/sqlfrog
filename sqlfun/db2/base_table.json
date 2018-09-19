@@ -1,0 +1,27 @@
+{
+  "funcName": "BASE_TABLE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "objectschema",
+        "description": "A character expression representing the schema used to qualify the supplied objectname value before resolution."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "objectname",
+        "description": "A character expression representing the schema used to qualify the supplied objectname value before resolution."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The BASE_TABLE function returns both the object name and schema name of the object found after any alias chains have been resolved.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Table functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053252.html",
+  "sample": "SELECT COLCOUNT INTO :H00030\nFROM SYSCAT.TABLES\nWHERE OWNER \u003d TABLE_SCHEMA(:H00031 ,:H00032 )\nAND TABNAME \u003d TABLE_NAME(:H00031 ,:H00032 )"
+}

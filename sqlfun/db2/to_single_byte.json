@@ -1,0 +1,21 @@
+{
+  "funcName": "TO_SINGLE_BYTE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that specifies the string which gets converted."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TO_SINGLE_BYTE function returns a string in which multi-byte characters are converted to the equivalent single-byte character where an equivalent character exists.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0058580.html",
+  "sample": "VALUES TO_SINGLE_BYTE(x\u0027efbca1efbca2efbca3\u0027)"
+}

@@ -1,0 +1,28 @@
+{
+  "funcName": "XMLNAMESPACES",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "namespace-uri",
+        "description": "Specifies the namespace universal resource identifier (URI) as an SQL character string constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "namespace-prefix",
+        "description": "Specifies the namespace universal resource identifier (URI) as an SQL character string constant."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLNAMESPACES declaration constructs namespace declarations from the arguments.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022190.html",
+  "sample": "SELECT EMPNO, XMLELEMENT(\n     NAME \"adm:employee\", XMLNAMESPACES(\n       \u0027http://www.adm.com\u0027 AS \"adm\"\n     ),\n     XMLATTRIBUTES(\n       WORKDEPT AS \"adm:department\"\n     ),\n   LASTNAME\n   )\n   FROM EMPLOYEE\n   WHERE JOB \u003d \u0027ANALYST\u0027"
+}

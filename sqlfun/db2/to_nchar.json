@@ -1,0 +1,13 @@
+{
+  "funcName": "TO_NCHAR",
+  "arguments": [],
+  "returnType": "",
+  "description": "The TO_NCHAR function returns a national character representation of an input expression that has been formatted using a character template.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0057010.html"
+}

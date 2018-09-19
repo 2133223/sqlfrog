@@ -1,0 +1,33 @@
+{
+  "funcName": "PERCENTILE_DISC",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "percentile",
+        "description": "An expression that specifies the percentile."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key",
+        "description": "Specifies the order of the rows from the same grouping set that are processed in the aggregation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window-partition-clause",
+        "description": "An expression that specifies the percentile."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The PERCENTILE_DISC function returns the value that corresponds to the specified percentile given a sort specification by using a discrete distribution model.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061838.html",
+  "sample": "SELECT PERCENTILE_DISC(0.75) WITHIN GROUP (ORDER BY SALARY) \n      INTO :PD FROM EMPLOYEE WHERE WORKDEPT \u003d \u0027E21\u0027"
+}

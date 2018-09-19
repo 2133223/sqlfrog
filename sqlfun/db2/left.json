@@ -1,0 +1,28 @@
+{
+  "funcName": "LEFT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that specifies the string from which the result is derived."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "An expression that specifies the string from which the result is derived."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The LEFT function returns the leftmost string of string-expression of length length, expressed in the specified string unit.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000817.html",
+  "sample": "SELECT LEFT(ALPHA,3)\n     FROM SYSIBM.SYSDUMMY1"
+}

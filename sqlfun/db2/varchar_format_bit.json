@@ -1,0 +1,26 @@
+{
+  "funcName": "VARCHAR_FORMAT_BIT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "bit-data-expression",
+        "description": "An expression that returns a value that is a built-in character-string FOR BIT DATA data type (SQLSTATE 42815)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format-string",
+        "description": "An expression that returns a value that is a built-in character-string FOR BIT DATA data type (SQLSTATE 42815)."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The VARCHAR_FORMAT_BIT function returns a character representation of a bit string that has been formatted using a character template.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0024844.html",
+  "sample": "VARCHAR_FORMAT_BIT(CAST(x\u0027d83d6360181811db9804b622a1ef5492\u0027 \n                        AS VARCHAR(16) FOR BIT DATA), \n                   \u0027xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\u0027)"
+}

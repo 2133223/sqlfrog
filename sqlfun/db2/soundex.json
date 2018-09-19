@@ -1,0 +1,22 @@
+{
+  "funcName": "SOUNDEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of CHAR or VARCHAR data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns a 4-character code representing the sound of the words in the argument. The result can be used to compare with the sound of other strings.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000851.html",
+  "sample": "SELECT EMPNO, LASTNAME FROM EMPLOYEE\n     WHERE SOUNDEX(LASTNAME) \u003d SOUNDEX(\u0027Loucesy\u0027)"
+}

@@ -1,0 +1,13 @@
+{
+  "funcName": "NCLOB",
+  "arguments": [],
+  "returnType": "",
+  "description": "The NCLOB function returns a NCLOB representation of any type of national character string.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0057007.html"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "DBPARTITIONNUM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "column-name",
+        "description": "The qualified or unqualified name of any column in the table."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "The DBPARTITIONNUM function returns the database partition number for a row. For example, if used in a SELECT clause, it returns the database partition number for each row in the result set.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Partitioning scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000832.html",
+  "sample": "SELECT COUNT(*) FROM DEPARTMENT D, EMPLOYEE E\n     WHERE D.DEPTNO\u003dE.WORKDEPT\n     AND DBPARTITIONNUM(E.LASTNAME) \u003c\u003e DBPARTITIONNUM(D.DEPTNO)"
+}

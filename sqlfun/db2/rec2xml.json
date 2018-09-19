@@ -1,0 +1,39 @@
+{
+  "funcName": "REC2XML",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "decimal-constant",
+        "description": "The expansion factor for replacing column data characters."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format-string",
+        "description": "The expansion factor for replacing column data characters."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "row-tag-string",
+        "description": "The expansion factor for replacing column data characters."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "column-name",
+        "description": "The expansion factor for replacing column data characters."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The REC2XML function returns a string formatted with XML tags, containing column names and column data.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0004488.html",
+  "sample": "REC2XML (dc, fs, rt, c1, c2, ..., cn)"
+}

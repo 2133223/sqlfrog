@@ -1,0 +1,27 @@
+{
+  "funcName": "SECLABEL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "security-policy-name",
+        "description": "A string that specifies a security policy that exists at the current server (SQLSTATE 42704)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "security-label-string",
+        "description": "A string that specifies a security policy that exists at the current server (SQLSTATE 42704)."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SECLABEL function returns an unnamed security label with a data type of DB2SECURITYLABEL. Use the SECLABEL function to insert a security label with given component values without having to create a named security label.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Security scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0020035.html",
+  "sample": "INSERT INTO REGIONS \n     VALUES (SECLABEL(\u0027CONTRIBUTIONS\u0027, \u0027LIFE MEMBER:(BLUE,YELLOW)\u0027),\n       1, \u0027Northeast\u0027)"
+}

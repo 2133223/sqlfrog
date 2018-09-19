@@ -1,0 +1,27 @@
+{
+  "funcName": "SECLABEL_TO_CHAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "security-policy-name",
+        "description": "A string that specifies a security policy that exists at the current server (SQLSTATE 42704)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "security-label",
+        "description": "A string that specifies a security policy that exists at the current server (SQLSTATE 42704)."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SECLABEL_TO_CHAR function accepts a security label and returns a string that contains all elements in the security label. The string is in the security label string format.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Security scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0020037.html",
+  "sample": "PROJECT\n    ________|________\n   |                 |\n TEST           DEVELOPMENT\n               ______|______\n              |             |\n           CURRENT        FIELD"
+}

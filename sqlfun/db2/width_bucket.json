@@ -1,0 +1,39 @@
+{
+  "funcName": "WIDTH_BUCKET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the value to be assigned into a bucket."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "bound1",
+        "description": "An expression that specifies the value to be assigned into a bucket."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "bound2",
+        "description": "An expression that specifies the value to be assigned into a bucket."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "num-buckets",
+        "description": "An expression that specifies the value to be assigned into a bucket."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The WIDTH_BUCKET function is used to create equal-width histograms.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061483.html",
+  "sample": "SELECT EMPNO, SALARY, WIDTH_BUCKET(SALARY, 35000, 100000, 13)\n      FROM EMPLOYEE ORDER BY EMPNO"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "THIS_WEEK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datetime-expression",
+        "description": "An expression that specifies a date for which first day of the week is to be returned."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The THIS_WEEK function returns the first day of the week that contains the specified date. Sunday is considered the first day of that week.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061977.html",
+  "sample": "values this_week (\u00271996-02-29\u0027)\n      Result: 1996-02-25"
+}

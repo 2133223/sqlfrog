@@ -1,0 +1,33 @@
+{
+  "funcName": "CURSOR_ROWCOUNT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "cursor-variable-name",
+        "description": "The name of a SQL variable or SQL parameter of a cursor type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "curEmp",
+        "description": "The name of a SQL variable or SQL parameter of a cursor type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "rows_fetched",
+        "description": "The name of a SQL variable or SQL parameter of a cursor type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The CURSOR_ROWCOUNT function returns the cumulative count of all rows fetched by the specified cursor since the cursor was opened.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0054573.html",
+  "sample": "SET rows_fetched \u003d CURSOR_ROWCOUNT(curEmp);"
+}

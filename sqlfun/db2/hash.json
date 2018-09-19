@@ -1,0 +1,27 @@
+{
+  "funcName": "HASH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that represents the string value to be hashed."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "algorithm",
+        "description": "An expression that represents the string value to be hashed."
+      }
+    }
+  ],
+  "returnType": "VARBINARY",
+  "description": "The HASH function returns a 128-bit, 160-bit, 256-bit or 512-bit hash of the input data, depending on the algorithm selected, and is intended for cryptographic purposes.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Partitioning scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061967.html",
+  "sample": "values  hash(\u0027Charlie at IBM\u0027, 1)\nresult is ÃÃ¤#F$ÂÃ¼inÂ¬SÃÂ°ÂÂ¥G5Â§"
+}

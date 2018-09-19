@@ -1,0 +1,22 @@
+{
+  "funcName": "XMLTEXT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression whose value has a character string type: CHAR, VARCHAR or CLOB."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLTEXT function returns an XML value with a single XQuery text node having the input argument as the content.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022196.html",
+  "sample": "VALUES(\n     XMLTEXT(\n       \u0027The stock symbol for Johnson\u0026Johnson is JNJ.\u0027\n     )\n   )"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "RID",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "table-designator",
+        "description": "Indicates that the RID function is to be run."
+      }
+    }
+  ],
+  "returnType": "BIGINT",
+  "description": "The RID and RID_BIT functions are used to uniquely identify a row. Each returns the row identifier (RID) of a row. The result of the RID_BIT function, unlike the result of the RID function, contains table information to help you avoid inadvertently using it with the wrong table. Both functions are non-deterministic.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Miscellaneous scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050679.html",
+  "sample": "SELECT RID_BIT (EMPLOYEE), ROW CHANGE TOKEN FOR EMPLOYEE, LASTNAME\n     FROM EMPLOYEE\n     WHERE DEPTNO \u003d \u002720\u0027"
+}

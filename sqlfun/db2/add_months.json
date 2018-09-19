@@ -1,0 +1,28 @@
+{
+  "funcName": "ADD_MONTHS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the starting date."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "numeric-expression",
+        "description": "An expression that specifies the starting date."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The ADD_MONTHS function returns a datetime value that represents expression plus a specified number of months.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053628.html",
+  "sample": "SET :ADD_MONTH \u003d ADD_MONTHS(LAST_DAY(CURRENT_DATE), 1);"
+}

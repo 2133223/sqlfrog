@@ -1,0 +1,100 @@
+{
+  "funcName": "XMLTABLE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "xmlnamespaces-declaration",
+        "description": "Specifies one or more XML namespace declarations that become part of the static context of the row-xquery-expression-constant and the column-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "row-xquery-expression-constant",
+        "description": "Specifies one or more XML namespace declarations that become part of the static context of the row-xquery-expression-constant and the column-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "column-xquery-expression-constant",
+        "description": "Specifies one or more XML namespace declarations that become part of the static context of the row-xquery-expression-constant and the column-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "identifier",
+        "description": "Specifies input values and the manner in which these values are passed to the XQuery expression specified by row-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "row-xquery-argument",
+        "description": "Specifies an argument that is to be passed to the XQuery expression that is specified by row-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "xquery-context-item-expression",
+        "description": "Specifies an argument that is to be passed to the XQuery expression that is specified by row-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "xquery-variable-expression",
+        "description": "Specifies an argument that is to be passed to the XQuery expression that is specified by row-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "input-xml-value",
+        "description": "Specifies an argument that is to be passed to the XQuery expression that is specified by row-xquery-expression-constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "row-xquery-expression",
+        "description": "xquery-context-item-expression specifies the initial context item for the row-xquery-expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "xquery-expression-variable",
+        "description": "Indicates that an XML input value is to be passed by reference."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "column-name",
+        "description": "Specifies the output columns of the result table."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "correlation-clause",
+        "description": "Specifies the output columns of the result table."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "data-type",
+        "description": "Specifies the name of the column in the result table."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "default-clause",
+        "description": "Specifies the name of the column in the result table."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLTABLE function returns a result table from the evaluation of XQuery expressions, possibly using specified input arguments as XQuery variables. Each sequence item in the result sequence of the row XQuery expression represents a row of the result table.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Table functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0022195.html",
+  "sample": "SELECT U.\"PO ID\", U.\"Part #\", U.\"Product Name\", \n        U.\"Quantity\", U.\"Price\", U.\"Order Date\"\n     FROM PURCHASEORDER P,\n        XMLTABLE(\u0027$po/PurchaseOrder/item\u0027 PASSING P.PORDER AS \"po\"\n                 COLUMNS \"PO ID\"         INTEGER       PATH \u0027../@PoNum\u0027,\n                         \"Part #\"        CHAR(10)      PATH \u0027partid\u0027,\n                         \"Product Name\"  VARCHAR(50)   PATH \u0027name\u0027,\n                         \"Quantity\"      INTEGER       PATH \u0027quantity\u0027,\n                         \"Price\"         DECIMAL(9,2)  PATH \u0027price\u0027,\n                         \"Order Date\"    DATE          PATH \u0027../@OrderDate\u0027\n                 ) AS U\n      WHERE P.STATUS \u003d \u0027Unshipped\u0027"
+}

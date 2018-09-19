@@ -1,0 +1,21 @@
+{
+  "funcName": "PARAMETER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "integer-constant",
+        "description": "An integer constant that specifies a position index of a value in the arguments of db2-fn:sqlquery."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The PARAMETER function represents a position in an SQL statement where the value is provided dynamically by XQuery as part of the invocation of the db2-fn:sqlquery function.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "XML functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050665.html",
+  "sample": "xquery \n   declare default element namespace \"http://posample.org\"; \n   for $po in db2-fn:xmlcolumn(\u0027PURCHASEORDER.PORDER\u0027)/PurchaseOrder,\n     $item in $po/item/partid \n   for $p in db2-fn:sqlquery( \n     \"select description from product where promostart \u003c PARAMETER(1)\",\n       $po/@OrderDate )\n   where $p//@pid \u003d $item \n   return \n   \u003cRESULT\u003e\n     \u003cPoNum\u003e{data($po/@PoNum)}\u003c/PoNum\u003e\n     \u003cPartID\u003e{data($item)} \u003c/PartID\u003e\n     \u003cPoDate\u003e{data($po/@OrderDate)}\u003c/PoDate\u003e\n   \u003c/RESULT\u003e"
+}

@@ -1,0 +1,22 @@
+{
+  "funcName": "DAY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of one of the following built-in data types: DATE, TIMESTAMP, numeric, or character string that is not a CLOB."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The DAY function returns the day part of a value.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000785.html",
+  "sample": "SELECT DAY(PRENDATE)\n     INTO :END_DAY\n     FROM PROJECT\n     WHERE PROJNAME \u003d \u0027WELD LINE PLANNING\u0027"
+}

@@ -1,0 +1,27 @@
+{
+  "funcName": "ADD_MINUTES",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the starting timestamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "numeric-expression",
+        "description": "An expression that specifies the starting timestamp."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The ADD_MINUTES function returns a timestamp value that represents the first argument plus a specified number of minutes.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061471.html",
+  "sample": "SET :ADD_MINUTE \u003d ADD_MINUTES(CURRENT TIMESTAMP, 1)"
+}

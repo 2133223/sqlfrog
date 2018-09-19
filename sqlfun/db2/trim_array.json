@@ -1,0 +1,27 @@
+{
+  "funcName": "TRIM_ARRAY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "array-expression",
+        "description": "An SQL variable, SQL parameter, or global variable of an ordinary array type, or a CAST specification of a parameter marker to an ordinary array type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "numeric-expression",
+        "description": "An SQL variable, SQL parameter, or global variable of an ordinary array type, or a CAST specification of a parameter marker to an ordinary array type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The TRIM_ARRAY function deletes elements from the end of an array.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Array functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0055048.html",
+  "sample": "SET RECENT_CALLS \u003d TRIM_ARRAY(RECENT_CALLS, 1)"
+}

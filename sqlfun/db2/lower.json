@@ -1,0 +1,22 @@
+{
+  "funcName": "LOWER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that returns a built-in character string or Boolean value."
+      }
+    }
+  ],
+  "returnType": "Z",
+  "description": "The LOWER function returns a string in which all the SBCS characters have been converted to lowercase characters.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "String scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0002411.html",
+  "sample": "SELECT LOWER(JOB)\n     FROM EMPLOYEE\n     WHERE EMPNO \u003d \u0027000020\u0027;"
+}

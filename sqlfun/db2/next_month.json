@@ -1,0 +1,21 @@
+{
+  "funcName": "NEXT_MONTH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datetime-expression",
+        "description": "An expression that specifies a date after which the first day of the next month is to be returned."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The NEXT_MONTH function returns the first day of the next month after the specified date.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061962.html",
+  "sample": "values next_month(\u00272007-02-18\u0027)\n      Result: 2007-03-01"
+}

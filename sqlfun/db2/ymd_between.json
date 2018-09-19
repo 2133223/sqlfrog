@@ -1,0 +1,27 @@
+{
+  "funcName": "YMD_BETWEEN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "An expression that specifies the first datetime value to compute the number of full years, full months, and full days between two datetime values."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "An expression that specifies the first datetime value to compute the number of full years, full months, and full days between two datetime values."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The YMD_BETWEEN function returns a numeric value that specifies the number of full years, full months, and full days between two datetime values.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061481.html",
+  "sample": "INTEGER( ( TIMESTAMP(expression1, 12) – TIMESTAMP(expression2, 12) ) / 1000000 )"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "AGE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the datetime value for which the age is computed."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The AGE function returns a numeric value that represents the number of full years, full months, and full days between the current timestamp and the argument.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061482.html",
+  "sample": "INTEGER( ( CURRENT TIMESTAMP(12) – TIMESTAMP( expression, 12 ) ) / 1000000 )"
+}

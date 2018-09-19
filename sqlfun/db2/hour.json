@@ -1,0 +1,22 @@
+{
+  "funcName": "HOUR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that returns a value of one of the following built-in data types: a DATE, a TIME, a TIMESTAMP, a character string, or an exact numeric data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The HOUR function returns the hour part of a value.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000812.html",
+  "sample": "SELECT * FROM CL_SCHED\n     WHERE HOUR(STARTING) BETWEEN 12 AND 17"
+}

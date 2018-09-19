@@ -1,0 +1,14 @@
+{
+  "funcName": "TO_NUMBER",
+  "arguments": [],
+  "returnType": "",
+  "description": "The TO_NUMBER function returns a DECFLOAT(34) value that is based on the interpretation of the input string using the specified format.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0053652.html"
+}

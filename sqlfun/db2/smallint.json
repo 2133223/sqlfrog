@@ -1,0 +1,40 @@
+{
+  "funcName": "SMALLINT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "numeric-expression",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string-expression",
+        "description": "An expression that returns a value that is a character-string or Unicode graphic-string representation of a number with a length not greater than the maximum length of a character constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string-expresssion",
+        "description": "An expression that returns a value that is a character-string or Unicode graphic-string representation of a number with a length not greater than the maximum length of a character constant."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "boolean-expression",
+        "description": "An expression that returns a Boolean value (TRUE or FALSE)."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SMALLINT function returns a small integer (a binary integer with a precision of 15 bits) representation of a value of a different data type.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000850.html",
+  "sample": "SELECT SMALLINT(SALARY / EDLEVEL), SALARY, ESDLEVEL, EMPNO     \n     FROM EMPLOYEE"
+}

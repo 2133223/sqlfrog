@@ -1,0 +1,27 @@
+{
+  "funcName": "ADD_HOURS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that specifies the starting timestamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "numeric-expression",
+        "description": "An expression that specifies the starting timestamp."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The ADD_HOURS function returns a timestamp value that represents the first argument plus a specified number of hours.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Datetime scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0061470.html",
+  "sample": "SET :ADD_HOUR \u003d ADD_HOURS(CURRENT TIMESTAMP, 1)"
+}

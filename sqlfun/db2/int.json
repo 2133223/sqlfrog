@@ -1,0 +1,14 @@
+{
+  "funcName": "INT",
+  "arguments": [],
+  "returnType": "",
+  "description": "The INT function returns a large integer (a binary integer with a precision of 31 bits) representation of a value of a different data type.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Cast scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r_sf_int.html"
+}

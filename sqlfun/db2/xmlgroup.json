@@ -1,0 +1,45 @@
+{
+  "funcName": "XMLGROUP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The content of each generated XML element node (or the value of each generated attribute) is specified by an expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "qname-identifier",
+        "description": "The content of each generated XML element node (or the value of each generated attribute) is specified by an expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "row-name",
+        "description": "The content of each generated XML element node (or the value of each generated attribute) is specified by an expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "root-name",
+        "description": "The content of each generated XML element node (or the value of each generated attribute) is specified by an expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "sort-key-expression",
+        "description": "The sort key can be a column name or a sort-key-expression."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The XMLGROUP function returns an XML value with a single XQuery document node containing one top-level element node. This is an aggregate expression that will return a single-rooted XML document from a group of rows where each row is mapped to a row subelement.",
+  "targetDBs": [
+    "11.1"
+  ],
+  "category": "Aggregate functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050588.html",
+  "sample": "C1          C2\n----------- -----------\n          1           2\n          -           2\n          1           -\n          -           -\n\n  4 record(s) selected."
+}

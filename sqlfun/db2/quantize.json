@@ -1,0 +1,28 @@
+{
+  "funcName": "QUANTIZE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "numeric-expression",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "exp-expression",
+        "description": "An expression that returns a value of any built-in numeric data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The QUANTIZE function returns a decimal floating-point value that is equal in value (except for any rounding) and sign to numeric-expression and that has an exponent equal to the exponent of exp-expression.",
+  "targetDBs": [
+    "10.0",
+    "11.1"
+  ],
+  "category": "Numeric scalar functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0050510.html",
+  "sample": "QUANTIZE(2.17, DECFLOAT(0.001)) \u003d 2.170 \nQUANTIZE(2.17, DECFLOAT(0.01)) \u003d 2.17 \nQUANTIZE(2.17, DECFLOAT(0.1)) \u003d 2.2 \nQUANTIZE(2.17, DECFLOAT(\u00271E+0\u0027)) \u003d 2 \nQUANTIZE(2.17, DECFLOAT(\u00271E+1\u0027)) \u003d 0E+1 \nQUANTIZE(2, DECFLOAT(INFINITY)) \u003d NaN    -- warning \nQUANTIZE(0, DECFLOAT(\u00271E+5\u0027)) \u003d 0E+5 \nQUANTIZE(217, DECFLOAT(\u00271E-1\u0027)) \u003d 217.0 \nQUANTIZE(217, DECFLOAT(\u00271E+0\u0027)) \u003d 217 \nQUANTIZE(217, DECFLOAT(\u00271E+1\u0027)) \u003d 2.2E+2 \nQUANTIZE(217, DECFLOAT(\u00271E+2\u0027)) \u003d 2E+2"
+}

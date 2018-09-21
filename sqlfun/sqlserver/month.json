@@ -27,5 +27,6 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/month-transact-sql?view\u003dsql-server-2017",
-  "sample": "SELECT MONTH(\u00272007-04-30T01:01:01.1234567 -07:00\u0027);"
+  "sample": "SELECT MONTH(\u00272007-04-30T01:01:01.1234567 -07:00\u0027);",
+  "alternative" : [{"oracle":"EXTRACT"},{"mysql":"MONTH"}]
 }

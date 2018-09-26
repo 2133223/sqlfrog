@@ -1,0 +1,31 @@
+{
+  "funcName": "mod",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "A numeric value whose remainder you wish to find."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "m",
+        "description": "The number used to divide into n."
+      }
+    }
+  ],
+  "description": "The PostgreSQL mod function returns the remainder of n divided by m.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/mod.php",
+  "sample": "postgres\u003d# SELECT mod(12, 5);\n mod\n-----\n   2\n(1 row)\n\npostgres\u003d# SELECT mod(12, 0.18);\n mod\n------\n 0.12\n(1 row)\n\npostgres\u003d# SELECT mod(100, 3.5938);\n  mod\n--------\n2.9674\n(1 row)"
+}

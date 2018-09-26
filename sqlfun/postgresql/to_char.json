@@ -1,0 +1,31 @@
+{
+  "funcName": "to_char",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "value",
+        "description": "The number, date that will be converted to a string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format_mask",
+        "description": "The format that will be used to convert value to a string. The format_mask is different whether you are converting numbers or dates. Let\u0027s take a look. With Numbers With numbers, the format_mask can be one of the following and can be used in many combinations. Parameter Explanation 9 Value (with no leading zeros) 0 Value (with leading zeros) . Decimal , Group separator PR Negative value in angle brackets S Sign L Currency symbol D Decimal G Group separator MI Minus sign (for negative numbers) PL Plus sign (for positive numbers) SG Plus/minus sign (for positive and negative numbers) RN Roman numerals TH Ordinal number suffix th Ordinal number suffix V Shift digits EEEE Scientific notation With Dates With dates, the format_mask can be one of the following and can be used in many combinations. Parameter Explanation YYYY 4-digit year Y,YYY 4-digit year, with comma YYY YY Y Last 3, 2, or 1 digit(s) of year IYYY 4-digit year based on the ISO standard IYY IY I Last 3, 2, or 1 digit(s) of ISO year Q Quarter of year (1, 2, 3, 4; JAN-MAR \u003d 1). MM Month (01-12; JAN \u003d 01). MON Abbreviated name of month in all uppercase Mon Abbreviated name of month capitalized mon Abbreviated name of month in all lowercase MONTH Name of month in all uppercase, padded with blanks to length of 9 characters Month Name of month capitalized, padded with blanks to length of 9 characters month Name of month in all lowercase, padded with blanks to length of 9 characters RM Month in uppercase Roman numerals rm Month in lowercase Roman numerals WW Week of year (1-53) where week 1 starts on the first day of the year W Week of month (1-5) where week 1 starts on the first day of the month IW Week of year (01-53) based on the ISO standard DAY Name of day in all uppercase, padded with blanks to length of 9 characters Day Name of day capitalized, padded with blanks to length of 9 characters day Name of day in all lowercase, padded with blanks to length of 9 characters DY Abbreviated name of day in all uppercase Dy Abbreviated name of day capitalized dy Abbreviated name of day in all lowercase DDD Day of year (1-366) IDDD Day of year based on ISO year DD Day of month (01-31) D Day of week (1-7, where 1\u003dSunday, 7\u003dSaturday) ID Day of week based on ISO year (1-7, where 1\u003dMonday, 7\u003dSunday) J Julian day; the number of days since midnight on November 24, 4714 BC HH Hour of day (01-12) HH12 Hour of day (01-12) HH24 Hour of day (00-23) MI Minute (00-59) SS Second (00-59) MS Millisecond (000-999) US Microsecond (000000-999999) SSSS Seconds past midnight (0-86399) am, AM, pm, or PM Meridian indicator a.m., A.M., p.m., or P.M. Meridian indicator ad, AD, a.d., or A.D AD indicator bc, BC, b.c., or B.C. BC indicator TZ Name of time zone in uppercase tz Name of time zone in lowercase CC 2-digit century"
+      }
+    }
+  ],
+  "description": "The PostgreSQL to_char function converts a number or date to a string.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/to_char.php",
+  "sample": "postgres\u003d# SELECT to_char(1210, \u00279999.99\u0027);\n to_char\n----------\n  1210.00\n(1 row)\n\npostgres\u003d# SELECT to_char(1210.7, \u00279G999.99\u0027);\n  to_char\n-----------\n 1,210.70\n(1 row)\n\npostgres\u003d# SELECT to_char(1210.7, \u0027L9G999.99\u0027);\n  to_char\n------------\n $ 1,210.70\n(1 row)\n\npostgres\u003d# SELECT to_char(1210.7, \u0027L9G999\u0027);\n to_char\n---------\n $ 1,211\n(1 row)\n\npostgres\u003d# SELECT to_char(121, \u00279 9 9\u0027);\n to_char\n---------\n  1 2 1\n(1 row)\n\npostgres\u003d# SELECT to_char(121, \u002700999\u0027);\n to_char\n---------\n  00121\n(1 row) postgres\u003d# SELECT to_char(date \u00272014-04-25\u0027, \u0027YYYY/MM/DD\u0027);\n  to_char\n------------\n 2014/04/25\n(1 row)\n\npostgres\u003d# SELECT to_char(date \u00272014-04-25\u0027, \u0027MMDDYY\u0027);\n to_char\n---------\n 042514\n(1 row)\n\npostgres\u003d# SELECT to_char(date \u00272014-04-25\u0027, \u0027Month DD, YYYY\u0027);\n      to_char\n--------------------\n April     25, 2014\n(1 row)"
+}

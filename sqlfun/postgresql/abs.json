@@ -1,0 +1,25 @@
+{
+  "funcName": "abs",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to convert to an absolute value."
+      }
+    }
+  ],
+  "description": "The PostgreSQL abs function returns the absolute value of a number.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/abs.php",
+  "sample": "postgres\u003d# SELECT abs(-23);\n abs\n-----\n  23\n(1 row)\n\npostgres\u003d# SELECT abs(-23.6);\n abs\n------\n 23.6\n(1 row)\n\npostgres\u003d# SELECT abs(-23.65);\n  abs\n-------\n 23.65\n(1 row)\n\npostgres\u003d# SELECT abs(23.65);\n  abs\n-------\n 23.65\n(1 row)\n\npostgres\u003d# SELECT abs(30 * -1);\n abs\n-----\n  30\n(1 row)"
+}

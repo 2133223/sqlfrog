@@ -1,0 +1,26 @@
+{
+  "funcName": "localtime",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "precision",
+        "description": "Optional. The number of digits to round the fractional seconds to.",
+        "optional": true
+      }
+    }
+  ],
+  "description": "The PostgreSQL localtime function returns the current time.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/localtime.php",
+  "sample": "postgres\u003d# SELECT localtime;\n      time\n-----------------\n 20:18:08.586881\n(1 row)\n\npostgres\u003d# SELECT localtime(1);\n    time\n------------\n 20:18:08.6\n(1 row)\n\npostgres\u003d# SELECT localtime(2);\n    time\n-------------\n 20:18:08.59\n(1 row)\n\npostgres\u003d# SELECT localtime(3);\n     time\n--------------\n 20:18:08.587\n(1 row)"
+}

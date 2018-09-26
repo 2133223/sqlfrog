@@ -1,0 +1,32 @@
+{
+  "funcName": "trunc",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to truncate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "decimal_places",
+        "description": "Optional. The number of decimal places to truncate to. This value must be a positive or negative integer.",
+        "optional": true
+      }
+    }
+  ],
+  "description": "The PostgreSQL trunc function returns a number truncated to a certain number of decimal places.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/trunc.php",
+  "sample": "postgres\u003d# SELECT trunc(125.315);\n trunc\n-------\n   125\n(1 row)\n\npostgres\u003d# SELECT trunc(125.315, 0);\n trunc\n-------\n   125\n(1 row)\n\npostgres\u003d# SELECT trunc(125.315, 1);\n trunc\n-------\n 125.3\n(1 row)\n\npostgres\u003d# SELECT trunc(125.315, 2);\n trunc\n--------\n 125.31\n(1 row)\n\npostgres\u003d# SELECT trunc(125.315, -1);\n trunc\n-------\n   120\n(1 row)\n\npostgres\u003d# SELECT trunc(125.315, -2);\n trunc\n-------\n   100\n(1 row)\n\npostgres\u003d# SELECT trunc(-125.315);\n trunc\n-------\n  -125\n(1 row)"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "floor",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The value used to find the largest integer value."
+      }
+    }
+  ],
+  "description": "The PostgreSQL floor function returns the largest integer value that is equal to or less than a number.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/floor.php",
+  "sample": "postgres\u003d# SELECT floor(32.65);\n floor\n-------\n    32\n(1 row)\n\npostgres\u003d# SELECT floor(32.1);\n floor\n-------\n    32\n(1 row)\n\npostgres\u003d# SELECT floor(32);\n floor\n-------\n    32\n(1 row)\n\npostgres\u003d# SELECT floor(-32.65);\n floor\n-------\n   -33\n(1 row)\n\npostgres\u003d# SELECT floor(-32.1);\n floor\n-------\n   -33\n(1 row)\n\npostgres\u003d# SELECT floor(-32);\n floor\n-------\n   -32\n(1 row)"
+}

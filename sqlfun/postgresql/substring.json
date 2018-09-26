@@ -1,0 +1,39 @@
+{
+  "funcName": "substring",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_position",
+        "description": "Optional. It is the starting position for extraction. If this parameter is omitted, the substring function will start at position 1 (which is the first position in the string).",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "Optional. It is the number of characters to extract. If this parameter is omitted, the substring function will return the entire string (from the start_position to the end of the string).",
+        "optional": true
+      }
+    }
+  ],
+  "description": "The PostgreSQL substring function allows you to extract a substring from a string.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/substring.php",
+  "sample": "postgres\u003d# SELECT substring(\u0027Techonthenet.com\u0027 for 5);\n substring\n-----------\n Techo\n(1 row)\n\npostgres\u003d# SELECT substring(\u0027Techonthenet.com\u0027 from 1 for 5);\n substring\n-----------\n Techo\n(1 row)\n\npostgres\u003d# SELECT substring(\u0027Techonthenet.com\u0027 from 2 for 5);\n substring\n-----------\n echon\n(1 row)\n\npostgres\u003d# SELECT substring(\u0027Techonthenet.com\u0027 from 5 for 8);\n substring \n-----------\n onthenet\n(1 row)\n\npostgres\u003d# SELECT substring(\u0027Techonthenet.com\u0027 from 14 for 3);\n substring\n-----------\n com\n(1 row)\n\npostgres\u003d# SELECT substring(\u0027Techonthenet.com\u0027 from 14);\n substring\n-----------\n com\n(1 row)"
+}

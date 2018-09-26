@@ -1,0 +1,37 @@
+{
+  "funcName": "replace",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "from_substring",
+        "description": "The substring to find. All occurrences of from_substring found within string are replaced with to_substring."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "to_substring",
+        "description": "The replacement substring. All occurrences of from_substring found within string are replaced with to_substring."
+      }
+    }
+  ],
+  "description": "The PostgreSQL replace function replaces all occurrences of a specified string.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/replace.php",
+  "sample": "postgres\u003d# SELECT replace(\u0027techonthenet.com\u0027, \u0027techonthenet\u0027, \u0027checkyourmath\u0027);\n      replace\n-------------------\n checkyourmath.com\n(1 row)\n\npostgres\u003d# SELECT replace(\u0027TechOnTheNet.com\u0027, \u0027techonthenet\u0027, \u0027checkyourmath\u0027);\n      replace\n-------------------\n TechOnTheNet.com\n(1 row)\n\npostgres\u003d# SELECT replace(\u0027abc abc\u0027, \u0027a\u0027, \u0027B\u0027);\n replace\n---------\n Bbc Bbc\n(1 row)\n\npostgres\u003d# SELECT replace(\u0027abc abc\u0027, \u0027A\u0027, \u0027B\u0027);\n replace\n---------\n abc abc\n(1 row)"
+}

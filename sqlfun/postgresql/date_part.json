@@ -1,0 +1,31 @@
+{
+  "funcName": "date_part",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "The date, timestamp, time, or interval value from which the date part is to be extracted."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "unit",
+        "description": "The unit type of the interval such as day, month, minute, hour, and so on. It can be one of the following: unit Explanation century Uses the Gregorian calendar where the first century starts at \u00270001-01-01 00:00:00 AD\u0027 day Day of the month (1 to 31) decade Year divided by 10 dow Day of the week (0\u003dSunday, 1\u003dMonday, 2\u003dTuesday, ... 6\u003dSaturday) doy Day of the year (1\u003dfirst day of year, 365/366\u003dlast day of the year, depending if it is a leap year) epoch Number of seconds since \u00271970-01-01 00:00:00 UTC\u0027, if date value. Number of seconds in an interval, if interval value hour Hour (0 to 23) isodow Day of the week (1\u003dMonday, 2\u003dTuesday, 3\u003dWednesday, ... 7\u003dSunday) isoyear ISO 8601 year value (where the year begins on the Monday of the week that contains January 4th) microseconds Seconds (and fractional seconds) multiplied by 1,000,000 millennium Millennium value milliseconds Seconds (and fractional seconds) multiplied by 1,000 minute Minute (0 to 59) month Number for the month (1 to 12), if date value. Number of months (0 to 11), if interval value quarter Quarter (1 to 4) second Seconds (and fractional seconds) timezone Time zone offset from UTC, expressed in seconds timezone_hour Hour portion of the time zone offset from UTC timezone_minute Minute portion of the time zone offset from UTC week Number of the week of the year based on ISO 8601 (where the year begins on the Monday of the week that contains January 4th) year Year as 4-digits"
+      }
+    }
+  ],
+  "description": "The PostgreSQL date_part function extracts parts from a date.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/date_part.php",
+  "sample": "postgres\u003d# SELECT date_part(\u0027day\u0027, date \u00272014-04-25\u0027);\n date_part\n-----------\n        25\n(1 row)\n\npostgres\u003d# SELECT date_part(\u0027month\u0027, date \u00272014-04-25\u0027);\n date_part\n-----------\n         4\n(1 row)\n\npostgres\u003d# SELECT date_part(\u0027year\u0027, date \u00272014-04-25\u0027);\n date_part\n-----------\n      2014\n(1 row) postgres\u003d# SELECT date_part(\u0027day\u0027, timestamp \u00272014-04-25 08:44:21\u0027);\n date_part\n-----------\n        25\n(1 row)\n\npostgres\u003d# SELECT date_part(\u0027month\u0027, timestamp \u00272014-04-25 08:44:21\u0027);\n date_part\n-----------\n         4\n(1 row)\n\npostgres\u003d# SELECT date_part(\u0027minute\u0027, timestamp \u00272014-04-25 08:44:21\u0027);\n date_part\n-----------\n        44\n(1 row)\n\npostgres\u003d# SELECT date_part(\u0027hour\u0027, timestamp \u00272014-04-25 08:44:21\u0027);\n date_part\n-----------\n         8\n(1 row) postgres\u003d# SELECT date_part(\u0027minute\u0027, time \u002708:44:21\u0027);\n date_part\n-----------\n        44\n(1 row)\n\npostgres\u003d# SELECT date_part(\u0027milliseconds\u0027, time \u002708:44:21.7\u0027);\n date_part\n-----------\n     21700\n(1 row) postgres\u003d# SELECT date_part(\u0027day\u0027, interval \u00275 days 3 hours\u0027);\n date_part\n-----------\n         5\n(1 row)\n\npostgres\u003d# SELECT date_part(\u0027hour\u0027, interval \u00275 days 3 hours\u0027);\n date_part\n-----------\n         3\n(1 row)"
+}

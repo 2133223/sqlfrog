@@ -1,0 +1,18 @@
+{
+  "funcName": "random",
+  "arguments": [],
+  "description": "The PostgreSQL random function can be used to return a random number or a random number within a range.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/random.php",
+  "sample": "postgres\u003d# SELECT random();\n      random\n-------------------\n 0.576233202125877\n(1 row)"
+}

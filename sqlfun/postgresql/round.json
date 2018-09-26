@@ -1,0 +1,31 @@
+{
+  "funcName": "round",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to round."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "decimal_places",
+        "description": "The number of decimal places rounded to. This value must be a positive or negative integer. If this parameter is omitted, the round function will round the number to 0 decimal places."
+      }
+    }
+  ],
+  "description": "The PostgreSQL round function returns a number rounded to a certain number of decimal places.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/round.php",
+  "sample": "postgres\u003d# SELECT round(125.315);\n round\n-------\n   125\n(1 row)\n\npostgres\u003d# SELECT round(125.315, 0);\n round\n-------\n   125\n(1 row)\n\npostgres\u003d# SELECT round(125.315, 1);\n round\n-------\n 125.3\n(1 row)\n\npostgres\u003d# SELECT round(125.315, 2);\n round\n--------\n 125.32\n(1 row)\n\npostgres\u003d# SELECT round(125.315, -1);\n round\n-------\n   130\n(1 row)\n\npostgres\u003d# SELECT round(125.315, -2);\n round\n-------\n   100\n(1 row)\n\npostgres\u003d# SELECT round(-125.315);\n round\n-------\n  -125\n(1 row)"
+}

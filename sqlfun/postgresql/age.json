@@ -1,0 +1,25 @@
+{
+  "funcName": "age",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date1 and date2",
+        "description": "The two dates to calculate the difference between."
+      }
+    }
+  ],
+  "description": "The PostgreSQL age function returns the number of years, months, and days between two dates.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/age.php",
+  "sample": "postgres\u003d# SELECT age(timestamp \u00272014-01-01\u0027);  (current date is \u00272014-04-25\u0027)\n      age\n----------------\n 3 mons 24 days\n(1 row)\n\npostgres\u003d# SELECT age(timestamp \u00272014-04-25\u0027, timestamp \u00272014-01-01\u0027);\n      age\n----------------\n 3 mons 24 days\n(1 row)\n\npostgres\u003d# SELECT age(timestamp \u00272014-04-25\u0027, timestamp \u00272014-04-17\u0027);\n  age\n--------\n 8 days\n(1 row)\n\npostgres\u003d# SELECT age(current_date, timestamp \u00272012-09-16\u0027);\n         age\n----------------------\n 1 year 7 mons 9 days\n(1 row)"
+}

@@ -1,0 +1,25 @@
+{
+  "funcName": "sign",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to test for its sign."
+      }
+    }
+  ],
+  "description": "The PostgreSQL sign function returns a value indicating the sign of a number.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/sign.php",
+  "sample": "postgres\u003d# SELECT sign(12);\n sign\n------\n    1\n(1 row)\n\npostgres\u003d# SELECT sign(0);\n sign\n------\n    0\n(1 row)\n\npostgres\u003d# SELECT sign(-12);\n sign\n------\n   -1\n(1 row)"
+}

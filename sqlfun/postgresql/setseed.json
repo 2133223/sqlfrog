@@ -1,0 +1,25 @@
+{
+  "funcName": "setseed",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "seed",
+        "description": "A value between 1.0 and -1.0, inclusive, that is used to provide the seed for the next call to the random function."
+      }
+    }
+  ],
+  "description": "The PostgreSQL setseed function can be used to set a seed for the next time that you call the random function. If you do not call setseed, PostgreSQL will use its own seed value. This may or may not be truly random. If you set the seed by calling the setseed function, then the random function will return a repeatable sequence of random numbers that is derived from the seed.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/setseed.php",
+  "sample": "postgres\u003d# SELECT random();\n      random\n-------------------\n 0.623784058727324\n(1 row)\n\npostgres\u003d# SELECT random();\n      random       \n-------------------\n 0.828258865978569\n(1 row)\n\npostgres\u003d# SELECT random();\nrandom       \n-------------------\n 0.269835902377963\n(1 row) postgres\u003d# SELECT setseed(0.5);\n setseed \n---------\n\n(1 row)\n\npostgres\u003d# SELECT random();\n      random\n-------------------\n 0.798512778244913\n(1 row)\n\npostgres\u003d# SELECT random();\n      random\n-------------------\n 0.518533017486334\n(1 row)\n\npostgres\u003d# SELECT random();\n      random\n-------------------\n 0.0734698106534779\n(1 row) postgres\u003d# SELECT setseed(0.5);\n setseed \n---------\n\n(1 row)\n\npostgres\u003d# SELECT random();\n      random\n-------------------\n 0.798512778244913\n(1 row)\n\npostgres\u003d# SELECT setseed(0.38);\n setseed \n---------\n\n(1 row)\n\npostgres\u003d# SELECT random();\n      random\n-------------------\n 0.771267373114824\n(1 row)\n\npostgres\u003d# SELECT setseed(-0.21);\n setseed \n---------\n\n(1 row)\n\npostgres\u003d# SELECT random();\n      random\n-------------------\n 0.590676144231111\n(1 row)"
+}

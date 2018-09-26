@@ -1,0 +1,25 @@
+{
+  "funcName": "length",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to return the length for."
+      }
+    }
+  ],
+  "description": "The PostgreSQL length function returns the length of the specified string, expressed as the number of characters.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/length.php",
+  "sample": "postgres\u003d# SELECT length(\u0027Tech on the Net\u0027);\n length\n--------\n     15\n(1 row)\n\npostgres\u003d# SELECT length(\u0027techonthenet.com\u0027);\n length\n--------\n     16\n(1 row)\n\npostgres\u003d# SELECT length(\u0027\u0027);\n length\n--------\n      0\n(1 row)\n\npostgres\u003d# SELECT length(\u0027 \u0027);\n length\n--------\n      1\n(1 row)\n\npostgres\u003d# SELECT length(NULL);\n length\n--------\n  \u003cNULL\u003e\n(1 row)"
+}

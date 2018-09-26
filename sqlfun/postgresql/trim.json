@@ -1,0 +1,49 @@
+{
+  "funcName": "trim",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "leading",
+        "description": "Remove trim_character from the front of string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "trailing",
+        "description": "Remove trim_character from the end of string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "both",
+        "description": "Remove trim_character from the front and end of string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "trim_character",
+        "description": "The set of characters that will be removed from string. If this parameter is omitted, the trim function will remove space characters from string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to trim."
+      }
+    }
+  ],
+  "description": "The PostgreSQL trim function removes all specified characters either from the beginning or the end of a string.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/trim.php",
+  "sample": "postgres\u003d# SELECT trim(leading \u0027 \u0027 from \u0027  techonthenet.com  \u0027);\n       ltrim\n----------------------\n \u0027techonthenet.com  \u0027\n(1 row)\n\npostgres\u003d# SELECT trim(trailing \u0027 \u0027 from \u0027  techonthenet.com  \u0027);\n       rtrim\n----------------------\n \u0027  techonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT trim(both \u0027 \u0027 from \u0027  techonthenet.com  \u0027);\n      btrim\n--------------------\n \u0027techonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT trim(\u0027 \u0027 from \u0027  techonthenet.com  \u0027);\n      btrim\n--------------------\n \u0027techonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT trim(\u0027   techonthenet.com   \u0027);\n      btrim\n--------------------\n \u0027techonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT trim(leading \u00270\u0027 from \u0027000123\u0027);\n ltrim\n-------\n \u0027123\u0027\n(1 row)\n\npostgres\u003d# SELECT trim(trailing \u00271\u0027 from \u0027Tech1\u0027);\n rtrim\n--------\n \u0027Tech\u0027\n(1 row)\n\npostgres\u003d# SELECT trim(both \u0027123\u0027 from \u0027123Tech123\u0027);\n btrim\n--------\n \u0027Tech\u0027\n(1 row)"
+}

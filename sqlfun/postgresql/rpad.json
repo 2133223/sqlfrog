@@ -1,0 +1,37 @@
+{
+  "funcName": "rpad",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to right-pad."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "The length of the result after string has been right-padded."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pad_string",
+        "description": "The specified string to right-pad to string."
+      }
+    }
+  ],
+  "description": "The PostgreSQL rpad function returns a string that is right-padded with a specified string to a certain length.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/rpad.php",
+  "sample": "postgres\u003d# SELECT rpad(\u0027techonthenet.com\u0027, 18, \u0027A\u0027);\n        rpad\n----------------------\n \u0027techonthenet.comAA\u0027\n(1 row)\n\npostgres\u003d# SELECT rpad(\u0027techonthenet.com\u0027, 19, \u0027A\u0027);\n        rpad\n-----------------------\n \u0027techonthenet.comAAA\u0027\n(1 row)\n\npostgres\u003d# SELECT rpad(\u0027abc\u0027, 6, \u0027 \u0027);\n   rpad\n----------\n \u0027abc   \u0027\n(1 row)\n\npostgres\u003d# SELECT rpad(\u0027abc\u0027, 9, \u0027XYZ\u0027);\n    rpad\n-------------\n \u0027abcXYZXYZ\u0027\n(1 row)\n\npostgres\u003d# SELECT rpad(\u0027abc\u0027, 10, \u0027XYZ\u0027);\n    rpad\n--------------\n \u0027abcXYZXYZX\u0027\n(1 row)"
+}

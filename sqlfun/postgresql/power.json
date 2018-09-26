@@ -1,0 +1,31 @@
+{
+  "funcName": "power",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "m",
+        "description": "The base to use in the power function."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "The exponent to use in the power function."
+      }
+    }
+  ],
+  "description": "The PostgreSQL power function returns m raised to the nth power.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/power.php",
+  "sample": "postgres\u003d# SELECT power(6, 2);\n power\n-------\n    36\n(1 row)\n\npostgres\u003d# SELECT power(6, -2);\n       power\n--------------------\n 0.0277777777777778\n(1 row)\n\npostgres\u003d# SELECT power(5.4, 3);\n        power\n----------------------\n 157.4640000000000000\n(1 row)\n\npostgres\u003d# SELECT power(0, 3);\n power\n-------\n     0\n(1 row)\n\npostgres\u003d# SELECT power(3, 0);\n power\n-------\n     1\n(1 row)"
+}

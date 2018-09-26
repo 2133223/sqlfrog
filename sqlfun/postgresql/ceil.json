@@ -1,0 +1,25 @@
+{
+  "funcName": "ceil",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The value used to find the smallest integer value."
+      }
+    }
+  ],
+  "description": "The PostgreSQL ceil function returns the smallest integer value that is greater than or equal to a number.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/ceil.php",
+  "sample": "postgres\u003d# SELECT ceil(32.65);\n ceil\n------\n   33\n(1 row)\n\npostgres\u003d# SELECT ceil(32.1);\n ceil\n------\n   33\n(1 row)\n\npostgres\u003d# SELECT ceil(32);\n ceil\n------\n   32\n(1 row)\n\npostgres\u003d# SELECT ceil(-32.65);\n ceil\n------\n  -32\n(1 row)\n\npostgres\u003d# SELECT ceil(-32.1);\n ceil\n------\n  -32\n(1 row)\n\npostgres\u003d# SELECT ceil(-32);\n ceil\n------\n  -32\n(1 row)"
+}

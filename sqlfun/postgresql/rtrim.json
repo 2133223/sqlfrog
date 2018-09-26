@@ -1,0 +1,31 @@
+{
+  "funcName": "rtrim",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to trim from the right-hand side."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "trim_character",
+        "description": "The set of characters that will be removed from the right-hand side of string. If this parameter is omitted, the rtrim function will remove space characters from the right-hand side of string."
+      }
+    }
+  ],
+  "description": "The PostgreSQL rtrim function removes all specified characters from the right-hand side of a string.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/rtrim.php",
+  "sample": "postgres\u003d# SELECT rtrim(\u0027  techonthenet.com  \u0027, \u0027 \u0027);\n       rtrim\n----------------------\n \u0027  techonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT rtrim(\u0027   Tech   on   the   net   \u0027);\n          rtrim\n----------------------------\n \u0027   Tech   on   the   net\u0027\n(1 row)\n\npostgres\u003d# SELECT rtrim(\u0027techonthenet.com    \u0027);\n      rtrim\n--------------------\n \u0027techonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT rtrim(\u0027123000\u0027, \u00270\u0027);\n rtrim\n-------\n \u0027123\u0027\n(1 row)"
+}

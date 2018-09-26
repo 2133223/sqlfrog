@@ -1,0 +1,25 @@
+{
+  "funcName": "exp",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The power to raise e to. Equivalent to the formula enumber."
+      }
+    }
+  ],
+  "description": "The PostgreSQL exp function returns e raised to the power of number (or enumber).",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/exp.php",
+  "sample": "postgres\u003d# SELECT exp(0);\n exp\n-----\n   1\n(1 row)\n\npostgres\u003d# SELECT exp(1);\n       exp\n------------------\n 2.71828182845904\n(1 row)\n\npostgres\u003d# SELECT exp(2);\n       exp\n------------------\n 7.38905609893065\n(1 row)\n\npostgres\u003d# SELECT exp(-2);\n        exp\n-------------------\n 0.135335283236613\n(1 row)"
+}

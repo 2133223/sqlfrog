@@ -1,0 +1,25 @@
+{
+  "funcName": "sqrt",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The positive number to take the square root of."
+      }
+    }
+  ],
+  "description": "The PostgreSQL sqrt function returns the square root of a number.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/sqrt.php",
+  "sample": "postgres\u003d# SELECT sqrt(25);\n sqrt\n------\n    5\n(1 row)\n\npostgres\u003d# SELECT sqrt(26);\n       sqrt\n------------------\n 5.09901951359278\n(1 row)\n\npostgres\u003d# SELECT sqrt(0);\n sqrt\n------\n    0\n(1 row)"
+}

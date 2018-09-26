@@ -1,0 +1,37 @@
+{
+  "funcName": "lpad",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to left-pad."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "The length of the result after string has been left-padded."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pad_string",
+        "description": "The specified string to left-pad to string."
+      }
+    }
+  ],
+  "description": "The PostgreSQL lpad function returns a string that is left-padded with a specified string to a certain length.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/lpad.php",
+  "sample": "postgres\u003d# SELECT lpad(\u0027techonthenet.com\u0027, 18, \u0027A\u0027);\n        lpad\n----------------------\n \u0027AAtechonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT lpad(\u0027techonthenet.com\u0027, 19, \u0027A\u0027);\n        lpad\n-----------------------\n \u0027AAAtechonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT lpad(\u0027abc\u0027, 6, \u0027 \u0027);\n   lpad\n----------\n \u0027   abc\u0027\n(1 row)\n\npostgres\u003d# SELECT lpad(\u0027abc\u0027, 9, \u0027XYZ\u0027);\n    lpad\n-------------\n \u0027XYZXYZabc\u0027\n(1 row)\n\npostgres\u003d# SELECT lpad(\u0027abc\u0027, 10, \u0027XYZ\u0027);\n    lpad\n--------------\n \u0027XYZXYZXabc\u0027\n(1 row)"
+}

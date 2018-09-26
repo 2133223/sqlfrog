@@ -1,0 +1,26 @@
+{
+  "funcName": "now",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "precision",
+        "description": "Optional. The number of digits to round the fractional seconds to.",
+        "optional": true
+      }
+    }
+  ],
+  "description": "The PostgreSQL now function returns the current date and time with the time zone.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/now.php",
+  "sample": "postgres\u003d# SELECT now();\n              now\n-------------------------------\n 2014-04-25 17:01:33.753769+00\n(1 row)"
+}

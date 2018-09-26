@@ -1,0 +1,26 @@
+{
+  "funcName": "localtimestamp",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "precision",
+        "description": "Optional. The number of digits to round the fractional seconds to.",
+        "optional": true
+      }
+    }
+  ],
+  "description": "The PostgreSQL localtimestamp function returns the current date and time.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/localtimestamp.php",
+  "sample": "postgres\u003d# SELECT localtimestamp;\n         timestamp\n----------------------------\n 2014-04-24 20:55:09.808294\n(1 row)\n\npostgres\u003d# SELECT localtimestamp(1);\n       timestamp\n-----------------------\n 2014-04-24 20:55:09.8\n(1 row)\n\npostgres\u003d# SELECT localtimestamp(2);\n       timestamp\n------------------------\n 2014-04-24 20:55:09.81\n(1 row)\n\npostgres\u003d# SELECT localtimestamp(3);\n        timestamp\n-------------------------\n 2014-04-24 20:55:09.808\n(1 row)"
+}

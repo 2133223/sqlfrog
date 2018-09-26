@@ -1,0 +1,31 @@
+{
+  "funcName": "to_number",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string that will be converted to a number."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format_mask",
+        "description": "The format that will be used to convert string1 to a number. It can be one of the following and can be used in many combinations. Parameter Explanation 9 Value (with no leading zeros) 0 Value (with leading zeros) . Decimal , Group separator PR Negative value in angle brackets S Sign L Currency symbol D Decimal G Group separator MI Minus sign (for negative numbers) PL Plus sign (for positive numbers) SG Plus/minus sign (for positive and negative numbers) RN Roman numerals TH Ordinal number suffix th Ordinal number suffix V Shift digits EEEE Scientific notation"
+      }
+    }
+  ],
+  "description": "The PostgreSQL to_number function converts a string to a number.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/to_number.php",
+  "sample": "postgres\u003d# SELECT to_number(\u00271210.73\u0027, \u00279999.99\u0027);\n to_number\n-----------\n   1210.73\n(1 row)\n\npostgres\u003d# SELECT to_number(\u00271,210.73\u0027, \u00279G999.99\u0027);\n to_number\n-----------\n   1210.73\n(1 row)\n\npostgres\u003d# SELECT to_number(\u0027$1,210.73\u0027, \u0027L9G999.99\u0027);\n to_number\n-----------\n   1210.73\n(1 row)\n\npostgres\u003d# SELECT to_number(\u0027$1,210.73\u0027, \u0027L9G999\u0027);\n to_number\n-----------\n      1210\n(1 row)"
+}

@@ -1,0 +1,31 @@
+{
+  "funcName": "strpos",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to search."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "substring",
+        "description": "The substring to search for in string."
+      }
+    }
+  ],
+  "description": "The PostgreSQL strpos function returns the location of a substring in a string.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/strpos.php",
+  "sample": "postgres\u003d# SELECT strpos(\u0027Tech on the net\u0027, \u0027T\u0027);\n strpos\n--------\n      1\n(1 row)\n\npostgres\u003d# SELECT strpos(\u0027Tech on the net\u0027, \u0027t\u0027);\n strpos\n--------\n      9\n(1 row)\n\npostgres\u003d# SELECT strpos(\u0027techonthenet.com\u0027, \u0027h\u0027);\n strpos\n--------\n      4\n(1 row)\n\npostgres\u003d# SELECT strpos(\u0027techonthenet.com\u0027, \u0027Z\u0027);\n strpos\n--------\n      0\n(1 row)"
+}

@@ -1,0 +1,31 @@
+{
+  "funcName": "repeat",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to repeat."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number of times to repeat the string."
+      }
+    }
+  ],
+  "description": "The PostgreSQL repeat function repeats a string a specified number of times.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/repeat.php",
+  "sample": "postgres\u003d# SELECT repeat(\u0027techonthenet.com\u0027, 2);\n              repeat\n------------------------------------\n \u0027techonthenet.comtechonthenet.com\u0027\n(1 row)\n\npostgres\u003d# SELECT repeat(\u0027A\u0027, 2);\n repeat\n--------\n \u0027AA\u0027\n(1 row)\n\npostgres\u003d# SELECT repeat(\u0027a\u0027, 5);\n repeat\n---------\n \u0027aaaaa\u0027\n(1 row)\n\npostgres\u003d# SELECT repeat(\u0027 \u0027, 6);\n repeat\n--------\n \u0027      \u0027\n(1 row)"
+}

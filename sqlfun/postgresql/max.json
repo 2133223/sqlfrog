@@ -1,0 +1,44 @@
+{
+  "funcName": "max",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1, expression2, ... expression_n",
+        "description": "Expressions that are not encapsulated within the max function and must be included in the GROUP BY clause at the end of the SQL statement."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "aggregate_expression",
+        "description": "This is the column or expression from which the maximum value will be returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "tables",
+        "description": "The tables that you wish to retrieve records from. There must be at least one table listed in the FROM clause."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "WHERE conditions",
+        "description": "Optional. These are conditions that must be met for the records to be selected.",
+        "optional": true
+      }
+    }
+  ],
+  "description": "The PostgreSQL max function returns the maximum value of an expression.",
+  "targetDBs": [
+    "PostgreSQL 9.4",
+    "PostgreSQL 9.3",
+    "PostgreSQL 9.2",
+    "PostgreSQL 9.1",
+    "PostgreSQL 9.0",
+    "PostgreSQL 8.4"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/postgresql/functions/max.php",
+  "sample": "SELECT max(quantity) AS \"Highest Quantity\"\nFROM inventory;"
+}

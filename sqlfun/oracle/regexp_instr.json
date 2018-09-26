@@ -1,0 +1,64 @@
+{
+  "funcName": "REGEXP_INSTR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to search. string can be CHAR, VARCHAR2, NCHAR, NVARCHAR2, CLOB, or NCLOB."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pattern",
+        "description": "The regular expression matching information. It can be a combination of the following: Value Description ^ Matches the beginning of a string. If used with a match_parameter of \u0027m\u0027, it matches the start of a line anywhere within expression. $ Matches the end of a string. If used with a match_parameter of \u0027m\u0027, it matches the end of a line anywhere within expression. * Matches zero or more occurrences. + Matches one or more occurrences. ? Matches zero or one occurrence. . Matches any character except NULL. | Used like an \"OR\" to specify more than one alternative. [ ] Used to specify a matching list where you are trying to match any one of the characters in the list. [^ ] Used to specify a nonmatching list where you are trying to match any character except for the ones in the list. ( ) Used to group expressions as a subexpression. {m} Matches m times. {m,} Matches at least m times. {m,n} Matches at least m times, but no more than n times. \\n n is a number between 1 and 9. Matches the nth subexpression found within ( ) before encountering \\n. [..] Matches one collation element that can be more than one character. [::] Matches character classes. [\u003d\u003d] Matches equivalence classes. \\d Matches a digit character. \\D Matches a nondigit character. \\w Matches a word character. \\W Matches a nonword character. \\s Matches a whitespace character. \\S matches a non-whitespace character. \\A Matches the beginning of a string or matches at the end of a string before a newline character. \\Z Matches at the end of a string. *? Matches the preceding pattern zero or more occurrences. +? Matches the preceding pattern one or more occurrences. ?? Matches the preceding pattern zero or one occurrence. {n}? Matches the preceding pattern n times. {n,}? Matches the preceding pattern at least n times. {n,m}? Matches the preceding pattern at least n times, but not more than m times."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_position",
+        "description": "Optional. It is the position in string where the search will start. If omitted, it defaults to 1 which is the first position in the string.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "nth_appearance",
+        "description": "Optional. It is the nth appearance of pattern in string. If omitted, it defaults to 1 which is the first appearance of pattern in string.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "return_option",
+        "description": "Optional. If a return_option of 0 is provided, the position of the first character of the occurrence of pattern is returned. If a return_option of 1 is provided, the position of the character after the occurrence of pattern is returned. If omitted, it defaults to 0.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "match_parameter",
+        "description": "Optional. It allows you to modify the matching behavior for the REGEXP_INSTR function. It can be a combination of the following: Value Description \u0027c\u0027 Perform case-sensitive matching. \u0027i\u0027 Perform case-insensitive matching. \u0027n\u0027 Allows the period character (.) to match the newline character. By default, the period is a wildcard. \u0027m\u0027 expression is assumed to have multiple lines, where ^ is the start of a line and $ is the end of a line, regardless of the position of those characters in expression. By default, expression is assumed to be a single line. \u0027x\u0027 Whitespace characters are ignored. By default, whitespace characters are matched like any other character.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "subexpression",
+        "description": "Optional. This is used when pattern has subexpressions and you wish to indicate which subexpression in pattern is the target. It is an integervalue from 0 to 9 indicating the subexpression to match on in pattern.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The REGEXP_INSTR function returns a numeric value. If the REGEXP_INSTR function does not find any occurrence of pattern, it will return 0.",
+  "description": "The Oracle/PLSQL REGEXP_INSTR function is an extension of the INSTR function. It returns the location of a regular expression pattern in a string. This function, introduced in Oracle 10g, will allow you to find a substring in a string using regular expression pattern matching.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/regexp_instr.php",
+  "sample": "SELECT REGEXP_INSTR (\u0027TechOnTheNet is a great resource\u0027, \u0027t\u0027)\nFROM dual;\n\nResult: 12 SELECT REGEXP_INSTR (\u0027TechOnTheNet is a great resource\u0027, \u0027t\u0027, 1, 1, 0, \u0027i\u0027)\nFROM dual;\n\nResult: 1 SELECT REGEXP_INSTR (last_name, \u0027t\u0027, 1, 1, 0, \u0027i\u0027) AS First_Occurrence\nFROM contacts;"
+}

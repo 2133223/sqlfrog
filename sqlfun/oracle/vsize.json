@@ -1,0 +1,25 @@
+{
+  "funcName": "VSIZE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The string to evaluate."
+      }
+    }
+  ],
+  "returnType": "The VSIZE function returns a numeric value. If expression is NULL, then the VSIZE function returns NULL.",
+  "description": "The Oracle/PLSQL VSIZE function returns the number of bytes in the internal representation of an expression.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/vsize.php",
+  "sample": "VSIZE(\u0027Tech on the net\u0027)\nResult: 15\n\nVSIZE(\u0027Tech on the net \u0027)\nResult: 16\n\nVSIZE(null)\nResult: \u003cnull\u003e\n\nVSIZE(\u0027\u0027)\nResult: \u003cnull\u003e\n\nVSIZE(\u0027 \u0027)\nResult: 1"
+}

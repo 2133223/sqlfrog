@@ -1,0 +1,32 @@
+{
+  "funcName": "TRUNC  (with dates)",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "The date to truncate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format",
+        "description": "Optional. The unit of measure to apply for truncating. If the format parameter is omitted, the TRUNC function will truncate the date to the day value, so that any hours, minutes, or seconds will be truncated off. It can be one of the following values: Unit Valid format parameters Year SYYYY, YYYY, YEAR, SYEAR, YYY, YY, Y ISO Year IYYY, IY, I Quarter Q Month MONTH, MON, MM, RM Week WW IW IW W W Day DDD, DD, J Start day of the week DAY, DY, D Hour HH, HH12, HH24 Minute MI",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The TRUNC function (as it applies to dates) returns a date value.",
+  "description": "The Oracle/PLSQL TRUNC function returns a date truncated to a specific unit of measure.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/trunc_date.php",
+  "sample": "TRUNC(TO_DATE(\u002722-AUG-03\u0027), \u0027YEAR\u0027)\nResult: \u002701-JAN-03\u0027\n\nTRUNC(TO_DATE(\u002722-AUG-03\u0027), \u0027Q\u0027)\nResult: \u002701-JUL-03\u0027\n\nTRUNC(TO_DATE(\u002722-AUG-03\u0027), \u0027MONTH\u0027)\nResult: \u002701-AUG-03\u0027\n\nTRUNC(TO_DATE(\u002722-AUG-03\u0027), \u0027DDD\u0027)\nResult: \u002722-AUG-03\u0027\n\nTRUNC(TO_DATE(\u002722-AUG-03\u0027), \u0027DAY\u0027)\nResult: \u002717-AUG-03\u0027"
+}

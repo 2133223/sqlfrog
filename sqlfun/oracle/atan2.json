@@ -1,0 +1,25 @@
+{
+  "funcName": "ATAN2",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "n and m",
+        "description": "The numbers used to calculate the arc tangent."
+      }
+    }
+  ],
+  "returnType": "The ATAN2 function returns a numeric value.",
+  "description": "The Oracle/PLSQL ATAN2 function returns the arc tangent of n and m.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/atan2.php",
+  "sample": "ATAN2(0.2, 0.3)\nResult: 0.588002603547568\n\nATAN2(0.35, -0.15)\nResult: 1.97568811307998\n\nATAN2(-0.3, -0.4)\nResult: -2.49809154479651"
+}

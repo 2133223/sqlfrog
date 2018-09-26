@@ -1,0 +1,25 @@
+{
+  "funcName": "LENGTHC",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to return the length for. string1 can be CHAR, VARCHAR2, NCHAR, or NVARCHAR2. string1 can not be CLOB or NCLOB."
+      }
+    }
+  ],
+  "returnType": "The LENGTHC function returns a numeric value. If string1 is NULL, then the LENGTHC function will return NULL.",
+  "description": "The Oracle/PLSQL LENGTHC function returns the length of the specified string, using Unicode complete characters.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/lengthc.php",
+  "sample": "LENGTHC(NULL)\nResult: NULL\n\nLENGTHC(\u0027\u0027)\nResult: NULL\n\nLENGTHC(\u0027 \u0027)\nResult: 1\n\nLENGTHC(\u0027TechOnTheNet.com\u0027)\nResult: 16\n\nLENGTHC(\u0027TechOnTheNet.com \u0027)\nResult: 17"
+}

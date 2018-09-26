@@ -1,0 +1,24 @@
+{
+  "funcName": "DECOMPOSE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string that will be decomposed."
+      }
+    }
+  ],
+  "returnType": "The DECOMPOSE function returns a Unicode string.",
+  "description": "The Oracle/PLSQL DECOMPOSE function accepts a string and returns a Unicode string.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/decompose.php",
+  "sample": "DECOMPOSE(\u0027Très bien\u0027)\nResult: \u0027Tre`s bien\u0027\n\nDECOMPOSE(\u0027é\u0027)\nResult: \u0027e´\u0027\n\nDECOMPOSE(\u0027olé\u0027)\nResult: \u0027ole´\u0027"
+}

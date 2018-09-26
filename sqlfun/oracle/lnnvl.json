@@ -1,0 +1,15 @@
+{
+  "funcName": "LNNVL",
+  "returnType": "The LNNVL function will return the following: So if we had two columns called qty and reorder_level where qty \u003d 20 and reorder_level IS NULL, the LNNVL function would return the following:",
+  "description": "The Oracle/PLSQL LNNVL function is used in the WHERE clause of a SQL statement to evaluate a condition when one of the operands may contain a NULL value.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/lnnvl.php",
+  "sample": "select * from products\nwhere qty \u003c reorder_level; select * from products\nwhere LNNVL(qty \u003e\u003d reorder_level);"
+}

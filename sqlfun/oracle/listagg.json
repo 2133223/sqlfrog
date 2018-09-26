@@ -1,0 +1,35 @@
+{
+  "funcName": "LISTAGG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "measure_column",
+        "description": "The column or expression whose values you wish to concatenate together in the result set. Null values in the measure_column are ignored."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "delimiter",
+        "description": "Optional. It is the delimiter to use when separating the measure_column values when outputting the results.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_by_clause",
+        "description": "It determines the order that the concatenated values (ie: measure_column) are returned."
+      }
+    }
+  ],
+  "returnType": "The LISTAGG function returns a string value.",
+  "description": "The Oracle/PLSQL LISTAGG function concatenates values of the measure_column for each GROUP based on the order_by_clause.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g Release 2"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/listagg.php",
+  "sample": "SELECT LISTAGG(product_name, \u0027, \u0027) WITHIN GROUP (ORDER BY product_name) \"Product_Listing\"\nFROM products; SELECT LISTAGG(product_name, \u0027, \u0027) WITHIN GROUP (ORDER BY product_name DESC) \"Product_Listing\"\nFROM products; SELECT LISTAGG(product_name, \u0027; \u0027) WITHIN GROUP (ORDER BY product_name DESC) \"Product_Listing\"\nFROM products;"
+}

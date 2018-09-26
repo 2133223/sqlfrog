@@ -1,0 +1,31 @@
+{
+  "funcName": "BFILENAME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "directory",
+        "description": "A directory object that serves as an alias for the full path to where the file is located on the file server."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "filename",
+        "description": "The name of the file on the file server."
+      }
+    }
+  ],
+  "returnType": "The BFILENAME function returns a BFILE locator.",
+  "description": "The Oracle/PLSQL BFILENAME function returns a BFILE locator for a physical LOB binary file.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/bfilename.php",
+  "sample": "CREATE DIRECTORY exampleDir AS \u0027/example/totn\u0027; SELECT BFILENAME(\u0027exampleDir\u0027, \u0027totn_logo.png\u0027)\nFROM dual;"
+}

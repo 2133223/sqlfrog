@@ -1,0 +1,24 @@
+{
+  "funcName": "TZ_OFFSET",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "timezone",
+        "description": "A valid time zone name, a time zone offset from UTC, the SESSIONTIMEZONE function, or the DBTIMEZONE function. Some of the more commonly used time zone names are: Canada/Atlantic Pacific/Easter Canada/Central Pacific/Honolulu Canada/East-Saskatchewan Pacific/Kwajalein Canada/Eastern Pacific/Pago_Pago Canada/Mountain Pacific/Samoa Canada/Newfoundland US/Alaska Canada/Pacific US/Aleutian Canada/Saskatchewan US/Arizona Canada/Yukon US/Central Europe/Dublin US/East-Indiana Europe/Istanbul US/Eastern Europe/Lisbon US/Hawaii Europe/London US/Michigan Europe/Moscow US/Mountain Europe/Warsaw US/Pacific Greenwich US/Pacific-New Pacific/Auckland US/Samoa Pacific/Chatham"
+      }
+    }
+  ],
+  "returnType": "The TZ_OFFSET function returns a time zone offset value.",
+  "description": "The Oracle/PLSQL TZ_OFFSET function returns the time zone offset of a value.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/tz_offset.php",
+  "sample": "TZ_OFFSET(\u0027US/Michigan\u0027)\nResult: \u0027-05:00\u0027\n\nTZ_OFFSET(\u0027-08:00\u0027)\nResult: \u0027-08:00\u0027\n\nTZ_OFFSET(sessiontimezone)\nResult: \u0027-07:00\u0027  (depending on your configuration)\n\nTZ_OFFSET(dbtimezone)\nResult: \u0027-07:00\u0027  (depending on your configuration)"
+}

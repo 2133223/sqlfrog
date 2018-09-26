@@ -1,0 +1,17 @@
+{
+  "funcName": "CUME_DIST",
+  "arguments": [],
+  "returnType": "The CUME_DIST function returns a numeric value.",
+  "description": "The Oracle/PLSQL CUME_DIST function returns the cumulative distribution of a value in a group of values. The CUME_DIST function will return a value that is \u003e0 and \u003c\u003d1. The CUME_DIST function can be used two ways - as an Aggregate function or as an Analytic function.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/cume_dist.php",
+  "sample": "select CUME_DIST(1000, 500) WITHIN GROUP (ORDER BY salary, bonus)\nfrom employees;"
+}

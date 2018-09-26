@@ -1,0 +1,39 @@
+{
+  "funcName": "TO_CHAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "value",
+        "description": "A number or date that will be converted to a string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format_mask",
+        "description": "Optional. This is the format that will be used to convert value to a string.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "nls_language",
+        "description": "Optional. This is the nls language used to convert value to a string.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The TO_CHAR function returns a string value.",
+  "description": "The Oracle/PLSQL TO_CHAR function converts a number or date to a string.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_char.php",
+  "sample": "TO_CHAR(1210.73, \u00279999.9\u0027)\nResult: \u0027 1210.7\u0027\n\nTO_CHAR(-1210.73, \u00279999.9\u0027)\nResult: \u0027-1210.7\u0027\n\nTO_CHAR(1210.73, \u00279,999.99\u0027)\nResult: \u0027 1,210.73\u0027\n\nTO_CHAR(1210.73, \u0027$9,999.00\u0027)\nResult: \u0027 $1,210.73\u0027\n\nTO_CHAR(21, \u0027000099\u0027)\nResult: \u0027 000021\u0027 TO_CHAR(sysdate, \u0027yyyy/mm/dd\u0027)\nResult: \u00272003/07/09\u0027\n\nTO_CHAR(sysdate, \u0027Month DD, YYYY\u0027)\nResult: \u0027July 09, 2003\u0027\n\nTO_CHAR(sysdate, \u0027FMMonth DD, YYYY\u0027)\nResult: \u0027July 9, 2003\u0027\n\nTO_CHAR(sysdate, \u0027MON DDth, YYYY\u0027)\nResult: \u0027JUL 09TH, 2003\u0027\n\nTO_CHAR(sysdate, \u0027FMMON DDth, YYYY\u0027)\nResult: \u0027JUL 9TH, 2003\u0027\n\nTO_CHAR(sysdate, \u0027FMMon ddth, YYYY\u0027)\nResult: \u0027Jul 9th, 2003\u0027 TO_CHAR(sysdate, \u0027FMMonth DD, YYYY\u0027)\nResult: \u0027July 9, 2003\u0027\n\nTO_CHAR(sysdate, \u0027FMMON DDth, YYYY\u0027)\nResult: \u0027JUL 9TH, 2003\u0027\n\nTO_CHAR(sysdate, \u0027FMMon ddth, YYYY\u0027)\nResult: \u0027Jul 9th, 2003\u0027"
+}

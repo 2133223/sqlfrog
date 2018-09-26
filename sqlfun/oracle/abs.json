@@ -1,0 +1,25 @@
+{
+  "funcName": "ABS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to convert to an absolute value."
+      }
+    }
+  ],
+  "returnType": "The ABS function returns a numeric value.",
+  "description": "The Oracle/PLSQL ABS function returns the absolute value of a number.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/abs.php",
+  "sample": "ABS(-23)\nResult: 23\n\nABS(-23.6)\nResult: 23.6\n\nABS(-23.65)\nResult: 23.65\n\nABS(23.65)\nResult: 23.65\n\nABS(23.65 * -1)\nResult: 23.65"
+}

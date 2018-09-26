@@ -1,0 +1,46 @@
+{
+  "funcName": "DUMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The expression to analyze."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "return_format",
+        "description": "Optional. It determines the format of the return value. This parameter can be any of the following values: Value Explanation 8 octal notation 10 decimal notation 16 hexadecimal notation 17 single characters 1008 octal notation with the character set name 1010 decimal notation with the character set name 1016 hexadecimal notation with the character set name 1017 single characters with the character set name",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_position",
+        "description": "Optional. The start position in the internal representation to return.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "Optional. The length of the internal representation to return.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The DUMP function returns a VARCHAR2 value. If the return_format, start_position and length parameters are omitted, the DUMP function will return the entire internal representation in decimal notation.",
+  "description": "The Oracle/PLSQL DUMP function returns a varchar2 value that includes the datatype code, the length in bytes, and the internal representation of the expression.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/dump.php",
+  "sample": "DUMP(\u0027Tech\u0027)\nResult: \u0027Typ\u003d96 Len\u003d4: 84,101,99,104\u0027\n\nDUMP(\u0027Tech\u0027, 10)\nResult: \u0027Typ\u003d96 Len\u003d4: 84,101,99,104\u0027\n\nDUMP(\u0027Tech\u0027, 16)\nResult: \u0027Typ\u003d96 Len\u003d4: 54,65,63,68\u0027\n\nDUMP(\u0027Tech\u0027, 1016)\nResult: \u0027Typ\u003d96 Len\u003d4 CharacterSet\u003dUS7ASCII: 54,65,63,68\u0027\n\nDUMP(\u0027Tech\u0027, 1017)\nResult: \u0027Typ\u003d96 Len\u003d4 CharacterSet\u003dUS7ASCII: T,e,c,h\u0027"
+}

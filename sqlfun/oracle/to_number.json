@@ -1,0 +1,39 @@
+{
+  "funcName": "TO_NUMBER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string that will be converted to a number."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format_mask",
+        "description": "Optional. This is the format that will be used to convert string1 to a number.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "nls_language",
+        "description": "Optional. This is the nls language used to convert string1 to a number.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The TO_NUMBER function returns a numeric value.",
+  "description": "The Oracle/PLSQL TO_NUMBER function converts a string to a number.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_number.php",
+  "sample": "TO_NUMBER(\u00271210.73\u0027, \u00279999.99\u0027)\nResult: 1210.73\n\nTO_NUMBER(\u0027546\u0027, \u0027999\u0027)\nResult: 546\n\nTO_NUMBER(\u002723\u0027, \u002799\u0027)\nResult: 23 TO_NUMBER(\u00271210.73\u0027)\nResult: 1210.73"
+}

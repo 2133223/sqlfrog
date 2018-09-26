@@ -1,0 +1,24 @@
+{
+  "funcName": "DENSE_RANK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1 .. expression_n",
+        "description": "One or more expressions which identify a unique row in the group."
+      }
+    }
+  ],
+  "returnType": "The DENSE_RANK function returns a numeric value.",
+  "description": "The Oracle/PLSQL DENSE_RANK function returns the rank of a row in a group of rows. It is very similar to the RANK function. However, the RANK function can cause non-consecutive rankings if the tested values are the same. Whereas, the DENSE_RANK function will always result in consecutive rankings. The DENSE_RANK function can be used two ways - as an Aggregate function or as an Analytic function.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/dense_rank.php",
+  "sample": "select DENSE_RANK(1000, 500) WITHIN GROUP (ORDER BY salary, bonus)\nfrom employees;"
+}

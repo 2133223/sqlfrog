@@ -1,0 +1,52 @@
+{
+  "funcName": "LAST_VALUE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The column or expression that you wish to return the last value for."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "RESPECT NULLS | IGNORE NULLS",
+        "description": "Optional. It determines whether NULL values are included or ignored in the analytic window calculation. If this parameter is omitted, the default is RESPECT NULLS which includes NULL values.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "query_partition_clause",
+        "description": "Optional. It is used to partition the results into groups based on one or more expressions.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_by_clause",
+        "description": "Optional. It is used to order the data within each partition.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "windowing_clause",
+        "description": "Optional. It determines the rows in the analytic window to evaluate and it is important that you use the correct windowing_clause or you could get unexpected results. It can be a value such as: windowing_clause Description RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW Last row in the window changes as the current row changes (default) RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING First row in the window changes as the current row changes RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING All rows are included in the window, regardless of the current row",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The LAST_VALUE function returns the last value in an ordered set of values from an analytic window.",
+  "description": "The Oracle/PLSQL LAST_VALUE function returns the last value in an ordered set of values from an analytic window. It is similar to the FIRST_VALUE and NTH_VALUE functions.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/last_value.php",
+  "sample": ""
+}

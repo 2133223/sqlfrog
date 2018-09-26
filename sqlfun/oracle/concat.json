@@ -1,0 +1,31 @@
+{
+  "funcName": "CONCAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The first string to concatenate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string2",
+        "description": "The second string to concatenate."
+      }
+    }
+  ],
+  "returnType": "The CONCAT function returns a string value.",
+  "description": "The Oracle/PLSQL CONCAT function allows you to concatenate two strings together.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/concat.php",
+  "sample": "CONCAT(\u0027Tech on\u0027, \u0027 the Net\u0027)\nResult: \u0027Tech on the Net\u0027\n\nCONCAT(\u0027a\u0027, \u0027b\u0027)\nResult: \u0027ab\u0027 SELECT CONCAT(CONCAT(\u0027A\u0027, \u0027B\u0027),\u0027C\u0027)\nFROM dual;\nResult: \u0027ABC\u0027 SELECT CONCAT(CONCAT(CONCAT(\u0027A\u0027, \u0027B\u0027),\u0027C\u0027),\u0027D\u0027)\nFROM dual;\nResult: \u0027ABCD\u0027 SELECT CONCAT(\u0027Let\u0027\u0027s\u0027, \u0027 learn Oracle\u0027)\nFROM dual;\nResult: Let\u0027s learn Oracle"
+}

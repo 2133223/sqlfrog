@@ -1,0 +1,24 @@
+{
+  "funcName": "COMPOSE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The input value used to create the Unicode string. It can be a char, varchar2, nchar, nvarchar2, clob, or nclob."
+      }
+    }
+  ],
+  "returnType": "The COMPOSE function returns a Unicode string. Below is a listing of unistring values that can be combined with other characters in the compose function.",
+  "description": "The Oracle/PLSQL COMPOSE function returns a Unicode string.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/compose.php",
+  "sample": "COMPOSE(\u0027o\u0027 || unistr(\u0027\\0308\u0027) )\nResult: ö\n\nCOMPOSE(\u0027a\u0027 || unistr(\u0027\\0302\u0027) )\nResult: â\n\nCOMPOSE(\u0027e\u0027 || unistr(\u0027\\0301\u0027) )\nResult: é"
+}

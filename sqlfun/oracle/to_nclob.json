@@ -1,0 +1,24 @@
+{
+  "funcName": "TO_NCLOB",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "A char, varchar2, nchar, nvarchar2, clob or nclob value that will be converted to a NCLOB value."
+      }
+    }
+  ],
+  "returnType": "The TO_NCLOB function returns a NCLOB value.",
+  "description": "The Oracle/PLSQL TO_NCLOB function converts a LOB value to a NCLOB value.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_nclob.php",
+  "sample": "select TO_NCLOB(lob_column)\nfrom suppliers;"
+}

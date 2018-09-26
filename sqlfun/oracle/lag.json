@@ -1,0 +1,53 @@
+{
+  "funcName": "LAG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that can contain other built-in functions, but can not contain any analytic functions."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "offset",
+        "description": "Optional. It is the physical offset from the current row in the table. If this parameter is omitted, the default is 1.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "default",
+        "description": "Optional. It is the value that is returned if the offset goes out of the bounds of the table. If this parameter is omitted, the default is null.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "query_partition_clause",
+        "description": "Optional. It is used to partition the results into groups based on one or more expressions.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_by_clause",
+        "description": "Optional. It is used to order the data within each partition.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The LAG function returns values from a previous row in the table.",
+  "description": "The Oracle/PLSQL LAG function is an analytic function that lets you query more than one row in a table at a time without having to join the table to itself. It returns values from a previous row in the table. To return a value from the next row, try using the LEAD function.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/lag.php",
+  "sample": "SELECT product_id, order_date,\nLAG (order_date,1) OVER (ORDER BY order_date) AS prev_order_date\nFROM orders; SELECT product_id, order_date,\nLAG (order_date,1) OVER (PARTITION BY product_id ORDER BY order_date) AS prev_order_date\nFROM orders;"
+}

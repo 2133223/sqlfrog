@@ -1,0 +1,25 @@
+{
+  "funcName": "TO_SINGLE_BYTE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "char",
+        "description": "A char, varchar2, nchar, or nvarchar2 value that will be converted to single-byte characters. This function will return its result in the same character set as char."
+      }
+    }
+  ],
+  "returnType": "The TO_SINGLE_BYTE function returns a single byte value.",
+  "description": "The Oracle/PLSQL TO_SINGLE_BYTE function returns a character value with all of the multibyte characters converted to single-byte characters. To use this function, your database character set contains both single-byte and multibyte characters.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_single_byte.php",
+  "sample": "select TO_SINGLE_BYTE(\u0027Tech on the net\u0027)\nfrom dual;"
+}

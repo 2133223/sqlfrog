@@ -1,0 +1,38 @@
+{
+  "funcName": "RPAD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to pad characters to (the right-hand side)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "padded_length",
+        "description": "The number of characters to return. If the padded_length is smaller than the original string, the RPAD function will truncate the string to the size of padded_length."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pad_string",
+        "description": "Optional. This is the string that will be padded to the right-hand side of string1. If this parameter is omitted, the RPAD function will pad spaces to the right-side of string1.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The RPAD function returns a string value.",
+  "description": "The Oracle/PLSQL RPAD function pads the right-side of a string with a specific set of characters (when string1 is not null).",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/rpad.php",
+  "sample": "RPAD(\u0027tech\u0027, 7)\nResult: \u0027tech   \u0027\n\nRPAD(\u0027tech\u0027, 2)\nResult: \u0027te\u0027\n\nRPAD(\u0027tech\u0027, 8, \u00270\u0027)\nResult: \u0027tech0000\u0027\n\nRPAD(\u0027tech on the net\u0027, 15, \u0027z\u0027)\nResult: \u0027tech on the net\u0027\n\nRPAD(\u0027tech on the net\u0027, 16, \u0027z\u0027)\nResult: \u0027tech on the netz\u0027"
+}

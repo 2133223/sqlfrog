@@ -1,0 +1,16 @@
+{
+  "funcName": "EXTRACT",
+  "returnType": "The EXTRACT function returns a numeric value when the following parameters are provided: YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, TIMEZONE_HOUR, TIMEZONE_MINUTE, TIMEZONE_REGION, TIMEZONE_MINUTE. The EXTRACT function returns a VARCHAR2 when TIMEZONE_REGION or TIMEZONE_ABBR parameters are provided (because the time zone name or abbreviation information is returned).",
+  "description": "The Oracle/PLSQL EXTRACT function extracts a value from a date or interval value.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/extract.php",
+  "sample": "EXTRACT(YEAR FROM DATE \u00272003-08-22\u0027)\nResult: 2003\n\nEXTRACT(MONTH FROM DATE \u00272003-08-22\u0027)\nResult: 8\n\nEXTRACT(DAY FROM DATE \u00272003-08-22\u0027)\nResult: 22"
+}

@@ -1,0 +1,18 @@
+{
+  "funcName": "EMPTY_BLOB",
+  "arguments": [],
+  "returnType": "The EMPTY_BLOB function returns an empty LOB locator.",
+  "description": "The Oracle/PLSQL EMPTY_BLOB function can be used to initialize a LOB column to EMPTY in an INSERT statement or UPDATE statement or it can be used initalize a LOB variable.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/empty_blob.php",
+  "sample": "UPDATE products\nSET product_photo \u003d EMPTY_BLOB();"
+}

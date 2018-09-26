@@ -1,0 +1,25 @@
+{
+  "funcName": "STDDEV",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "A numeric value or formula."
+      }
+    }
+  ],
+  "returnType": "The STDDEV function returns a numeric value.",
+  "description": "The Oracle/PLSQL STDDEV function returns the standard deviation of a set of numbers. The STDDEV function can be used two ways - as an Aggregate function or as an Analytic function.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/stddev.php",
+  "sample": "select STDDEV(bonus)\nfrom employees;"
+}

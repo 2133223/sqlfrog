@@ -1,0 +1,31 @@
+{
+  "funcName": "NUMTOYMINTERVAL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to convert to an interval."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The unit to convert to. It must be one of the following values: YEAR or MONTH."
+      }
+    }
+  ],
+  "returnType": "The NUMTOYMINTERVAL function returns an INTERVAL YEAR TO MONTH value.",
+  "description": "The Oracle/PLSQL NUMTOYMINTERVAL function converts a number to an INTERVAL YEAR TO MONTH literal.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/numtoyminterval.php",
+  "sample": "NUMTOYMINTERVAL(100000000, \u0027MONTH\u0027)\nResult: \u0027+0083\u0027\n\nNUMTOYMINTERVAL(100000, \u0027YEAR\u0027)\nResult: \u0027+0001\u0027"
+}

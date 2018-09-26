@@ -1,0 +1,30 @@
+{
+  "funcName": "NEW_TIME",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "zone1",
+        "description": "Original time zone that date is currently displayed in. It can be a value from the table below."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "zone2",
+        "description": "New time zone that you wish to display result. It can be one of the values in the following table: Value Description AST Atlantic Standard Time ADT Atlantic Daylight Time BST Bering Standard Time BDT Bering Daylight Time CST Central Standard Time CDT Central Daylight Time EST Eastern Standard Time EDT Eastern Daylight Time GMT Greenwich Mean Time HST Alaska-Hawaii Standard Time HDT Alaska-Hawaii Daylight Time MST Mountain Standard Time MDT Mountain Daylight Time NST Newfoundland Standard Time PST Pacific Standard Time PDT Pacific Daylight Time YST Yukon Standard Time YDT Yukon Daylight Time"
+      }
+    }
+  ],
+  "returnType": "The NEW_TIME function returns a date value.",
+  "description": "The Oracle/PLSQL NEW_TIME function converts a date from time zone1 to a date in time zone2.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/new_time.php",
+  "sample": "NEW_TIME (TO_DATE (\u00272003/11/01 01:45\u0027, \u0027yyyy/mm/dd HH24:MI\u0027), \u0027AST\u0027, \u0027MST\u0027)"
+}

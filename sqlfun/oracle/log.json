@@ -1,0 +1,31 @@
+{
+  "funcName": "LOG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "m",
+        "description": "Value used in the calculation. It must be a positive number, except 0 or 1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "Value used in the calculation. It must be a positive number."
+      }
+    }
+  ],
+  "returnType": "The LOG function returns a numeric value.",
+  "description": "The Oracle/PLSQL LOG function returns the logarithm of n base m.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/log.php",
+  "sample": "LOG(10, 20)\nResult: 1.30102999566398\n\nLOG(2, 15)\nResult: 3.90689059560852\n\nLOG(100, 1)\nResult: 0"
+}

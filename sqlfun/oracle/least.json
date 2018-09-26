@@ -1,0 +1,32 @@
+{
+  "funcName": "LEAST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1",
+        "description": "The first expression to evaluate whether it is the smallest."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2, ... expr_n",
+        "description": "Optional. Additional expressions that are to be evaluated.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The LEAST function returns a value that is the same datatype as expr1. Having a NULL value in one of the expressions will return NULL as the least value.",
+  "description": "The Oracle/PLSQL LEAST function returns the smallest value in a list of expressions.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/least.php",
+  "sample": "LEAST(2, 5, 12, 3)\nResult: 2\n\nLEAST(\u00272\u0027, \u00275\u0027, \u002712\u0027, \u00273\u0027)\nResult: \u002712\u0027\n\nLEAST(\u0027apples\u0027, \u0027oranges\u0027, \u0027bananas\u0027)\nResult: \u0027apples\u0027\n\nLEAST(\u0027apples\u0027, \u0027applis\u0027, \u0027applas\u0027)\nResult: \u0027applas\u0027\n\nLEAST(\u0027apples\u0027, \u0027applis\u0027, \u0027applas\u0027, null)\nResult: NULL"
+}

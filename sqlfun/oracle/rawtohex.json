@@ -1,0 +1,25 @@
+{
+  "funcName": "RAWTOHEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "raw",
+        "description": "The raw value to convert to a hexademical value."
+      }
+    }
+  ],
+  "returnType": "The RAWTOHEX function returns a string value.",
+  "description": "The Oracle/PLSQL RAWTOHEX function converts a raw value into a hexadecimal value. One of our viewers says that this function comes in handy to move a varchar value to a blob field.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/rawtohex.php",
+  "sample": "RAWTOHEX(\u0027AB\u0027)\nResult: \u00274142\u0027 if run as a SQL function and \u0027AB\u0027 if run as a PLSQL function\n\nRAWTOHEX(\u00277E\u0027)\nResult: \u00273745\u0027 if run as a SQL function and \u00277E\u0027 as a PLSQL function"
+}

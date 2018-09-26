@@ -1,0 +1,45 @@
+{
+  "funcName": "INSTR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to search. string can be CHAR, VARCHAR2, NCHAR, NVARCHAR2, CLOB, or NCLOB."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "substring",
+        "description": "The substring to search for in string. substring can be CHAR, VARCHAR2, NCHAR, NVARCHAR2, CLOB, or NCLOB."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_position",
+        "description": "Optional. The position in string where the search will start. If omitted, it defaults to 1. The first position in the string is 1. If the start_position is negative, the INSTR function counts back start_position number of characters from the end of string and then searches towards the beginning of string.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "nth_appearance",
+        "description": "Optional. The nth appearance of substring. If omitted, it defaults to 1.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The INSTR function returns a numeric value. The first position in the string is 1. If substring is not found in string, then the INSTR function will return 0.",
+  "description": "The Oracle/PLSQL INSTR function returns the location of a substring in a string.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/instr.php",
+  "sample": "INSTR(\u0027Tech on the net\u0027, \u0027e\u0027)\nResult: 2   (the first occurrence of \u0027e\u0027)\n\nINSTR(\u0027Tech on the net\u0027, \u0027e\u0027, 1, 1)\nResult: 2   (the first occurrence of \u0027e\u0027)\n\nINSTR(\u0027Tech on the net\u0027, \u0027e\u0027, 1, 2)\nResult: 11  (the second occurrence of \u0027e\u0027)\n\nINSTR(\u0027Tech on the net\u0027, \u0027e\u0027, 1, 3)\nResult: 14  (the third occurrence of \u0027e\u0027)\n\nINSTR(\u0027Tech on the net\u0027, \u0027e\u0027, -3, 2)\nResult: 2"
+}

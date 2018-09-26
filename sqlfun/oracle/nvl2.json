@@ -1,0 +1,37 @@
+{
+  "funcName": "NVL2",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to test for a null value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "value_if_not_null",
+        "description": "The value returned if string1 is not null."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "value_if_null",
+        "description": "The value returned if string1 is null."
+      }
+    }
+  ],
+  "returnType": "The NVL2 function returns a substitute value.",
+  "description": "The Oracle/PLSQL NVL2 function extends the functionality found in the NVL function. It lets you substitutes a value when a null value is encountered as well as when a non-null value is encountered.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/nvl2.php",
+  "sample": "select NVL2(supplier_city, \u0027Completed\u0027, \u0027n/a\u0027)\nfrom suppliers; select supplier_id,\nNVL2(supplier_desc, supplier_name, supplier_name2)\nfrom suppliers;"
+}

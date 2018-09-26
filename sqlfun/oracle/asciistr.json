@@ -1,0 +1,24 @@
+{
+  "funcName": "ASCIISTR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "A string in any character set that you want converted to an ASCII string in the database character set."
+      }
+    }
+  ],
+  "returnType": "The ASCIISTR function returns a string value.",
+  "description": "The Oracle/PLSQL ASCIISTR function converts a string in any character set to an ASCII string using the database character set.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/asciistr.php",
+  "sample": "ASCIISTR(\u0027A B C Ä Ê\u0027)\nResult: \u0027A B C \\00C4 \\00CA\u0027\n\nASCIISTR(\u0027A B C Õ Ø\u0027)\nResult: \u0027A B C \\00D5 \\00D8\u0027\n\nASCIISTR(\u0027A B C Ä Ê Í Õ Ø\u0027)\nResult: \u0027A B C \\00C4 \\00CA \\00CD \\00D5 \\00D8\u0027"
+}

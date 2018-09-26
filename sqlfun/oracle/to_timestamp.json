@@ -1,0 +1,31 @@
+{
+  "funcName": "TO_TIMESTAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string that will be converted to a timestamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format_mask",
+        "description": "Optional. This is the format that will be used to convert string1 to a timestamp. It can be one or a combination of the following values Parameter Explanation YYYY 4-digit year MM Month (01-12; JAN \u003d 01). MON Abbreviated name of month. MONTH Name of month, padded with blanks to length of 9 characters. DD Day of month (1-31). HH Hour of day (1-12). HH12 Hour of day (1-12). HH24 Hour of day (0-23). MI Minute (0-59). SS Second (0-59).",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The TO_TIMESTAMP function returns a timestamp value.",
+  "description": "The Oracle/PLSQL TO_TIMESTAMP function converts a string to a timestamp.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_timestamp.php",
+  "sample": "TO_TIMESTAMP(\u00272003/12/13 10:13:18\u0027, \u0027YYYY/MM/DD HH:MI:SS\u0027) TO_TIMESTAMP(\u00272003/DEC/13 10:13:18\u0027, \u0027YYYY/MON/DD HH:MI:SS\u0027)"
+}

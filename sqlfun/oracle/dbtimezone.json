@@ -1,0 +1,17 @@
+{
+  "funcName": "DBTIMEZONE",
+  "arguments": [],
+  "returnType": "The DBTIMEZONE function returns a time zone offset (in the following format: \u0027[+|-]TZH:TZM\u0027) or a time zone region name.",
+  "description": "The Oracle/PLSQL DBTIMEZONE function returns the database time zone as a time zone offset (in the following format: \u0027[+|-]TZH:TZM\u0027) or a time zone region name.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/dbtimezone.php",
+  "sample": "select DBTIMEZONE\nfrom dual; +00:00 -07:00"
+}

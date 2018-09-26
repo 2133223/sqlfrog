@@ -1,0 +1,38 @@
+{
+  "funcName": "SUBSTR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The source string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_position",
+        "description": "The starting position for extraction. The first position in the string is always 1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "Optional. It is the number of characters to extract. If this parameter is omitted, the SUBSTR function will return the entire string.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The SUBSTR function returns a string value. If length is a negative number, then the SUBSTR function will return a NULL value.",
+  "description": "The Oracle/PLSQL SUBSTR functions allows you to extract a substring from a string.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/substr.php",
+  "sample": "SUBSTR(\u0027This is a test\u0027, 6, 2)\nResult: \u0027is\u0027\n\nSUBSTR(\u0027This is a test\u0027, 6)\nResult: \u0027is a test\u0027\n\nSUBSTR(\u0027TechOnTheNet\u0027, 1, 4)\nResult: \u0027Tech\u0027\n\nSUBSTR(\u0027TechOnTheNet\u0027, -3, 3)\nResult: \u0027Net\u0027\n\nSUBSTR(\u0027TechOnTheNet\u0027, -6, 3)\nResult: \u0027The\u0027\n\nSUBSTR(\u0027TechOnTheNet\u0027, -8, 2)\nResult: \u0027On\u0027"
+}

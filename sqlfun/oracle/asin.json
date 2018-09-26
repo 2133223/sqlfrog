@@ -1,0 +1,25 @@
+{
+  "funcName": "ASIN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number used to calculate the arc sine."
+      }
+    }
+  ],
+  "returnType": "The ASIN function returns a numeric value.",
+  "description": "The Oracle/PLSQL ASIN function returns the arc sine of a number.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/asin.php",
+  "sample": "ASIN(0.2)\nResult: 0.201357920790331\n\nASIN(0.35)\nResult: 0.35757110364551\n\nASIN(-0.15)\nResult: -0.150568272776686"
+}

@@ -1,0 +1,30 @@
+{
+  "funcName": "NEXT_DAY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date value used to find the next weekday."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "weekday",
+        "description": "The day of the week that you wish to return. It can be one of the following values: Value Description SUNDAY First Sunday greater than date MONDAY First Monday greater than date TUESDAY First Tuesday greater than date WEDNESDAY First Wednesday greater than date THURSDAY First Thursday greater than date FRIDAY First Friday greater than date SATURDAY First Saturday greater than date"
+      }
+    }
+  ],
+  "returnType": "The NEXT_DAY function returns a date value.",
+  "description": "The Oracle/PLSQL NEXT_DAY function returns the first weekday that is greater than a date.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/next_day.php",
+  "sample": "NEXT_DAY(\u002701-Aug-03\u0027, \u0027TUESDAY\u0027)\nResult: \u002705-Aug-03\u0027\n\nNEXT_DAY(\u002706-Aug-03\u0027, \u0027WEDNESDAY\u0027)\nResult: \u002713-Aug-03\u0027\n\nNEXT_DAY(\u002706-Aug-03\u0027, \u0027SUNDAY\u0027)\nResult: \u002710-Aug-03\u0027"
+}

@@ -1,0 +1,29 @@
+{
+  "funcName": "REMAINDER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "m",
+        "description": "A numeric value used in the calculation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "A numeric value used in the calculation."
+      }
+    }
+  ],
+  "returnType": "The REMAINDER function returns a numeric value.",
+  "description": "The Oracle/PLSQL REMAINDER function returns the remainder of m divided by n.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/remainder.php",
+  "sample": "REMAINDER(15, 6)\nResult: 3\n\nREMAINDER(15, 5)\nResult: 0\n\nREMAINDER(15, 4)\nResult: -1\n\nREMAINDER(11.6, 2)\nResult: -0.4\n\nREMAINDER(11.6, 2.1)\nResult: -1\n\nREMAINDER(-15, 4)\nResult: 1"
+}

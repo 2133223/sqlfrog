@@ -1,0 +1,38 @@
+{
+  "funcName": "CONVERT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to be converted."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "char_set_to",
+        "description": "The character set to convert to."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "char_set_from",
+        "description": "Optional. The character set to convert from.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The CONVERT function returns a string value in particular character set. The available character sets are:",
+  "description": "The Oracle/PLSQL CONVERT function converts a string from one character set to another.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/convert.php",
+  "sample": "CONVERT(\u0027A B C D E Ä Ê Í Õ Ø\u0027, \u0027US7ASCII\u0027, \u0027WE8ISO8859P1\u0027)\nResult: \u0027A B C D E A E I ? ?\u0027"
+}

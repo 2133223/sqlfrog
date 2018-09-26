@@ -1,0 +1,31 @@
+{
+  "funcName": "TO_DSINTERVAL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character",
+        "description": "The value to convert to an INTERVAL DAY TO SECOND type. It can be a char, varchar2, nchar, or nvarchar2 value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "nls_parameter",
+        "description": "Optional. A decimal character and group separator value.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The TO_DSINTERVAL function returns a INTERVAL DAY TO SECOND value.",
+  "description": "The Oracle/PLSQL TO_DSINTERVAL function converts a string to an INTERVAL DAY TO SECOND type.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_dsinterval.php",
+  "sample": "TO_DSINTERVAL(\u0027150 08:30:00\u0027)\nResult: \u0027+000000150\u0027\n\nTO_DSINTERVAL(\u002780 12:30:00\u0027)\nResult: \u0027+000000080\u0027\n\nTO_DSINTERVAL(\u002795 18:30:00\u0027)\nResult: \u0027+000000095\u0027"
+}

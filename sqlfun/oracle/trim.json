@@ -1,0 +1,49 @@
+{
+  "funcName": "TRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "LEADING",
+        "description": "The function will remove trim_character from the front of string1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "TRAILING",
+        "description": "The function will remove trim_character from the end of string1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "BOTH",
+        "description": "The function will remove trim_character from the front and end of string1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "trim_character",
+        "description": "The character that will be removed from string1. If this parameter is omitted, the TRIM function will remove space characters from string1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to trim."
+      }
+    }
+  ],
+  "returnType": "The TRIM function returns a string value.",
+  "description": "The Oracle/PLSQL TRIM function removes all specified characters either from the beginning or the end of a string.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/trim.php",
+  "sample": "TRIM(\u0027   tech   \u0027)\nResult: \u0027tech\u0027\n\nTRIM(\u0027 \u0027  FROM  \u0027   tech   \u0027)\nResult: \u0027tech\u0027\n\nTRIM(LEADING \u00270\u0027 FROM \u0027000123\u0027)\nResult: \u0027123\u0027\n\nTRIM(TRAILING \u00271\u0027 FROM \u0027Tech1\u0027)\nResult: \u0027Tech\u0027\n\nTRIM(BOTH \u00271\u0027 FROM \u0027123Tech111\u0027)\nResult: \u002723Tech\u0027"
+}

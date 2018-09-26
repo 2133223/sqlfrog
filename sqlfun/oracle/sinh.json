@@ -1,0 +1,25 @@
+{
+  "funcName": "SINH",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "A numeric value used to calculate the hyperbolic sine."
+      }
+    }
+  ],
+  "returnType": "The SINH function returns a numeric value.",
+  "description": "The Oracle/PLSQL SINH function returns the hyperbolic sine of n.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/sinh.php",
+  "sample": "SINH(3)\nResult: 10.0178749274099\n\nSINH(5.2)\nResult: 90.6333626553652\n\nSINH(-5.2)\nResult: -90.6333626553652"
+}

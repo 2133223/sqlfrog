@@ -1,0 +1,16 @@
+{
+  "funcName": "CAST",
+  "returnType": "The CAST function returns the new datatype that you have converted to. If the resulting value is larger than the target type, an error is returned.",
+  "description": "The Oracle/PLSQL CAST function converts one datatype to another.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/cast.php",
+  "sample": "select CAST( \u002722-Aug-2003\u0027 AS varchar2(30) )\nfrom dual;"
+}

@@ -1,0 +1,43 @@
+{
+  "funcName": "DECODE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The value to compare. It is automatically converted to the data type of the first search value before comparing."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "search",
+        "description": "The value that is compared against expression. All search values are automatically converted to the data type of the first search value before comparing."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "result",
+        "description": "The value returned, if expression is equal to search."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "default",
+        "description": "Optional. If no matches are found, the DECODE function will return default. If default is omitted, then the DECODE function will return NULL (if no matches are found).",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The DECODE function returns a value that is the same datatype as the first result in the list. If the first result is NULL, then the return value is converted to VARCHAR2. If the first result has a datatype of CHAR, then the return value is converted to VARCHAR2. If no matches are found, the default value is returned. If default is omitted and no matches are found, then NULL is returned.",
+  "description": "The Oracle/PLSQL DECODE function has the functionality of an IF-THEN-ELSE statement.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/decode.php",
+  "sample": "SELECT supplier_name,\nDECODE(supplier_id, 10000, \u0027IBM\u0027,\n                    10001, \u0027Microsoft\u0027,\n                    10002, \u0027Hewlett Packard\u0027,\n                    \u0027Gateway\u0027) result\nFROM suppliers; IF supplier_id \u003d 10000 THEN\n   result :\u003d \u0027IBM\u0027;\n\nELSIF supplier_id \u003d 10001 THEN\n   result :\u003d \u0027Microsoft\u0027;\n\nELSIF supplier_id \u003d 10002 THEN\n   result :\u003d \u0027Hewlett Packard\u0027;\n\nELSE\n   result :\u003d \u0027Gateway\u0027;\n\nEND IF;"
+}

@@ -1,0 +1,38 @@
+{
+  "funcName": "SYS_CONTEXT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "namespace",
+        "description": "An Oracle namespace that has already been created. If the namespace of \u0027USERENV\u0027 is used, attributes describing the current Oracle session can be returned."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "parameter",
+        "description": "A valid attribute that has been set using the DBMS_SESSION.set_context procedure."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "Optional. It is the length of the return value in bytes. If this parameter is omitted or if an invalid entry is provided, the sys_context function will default to 256 bytes.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The SYS_CONTEXT function returns a string value.",
+  "description": "The Oracle/PLSQL SYS_CONTEXT function can be used to retrieve information about the Oracle environment.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/sys_context.php",
+  "sample": "SYS_CONTEXT(\u0027USERENV\u0027, \u0027NLS_DATE_FORMAT\u0027)\nResult: \u0027RR-MM-DD\u0027\n\nSYS_CONTEXT(\u0027USERENV\u0027, \u0027NLS_SORT\u0027)\nResult: \u0027BINARY\u0027"
+}

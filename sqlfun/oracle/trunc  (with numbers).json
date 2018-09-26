@@ -1,0 +1,32 @@
+{
+  "funcName": "TRUNC  (with numbers)",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to truncate."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "decimal_places",
+        "description": "Optional. The number of decimal places to truncate to. This value must be an integer. If this parameter is omitted, the TRUNC function will truncate the number to 0 decimal places.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The TRUNC function (as it applies to numbers) returns a numeric value.",
+  "description": "The Oracle/PLSQL TRUNC function returns a number truncated to a certain number of decimal places.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/trunc_nbr.php",
+  "sample": "TRUNC(125.815)\nResult: 125\n\nTRUNC(125.815, 0)\nResult: 125\n\nTRUNC(125.815, 1)\nResult: 125.8\n\nTRUNC(125.815, 2)\nResult: 125.81\n\nTRUNC(125.815, 3)\nResult: 125.815\n\nTRUNC(-125.815, 2)\nResult: -125.81\n\nTRUNC(125.815, -1)\nResult: 120\n\nTRUNC(125.815, -2)\nResult: 100\n\nTRUNC(125.815, -3)\nResult: 0"
+}

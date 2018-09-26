@@ -1,0 +1,25 @@
+{
+  "funcName": "UPPER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to convert to uppercase."
+      }
+    }
+  ],
+  "returnType": "The UPPER function returns a string value.",
+  "description": "The Oracle/PLSQL UPPER function converts all letters in the specified string to uppercase. If there are characters in the string that are not letters, they are unaffected by this function.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/upper.php",
+  "sample": "UPPER(\u0027Tech on the Net\u0027)\nResult: \u0027TECH ON THE NET\u0027\n\nUPPER(\u0027george burns 123   \u0027)\nResult: \u0027GEORGE BURNS 123   \u0027"
+}

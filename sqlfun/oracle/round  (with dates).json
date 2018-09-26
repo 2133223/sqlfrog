@@ -1,0 +1,32 @@
+{
+  "funcName": "ROUND  (with dates)",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "The date to round."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format",
+        "description": "Optional. The unit of measure to apply for rounding. If the format parameter is omitted, the ROUND function will round to the nearest day. It can be can one of the following values: Unit Valid format parameters Rounding Rule Year SYYYY, YYYY, YEAR, SYEAR, YYY, YY, Y Rounds up on July 1st ISO Year IYYY, IY, I Quarter Q Rounds up on the 16th day of the second month of the quarter Month MONTH, MON, MM, RM Rounds up on the 16th day of the month Week WW Same day of the week as the first day of the year IW IW Same day of the week as the first day of the ISO year W W Same day of the week as the first day of the month Day DDD, DD, J Start day of the week DAY, DY, D Hour HH, HH12, HH24 Minute MI",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The ROUND function (as it applies to dates) returns a date value.",
+  "description": "The Oracle/PLSQL ROUND function returns a date rounded to a specific unit of measure. The syntax for the ROUND function in Oracle/PLSQL is: Optional. The unit of measure to apply for rounding. If the format parameter is omitted, the ROUND function will round to the nearest day. It can be can one of the following values:",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/round_date.php",
+  "sample": "ROUND(TO_DATE (\u002722-AUG-03\u0027),\u0027YEAR\u0027)\nResult: \u002701-JAN-04\u0027\n\nROUND(TO_DATE (\u002722-AUG-03\u0027),\u0027Q\u0027)\nResult: \u002701-OCT-03\u0027\n\nROUND(TO_DATE (\u002722-AUG-03\u0027),\u0027MONTH\u0027)\nResult: \u002701-SEP-03\u0027\n\nROUND(TO_DATE (\u002722-AUG-03\u0027),\u0027DDD\u0027)\nResult: \u002722-AUG-03\u0027\n\nROUND(TO_DATE (\u002722-AUG-03\u0027),\u0027DAY\u0027)\nResult: \u002724-AUG-03\u0027"
+}

@@ -1,0 +1,24 @@
+{
+  "funcName": "TO_YMINTERVAL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "character",
+        "description": "The value to convert to an INTERVAL YEAR TO MONTH type. It can be a char, varchar2, nchar, or nvarchar2 value."
+      }
+    }
+  ],
+  "returnType": "The TO_YMINTERVAL function returns an INTERVAL YEAR TO MONTH value.",
+  "description": "The Oracle/PLSQL TO_YMINTERVAL function converts a string to an INTERVAL YEAR TO MONTH type.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_yminterval.php",
+  "sample": "TO_YMINTERVAL(\u002703-11\u0027)\nResult: 3 years 11 months   (as an INTERVAL YEAR TO MONTH type)\n\nTO_YMINTERVAL(\u002701-05\u0027)\nResult: 1 year 5 months     (as an INTERVAL YEAR TO MONTH type)\n\nTO_YMINTERVAL(\u002700-01\u0027)\nResult: 0 years 1 month     (as an INTERVAL YEAR TO MONTH type) select order_date, order_date + to_yminterval(\u002701-05\u0027)\nfrom orders;"
+}

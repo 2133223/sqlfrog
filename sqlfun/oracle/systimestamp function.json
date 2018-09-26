@@ -1,0 +1,17 @@
+{
+  "funcName": "SYSTIMESTAMP function",
+  "arguments": [],
+  "returnType": "The SYSTIMESTAMP function returns a TIMESTAMP WITH TIME ZONE value.",
+  "description": "The Oracle/PLSQL SYSTIMESTAMP function returns the current system date and time (including fractional seconds and time zone) on your local database.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/systimestamp.php",
+  "sample": "SELECT SYSTIMESTAMP\nINTO v_time\nFROM dual; 2015-07-22 10:35:07.417849 -06:00 SELECT TO_CHAR(SYSTIMESTAMP, \u0027SSSS.FF\u0027)\nFROM dual; 4141.550774 SELECT supplier_id, SYSTIMESTAMP\nFROM suppliers\nWHERE supplier_id \u003e 5000;"
+}

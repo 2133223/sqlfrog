@@ -1,0 +1,29 @@
+{
+  "funcName": "NANVL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "value",
+        "description": "The BINARY_FLOAT or BINARY_NUMBER to test for a Nan (Not a number)."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "replace_with",
+        "description": "The value returned if value is Nan (not a number)."
+      }
+    }
+  ],
+  "returnType": "The NANVL function returns a substitute value.",
+  "description": "The Oracle/PLSQL NANVL function lets you substitute a value for a floating point number such as BINARY_FLOAT or BINARY_DOUBLE, when a Nan (Not a number) value is encountered. This is most commonly used to convert Nan (Not a number) values into either NULL or 0.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/nanvl.php",
+  "sample": "select NANVL(binary1, 0)\nfrom test_table; select NANVL(binary1, NULL)\nfrom test_table;"
+}

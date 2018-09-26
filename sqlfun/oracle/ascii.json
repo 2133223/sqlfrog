@@ -1,0 +1,25 @@
+{
+  "funcName": "ASCII",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "single_character",
+        "description": "The specified character to retrieve the NUMBER code for. If more than one character is entered, the ASCII function will return the value for the first character and ignore all of the characters after the first."
+      }
+    }
+  ],
+  "returnType": "The ASCII function returns a numeric value.",
+  "description": "The Oracle/PLSQL ASCII function returns the NUMBER code that represents the specified character.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/ascii.php",
+  "sample": "ASCII(\u0027t\u0027)\nResult: 116\n\nASCII(\u0027T\u0027)\nResult: 84\n\nASCII(\u0027T2\u0027)\nResult: 84"
+}

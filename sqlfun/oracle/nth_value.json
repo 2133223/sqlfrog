@@ -1,0 +1,63 @@
+{
+  "funcName": "NTH_VALUE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "measure_column",
+        "description": "The column or expression that you wish to return."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "n",
+        "description": "It is the nth value of measure_column in the analytic window that you wish to return."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "FROM FIRST | FROM LAST",
+        "description": "Optional. It determines whether the calculation starts at the first row of the analytic window or the last row of the analytic window. If this parameter is omitted, the default is FROM FIRST which starts at the first row.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "RESPECT NULLS | IGNORE NULLS",
+        "description": "Optional. It determines whether NULL values are included or ignored in the analytic window calculation. If this parameter is omitted, the default is RESPECT NULLS which includes NULL values.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "query_partition_clause",
+        "description": "Optional. It is used to partition the results into groups based on one or more expressions.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_by_clause",
+        "description": "Optional. It is used to order the data within each partition.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "windowing_clause",
+        "description": "Optional. It determines the rows in the analytic window to evaluate and it is important that you use the correct windowing_clause or you could get unexpected results. It can be a value such as: windowing_clause Description RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW Last row in the window changes as the current row changes (default) RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING First row in the window changes as the current row changes RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING All rows are included in the window, regardless of the current row",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The NTH_VALUE function returns the nth value in an ordered set of values from an analytic window. If there are less than n rows in the data source window, the NTH_VALUE function will return NULL. If the parameter n is NULL, the NTH_VALUE function returns an error.",
+  "description": "The Oracle/PLSQL NTH_VALUE function returns the nth value in an ordered set of values from an analytic window. It is similar to the FIRST_VALUE and LAST_VALUE functions except the NTH_VALUE lets you find a specific position in the analytic window such as 2nd, 3rd, or 4th value.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g Release 2"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/nth_value.php",
+  "sample": ""
+}

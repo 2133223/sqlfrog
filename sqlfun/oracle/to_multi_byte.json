@@ -1,0 +1,25 @@
+{
+  "funcName": "TO_MULTI_BYTE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "char",
+        "description": "A char, varchar2, nchar, or nvarchar2 value converted to multibyte characters. This function will return its result in the same character set as char."
+      }
+    }
+  ],
+  "returnType": "The TO_MULTI_BYTE function returns a multibyte character value that will be in the same character set as the char parameter.",
+  "description": "The Oracle/PLSQL TO_MULTI_BYTE function returns a character value with all of the single-byte characters converted to multibyte characters. To use this function, your database character set contains both single-byte and multibyte characters.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/to_multi_byte.php",
+  "sample": "select TO_MULTI_BYTE(\u0027Tech on the net\u0027)\nfrom dual;"
+}

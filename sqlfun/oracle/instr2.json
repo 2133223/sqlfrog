@@ -1,0 +1,45 @@
+{
+  "funcName": "INSTR2",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to search. string can be CHAR, VARCHAR2, NCHAR, or NVARCHAR2. string can not be CLOB or NCLOB."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "substring",
+        "description": "The substring to search for in string. substring can be CHAR, VARCHAR2, NCHAR, NVARCHAR2, CLOB, or NCLOB."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_position",
+        "description": "Optional. The position in string where the search will start. If omitted, it defaults to 1. The first position in the string is 1. If the start_position is negative, the INSTR2 function counts back start_position number of characters from the end of string and then searches towards the beginning of string.",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "nth_appearance",
+        "description": "Optional. The nth appearance of substring. If omitted, it defaults to 1.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The INSTR2 function returns a numeric value. The first position in the string is 1. If substring is not found in string, then the INSTR2 function will return 0.",
+  "description": "The Oracle/PLSQL INSTR2 function returns the location of a substring in a string, using UCS2 code points.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/instr2.php",
+  "sample": "INSTR2(\u0027TechOnTheNet.com\u0027, \u0027e\u0027)\nResult: 2   (the first occurrence of \u0027e\u0027)\n\nINSTR2(\u0027TechOnTheNet.com\u0027, \u0027e\u0027, 1, 1)\nResult: 2   (the first occurrence of \u0027e\u0027)\n\nINSTR2(\u0027TechOnTheNet.com\u0027, \u0027e\u0027, 1, 2)\nResult: 9   (the second occurrence of \u0027e\u0027)\n\nINSTR2(\u0027TechOnTheNet.com\u0027, \u0027e\u0027, 1, 3)\nResult: 11  (the third occurrence of \u0027e\u0027)\n\nINSTR2(\u0027TechOnTheNet.com\u0027, \u0027e\u0027, -3, 2)\nResult: 9"
+}

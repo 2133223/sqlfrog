@@ -1,0 +1,23 @@
+{
+  "funcName": "MEDIAN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The value used to calculate the median."
+      }
+    }
+  ],
+  "returnType": "The MEDIAN function returns a numeric or date value.",
+  "description": "The Oracle/PLSQL MEDIAN function returns the median of an expression.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/median.php",
+  "sample": "select MEDIAN(salary)\nfrom employees\nwhere department \u003d \u0027Marketing\u0027;"
+}

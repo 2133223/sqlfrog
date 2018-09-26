@@ -1,0 +1,25 @@
+{
+  "funcName": "NCHR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number_code",
+        "description": "The NUMBER code in the national character set used to retrieve the character."
+      }
+    }
+  ],
+  "returnType": "The NCHR function returns a string value.",
+  "description": "The Oracle/PLSQL NCHR function returns the character based on the number_code in the national character set.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/nchr.php",
+  "sample": "NCHR(116)\nResult: \u0027t\u0027\n\nNCHR(84)\nResult: \u0027T\u0027"
+}

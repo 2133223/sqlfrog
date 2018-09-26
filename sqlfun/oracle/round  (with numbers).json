@@ -1,0 +1,32 @@
+{
+  "funcName": "ROUND  (with numbers)",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to round."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "decimal_places",
+        "description": "Optional. The number of decimal places rounded to. This value must be an integer. If this parameter is omitted, the ROUND function will round the number to 0 decimal places.",
+        "optional": true
+      }
+    }
+  ],
+  "returnType": "The ROUND function (as it applies to numbers) returns a numeric value.",
+  "description": "The Oracle/PLSQL ROUND function returns a number rounded to a certain number of decimal places.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/round_nbr.php",
+  "sample": "ROUND(125.315)\nResult: 125\n\nROUND(125.315, 0)\nResult: 125\n\nROUND(125.315, 1)\nResult: 125.3\n\nROUND(125.315, 2)\nResult: 125.32\n\nROUND(125.315, 3)\nResult: 125.315\n\nROUND(-125.315, 2)\nResult: -125.32"
+}

@@ -1,0 +1,18 @@
+{
+  "funcName": "ROWNUM",
+  "arguments": [],
+  "returnType": "The ROWNUM function returns a numeric value.",
+  "description": "The Oracle/PLSQL ROWNUM function returns a number that represents the order that a row is selected by Oracle from a table or joined tables. The first row has a ROWNUM of 1, the second has a ROWNUM of 2, and so on.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Numeric/Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/rownum.php",
+  "sample": ""
+}

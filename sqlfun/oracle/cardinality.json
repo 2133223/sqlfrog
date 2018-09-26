@@ -1,0 +1,23 @@
+{
+  "funcName": "CARDINALITY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "nested_table_column",
+        "description": "The column in the nested table that you wish to return the cardinality for."
+      }
+    }
+  ],
+  "returnType": "The CARDINALITY function returns a numeric value. If the nested table is empty, the CARDINALITY function will return NULL. If the nested table is a null collection, the CARDINALITY function will return NULL.",
+  "description": "The Oracle/PLSQL CARDINALITY function returns the number of elements in a nested table.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/cardinality.php",
+  "sample": "select supplier_id, CARDINALITY(location)\nfrom suppliers;"
+}

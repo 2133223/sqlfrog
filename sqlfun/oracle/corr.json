@@ -1,0 +1,25 @@
+{
+  "funcName": "CORR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "n and m",
+        "description": "The numbers to use to calculate the cofficient of correlation."
+      }
+    }
+  ],
+  "returnType": "The CORR function returns a numeric value.",
+  "description": "The Oracle/PLSQL CORR function returns the coefficient of correlation of a set of number pairs.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Analytic Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/corr.php",
+  "sample": "select CORR(quantity, commission)\nfrom sales; select max_entents, CORR(max_trans, initial_extent)\nfrom data\ngroup by max_extents;"
+}

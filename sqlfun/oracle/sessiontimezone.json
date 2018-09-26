@@ -1,0 +1,17 @@
+{
+  "funcName": "SESSIONTIMEZONE",
+  "arguments": [],
+  "returnType": "The SESSIONTIMEZONE function returns a time zone offset (in the following format: \u0027[+|-]TZH:TZM\u0027) or a time zone region name.",
+  "description": "The Oracle/PLSQL SESSIONTIMEZONE function returns the current session\u0027s time zone as a time zone offset (in the following format: \u0027[+|-]TZH:TZM\u0027) or a time zone region name.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Date/Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/sessiontimezone.php",
+  "sample": "SELECT SESSIONTIMEZONE\nFROM dual; +00:00 -07:00 ALTER SESSION SET TIME_ZONE \u003d \u0027-7:0\u0027;"
+}

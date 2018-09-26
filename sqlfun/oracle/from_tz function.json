@@ -1,0 +1,30 @@
+{
+  "funcName": "FROM_TZ function",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "timestamp_value",
+        "description": "The value to convert to a TIMESTAMP WITH TIME ZONE value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "time_zone_value",
+        "description": "The time zone used to convert timestamp_value to a TIMESTAMP WITH TIME ZONE value."
+      }
+    }
+  ],
+  "returnType": "The FROM_TZ function returns a TIMESTAMP WITH TIME ZONE value.",
+  "description": "The Oracle/PLSQL FROM_TZ function converts a TIMESTAMP value (given a TIME ZONE) to a TIMESTAMP WITH TIME ZONE value.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/from_tz.php",
+  "sample": "select FROM_TZ(TIMESTAMP \u00272005-09-11 01:50:42\u0027, \u00275:00\u0027)\nfrom dual; 11-Sep-05 01.50.42.000000 AM +05:00 select FROM_TZ(TIMESTAMP \u00272005-09-11 01:50:42\u0027, \u0027-7:00\u0027)\nfrom dual; 11-Sep-05 01.50.42.000000 AM -07:00"
+}

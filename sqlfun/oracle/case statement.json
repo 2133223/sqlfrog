@@ -1,0 +1,37 @@
+{
+  "funcName": "CASE Statement",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "Optional. It is the value that you are comparing to the list of conditions. (ie: condition_1, condition_2, ... condition_n)",
+        "optional": true
+      }
+    },
+    {
+      "argument": {
+        "arguName": "condition_1, condition_2, ... condition_n",
+        "description": "The conditions that must all be the same datatype. The conditions are evaluated in the order listed. Once a condition is found to be true, the CASE statement will return the result and not evaluate the conditions any further."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "result_1, result_2, ... result_n",
+        "description": "Results that must all be the same datatype. This is the value returned once a condition is found to be true."
+      }
+    }
+  ],
+  "returnType": "The CASE statement returns any datatype such as a string, numeric, date, etc. (BUT all results must be the same datatype in the CASE statement.) If all conditions are not the same datatype, an ORA-00932 error will be returned. If all results are not the same datatype, an ORA-00932 error will be returned. If no condition is found to be true, then the CASE statement will return the value in the ELSE clause. If the ELSE clause is omitted and no condition is found to be true, then the CASE statement will return NULL.",
+  "description": "The Oracle/PLSQL CASE statement has the functionality of an IF-THEN-ELSE statement. Starting in Oracle 9i, you can use the CASE statement within a SQL statement.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/case.php",
+  "sample": "SELECT table_name,\nCASE owner\n  WHEN \u0027SYS\u0027 THEN \u0027The owner is SYS\u0027\n  WHEN \u0027SYSTEM\u0027 THEN \u0027The owner is SYSTEM\u0027\n  ELSE \u0027The owner is another value\u0027\nEND\nFROM all_tables; SELECT table_name,\nCASE\n  WHEN owner\u003d\u0027SYS\u0027 THEN \u0027The owner is SYS\u0027\n  WHEN owner\u003d\u0027SYSTEM\u0027 THEN \u0027The owner is SYSTEM\u0027\n  ELSE \u0027The owner is another value\u0027\nEND\nFROM all_tables; IF owner \u003d \u0027SYS\u0027 THEN\n   result :\u003d \u0027The owner is SYS\u0027;\n\nELSIF owner \u003d \u0027SYSTEM\u0027 THEN\n   result :\u003d \u0027The owner is SYSTEM\u0027\u0027;\n\nELSE\n   result :\u003d \u0027The owner is another value\u0027;\n\nEND IF; SELECT table_name,\nCASE owner\n  WHEN \u0027SYS\u0027 THEN \u0027The owner is SYS\u0027\n  WHEN \u0027SYSTEM\u0027 THEN \u0027The owner is SYSTEM\u0027\nEND\nFROM all_tables; SELECT\nCASE\n  WHEN a \u003c b THEN \u0027hello\u0027\n  WHEN d \u003c e THEN \u0027goodbye\u0027\nEND\nFROM suppliers;"
+}

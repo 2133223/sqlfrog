@@ -1,0 +1,31 @@
+{
+  "funcName": "NUMTODSINTERVAL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The number to convert to an interval."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The unit to convert to. It must be one of the following values: DAY, HOUR, MINUTE, or SECOND."
+      }
+    }
+  ],
+  "returnType": "The NUMTODSINTERVAL function returns an INTERVAL DAY TO SECOND value.",
+  "description": "The Oracle/PLSQL NUMTODSINTERVAL function converts a number to an INTERVAL DAY TO SECOND literal.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "Conversion Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/numtodsinterval.php",
+  "sample": "NUMTODSINTERVAL(150, \u0027DAY\u0027)\nResult: \u0027+000000150\u0027\n\nNUMTODSINTERVAL(1500, \u0027HOUR\u0027)\nResult: \u0027+000000062\u0027\n\nNUMTODSINTERVAL(15000, \u0027MINUTE\u0027)\nResult: \u0027+000000010\u0027\n\nNUMTODSINTERVAL(150000, \u0027SECOND\u0027)\nResult: \u0027+000000001\u0027"
+}

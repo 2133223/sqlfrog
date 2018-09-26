@@ -1,0 +1,37 @@
+{
+  "funcName": "TRANSLATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to replace a sequence of characters with another set of characters."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string_to_replace",
+        "description": "The string that will be searched for in string1."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "replacement_string",
+        "description": "All characters in the string_to_replace will be replaced with the corresponding character in the replacement_string."
+      }
+    }
+  ],
+  "returnType": "The TRANSLATE function returns a string value.",
+  "description": "The Oracle/PLSQL TRANSLATE function replaces a sequence of characters in a string with another set of characters. However, it replaces a single character at a time. For example, it will replace the 1st character in the string_to_replace with the 1st character in the replacement_string. Then it will replace the 2nd character in the string_to_replace with the 2nd character in the replacement_string, and so on.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/translate.php",
+  "sample": "TRANSLATE(\u00271tech23\u0027, \u0027123\u0027, \u0027456\u0027)\nResult: \u00274tech56\u0027\n\nTRANSLATE(\u0027222tech\u0027, \u00272ec\u0027, \u00273it\u0027)\nResult: \u0027333tith\u0027"
+}

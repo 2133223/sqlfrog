@@ -1,0 +1,17 @@
+{
+  "funcName": "GROUP_ID",
+  "arguments": [],
+  "returnType": "The GROUP_ID function returns a numeric value.",
+  "description": "The Oracle/PLSQL GROUP_ID function assigns a number to each group resulting from a GROUP BY clause. The GROUP_ID function is most commonly used to identify duplicated groups in your query results. For each unique group, the GROUP_ID function will return 0. When a duplicated group is found, the GROUP_ID function will return a value \u003e0.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/group_id.php",
+  "sample": "SELECT SUM(salary), department, bonus, GROUP_ID()\nFROM employees\nWHERE bonus \u003e 100\nGROUP BY department,\nROLLUP (department, bonus); SELECT SUM(salary), department, bonus, GROUP_ID()\nFROM employees\nWHERE bonus \u003e 100\nGROUP BY department,\nROLLUP (department, bonus)\nHAVING GROUP_ID() \u003c 1;"
+}

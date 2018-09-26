@@ -1,0 +1,25 @@
+{
+  "funcName": "INITCAP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string argument whose first character in each word will be converted to uppercase and all remaining characters converted to lowercase."
+      }
+    }
+  ],
+  "returnType": "The INITCAP function returns a string value.",
+  "description": "The Oracle/PLSQL INITCAP function sets the first character in each word to uppercase and the rest to lowercase.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/initcap.php",
+  "sample": "INITCAP(\u0027tech on the net\u0027);\nResult: \u0027Tech On The Net\u0027\n\nINITCAP(\u0027GEORGE BURNS\u0027);\nResult: \u0027George Burns\u0027"
+}

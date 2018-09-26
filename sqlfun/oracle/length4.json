@@ -1,0 +1,25 @@
+{
+  "funcName": "LENGTH4",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "The string to return the length for. It can be CHAR, VARCHAR2, NCHAR, or NVARCHAR2, but it can not be CLOB or NCLOB."
+      }
+    }
+  ],
+  "returnType": "The LENGTH4 function returns a numeric value. If string1 is NULL, then the LENGTH4 function will return NULL.",
+  "description": "The Oracle/PLSQL LENGTH4 function returns the length of the specified string, using UCS4 code points.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i",
+    "Oracle 8i"
+  ],
+  "category": "String/Char Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/length4.php",
+  "sample": "LENGTH4(NULL)\nResult: NULL\n\nLENGTH4(\u0027\u0027)\nResult: NULL\n\nLENGTH4(\u0027 \u0027)\nResult: 1\n\nLENGTH4(\u0027TechOnTheNet.com\u0027)\nResult: 16\n\nLENGTH4(\u0027TechOnTheNet.com \u0027)\nResult: 17"
+}

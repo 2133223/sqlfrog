@@ -1,0 +1,30 @@
+{
+  "funcName": "NULLIF",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr1",
+        "description": "First value to compare. Must be either a numeric value or a value that is the same datatype as expr2."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr2",
+        "description": "Second value to compare. Must be either a numeric value or a value that is the same datatype as expr1."
+      }
+    }
+  ],
+  "returnType": "The NULLIF function returns NULL if expr1 and expr2 are equal. The NULLIF function returns expr1 if expr1 and expr2 are not equal.",
+  "description": "The Oracle/PLSQL NULLIF function compares expr1 and expr2. If expr1 and expr2 are equal, the NULLIF function returns NULL. Otherwise, it returns expr1.",
+  "targetDBs": [
+    "Oracle 12c",
+    "Oracle 11g",
+    "Oracle 10g",
+    "Oracle 9i"
+  ],
+  "category": "Advanced Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://www.techonthenet.com/oracle/functions/nullif.php",
+  "sample": "NULLIF(12, 12)\nResult: NULL\n\nNULLIF(12, 13)\nResult: 12\n\nNULLIF(\u0027apples\u0027, \u0027apples\u0027)\nResult: NULL\n\nNULLIF(\u0027apples\u0027, \u0027oranges\u0027)\nResult: \u0027apples\u0027\n\nNULLIF(NULL, 12)\nResult: ORA-00932 error   (because expr1 can not be the literal NULL)"
+}

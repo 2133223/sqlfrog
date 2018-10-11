@@ -19,6 +19,7 @@ import gudusoft.gsqlparser.stmt.TSelectSqlStatement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class AnsiJoinConverter
 {
@@ -59,7 +60,8 @@ public class AnsiJoinConverter
 		boolean is_compare_condition( EExpressionType t )
 		{
 			return ( ( t == EExpressionType.simple_comparison_t )
-					|| ( t == EExpressionType.group_comparison_t ) || ( t == EExpressionType.in_t ) );
+					|| ( t == EExpressionType.group_comparison_t )
+					|| ( t == EExpressionType.in_t ) || ( t == EExpressionType.pattern_matching_t ) );
 		}
 
 		TExpression getCompareCondition( TExpression expr )
@@ -86,10 +88,11 @@ public class AnsiJoinConverter
 				}
 			}
 
+			slexpr = lc_expr.getLeftOperand( );
+			srexpr = lc_expr.getRightOperand( );
+
 			if ( is_compare_condition( lc_expr.getExpressionType( ) ) )
 			{
-				slexpr = lc_expr.getLeftOperand( );
-				srexpr = lc_expr.getRightOperand( );
 
 				if ( slexpr.isOracleOuterJoin( ) || srexpr.isOracleOuterJoin( ) )
 				{
@@ -137,12 +140,39 @@ public class AnsiJoinConverter
 					jr.lefttable = getExpressionTable( slexpr );
 					jr.righttable = getExpressionTable( srexpr );
 					jrs.add( jr );
+					// System.out.printf(
+					// "join condition: %s, %s:%d, %s:%d, %s\n",
+					// expr.toString( ),
+					// slexpr.toString( ),
+					// slexpr.getExpressionType( ),
+					// srexpr.toString( ),
+					// srexpr.getExpressionType( ),
+					// srexpr.getObjectOperand( ).getObjectType( ) );
 				}
 				else
 				{
 					// not a join condition
 				}
 
+			}
+			else if ( slexpr != null
+					&& slexpr.isOracleOuterJoin( )
+					&& srexpr == null )
+			{
+				JoinCondition jr = new JoinCondition( );
+				jr.used = false;
+				jr.lexpr = slexpr;
+				jr.rexpr = srexpr;
+				jr.expr = expr;
+
+				jr.jt = jointype.right;
+				// remove (+)
+				slexpr.getEndToken( ).setString( "" );
+
+				jr.lefttable = getExpressionTable( slexpr );
+				jr.righttable = null;
+
+				jrs.add( jr );
 			}
 			else if ( lc_expr.isOracleOuterJoin( )
 					&& parent_expr != null
@@ -513,14 +543,34 @@ public class AnsiJoinConverter
 						}
 					}
 
-					boolean tableUsed[] = new boolean[select.tables.size( )];
-					for ( int i = 0; i < select.tables.size( ); i++ )
+					List<TTable> tables = new ArrayList<TTable>();
+					for(int i=0;i<select.tables.size();i++)
+					{
+						tables.add(select.tables.getTable(i));
+					}
+					
+					TCustomSqlStatement parentStmt = select;
+					while(parentStmt.getParentStmt() !=null)
+					{
+						parentStmt = select.getParentStmt();
+						if(parentStmt instanceof TSelectSqlStatement)
+						{
+							TSelectSqlStatement temp = (TSelectSqlStatement)parentStmt;
+							for(int i=0;i<temp.tables.size();i++)
+							{
+								tables.add(temp.tables.getTable(i));
+							}
+						}
+					}
+					
+					boolean tableUsed[] = new boolean[tables.size( )];
+					for ( int i = 0; i < tables.size( ); i++ )
 					{
 						tableUsed[i] = false;
 					}
-
+					
 					// make first table to be the left most joined table
-					String fromclause = getFullNameWithAliasString( select.tables.getTable( 0 ) );
+					String fromclause = getFullNameWithAliasString( tables.get( 0 ) );
 
 					tableUsed[0] = true;
 					boolean foundTableJoined;
@@ -529,14 +579,14 @@ public class AnsiJoinConverter
 					{
 						foundTableJoined = false;
 
-						for ( int i = 0; i < select.tables.size( ); i++ )
+						for ( int i = 0; i < tables.size( ); i++ )
 						{
-							TTable lcTable1 = select.tables.getTable( i );
+							TTable lcTable1 = tables.get( i );
 
 							TTable leftTable = null, rightTable = null;
-							for ( int j = i + 1; j < select.tables.size( ); j++ )
+							for ( int j = i + 1; j < tables.size( ); j++ )
 							{
-								TTable lcTable2 = select.tables.getTable( j );
+								TTable lcTable2 = tables.get( j );
 								if ( areTableJoined( lcTable1, lcTable2, jrs ) )
 								{
 									if ( tableUsed[i] && ( !tableUsed[j] ) )
@@ -697,8 +747,15 @@ public class AnsiJoinConverter
 									.length( ) == 0 ) )
 					{
 						// no where condition, remove WHERE keyword
-						select.getWhereClause( ).setString( " " );
+						select.getWhereClause( ).fastSetString( " " );
 
+					}
+					else
+					{
+						select.getWhereClause( ).getCondition().fastSetString(select.getWhereClause( )
+									.getCondition( )
+									.toString( )
+									.trim( ));
 					}
 				}
 			}

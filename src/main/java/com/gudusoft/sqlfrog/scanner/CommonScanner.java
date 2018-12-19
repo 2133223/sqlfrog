@@ -1,6 +1,21 @@
 
 package com.gudusoft.sqlfrog.scanner;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.gudusoft.sqlfrog.model.AutomaticKey;
+import com.gudusoft.sqlfrog.model.Concatenation;
+import com.gudusoft.sqlfrog.model.ConvertPoint;
+import com.gudusoft.sqlfrog.model.CopyingStructure;
+import com.gudusoft.sqlfrog.model.DataType;
+import com.gudusoft.sqlfrog.model.Function;
+import com.gudusoft.sqlfrog.model.Identifier;
+import com.gudusoft.sqlfrog.model.JoinCondition;
+import com.gudusoft.sqlfrog.model.LimitResultSet;
+import com.gudusoft.sqlfrog.model.LocalTimestamp;
+import com.gudusoft.sqlfrog.model.Table;
+
 import gudusoft.gsqlparser.EDbVendor;
 import gudusoft.gsqlparser.EDeclareType;
 import gudusoft.gsqlparser.EExpressionType;
@@ -145,20 +160,6 @@ import gudusoft.gsqlparser.stmt.oracle.TPlsqlRecordTypeDefStmt;
 import gudusoft.gsqlparser.stmt.oracle.TPlsqlTableTypeDefStmt;
 import gudusoft.gsqlparser.stmt.oracle.TPlsqlVarrayTypeDefStmt;
 import gudusoft.gsqlparser.stmt.oracle.TSqlplusCmdStatement;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import com.gudusoft.sqlfrog.model.AutomaticKey;
-import com.gudusoft.sqlfrog.model.Concatenation;
-import com.gudusoft.sqlfrog.model.ConvertPoint;
-import com.gudusoft.sqlfrog.model.CopyingStructure;
-import com.gudusoft.sqlfrog.model.DataType;
-import com.gudusoft.sqlfrog.model.Function;
-import com.gudusoft.sqlfrog.model.Identifier;
-import com.gudusoft.sqlfrog.model.JoinCondition;
-import com.gudusoft.sqlfrog.model.LimitResultSet;
-import com.gudusoft.sqlfrog.model.LocalTimestamp;
 
 public class CommonScanner extends TParseTreeVisitor implements Scanner
 {
@@ -630,6 +631,7 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 				{
 					node.getAliasClause( ).accept( this );
 				}
+				convertPoints.add( new Table( node ) );
 				break;
 			}
 			case function :

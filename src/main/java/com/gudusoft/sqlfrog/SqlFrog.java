@@ -32,6 +32,7 @@ import com.gudusoft.sqlfrog.model.Identifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
 import com.gudusoft.sqlfrog.model.LocalTimestamp;
+import com.gudusoft.sqlfrog.model.Table;
 import com.gudusoft.sqlfrog.model.Tuple;
 import com.gudusoft.sqlfrog.scanner.ScannerFactory;
 import com.gudusoft.sqlfrog.util.SQLUtil;
@@ -246,6 +247,21 @@ public class SqlFrog
 				if ( !ignoreConvertException )
 				{
 					return convertResult;
+				}
+			}
+			if(point instanceof Table){
+				try
+				{
+					ConverterFactory.getSubqueryTableConverter( point.getVender( ) )
+							.convert( (Table) point, target );
+				}
+				catch ( ConvertException e )
+				{
+					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+					if ( !ignoreConvertException )
+					{
+						return convertResult;
+					}
 				}
 			}
 		}

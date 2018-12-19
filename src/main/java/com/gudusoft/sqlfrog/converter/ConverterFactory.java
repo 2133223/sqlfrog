@@ -1,8 +1,6 @@
 
 package com.gudusoft.sqlfrog.converter;
 
-import gudusoft.gsqlparser.EDbVendor;
-
 import com.gudusoft.sqlfrog.converter.datatype.AnsiDataTypeConverter;
 import com.gudusoft.sqlfrog.converter.datatype.OracleDataTypeConverter;
 import com.gudusoft.sqlfrog.converter.datatype.SqlServerDataTypeConverter;
@@ -13,7 +11,11 @@ import com.gudusoft.sqlfrog.converter.identifier.MysqlIdentifierConverter;
 import com.gudusoft.sqlfrog.converter.identifier.SqlServerIdentifierConverter;
 import com.gudusoft.sqlfrog.converter.join.OracleJoinConditionConverter;
 import com.gudusoft.sqlfrog.converter.join.SqlServerJoinConditionConverter;
+import com.gudusoft.sqlfrog.converter.table.CommonSubqueryTableConverter;
+import com.gudusoft.sqlfrog.model.Table;
 import com.gudusoft.sqlfrog.util.SQLUtil;
+
+import gudusoft.gsqlparser.EDbVendor;
 
 public class ConverterFactory
 {
@@ -70,6 +72,15 @@ public class ConverterFactory
 		{
 			default :
 				return new CommonFunctionConverter( );
+		}
+	}
+
+	public static Converter<Table> getSubqueryTableConverter(EDbVendor vender) 
+	{
+		switch ( vender )
+		{
+			default :
+				return new CommonSubqueryTableConverter( );
 		}
 	}
 }

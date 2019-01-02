@@ -2,7 +2,10 @@
 package com.gudusoft.sqlfrog.converter.function;
 
 import gudusoft.gsqlparser.EDbVendor;
+import gudusoft.gsqlparser.EExpressionType;
+import gudusoft.gsqlparser.nodes.TExpression;
 import gudusoft.gsqlparser.nodes.TFunctionCall;
+import gudusoft.gsqlparser.nodes.TParseTreeNodeList;
 
 import com.gudusoft.sqlfrog.converter.exception.ConvertException;
 import com.gudusoft.sqlfrog.model.ConvertInfo;
@@ -89,8 +92,44 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 						"E021-11, POSITION function: use INSTR function instead." );
 			}
 		}
+		else
+		{
+			if ( ( getFunctionName( functionCall ).equals( "CURRVAL" ) || getFunctionName( functionCall ).equals( "NEXTVAL" ) ) )
+			{
+				if ( targetVendor == EDbVendor.dbvoracle )
+				{
+					String convertSql = functionCall.getArgs( ).toString( )
+							+ "."
+							+ functionCall.getFunctionName( ).toString( );
+					TExpression expression = getExpression( functionCall,
+							targetVendor );
+					expression.setExpressionType( EExpressionType.simple_object_name_t );
+					expression.setObjectOperand( expression.getGsqlparser( )
+							.parseObjectName( convertSql ) );
+				}
+				else
+				{
+					throw generateConvertException( functionCall, targetVendor );
+				}
+			}
+		}
 
 		return null;
+	}
+
+	private TExpression getExpression( TFunctionCall function,
+			EDbVendor targetVendor )
+	{
+		TParseTreeNodeList list = function.getStartToken( )
+				.getNodesStartFromThisToken( );
+		for ( int i = 0; i < list.size( ); i++ )
+		{
+			if ( list.getElement( i ) instanceof TExpression )
+			{
+				return (TExpression) list.getElement( i );
+			}
+		}
+		throw generateConvertException( function, targetVendor );
 	}
 
 	private String getFunctionName( TFunctionCall functionCall )

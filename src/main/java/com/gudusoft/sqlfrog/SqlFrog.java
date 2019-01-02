@@ -28,10 +28,11 @@ import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
 import com.gudusoft.sqlfrog.model.FrogResult;
 import com.gudusoft.sqlfrog.model.Function;
-import com.gudusoft.sqlfrog.model.Identifier;
+import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
 import com.gudusoft.sqlfrog.model.LocalTimestamp;
+import com.gudusoft.sqlfrog.model.SequenceIdentifier;
 import com.gudusoft.sqlfrog.model.Table;
 import com.gudusoft.sqlfrog.model.Tuple;
 import com.gudusoft.sqlfrog.scanner.ScannerFactory;
@@ -187,12 +188,28 @@ public class SqlFrog
 					}
 				}
 			}
-			if ( point instanceof Identifier )
+			if ( point instanceof QuotedIdentifier )
 			{
 				try
 				{
-					ConverterFactory.getIdentifierConverter( point.getVender( ) )
-							.convert( (Identifier) point, target );
+					ConverterFactory.getQuotedIdentifierConverter( point.getVender( ) )
+							.convert( (QuotedIdentifier) point, target );
+				}
+				catch ( ConvertException e )
+				{
+					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+					if ( !ignoreConvertException )
+					{
+						return convertResult;
+					}
+				}
+			}
+			if ( point instanceof SequenceIdentifier )
+			{
+				try
+				{
+					ConverterFactory.getSequenceIdentifierConverter( point.getVender( ) )
+							.convert( (SequenceIdentifier) point, target );
 				}
 				catch ( ConvertException e )
 				{
@@ -249,11 +266,28 @@ public class SqlFrog
 					return convertResult;
 				}
 			}
-			if(point instanceof Table){
+			if ( point instanceof Table )
+			{
 				try
 				{
 					ConverterFactory.getSubqueryTableConverter( point.getVender( ) )
 							.convert( (Table) point, target );
+				}
+				catch ( ConvertException e )
+				{
+					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+					if ( !ignoreConvertException )
+					{
+						return convertResult;
+					}
+				}
+			}
+			if ( point instanceof Function )
+			{
+				try
+				{
+					ConverterFactory.getFunctionConverter( point.getVender( ) )
+							.convert( (Function) point, target );
 				}
 				catch ( ConvertException e )
 				{
@@ -303,12 +337,28 @@ public class SqlFrog
 					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
 				}
 			}
-			if ( point instanceof Identifier )
+			if ( point instanceof QuotedIdentifier )
 			{
 				try
 				{
-					ConvertInfo info = ConverterFactory.getIdentifierConverter( point.getVender( ) )
-							.scan( (Identifier) point, target );
+					ConvertInfo info = ConverterFactory.getQuotedIdentifierConverter( point.getVender( ) )
+							.scan( (QuotedIdentifier) point, target );
+					if ( info.isNeedConvert( ) )
+					{
+						convertResult.appendResult( info.toString( ) );
+					}
+				}
+				catch ( ConvertException e )
+				{
+					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+				}
+			}
+			if ( point instanceof SequenceIdentifier )
+			{
+				try
+				{
+					ConvertInfo info = ConverterFactory.getSequenceIdentifierConverter( point.getVender( ) )
+							.scan( (SequenceIdentifier) point, target );
 					if ( info.isNeedConvert( ) )
 					{
 						convertResult.appendResult( info.toString( ) );

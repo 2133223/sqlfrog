@@ -8,9 +8,8 @@ import gudusoft.gsqlparser.TSourceTokenList;
 import com.gudusoft.sqlfrog.converter.exception.ConvertException;
 import com.gudusoft.sqlfrog.model.ConvertInfo;
 import com.gudusoft.sqlfrog.model.Identifier;
-import com.gudusoft.sqlfrog.util.SQLUtil;
 
-public class MysqlIdentifierConverter extends AbstractIndentifierConverter
+public class CommonQuotedIdentifierConverter extends AbstractIndentifierConverter
 {
 
 	protected ConvertInfo convert( Identifier identifier,
@@ -19,14 +18,6 @@ public class MysqlIdentifierConverter extends AbstractIndentifierConverter
 		if ( identifier == null || identifier.getElement( ) == null )
 		{
 			IllegalArgumentException exception = new IllegalArgumentException( "Identifier should not be null." );
-			throw new ConvertException( exception.getMessage( ), exception );
-		}
-
-		EDbVendor sourceVendor = identifier.getVender( );
-		if ( !EDbVendor.dbvmysql.equals( sourceVendor ) )
-		{
-			IllegalArgumentException exception = new IllegalArgumentException( "identifier should match the mysql vendor, but "
-					+ SQLUtil.getVendorName( sourceVendor ) );
 			throw new ConvertException( exception.getMessage( ), exception );
 		}
 
@@ -43,7 +34,7 @@ public class MysqlIdentifierConverter extends AbstractIndentifierConverter
 		{
 			TSourceToken token = tokens.get( i );
 			String tokenString = token.astext;
-			if ( tokenString.startsWith( "`" ) && tokenString.endsWith( "`" ) )
+			if ( tokenString.startsWith( "\"" ) && tokenString.endsWith( "\"" ) )
 			{
 				if ( targetVendor == EDbVendor.dbvmssql )
 				{
@@ -56,29 +47,14 @@ public class MysqlIdentifierConverter extends AbstractIndentifierConverter
 					}
 					info.setNeedConvert( true );
 				}
-				else if ( targetVendor != EDbVendor.dbvmysql )
+				else if ( targetVendor == EDbVendor.dbvmysql )
 				{
 					if ( convert )
 					{
-						token.astext = "\""
+						token.astext = "`"
 								+ tokenString.substring( 1,
 										tokenString.length( ) - 1 )
-								+ "\"";
-					}
-					info.setNeedConvert( true );
-				}
-			}
-			else if ( tokenString.startsWith( "\"" )
-					&& tokenString.endsWith( "\"" ) )
-			{
-				if ( targetVendor == EDbVendor.dbvmssql )
-				{
-					if ( convert )
-					{
-						token.astext = "["
-								+ tokenString.substring( 1,
-										tokenString.length( ) - 1 )
-								+ "]";
+								+ "`";
 					}
 					info.setNeedConvert( true );
 				}

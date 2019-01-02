@@ -10,10 +10,11 @@ import com.gudusoft.sqlfrog.model.ConvertPoint;
 import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
 import com.gudusoft.sqlfrog.model.Function;
-import com.gudusoft.sqlfrog.model.Identifier;
+import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
 import com.gudusoft.sqlfrog.model.LocalTimestamp;
+import com.gudusoft.sqlfrog.model.SequenceIdentifier;
 import com.gudusoft.sqlfrog.model.Table;
 
 import gudusoft.gsqlparser.EDbVendor;
@@ -288,7 +289,17 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 	{
 		if ( isQuotedIdentifier( identifier ) )
 		{
-			convertPoints.add( new Identifier( identifier ) );
+			convertPoints.add( new QuotedIdentifier( identifier ) );
+		}
+
+		String partString = identifier.getPartString( ).toUpperCase( );
+		if ( identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvoracle )
+		{
+			if ( partString.equals( "CURRVAL" )
+					|| partString.equals( "NEXTVAL" ) )
+			{
+				convertPoints.add( new SequenceIdentifier( identifier ) );
+			}
 		}
 	}
 

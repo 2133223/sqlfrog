@@ -57,4 +57,21 @@ public abstract class AbstractIndentifierConverter implements
 		}
 		return info;
 	}
+
+	protected ConvertException generateConvertException(
+			TObjectName identifier, EDbVendor targetVendor )
+	{
+		return new ConvertException( "Can't convert the "
+				+ SQLUtil.getVendorName( identifier.getStartToken( )
+						.getDbvendor( ) )
+				+ " identifier "
+				+ identifier.toString( )
+				+ " to "
+				+ SQLUtil.getVendorName( targetVendor )
+				+ ", line:"
+				+ identifier.getLineNo( )
+				+ ", column:"
+				+ identifier.getColumnNo( )
+				+ "." );
+	}
 }

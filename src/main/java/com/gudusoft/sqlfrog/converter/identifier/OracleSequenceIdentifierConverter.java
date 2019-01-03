@@ -1,17 +1,16 @@
 
 package com.gudusoft.sqlfrog.converter.identifier;
 
+import com.gudusoft.sqlfrog.converter.exception.ConvertException;
+import com.gudusoft.sqlfrog.model.ConvertInfo;
+import com.gudusoft.sqlfrog.model.Identifier;
+
 import gudusoft.gsqlparser.EDbVendor;
 import gudusoft.gsqlparser.EExpressionType;
 import gudusoft.gsqlparser.nodes.TExpression;
 import gudusoft.gsqlparser.nodes.TFunctionCall;
 import gudusoft.gsqlparser.nodes.TObjectName;
 import gudusoft.gsqlparser.nodes.TParseTreeNodeList;
-
-import com.gudusoft.sqlfrog.converter.exception.ConvertException;
-import com.gudusoft.sqlfrog.model.ConvertInfo;
-import com.gudusoft.sqlfrog.model.Identifier;
-import com.gudusoft.sqlfrog.util.SQLUtil;
 
 public class OracleSequenceIdentifierConverter extends
 		AbstractIndentifierConverter
@@ -23,14 +22,6 @@ public class OracleSequenceIdentifierConverter extends
 		if ( identifier == null || identifier.getElement( ) == null )
 		{
 			IllegalArgumentException exception = new IllegalArgumentException( "Identifier should not be null." );
-			throw new ConvertException( exception.getMessage( ), exception );
-		}
-
-		EDbVendor sourceVendor = identifier.getVender( );
-		if ( !EDbVendor.dbvoracle.equals( sourceVendor ) )
-		{
-			IllegalArgumentException exception = new IllegalArgumentException( "identifier should match the oracle vendor, but "
-					+ SQLUtil.getVendorName( sourceVendor ) );
 			throw new ConvertException( exception.getMessage( ), exception );
 		}
 

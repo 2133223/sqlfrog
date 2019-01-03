@@ -96,7 +96,7 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 		{
 			if ( ( getFunctionName( functionCall ).equals( "CURRVAL" ) || getFunctionName( functionCall ).equals( "NEXTVAL" ) ) )
 			{
-				if ( targetVendor == EDbVendor.dbvoracle )
+				if ( targetVendor == EDbVendor.dbvoracle ||  targetVendor == EDbVendor.dbvdb2)
 				{
 					String convertSql = functionCall.getArgs( ).toString( )
 							+ "."

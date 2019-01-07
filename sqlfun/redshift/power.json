@@ -1,0 +1,27 @@
+{
+  "funcName": "POWER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression1",
+        "description": "Numeric expression to be raised. Must be an integer, decimal, or floating-point data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expression2",
+        "description": "Power to raise expression1. Must be an integer, decimal, or floating-point data type."
+      }
+    }
+  ],
+  "returnType": "DOUBLE",
+  "description": "The POWER function is an exponential function that raises a numeric expression to the power of a second numeric expression.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_POWER.html",
+  "sample": "select (select sum(qtysold) from sales, date\nwhere sales.dateid\u003ddate.dateid\nand year\u003d2008) * pow((1+7::float/100),10) qty2010;"
+}

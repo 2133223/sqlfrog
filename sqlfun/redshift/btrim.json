@@ -1,0 +1,27 @@
+{
+  "funcName": "BTRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The first input parameter is a VARCHAR string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "matching_string",
+        "description": "The second parameter, if present, is a VARCHAR string."
+      }
+    }
+  ],
+  "returnType": "VARCHAR",
+  "description": "The BTRIM function trims a string by removing leading and trailing blanks or by removing characters that match an optional specified string.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_BTRIM.html",
+  "sample": "select \u0027     abc    \u0027 as untrim, btrim(\u0027     abc    \u0027) as trim;"
+}

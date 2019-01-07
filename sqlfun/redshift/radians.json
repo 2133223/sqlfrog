@@ -1,0 +1,21 @@
+{
+  "funcName": "RADIANS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The input parameter is a double precision number."
+      }
+    }
+  ],
+  "returnType": "double",
+  "description": "Converts an angle in degrees to its equivalent in radians.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_RADIANS.html",
+  "sample": "select radians(180);"
+}

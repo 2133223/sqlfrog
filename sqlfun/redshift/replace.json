@@ -1,0 +1,39 @@
+{
+  "funcName": "REPLACE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "CHAR or VARCHAR string to be searched search"
+      }
+    },
+    {
+      "argument": {
+        "arguName": "old_chars",
+        "description": "CHAR or VARCHAR string to replace."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "new_chars",
+        "description": "New CHAR or VARCHAR string replacing the old_string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "old_string",
+        "description": "CHAR or VARCHAR string to be searched search"
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Replaces all occurrences of a set of characters within an existing string with other specified characters.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_REPLACE.html",
+  "sample": "select catid, catgroup,\nreplace(catgroup, \u0027Shows\u0027, \u0027Theatre\u0027)\nfrom category\norder by 1,2,3;"
+}

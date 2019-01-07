@@ -1,0 +1,39 @@
+{
+  "funcName": "CASE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "A column name or any valid expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "value",
+        "description": "Value that the expression is compared with, such as a numeric constant or a character string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "result",
+        "description": "The target value or expression that is returned when an expression or Boolean condition is evaluated."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "Boolean condition",
+        "description": "A Boolean condition is valid or true when the value is equal to the constant. When true, the result specified following the THEN clause is returned. If a condition is false, the result following the ELSE clause is returned. If the ELSE clause is omitted and no condition matches, the result is null."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The CASE expression is a conditional expression, similar to if/then/else statements found in other languages. CASE is used to specify a result when there are multiple conditions.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Conditional Expressions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CASE_function.html",
+  "sample": "select venuecity,\ncase venuecity\nwhen \u0027New York City\u0027\nthen \u0027Big Apple\u0027 else \u0027other\u0027\nend from venue\norder by venueid desc;"
+}

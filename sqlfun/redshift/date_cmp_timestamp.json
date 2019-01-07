@@ -1,0 +1,27 @@
+{
+  "funcName": "DATE_CMP_TIMESTAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date column or an expression that implicitly converts to a date."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A timestamp column or an expression that implicitly converts to a time stamp."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "Compares a date to a time stamp and returns 0 if the values are identical, 1 if date is greater alphabetically and -1 if timestamp is greater.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DATE_CMP_TIMESTAMP.html",
+  "sample": "select listid, \u00272008-06-18\u0027, listtime,\ndate_cmp_timestamp(\u00272008-06-18\u0027, listtime)\nfrom listing\norder by 1, 2, 3, 4\nlimit 10;"
+}

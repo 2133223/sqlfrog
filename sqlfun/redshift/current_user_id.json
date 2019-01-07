@@ -1,0 +1,14 @@
+{
+  "funcName": "CURRENT_USER_ID",
+  "arguments": [],
+  "returnType": "integer",
+  "description": "Returns the unique identifier for the Amazon Redshift user logged in to the current session.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CURRENT_USER_ID.html",
+  "sample": "select user, current_user_id;"
+}

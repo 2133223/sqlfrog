@@ -1,0 +1,33 @@
+{
+  "funcName": "TRANSLATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The expression to be translated."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "characters_to_replace",
+        "description": "A string containing the characters to be replaced."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "characters_to_substitute",
+        "description": "A string containing the characters to substitute."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "For a given expression, replaces all occurrences of specified characters with specified substitutes. Existing characters are mapped to replacement characters by their positions in the characters_to_replace and characters_to_substitute arguments. If more characters are specified in the characters_to_replace argument than in the characters_to_substitute argument, the extra characters from the characters_to_replace argument are omitted in the return value.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TRANSLATE.html",
+  "sample": "select translate(\u0027mint tea\u0027, \u0027inea\u0027, \u0027osin\u0027);"
+}

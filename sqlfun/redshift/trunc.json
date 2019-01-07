@@ -1,0 +1,33 @@
+{
+  "funcName": "TRUNC",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "Numeric data type to be truncated. SMALLINT, INTEGER, BIGINT, DECIMAL, REAL, and DOUBLE PRECISION data types are supported."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "integer",
+        "description": "An integer that indicates the number of decimal places of precision, in either direction. If no integer is provided, the number is truncated as a whole number; if an integer is specified, the number is truncated to the specified decimal place."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "The function can also return the date from a time stamp. (To return a time stamp value with 00:00:00 as the time, cast the function result to a time stamp.)"
+      }
+    }
+  ],
+  "returnType": "date",
+  "description": "The TRUNC function truncates a number and right-fills it with zeros from the position specified. This function also truncates a time stamp and returns a date.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TRUNC.html",
+  "sample": "select commission, trunc(commission)\nfrom sales where salesid\u003d784;"
+}

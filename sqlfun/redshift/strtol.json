@@ -1,0 +1,27 @@
+{
+  "funcName": "STRTOL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "num_string",
+        "description": "String expression of a number to be converted. If num_string is empty ( \u0027\u0027 ) or begins with the null character (\u0027\\0\u0027), the converted value is 0. If num_string is a column containing a NULL value, STRTOL returns NULL. The string can begin with any amount of white space, optionally followed by a single plus \u0027+\u0027 or minus \u0027-\u0027 sign to indicate positive or negative. The default is \u0027+\u0027. If base is 16, the string can optionally begin with \u00270x\u0027."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "base",
+        "description": "String expression of a number to be converted. If num_string is empty ( \u0027\u0027 ) or begins with the null character (\u0027\\0\u0027), the converted value is 0. If num_string is a column containing a NULL value, STRTOL returns NULL. The string can begin with any amount of white space, optionally followed by a single plus \u0027+\u0027 or minus \u0027-\u0027 sign to indicate positive or negative. The default is \u0027+\u0027. If base is 16, the string can optionally begin with \u00270x\u0027."
+      }
+    }
+  ],
+  "returnType": "BIGINT",
+  "description": "Converts a string expression of a number of the specified base to the equivalent integer value. The converted value must be within the signed 64-bit range.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_STRTOL.html",
+  "sample": "select strtol(\u00270xf\u0027,16);"
+}

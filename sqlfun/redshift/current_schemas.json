@@ -1,0 +1,21 @@
+{
+  "funcName": "CURRENT_SCHEMAS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "include_implicit",
+        "description": "If true, specifies that the search path should include any implicitly included system schemas. Valid values are true and false. Typically, if true, this parameter returns the pg_catalog schema in addition to the current schema."
+      }
+    }
+  ],
+  "returnType": "CHAR",
+  "description": "Returns an array of the names of any schemas in the current search path. The current search path is defined in the search_path parameter.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CURRENT_SCHEMAS.html",
+  "sample": "select current_schemas(false);"
+}

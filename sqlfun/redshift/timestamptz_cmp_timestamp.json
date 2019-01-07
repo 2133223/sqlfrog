@@ -1,0 +1,26 @@
+{
+  "funcName": "TIMESTAMPTZ_CMP_TIMESTAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "timestamptz",
+        "description": "A TIMESTAMPTZ column or an expression that implicitly converts to a time stamp with a time zone."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A TIMESTAMP column or an expression that implicitly converts to a time stamp."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "TIMESTAMPTZ_CMP_TIMESTAMP compares the value of a time stamp with time zone expression with a time stamp expression. If the time stamp with time zone and time stamp values are identical, the function returns 0. If the time stamp with time zone is greater alphabetically, the function returns 1. If the time stamp is greater, the function returns –1.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TIMESTAMPTZ_CMP_TIMESTAMP.html"
+}

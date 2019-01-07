@@ -1,0 +1,33 @@
+{
+  "funcName": "SUBSTRING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to be searched. Non-character data types are treated like a string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "start_position",
+        "description": "The position within the string to begin the extraction, starting at 1. The start_position is based on the number of characters, not bytes, so that multi-byte characters are counted as single characters. This number can be negative."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "number_characters",
+        "description": "The number of characters to extract (the length of the substring). The number_characters is based on the number of characters, not bytes, so that multi-byte characters are counted as single characters. This number cannot be negative."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns the characters extracted from a string based on the specified character position for a specified number of characters.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SUBSTRING.html",
+  "sample": "select listid, listtime,\nsubstring(listtime, 6, 2) as month\nfrom listing\norder by 1, 2, 3\nlimit 10;"
+}

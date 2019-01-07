@@ -1,0 +1,20 @@
+{
+  "funcName": "IS_VALID_JSON",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "json_string",
+        "description": "A string or expression that evaluates to a JSON string."
+      }
+    }
+  ],
+  "returnType": "BOOLEAN",
+  "description": "IS_VALID_JSON validates a JSON string. The function returns Boolean true (t) if the string is properly formed JSON or false (f) if the string is malformed. To validate a JSON array, use IS_VALID_JSON_ARRAY Function",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "JSON Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/IS_VALID_JSON.html"
+}

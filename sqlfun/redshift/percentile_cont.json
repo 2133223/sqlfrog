@@ -1,0 +1,27 @@
+{
+  "funcName": "PERCENTILE_CONT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "percentile",
+        "description": "Numeric constant between 0 and 1. Nulls are ignored in the calculation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr",
+        "description": "Specifies numeric or date/time values to sort and compute the percentile over."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "PERCENTILE_CONT is an inverse distribution function that assumes a continuous distribution model. It takes a percentile value and a sort specification, and returns an interpolated value that would fall into the given percentile value with respect to the sort specification.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_PERCENTILE_CONT.html",
+  "sample": "select top 10  distinct sellerid, qtysold, \npercentile_cont(0.5) within group (order by qtysold),\nmedian (qtysold) \nfrom sales\ngroup by sellerid, qtysold;"
+}

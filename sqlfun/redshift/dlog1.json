@@ -1,0 +1,13 @@
+{
+  "funcName": "DLOG1",
+  "arguments": [],
+  "returnType": "",
+  "description": "The DLOG1 function returns the natural logarithm of the input parameter. Synonym for the LN function.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DLOG1.html"
+}

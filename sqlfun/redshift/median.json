@@ -1,0 +1,21 @@
+{
+  "funcName": "MEDIAN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "median_expression",
+        "description": "The target column or expression that the function operates on."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Calculates the median value for the range of values. NULL values in the range are ignored.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_MEDIAN.html",
+  "sample": "select top 10  distinct sellerid, qtysold, \npercentile_cont(0.5) within group (order by qtysold),\nmedian (qtysold) \nfrom sales\ngroup by sellerid, qtysold;"
+}

@@ -1,0 +1,33 @@
+{
+  "funcName": "RPAD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "A character string or an expression that evaluates to a character string, such as the name of a character column."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "length",
+        "description": "An integer that defines the length of the result of the function. The length of a string is based on the number of characters, not bytes, so that multi-byte characters are counted as single characters. If string1 is longer than the specified length, it is truncated (on the right). If length is a negative number, the result of the function is an empty string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string2",
+        "description": "One or more characters that are prepended or appended to string1. This argument is optional; if it is not specified, spaces are used."
+      }
+    }
+  ],
+  "returnType": "VARCHAR",
+  "description": "These functions prepend or append characters to a string, based on a specified length.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_LPAD.html",
+  "sample": "select lpad(eventname,20) from event\nwhere eventid between 1 and 5 order by 1;"
+}

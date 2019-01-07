@@ -1,0 +1,26 @@
+{
+  "funcName": "MOD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number1",
+        "description": "The first input parameter is an INTEGER, SMALLINT, BIGINT, or DECIMAL number. If either parameter is a DECIMAL type, the other parameter must also be a DECIMAL type. If either parameter is an INTEGER, the other parameter can be an INTEGER, SMALLINT, or BIGINT. Both parameters can also be SMALLINT or BIGINT, but one parameter cannot be a SMALLINT if the other is a BIGINT."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "number2",
+        "description": "The second parameter is an INTEGER, SMALLINT, BIGINT, or DECIMAL number. The same data type rules apply to number2 as to number1."
+      }
+    }
+  ],
+  "returnType": "DECIMAL",
+  "description": "The MOD function returns a numeric result that is the remainder of two numeric parameters. The first parameter is divided by the second parameter.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_MOD.html"
+}

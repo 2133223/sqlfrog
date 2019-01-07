@@ -1,0 +1,27 @@
+{
+  "funcName": "TIMESTAMP_CMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "timestamp1",
+        "description": "A TIMESTAMP column or an expression that implicitly converts to a time stamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp2",
+        "description": "A TIMESTAMP column or an expression that implicitly converts to a time stamp."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "Compares the value of two time stamps and returns an integer. If the time stamps are identical, the function returns 0. If the first time stamp is greater alphabetically, the function returns 1. If the second time stamp is greater, the function returns –1.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TIMESTAMP_CMP.html",
+  "sample": "select listing.listid, listing.listtime,\nsales.saletime, timestamp_cmp(listing.listtime, sales.saletime)\nfrom listing, sales\nwhere listing.listid\u003dsales.listid\norder by 1, 2, 3, 4\nlimit 10;"
+}

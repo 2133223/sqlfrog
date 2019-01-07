@@ -1,0 +1,26 @@
+{
+  "funcName": "DATE_TRUNC",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "description": "The date part to which to truncate the time stamp value. See Dateparts for Date or Time Stamp Functions for valid formats."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A timestamp column or an expression that implicitly converts to a time stamp."
+      }
+    }
+  ],
+  "returnType": "TIMESTAMP",
+  "description": "The DATE_TRUNC function truncates a time stamp expression or literal based on the date part that you specify, such as hour, week, or month. DATE_TRUNC returns the first day of the specified year, the first day of the specified month, or the Monday of the specified week.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DATE_TRUNC.html"
+}

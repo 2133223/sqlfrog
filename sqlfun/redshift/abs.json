@@ -1,0 +1,21 @@
+{
+  "funcName": "ABS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "Number or expression that evaluates to a number."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "ABS calculates the absolute value of a number, where that number can be a literal or an expression that evaluates to a number.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_ABS.html",
+  "sample": "select abs (-38);"
+}

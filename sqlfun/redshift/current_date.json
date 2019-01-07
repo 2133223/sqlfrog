@@ -1,0 +1,14 @@
+{
+  "funcName": "CURRENT_DATE",
+  "arguments": [],
+  "returnType": "DATE",
+  "description": "CURRENT_DATE returns a date in the current session time zone (UTC by default) in the default format: YYYY-MM-DD.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CURRENT_DATE_function.html",
+  "sample": "select current_date;"
+}

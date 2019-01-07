@@ -1,0 +1,20 @@
+{
+  "funcName": "DEXP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The input parameter is a double precision number."
+      }
+    }
+  ],
+  "returnType": "double",
+  "description": "The DEXP function returns the exponential value in scientific notation for a double precision number. The only difference between the DEXP and EXP functions is that the parameter for DEXP must be a double precision.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DEXP.html"
+}

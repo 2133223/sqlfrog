@@ -1,0 +1,38 @@
+{
+  "funcName": "FIRST_VALUE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The target column or expression that the function operates on."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr_list",
+        "description": "Defines the window for the function in terms of one or more expressions."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_list",
+        "description": "Sorts the rows within each partition. If no PARTITION BY clause is specified, ORDER BY sorts the entire table. If you specify an ORDER BY clause, you must also specify a frame_clause. The results of the FIRST_VALUE and LAST_VALUE functions depend on the ordering of the data. The results are nondeterministic in the following cases: When no ORDER BY clause is specified and a partition contains two different values for an expression When the expression evaluates to different values that correspond to the same value in the ORDER BY list."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "frame_clause",
+        "description": "The target column or expression that the function operates on."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Given an ordered set of rows, FIRST_VALUE returns the value of the specified expression with respect to the first row in the window frame. The LAST_VALUE function returns the value of the expression with respect to the last row in the frame.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_first_value.html"
+}

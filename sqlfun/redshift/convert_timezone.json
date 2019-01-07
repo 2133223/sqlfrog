@@ -1,0 +1,33 @@
+{
+  "funcName": "CONVERT_TIMEZONE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "source_timezone",
+        "description": "(Optional) The time zone of the current time stamp. The default is UTC. For more information, see Time Zone Usage Notes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "target_timezone",
+        "description": "The time zone for the new time stamp. For more information, see Time Zone Usage Notes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A timestamp column or an expression that implicitly converts to a time stamp."
+      }
+    }
+  ],
+  "returnType": "TIMESTAMP",
+  "description": "CONVERT_TIMEZONE converts a time stamp from one time zone to another.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/CONVERT_TIMEZONE.html",
+  "sample": "select listtime, convert_timezone(\u0027PST\u0027, listtime) from listing\nwhere listid \u003d 16;"
+}

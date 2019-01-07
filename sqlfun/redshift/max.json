@@ -1,0 +1,21 @@
+{
+  "funcName": "MAX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The target column or expression that the function operates on."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The MAX function returns the maximum value in a set of rows. DISTINCT or ALL may be used but do not affect the result.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_MAX.html",
+  "sample": "select max(pricepaid) from sales;"
+}

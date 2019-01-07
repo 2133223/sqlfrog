@@ -1,0 +1,38 @@
+{
+  "funcName": "REGEXP_REPLACE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "source_string",
+        "description": "A string expression, such as a column name, to be searched."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "pattern",
+        "description": "A string literal that represents a SQL standard regular expression pattern."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "replace_string",
+        "description": "A string expression, such as a column name, that will replace each occurrence of pattern. The default is an empty string ( \"\" )."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "position",
+        "description": "A positive integer that indicates the position within source_string to begin searching. The position is based on the number of characters, not bytes, so that multibyte characters are counted as single characters. The default is 1. If position is less than 1, the search begins at the first character of source_string. If position is greater than the number of characters in source_string, the result is source_string."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Searches a string for a regular expression pattern and replaces every occurrence of the pattern with the specified string. REGEXP_REPLACE is similar to the REPLACE Function, but lets you search a string for a regular expression pattern. For more information about regular expressions, see POSIX Operators.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/REGEXP_REPLACE.html"
+}

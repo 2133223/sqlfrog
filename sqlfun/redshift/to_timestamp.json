@@ -1,0 +1,27 @@
+{
+  "funcName": "TO_TIMESTAMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A string that represents a time stamp value in the format specified by format."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format",
+        "description": "A string that represents a time stamp value in the format specified by format."
+      }
+    }
+  ],
+  "returnType": "TIMESTAMPTZ",
+  "description": "TO_TIMESTAMP converts a TIMESTAMP string to TIMESTAMPTZ.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TO_TIMESTAMP.html",
+  "sample": "select sysdate,\nto_timestamp (sysdate, \u0027HH24:MI:SS\u0027) as seconds;"
+}

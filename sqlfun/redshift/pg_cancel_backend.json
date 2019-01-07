@@ -1,0 +1,21 @@
+{
+  "funcName": "PG_CANCEL_BACKEND",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "pid",
+        "description": "The process ID (PID) of the query to be canceled. You cannot cancel a query by specifying a query ID; you must specify the query\u0027s process ID. Requires an integer value."
+      }
+    }
+  ],
+  "returnType": "None",
+  "description": "Cancels a query. PG_CANCEL_BACKEND is functionally equivalent to the CANCEL command. You can cancel queries currently being run by your user. Superusers can cancel any query.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Administration Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/PG_CANCEL_BACKEND.html",
+  "sample": "select pid, trim(starttime) as start, \nduration, trim(user_name) as user,\nsubstring (query,1,40) as querytxt\nfrom stv_recents\nwhere status \u003d \u0027Running\u0027;"
+}

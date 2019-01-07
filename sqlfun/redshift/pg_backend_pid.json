@@ -1,0 +1,13 @@
+{
+  "funcName": "PG_BACKEND_PID",
+  "arguments": [],
+  "returnType": "integer",
+  "description": "Returns the process ID (PID) of the server process handling the current session.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/PG_BACKEND_PID.html"
+}

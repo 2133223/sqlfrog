@@ -1,0 +1,27 @@
+{
+  "funcName": "CONCAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string1",
+        "description": "Both arguments can be fixed-length or variable-length character strings or expressions."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string2",
+        "description": "Both arguments can be fixed-length or variable-length character strings or expressions."
+      }
+    }
+  ],
+  "returnType": "string",
+  "description": "The CONCAT function concatenates two character strings and returns the resulting string. To concatenate more than two strings, use nested CONCAT functions. The concatenation operator (||) between two strings produces the same results as the CONCAT function.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CONCAT.html",
+  "sample": "select concat(\u0027December 25, \u0027, \u00272008\u0027);"
+}

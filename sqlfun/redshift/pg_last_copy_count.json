@@ -1,0 +1,13 @@
+{
+  "funcName": "PG_LAST_COPY_COUNT",
+  "arguments": [],
+  "returnType": "BIGINT",
+  "description": "Returns the number of rows that were loaded by the last COPY command executed in the current session. PG_LAST_COPY_COUNT is updated with the last COPY ID, which is the query ID of the last COPY that began the load process, even if the load failed. The query ID and COPY ID are updated when the COPY command begins the load process.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/PG_LAST_COPY_COUNT.html"
+}

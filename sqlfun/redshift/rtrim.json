@@ -1,0 +1,26 @@
+{
+  "funcName": "RTRIM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string column or expression to be trimmed."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "trim_chars",
+        "description": "A string column or expression representing the characters to be trimmed from the end of string."
+      }
+    }
+  ],
+  "returnType": "string",
+  "description": "The RTRIM function trims a specified set of characters from the end of a string.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_RTRIM.html"
+}

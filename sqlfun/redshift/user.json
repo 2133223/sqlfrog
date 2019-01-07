@@ -1,0 +1,13 @@
+{
+  "funcName": "USER",
+  "arguments": [],
+  "returnType": "",
+  "description": "Synonym for CURRENT_USER. See CURRENT_USER.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_USER.html"
+}

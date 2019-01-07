@@ -1,0 +1,14 @@
+{
+  "funcName": "SLICE_NUM",
+  "arguments": [],
+  "returnType": "T",
+  "description": "Returns an integer corresponding to the slice number in the cluster where the data for a row is located. SLICE_NUM takes no parameters.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SLICE_NUM.html",
+  "sample": "select distinct eventid, slice_num() from event order by eventid limit 10;"
+}

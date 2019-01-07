@@ -1,0 +1,13 @@
+{
+  "funcName": "PG_LAST_COPY_ID",
+  "arguments": [],
+  "returnType": "integer",
+  "description": "Returns the query ID of the most recently executed COPY command in the current session. If no COPY commands have been executed in the current session, PG_LAST_COPY_ID returns -1.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/PG_LAST_COPY_ID.html"
+}

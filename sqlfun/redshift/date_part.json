@@ -1,0 +1,33 @@
+{
+  "funcName": "DATE_PART",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "description": "The specific part of the date value (year, month, or day, for example) that the function operates on. For more information, see Dateparts for Date or Time Stamp Functions."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp. The expression must be a date or time stamp expression that contains the specified datepart."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp. The expression must be a date or time stamp expression that contains the specified datepart."
+      }
+    }
+  ],
+  "returnType": "DOUBLE",
+  "description": "DATE_PART extracts datepart values from an expression. DATE_PART is a synonym of the PGDATE_PART function.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DATE_PART_function.html",
+  "sample": "select date_part(w, listtime) as weeks, listtime\nfrom listing where listid\u003d10;"
+}

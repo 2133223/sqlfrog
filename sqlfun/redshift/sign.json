@@ -1,0 +1,21 @@
+{
+  "funcName": "SIGN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "numeric",
+        "description": "Numeric value to be evaluated."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SIGN function returns the sign (positive or negative) of a numeric value. The result of the SIGN function will be a 1, -1, or 0 indicating the sign of the argument.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SIGN.html",
+  "sample": "select commission, sign (commission)\nfrom sales where salesid\u003d10000;"
+}

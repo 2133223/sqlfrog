@@ -1,0 +1,32 @@
+{
+  "funcName": "NTILE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr",
+        "description": "The number of ranking groups and must result in a positive integer value (greater than 0) for each partition. The expr argument must not be nullable."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window_partition",
+        "description": "Optional. The range of records for each group in the OVER clause."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window_ordering",
+        "description": "Optional. An expression that sorts the rows within each partition. If the ORDER BY clause is omitted, the ranking behavior is the same. If ORDER BY does not produce a unique ordering, the order of the rows is nondeterministic. For more information, see Unique Ordering of Data for Window Functions."
+      }
+    }
+  ],
+  "returnType": "BIGINT",
+  "description": "The NTILE window function divides ordered rows in the partition into the specified number of ranked groups of as equal size as possible and returns the group that a given row falls into.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_NTILE.html"
+}

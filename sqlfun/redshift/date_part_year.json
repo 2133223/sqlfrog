@@ -1,0 +1,21 @@
+{
+  "funcName": "DATE_PART_YEAR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date column or an expression that implicitly converts to a date."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "The DATE_PART_YEAR function extracts the year from a date.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DATE_PART_YEAR.html",
+  "sample": "select caldate, date_part_year(caldate)\nfrom date\norder by\ndateid limit 10;"
+}

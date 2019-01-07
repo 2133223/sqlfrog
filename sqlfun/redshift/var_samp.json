@@ -1,0 +1,14 @@
+{
+  "funcName": "VAR_SAMP",
+  "arguments": [],
+  "returnType": "",
+  "description": "The VAR_SAMP and VAR_POP functions return the sample and population variance of a set of numeric values (integer, decimal, or floating-point). The result of the VAR_SAMP function is equivalent to the squared sample standard deviation of the same set of values.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_VARIANCE_functions.html",
+  "sample": "select avg(numtickets),\nround(var_samp(numtickets)) varsamp,\nround(var_pop(numtickets)) varpop\nfrom listing;"
+}

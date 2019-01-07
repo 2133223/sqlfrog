@@ -1,0 +1,21 @@
+{
+  "funcName": "SIN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The input parameter is a double precision number."
+      }
+    }
+  ],
+  "returnType": "double",
+  "description": "SIN is a trigonometric function that returns the sine of a number. The return value is in radians and is between PI/2 and -PI/2.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SIN.html",
+  "sample": "select sin(-pi());"
+}

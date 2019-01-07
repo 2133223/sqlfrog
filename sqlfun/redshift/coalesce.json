@@ -1,0 +1,13 @@
+{
+  "funcName": "COALESCE",
+  "arguments": [],
+  "returnType": "",
+  "description": "Synonym of the NVL expression.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Conditional Expressions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_COALESCE.html"
+}

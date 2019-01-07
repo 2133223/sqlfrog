@@ -1,0 +1,13 @@
+{
+  "funcName": "REPLICATE",
+  "arguments": [],
+  "returnType": "",
+  "description": "Synonym for the REPEAT function.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_REPLICATE.html"
+}

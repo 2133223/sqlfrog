@@ -1,0 +1,21 @@
+{
+  "funcName": "TAN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The input parameter is a double precision number."
+      }
+    }
+  ],
+  "returnType": "double",
+  "description": "TAN is a trigonometric function that returns the tangent of a number. The input parameter must be a non-zero number (in radians).",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TAN.html",
+  "sample": "select tan(0);"
+}

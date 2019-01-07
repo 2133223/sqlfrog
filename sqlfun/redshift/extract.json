@@ -1,0 +1,33 @@
+{
+  "funcName": "EXTRACT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "description": "For possible values, see Dateparts for Date or Time Stamp Functions."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "literal",
+        "description": "A time stamp value, enclosed in single quotation marks and preceded by the TIMESTAMP keyword."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A TIMESTAMP or TIMESTAMPTZ column, or an expression that implicitly converts to a time stamp or time stamp with time zone."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "The EXTRACT function returns a date part, such as a day, month, or year, from a time stamp value or expression.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_EXTRACT_function.html",
+  "sample": "select salesid, extract(week from saletime) as weeknum\nfrom sales where pricepaid \u003e 9999 order by 2;"
+}

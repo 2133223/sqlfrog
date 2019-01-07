@@ -1,0 +1,14 @@
+{
+  "funcName": "TIMEOFDAY",
+  "arguments": [],
+  "returnType": "VARCHAR",
+  "description": "TIMEOFDAY is a special alias used to return the weekday, date, and time as a string value.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TIMEOFDAY_function.html",
+  "sample": "select timeofday();"
+}

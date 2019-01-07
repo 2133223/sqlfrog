@@ -1,0 +1,39 @@
+{
+  "funcName": "DATEDIFF",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "description": "The specific part of the date value (year, month, or day, for example) that the function operates on. For more information, see Dateparts for Date or Time Stamp Functions. Specifically, DATEDIFF determines the number of datepart boundaries that are crossed between two expressions. For example, if you are calculating the difference in years between two dates, 12-31-2008 and 01-01-2009, the function returns 1 year despite the fact that these dates are only one day apart. If you are finding the difference in hours between two time stamps, 01-01-2009 8:30:00 and 01-01-2009 10:00:00, the result is 2 hours."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "datepart boundaries",
+        "description": "The specific part of the date value (year, month, or day, for example) that the function operates on. For more information, see Dateparts for Date or Time Stamp Functions. Specifically, DATEDIFF determines the number of datepart boundaries that are crossed between two expressions. For example, if you are calculating the difference in years between two dates, 12-31-2008 and 01-01-2009, the function returns 1 year despite the fact that these dates are only one day apart. If you are finding the difference in hours between two time stamps, 01-01-2009 8:30:00 and 01-01-2009 10:00:00, the result is 2 hours."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date or timestamp columns or expressions that implicitly convert to a date or time stamp. The expressions must both contain the specified date part. If the second date or time is later than the first date or time, the result is positive. If the second date or time is earlier than the first date or time, the result is negative."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A date or timestamp columns or expressions that implicitly convert to a date or time stamp. The expressions must both contain the specified date part. If the second date or time is later than the first date or time, the result is positive. If the second date or time is earlier than the first date or time, the result is negative."
+      }
+    }
+  ],
+  "returnType": "BIGINT",
+  "description": "DATEDIFF returns the difference between the date parts of two date or time expressions.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DATEDIFF_function.html",
+  "sample": "select datediff(week,\u00272009-01-01\u0027,\u00272009-12-31\u0027) as numweeks;"
+}

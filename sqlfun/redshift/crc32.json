@@ -1,0 +1,20 @@
+{
+  "funcName": "CRC32",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "A variable-length string."
+      }
+    }
+  ],
+  "returnType": "8-character string",
+  "description": "CRC32 is an error-detecting function that uses a CRC32 algorithm to detect changes between source and target data. The CRC32 function converts a variable-length string into an 8-character string that is a text representation of the hexadecimal value of a 32 bit-binary sequence.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/crc32-function.html"
+}

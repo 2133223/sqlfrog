@@ -1,0 +1,33 @@
+{
+  "funcName": "NEXT_DAY",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "day",
+        "description": "A string containing the name of any day. Capitalization does not matter. Valid values are as follows: Day Values Sunday Su, Sun, Sunday Monday M, Mo, Mon, Monday Tuesday Tu, Tues, Tuesday Wednesday W, We Wed, Wednesday Thursday Th, Thu, Thurs, Thursday Friday F, Fr, Fri, Friday Saturday Sa, Sat, Saturday"
+      }
+    }
+  ],
+  "returnType": "DATE",
+  "description": "NEXT_DAY returns the date of the first instance of the specified day that is later than the given date.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_NEXT_DAY.html",
+  "sample": "select next_day(\u00272014-08-20\u0027,\u0027Tuesday\u0027);"
+}

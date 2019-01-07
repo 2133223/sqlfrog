@@ -1,0 +1,32 @@
+{
+  "funcName": "TIMEZONE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "timezone",
+        "description": "The time zone for the return value. The time zone can be specified as a time zone name (such as \u0027Africa/Kampala\u0027 or \u0027Singapore\u0027) or as a time zone abbreviation (such as \u0027UTC\u0027 or \u0027PDT\u0027). To view a list of supported time zone names, execute the following command. select pg_timezone_names(); To view a list of supported time zone abbreviations, execute the following command. select pg_timezone_abbrevs(); For more information and examples, see Time Zone Usage Notes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "An expression that results in a TIMESTAMP type, or a value that can implicitly be coerced to a time stamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamptz",
+        "description": "An expression that results in a TIMESTAMPTZ type, or a value that can implicitly be coerced to a time stamp with time zone."
+      }
+    }
+  ],
+  "returnType": "TIMESTAMPTZ",
+  "description": "TIMEZONE returns a time stamp for the specified time zone and time stamp value.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TIMEZONE.html"
+}

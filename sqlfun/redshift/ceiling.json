@@ -1,0 +1,20 @@
+{
+  "funcName": "CEILING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "DOUBLE PRECISION number to be rounded."
+      }
+    }
+  ],
+  "returnType": "integer",
+  "description": "The CEILING or CEIL function is used to round a number up to the next whole number. (The FLOOR Function rounds a number down to the next whole number.)",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CEILING_FLOOR.html"
+}

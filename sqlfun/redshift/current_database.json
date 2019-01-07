@@ -1,0 +1,13 @@
+{
+  "funcName": "CURRENT_DATABASE",
+  "arguments": [],
+  "returnType": "CHAR",
+  "description": "Returns the name of the database where you are currently connected.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CURRENT_DATABASE.html"
+}

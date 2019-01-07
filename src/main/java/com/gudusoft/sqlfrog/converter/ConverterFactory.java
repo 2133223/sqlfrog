@@ -93,6 +93,7 @@ public class ConverterFactory
 		switch ( vender )
 		{
 			case dbvoracle :
+			case dbvdb2 :
 				return new OracleSequenceIdentifierConverter( );
 			default :
 				throw new ConvertException( "Can't support the "

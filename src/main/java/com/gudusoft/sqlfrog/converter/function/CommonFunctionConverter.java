@@ -96,7 +96,7 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 		{
 			if ( ( getFunctionName( functionCall ).equals( "CURRVAL" ) || getFunctionName( functionCall ).equals( "NEXTVAL" ) ) )
 			{
-				if ( targetVendor == EDbVendor.dbvoracle )
+				if ( targetVendor == EDbVendor.dbvoracle ||  targetVendor == EDbVendor.dbvdb2)
 				{
 					String convertSql = functionCall.getArgs( ).toString( )
 							+ "."
@@ -111,6 +111,16 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 				{
 					throw generateConvertException( functionCall, targetVendor );
 				}
+			}
+			if(isTruncFunction( functionCall ))
+			{
+				new TruncFunctionConverter().convert(functionCall, targetVendor);
+			}
+			if(isExtractFunction(functionCall)){
+				new ExtractFunctionConverter().convert(functionCall, targetVendor);
+			}
+			if(isToDateFunction(functionCall)){
+				new ToDateFunctionConverter().convert(functionCall, targetVendor);
 			}
 		}
 
@@ -173,6 +183,51 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 		}
 		return false;
 	}
+	
+	private boolean isTruncFunction( TFunctionCall functionCall )
+	{
+		String functionName = getFunctionName( functionCall );
+		EDbVendor vendor = functionCall.getFunctionName( ).getStartToken( ).container.getGsqlparser( )
+				.getDbVendor( );
+
+		if ( "TRUNC".equals( functionName ) )
+		{
+			if ( vendor == EDbVendor.dbvoracle || vendor == EDbVendor.dbvpostgresql )
+			{
+				return true;
+			}
+		}
+		if ( "TRUNCATE".equals( functionName ) )
+		{
+			if ( vendor == EDbVendor.dbvmysql )
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean isExtractFunction( TFunctionCall functionCall )
+	{
+		String functionName = getFunctionName( functionCall );
+		if ( "EXTRACT".equals( functionName ) )
+		{
+				return true;
+		}
+		return false;
+	}
+	
+	private boolean isToDateFunction( TFunctionCall functionCall )
+	{
+		String functionName = getFunctionName( functionCall );
+		if ( "TO_DATE".equals( functionName ) )
+		{
+				return true;
+		}
+		return false;
+	}
+	
+	
 
 	private boolean isSubStringFunction( TFunctionCall functionCall )
 	{

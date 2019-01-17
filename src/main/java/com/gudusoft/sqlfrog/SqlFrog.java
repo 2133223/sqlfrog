@@ -242,15 +242,22 @@ public class SqlFrog
 			}
 			if ( point instanceof LimitResultSet )
 			{
-				ConvertException e = new ConvertException( "F856, limiting result sets is incompatible with ANSI SQL, line:"
-						+ point.getPosition( ).getX( )
-						+ ", column:"
-						+ point.getPosition( ).getY( )
-						+ "." );
-				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
-				if ( !ignoreConvertException )
+				try
 				{
-					return convertResult;
+					if ( ConverterFactory.getLimitConverter( point.getVender( ) )
+							.enableConvert( target ) )
+					{
+						ConverterFactory.getLimitConverter( point.getVender( ) )
+								.convert( (LimitResultSet) point, target );
+					}
+				}
+				catch ( ConvertException e )
+				{
+					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+					if ( !ignoreConvertException )
+					{
+						return convertResult;
+					}
 				}
 			}
 			if ( point instanceof CopyingStructure )

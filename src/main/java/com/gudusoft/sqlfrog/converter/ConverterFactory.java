@@ -14,8 +14,11 @@ import com.gudusoft.sqlfrog.converter.identifier.OracleSequenceIdentifierConvert
 import com.gudusoft.sqlfrog.converter.identifier.SqlServerQuotedIdentifierConverter;
 import com.gudusoft.sqlfrog.converter.join.OracleJoinConditionConverter;
 import com.gudusoft.sqlfrog.converter.join.SqlServerJoinConditionConverter;
+import com.gudusoft.sqlfrog.converter.limit.PostgresqlLimitConverter;
+import com.gudusoft.sqlfrog.converter.limit.SqlServerLimitConverter;
 import com.gudusoft.sqlfrog.converter.table.CommonSubqueryTableConverter;
 import com.gudusoft.sqlfrog.model.Identifier;
+import com.gudusoft.sqlfrog.model.LimitResultSet;
 import com.gudusoft.sqlfrog.model.Table;
 import com.gudusoft.sqlfrog.util.SQLUtil;
 
@@ -99,6 +102,21 @@ public class ConverterFactory
 				throw new ConvertException( "Can't support the "
 						+ SQLUtil.getVendorName( vender )
 						+ " sequence identifier converter!" );
+		}
+	}
+
+	public static Converter<LimitResultSet> getLimitConverter( EDbVendor vender )
+	{
+		switch ( vender )
+		{
+			case dbvpostgresql :
+				return new PostgresqlLimitConverter( );
+			case dbvmssql :
+				return new SqlServerLimitConverter( );
+			default :
+				throw new ConvertException( "Can't support the "
+						+ SQLUtil.getVendorName( vender )
+						+ " limit clause converter!" );
 		}
 	}
 }

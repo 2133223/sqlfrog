@@ -90,6 +90,14 @@ public class SqlFrog
 			return convertResult;
 		}
 
+		if ( source == target )
+		{
+			FrogResult convertResult = new FrogResult( );
+			convertResult.appendResult( sqlparser.getSqlstatements( )
+					.toScript( ) );
+			return convertResult;
+		}
+
 		return convert( source, target, ignoreConvertException, sqlparser );
 	}
 

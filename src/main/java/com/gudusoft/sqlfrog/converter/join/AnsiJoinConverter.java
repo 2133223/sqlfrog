@@ -149,11 +149,29 @@ public class AnsiJoinConverter
 					// srexpr.getExpressionType( ),
 					// srexpr.getObjectOperand( ).getObjectType( ) );
 				}
-				else
+				else if ( ( slexpr.getExpressionType( ) == EExpressionType.simple_object_name_t )
+						&& ( !slexpr.toString( ).startsWith( ":" ) )
+						&& ( !slexpr.toString( ).startsWith( "?" ) )
+						&& ( srexpr.getExpressionType( ) == EExpressionType.function_t ) )
 				{
-					// not a join condition
+					List<String> tables = new ArrayList<String>( );
+					getExpressionTables( tables, srexpr );
+					if ( !tables.isEmpty( ) )
+					{
+						for ( int i = 0; i < tables.size( ); i++ )
+						{
+							JoinCondition jr = new JoinCondition( );
+							jr.used = false;
+							jr.lexpr = slexpr;
+							jr.rexpr = srexpr;
+							jr.expr = expr;
+							jr.jt = jointype.inner;
+							jr.lefttable = getExpressionTable( slexpr );
+							jr.righttable = tables.get( i );
+							jrs.add( jr );
+						}
+					}
 				}
-
 			}
 			else if ( slexpr != null
 					&& slexpr.isOracleOuterJoin( )
@@ -239,16 +257,29 @@ public class AnsiJoinConverter
 			TExpression expr = (TExpression) pNode;
 			if ( expr.getExpressionType( ) == EExpressionType.function_t )
 			{
-				for ( int i = 0; i < expr.getFunctionCall( ).getArgs( ).size( ); i++ )
+				if ( expr.getFunctionCall( ).getArgs( ) != null )
 				{
-					analyzeJoinCondition( expr.getFunctionCall( )
+					for ( int i = 0; i < expr.getFunctionCall( )
 							.getArgs( )
-							.getExpression( i ), expr );
+							.size( ); i++ )
+					{
+						TExpression arg = expr.getFunctionCall( )
+								.getArgs( )
+								.getExpression( i );
+						analyzeJoinCondition( arg, expr );
+						if ( isLeafNode )
+						{
+							exprVisit( arg, isLeafNode );
+						}
+					}
+				}
+				else if ( expr.getFunctionCall( ).getExpr1( ) != null )
+				{
+					TExpression arg = expr.getFunctionCall( ).getExpr1( );
+					analyzeJoinCondition( arg, expr );
 					if ( isLeafNode )
 					{
-						exprVisit( expr.getFunctionCall( )
-								.getArgs( )
-								.getExpression( i ), isLeafNode );
+						exprVisit( arg, isLeafNode );
 					}
 				}
 			}
@@ -259,7 +290,6 @@ public class AnsiJoinConverter
 			return true;
 
 		}
-
 	}
 
 	private String ErrorMessage = "";
@@ -543,32 +573,32 @@ public class AnsiJoinConverter
 						}
 					}
 
-					List<TTable> tables = new ArrayList<TTable>();
-					for(int i=0;i<select.tables.size();i++)
+					List<TTable> tables = new ArrayList<TTable>( );
+					for ( int i = 0; i < select.tables.size( ); i++ )
 					{
-						tables.add(select.tables.getTable(i));
+						tables.add( select.tables.getTable( i ) );
 					}
-					
+
 					TCustomSqlStatement parentStmt = select;
-					while(parentStmt.getParentStmt() !=null)
+					while ( parentStmt.getParentStmt( ) != null )
 					{
-						parentStmt = select.getParentStmt();
-						if(parentStmt instanceof TSelectSqlStatement)
+						parentStmt = select.getParentStmt( );
+						if ( parentStmt instanceof TSelectSqlStatement )
 						{
-							TSelectSqlStatement temp = (TSelectSqlStatement)parentStmt;
-							for(int i=0;i<temp.tables.size();i++)
+							TSelectSqlStatement temp = (TSelectSqlStatement) parentStmt;
+							for ( int i = 0; i < temp.tables.size( ); i++ )
 							{
-								tables.add(temp.tables.getTable(i));
+								tables.add( temp.tables.getTable( i ) );
 							}
 						}
 					}
-					
+
 					boolean tableUsed[] = new boolean[tables.size( )];
 					for ( int i = 0; i < tables.size( ); i++ )
 					{
 						tableUsed[i] = false;
 					}
-					
+
 					// make first table to be the left most joined table
 					String fromclause = getFullNameWithAliasString( tables.get( 0 ) );
 
@@ -599,6 +629,12 @@ public class AnsiJoinConverter
 										leftTable = lcTable2;
 										rightTable = lcTable1;
 									}
+									else if ( ( !tableUsed[i] )
+											&& ( !tableUsed[j] ) )
+									{
+										leftTable = lcTable1;
+										rightTable = lcTable2;
+									}
 
 									if ( ( leftTable != null )
 											&& ( rightTable != null ) )
@@ -615,13 +651,16 @@ public class AnsiJoinConverter
 										String condition = "";
 										for ( int k = 0; k < lcjrs.size( ); k++ )
 										{
-											condition += lcjrs.get( k ).expr.toString( );
-											if ( k != lcjrs.size( ) - 1 )
+											TExpression expr = lcjrs.get( k ).expr;
+											if ( expr.toString( ) != null )
 											{
-												condition += " and ";
+												if ( condition.length( ) > 0 )
+												{
+													condition += " and ";
+												}
+												condition += expr.toString( );
 											}
-											TExpression lc_expr = lcjrs.get( k ).expr;
-											lc_expr.remove2( );
+											expr.remove2( );
 										}
 										fc.condition = condition;
 
@@ -654,11 +693,15 @@ public class AnsiJoinConverter
 										|| isNameOrAliasOfTable( fromClauses.get( j ).joinTable,
 												jc.righttable ) )
 								{
-									fromClauses.get( j ).condition += " and "
-											+ jc.expr.toString( );
+									if ( jc.expr.toString( ) != null )
+									{
+										fromClauses.get( j ).condition += " and "
+												+ jc.expr.toString( );
+									}
 									jc.used = true;
 									jc.expr.remove2( );
 									break;
+
 								}
 							}
 						}
@@ -752,10 +795,12 @@ public class AnsiJoinConverter
 					}
 					else
 					{
-						select.getWhereClause( ).getCondition().fastSetString(select.getWhereClause( )
-									.getCondition( )
-									.toString( )
-									.trim( ));
+						select.getWhereClause( )
+								.getCondition( )
+								.fastSetString( select.getWhereClause( )
+										.getCondition( )
+										.toString( )
+										.trim( ) );
 					}
 				}
 			}
@@ -808,15 +853,66 @@ public class AnsiJoinConverter
 			return table.toString( );
 	}
 
+	private void getExpressionTables( List<String> tables, TExpression expr )
+	{
+		if ( expr.getExpressionType( ) == EExpressionType.function_t )
+		{
+			if ( expr.getFunctionCall( ).getArgs( ) != null )
+			{
+				for ( int i = 0; i < expr.getFunctionCall( ).getArgs( ).size( ); i++ )
+				{
+					getExpressionTables( tables, expr.getFunctionCall( )
+							.getArgs( )
+							.getExpression( i ) );
+				}
+			}
+			if ( expr.getFunctionCall( ).getExpr1( ) != null )
+			{
+				getExpressionTables( tables, expr.getFunctionCall( ).getExpr1( ) );
+
+			}
+			if ( expr.getFunctionCall( ).getExpr2( ) != null )
+			{
+				getExpressionTables( tables, expr.getFunctionCall( ).getExpr2( ) );
+			}
+			if ( expr.getFunctionCall( ).getExpr3( ) != null )
+			{
+				getExpressionTables( tables, expr.getFunctionCall( ).getExpr3( ) );
+			}
+		}
+		else if ( expr.getObjectOperand( ) != null )
+			tables.add( expr.getObjectOperand( ).getObjectString( ) );
+		else if ( expr.getLeftOperand( ) != null
+				&& expr.getLeftOperand( ).getObjectOperand( ) != null )
+			tables.add( expr.getLeftOperand( )
+					.getObjectOperand( )
+					.getObjectString( ) );
+		else if ( expr.getRightOperand( ) != null
+				&& expr.getRightOperand( ).getObjectOperand( ) != null )
+			tables.add( expr.getRightOperand( )
+					.getObjectOperand( )
+					.getObjectString( ) );
+	}
+
 	private String getExpressionTable( TExpression expr )
 	{
 		if ( expr.getExpressionType( ) == EExpressionType.function_t )
 		{
-			for ( int i = 0; i < expr.getFunctionCall( ).getArgs( ).size( ); i++ )
+			if ( expr.getFunctionCall( ).getArgs( ) != null )
+			{
+				for ( int i = 0; i < expr.getFunctionCall( ).getArgs( ).size( ); i++ )
+				{
+					String table = getExpressionTable( expr.getFunctionCall( )
+							.getArgs( )
+							.getExpression( i ) );
+					if ( table != null )
+						return table;
+				}
+			}
+			if ( expr.getFunctionCall( ).getExpr1( ) != null )
 			{
 				String table = getExpressionTable( expr.getFunctionCall( )
-						.getArgs( )
-						.getExpression( i ) );
+						.getExpr1( ) );
 				if ( table != null )
 					return table;
 			}

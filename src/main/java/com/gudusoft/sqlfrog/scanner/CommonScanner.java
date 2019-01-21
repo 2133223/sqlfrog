@@ -256,8 +256,11 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 				&& select.dbvendor == EDbVendor.dbvoracle
 				&& select.getJoins( ).getJoin( 0 ).getJoinItems( ).size( ) == 0 )
 		{
-			convertPoints.add( new JoinCondition( select.getWhereClause( )
-					.getCondition( ) ) );
+			if ( select.getWhereClause( ) != null )
+			{
+				convertPoints.add( new JoinCondition( select.getWhereClause( )
+						.getCondition( ) ) );
+			}
 		}
 	}
 
@@ -293,7 +296,7 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 		}
 
 		String partString = identifier.getPartString( ).toUpperCase( );
-		if ( identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvoracle 
+		if ( identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvoracle
 				|| identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvdb2 )
 		{
 			if ( partString.equals( "CURRVAL" )

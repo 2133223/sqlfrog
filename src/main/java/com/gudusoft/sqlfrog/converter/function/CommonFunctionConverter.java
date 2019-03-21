@@ -223,7 +223,8 @@ public class CommonFunctionConverter extends AbstractFunctionConverter
 		String functionName = getFunctionName( functionCall );
 		if ( "NVL".equals( functionName )
 				|| "ISNULL".equals( functionName )
-				|| "COALESCE".equals( functionName ) )
+				|| "COALESCE".equals( functionName )
+				|| "IFNULL".equals( functionName ) )
 		{
 			return true;
 		}

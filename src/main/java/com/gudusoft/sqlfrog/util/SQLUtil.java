@@ -622,6 +622,10 @@ public class SQLUtil
 		{
 			vendor = EDbVendor.dbvredshift;
 		}
+		else if ( venderValue.equalsIgnoreCase( "snowflake" ) )
+		{
+			vendor = EDbVendor.dbvsnowflake;
+		}
 		return vendor;
 	}
 }

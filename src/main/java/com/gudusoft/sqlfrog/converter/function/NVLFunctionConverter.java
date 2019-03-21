@@ -2,7 +2,6 @@
 package com.gudusoft.sqlfrog.converter.function;
 
 import gudusoft.gsqlparser.EDbVendor;
-import gudusoft.gsqlparser.EFunctionType;
 import gudusoft.gsqlparser.nodes.TFunctionCall;
 
 public class NVLFunctionConverter
@@ -42,8 +41,26 @@ public class NVLFunctionConverter
 			case dbvteradata :
 				toTeradata( function );
 				break;
+			case dbvsnowflake :
+				toSnowflake( function );
+				break;
 			default :
 		}
+	}
+
+	private void toSnowflake( TFunctionCall function )
+	{
+		if ( getFunctionName( function ).equals( "NVL" ) )
+		{
+			function.setFunctionName( function.getGsqlparser( )
+					.parseObjectName( "NVL" ) );
+		}
+		else
+		{
+			function.setFunctionName( function.getGsqlparser( )
+					.parseObjectName( "IFNULL" ) );
+		}
+		
 	}
 
 	private void toTeradata( TFunctionCall function )

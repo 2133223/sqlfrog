@@ -16,6 +16,10 @@ import com.gudusoft.sqlfrog.model.LocalTimestamp;
 import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.SequenceIdentifier;
 import com.gudusoft.sqlfrog.model.Table;
+import com.gudusoft.sqlfrog.transform.SQLServerTransfrom;
+import com.gudusoft.sqlfrog.transform.SQLServerTransfrom.TransformType;
+import com.gudusoft.sqlfrog.transform.Transfrom;
+import com.gudusoft.sqlfrog.util.ObjectNameUtils;
 
 import gudusoft.gsqlparser.EDbVendor;
 import gudusoft.gsqlparser.EDeclareType;
@@ -166,15 +170,23 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 {
 
 	private List<ConvertPoint<? extends TParseTreeNode>> convertPoints = new ArrayList<ConvertPoint<? extends TParseTreeNode>>( );
+	private List<Transfrom> transformPoints = new ArrayList<Transfrom>( );
 
 	public List<ConvertPoint<? extends TParseTreeNode>> scan( TGSqlParser parser )
 	{
+		ObjectNameUtils.clearCache( );
+		transformPoints.clear( );
 		convertPoints.clear( );
 		for ( int i = 0; i < parser.sqlstatements.size( ); i++ )
 		{
 			parser.sqlstatements.get( i ).accept( this );
 		}
 		return convertPoints;
+	}
+
+	public List<Transfrom> getTransfromPoints( )
+	{
+		return transformPoints;
 	}
 
 	public void postVisit( TConstraint node )
@@ -290,6 +302,15 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 
 	public void postVisit( TObjectName identifier )
 	{
+		if ( identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvmssql )
+		{
+			if ( !ObjectNameUtils.checkSQLName( identifier ) )
+			{
+				transformPoints.add( new SQLServerTransfrom( identifier,
+						TransformType.clean_variable_name ) );
+			}
+		}
+
 		if ( isQuotedIdentifier( identifier ) )
 		{
 			convertPoints.add( new QuotedIdentifier( identifier ) );
@@ -455,6 +476,13 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 		if ( node.getAliasClause( ) != null )
 		{
 			node.getAliasClause( ).accept( this );
+		}
+
+		TExpression expression = node.getExpr( );
+		if ( expression.getExpressionType( ) == EExpressionType.sqlserver_proprietary_column_alias_t )
+		{
+			transformPoints.add( new SQLServerTransfrom( node,
+					TransformType.proprietary_column_alias ) );
 		}
 	}
 

@@ -178,7 +178,7 @@ public class SQLUtil
 			StringBuilder buffer = new StringBuilder( );
 			for ( int i = 0; i < splits.size( ); i++ )
 			{
-				buffer.append( splits.get( i ) );
+				buffer.append( trimObjectName( splits.get( i ) ) );
 				if ( i < splits.size( ) - 1 )
 				{
 					buffer.append( "." );

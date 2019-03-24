@@ -28,14 +28,16 @@ import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
 import com.gudusoft.sqlfrog.model.FrogResult;
 import com.gudusoft.sqlfrog.model.Function;
-import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
 import com.gudusoft.sqlfrog.model.LocalTimestamp;
+import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.SequenceIdentifier;
 import com.gudusoft.sqlfrog.model.Table;
 import com.gudusoft.sqlfrog.model.Tuple;
+import com.gudusoft.sqlfrog.scanner.CommonScanner;
 import com.gudusoft.sqlfrog.scanner.ScannerFactory;
+import com.gudusoft.sqlfrog.transform.Transfrom;
 import com.gudusoft.sqlfrog.util.SQLUtil;
 
 public class SqlFrog
@@ -121,8 +123,10 @@ public class SqlFrog
 			boolean ignoreConvertException, TGSqlParser sqlparser )
 	{
 		FrogResult convertResult = new FrogResult( );
-		List<ConvertPoint<? extends TParseTreeNode>> points = ScannerFactory.getScanner( )
-				.scan( sqlparser );
+		CommonScanner scanner = (CommonScanner) ScannerFactory.getScanner( );
+		List<ConvertPoint<? extends TParseTreeNode>> points = scanner.scan( sqlparser );
+		List<Transfrom> transforms = scanner.getTransfromPoints( );
+
 		List<TCustomSqlStatement> convertJoinToAnsi = new ArrayList<TCustomSqlStatement>( );
 
 		for ( ConvertPoint<? extends TParseTreeNode> point : points )
@@ -150,6 +154,14 @@ public class SqlFrog
 						return convertResult;
 					}
 				}
+			}
+		}
+
+		if ( !transforms.isEmpty( ) )
+		{
+			for ( int i = 0; i < transforms.size( ); i++ )
+			{
+				transforms.get( i ).transfrom( );
 			}
 		}
 

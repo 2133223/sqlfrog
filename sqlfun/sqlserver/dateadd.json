@@ -23,5 +23,14 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/dateadd-transact-sql?view\u003dsql-server-2017",
-  "sample": "DECLARE @datetime2 datetime2 \u003d \u00272007-01-01 13:10:10.1111111\u0027;  \nSELECT \u0027year\u0027, DATEADD(year,1,@datetime2)  \nUNION ALL  \nSELECT \u0027quarter\u0027,DATEADD(quarter,1,@datetime2)  \nUNION ALL  \nSELECT \u0027month\u0027,DATEADD(month,1,@datetime2)  \nUNION ALL  \nSELECT \u0027dayofyear\u0027,DATEADD(dayofyear,1,@datetime2)  \nUNION ALL  \nSELECT \u0027day\u0027,DATEADD(day,1,@datetime2)  \nUNION ALL  \nSELECT \u0027week\u0027,DATEADD(week,1,@datetime2)  \nUNION ALL  \nSELECT \u0027weekday\u0027,DATEADD(weekday,1,@datetime2)  \nUNION ALL  \nSELECT \u0027hour\u0027,DATEADD(hour,1,@datetime2)  \nUNION ALL  \nSELECT \u0027minute\u0027,DATEADD(minute,1,@datetime2)  \nUNION ALL  \nSELECT \u0027second\u0027,DATEADD(second,1,@datetime2)  \nUNION ALL  \nSELECT \u0027millisecond\u0027,DATEADD(millisecond,1,@datetime2)  \nUNION ALL  \nSELECT \u0027microsecond\u0027,DATEADD(microsecond,1,@datetime2)  \nUNION ALL  \nSELECT \u0027nanosecond\u0027,DATEADD(nanosecond,1,@datetime2);"
+  "sample": "DECLARE @datetime2 datetime2 \u003d \u00272007-01-01 13:10:10.1111111\u0027;  \nSELECT \u0027year\u0027, DATEADD(year,1,@datetime2)  \nUNION ALL  \nSELECT \u0027quarter\u0027,DATEADD(quarter,1,@datetime2)  \nUNION ALL  \nSELECT \u0027month\u0027,DATEADD(month,1,@datetime2)  \nUNION ALL  \nSELECT \u0027dayofyear\u0027,DATEADD(dayofyear,1,@datetime2)  \nUNION ALL  \nSELECT \u0027day\u0027,DATEADD(day,1,@datetime2)  \nUNION ALL  \nSELECT \u0027week\u0027,DATEADD(week,1,@datetime2)  \nUNION ALL  \nSELECT \u0027weekday\u0027,DATEADD(weekday,1,@datetime2)  \nUNION ALL  \nSELECT \u0027hour\u0027,DATEADD(hour,1,@datetime2)  \nUNION ALL  \nSELECT \u0027minute\u0027,DATEADD(minute,1,@datetime2)  \nUNION ALL  \nSELECT \u0027second\u0027,DATEADD(second,1,@datetime2)  \nUNION ALL  \nSELECT \u0027millisecond\u0027,DATEADD(millisecond,1,@datetime2)  \nUNION ALL  \nSELECT \u0027microsecond\u0027,DATEADD(microsecond,1,@datetime2)  \nUNION ALL  \nSELECT \u0027nanosecond\u0027,DATEADD(nanosecond,1,@datetime2);",
+  "translation":[
+    {
+	  "db2":{"funcName":"DATE","comment":"the translation result depends on datepart"},
+	  "informix":{"funcName":"+","comment":"the translation result depends on datepart"},
+	  "mysql":{"funcName":"DATE_ADD","comment":"the translation result depends on datepart"},
+	  "oracle":{"funcName":"ADD_MONTHS,TO_DATE","comment":"the translation result depends on datepart"}
+    }
+  ]  
+  
 }

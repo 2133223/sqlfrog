@@ -44,5 +44,15 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/var-transact-sql?view\u003dsql-server-2017",
-  "sample": "SELECT VAR(Bonus)  \nFROM Sales.SalesPerson;  \nGO"
+  "sample": "SELECT VAR(Bonus)  \nFROM Sales.SalesPerson;  \nGO",
+  "translation":[
+    {
+	  "ansi":{"funcName":"VARIANCE"},
+	  "informix":{"funcName":"VARIANCE"},
+	  "mysql":{"funcName":"VARIANCE"},
+      "oracle":{"funcName":"VARIANCE"},
+	  "postgresql":{"funcName":"VARIANCE"},
+	  "sybase":{"funcName":"VARIANCE"}
+    }
+  ]    
 }

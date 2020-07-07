@@ -21,5 +21,10 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://www.techonthenet.com/oracle/functions/variance.php",
-  "sample": "select VARIANCE(char_length)\nfrom all_tab_columns;"
+  "sample": "select VARIANCE(char_length)\nfrom all_tab_columns;",
+  "translation":[
+    {
+      "sqlserver":{"funcName":"VAR"}
+    }
+    ]
 }

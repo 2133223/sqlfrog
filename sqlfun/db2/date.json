@@ -42,5 +42,14 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000784.html",
-  "sample": "DATE(RECEIVED)"
+  "sample": "DATE(RECEIVED)",
+  "translation":[
+    {
+	  "informix":{"funcName":"CURRENT"},
+	  "oracle":{"funcName":"TO_DATE"},
+	  "postgresql":{"funcName":"CURRENT_DATE"},
+	  "sqlserver":{"funcName":"CONVERT","arguments":["DATE","expression"]},
+	  "sybase":{"funcName":"CONVERT","arguments":["DATE","expression"]}
+    }
+  ]  
 }

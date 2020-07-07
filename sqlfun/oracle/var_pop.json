@@ -21,5 +21,10 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://www.techonthenet.com/oracle/functions/var_pop.php",
-  "sample": "select VAR_POP(data_length)\nfrom all_tab_columns;"
+  "sample": "select VAR_POP(data_length)\nfrom all_tab_columns;",
+	"translation":[
+	{
+	  "sqlserver":{"funcName":"VARP"}
+	}
+	]
 }

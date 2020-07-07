@@ -10,5 +10,14 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.htmll#function_date",
-  "sample": "SELECT something FROM tbl_name  WHERE DATE_SUB(CURDATE(),INTERVAL 30 DAY) \u003c\u003d date_col;"
+  "sample": "SELECT something FROM tbl_name  WHERE DATE_SUB(CURDATE(),INTERVAL 30 DAY) \u003c\u003d date_col;",
+  "translation":[
+    {
+	  "informix":{"funcName":"CURRENT"},
+	  "oracle":{"funcName":"TO_DATE"},
+	  "postgresql":{"funcName":"CURRENT_DATE"},
+	  "sqlserver":{"funcName":"CONVERT","arguments":["DATE","expression"]},
+	  "sybase":{"funcName":"CONVERT","arguments":["DATE","expression"]}
+    }
+  ]  
 }

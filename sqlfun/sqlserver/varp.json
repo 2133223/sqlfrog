@@ -44,5 +44,17 @@
   "ansiCompatible": "",
   "package": "",
   "docLink": "https://docs.microsoft.com/en-gb/sql/t-sql/functions/varp-transact-sql?view\u003dsql-server-2017",
-  "sample": "SELECT VARP(Bonus)  \nFROM Sales.SalesPerson;  \nGO"
+  "sample": "SELECT VARP(Bonus)  \nFROM Sales.SalesPerson;  \nGO",
+  "translation":[
+    {
+	  "ansi":{"funcName":"VARIANCE"},
+	  "db2":{"funcName":"VARIANCE"},
+	  "informix":{"funcName":"VARIANCE"},
+	  "mysql":{"funcName":"VARIANCE"},
+      "netezza":{"funcName":"VAR_POP"},
+	  "oracle":{"funcName":"VAR_POP"},
+	  "postgresql":{"funcName":"VARIANCE"},
+	  "sybase":{"funcName":"VARIANCE"}
+    }
+  ]    
 }

@@ -1,0 +1,27 @@
+{
+  "funcName": "POSITION",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "substring",
+        "description": "The substring to search for within the string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The substring to search for within the string."
+      }
+    }
+  ],
+  "returnType": "integer",
+  "description": "Returns the location of the specified substring within a string.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_POSITION.html",
+  "sample": "select position(\u0027fish\u0027 in \u0027dogfish\u0027);"
+}

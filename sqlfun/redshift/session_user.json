@@ -1,0 +1,13 @@
+{
+  "funcName": "SESSION_USER",
+  "arguments": [],
+  "returnType": "CHAR",
+  "description": "Returns the name of the user associated with the current session. This is the user who initiated the current database connection.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SESSION_USER.html"
+}

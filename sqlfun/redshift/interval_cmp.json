@@ -1,0 +1,27 @@
+{
+  "funcName": "INTERVAL_CMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "interval1",
+        "description": "An interval literal value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "interval2",
+        "description": "An interval literal value."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "INTERVAL_CMP compares two intervals and returns 1 if the first interval is greater, -1 if the second interval is greater, and 0 if the intervals are equal. For more information, see Interval Literals.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_INTERVAL_CMP.html",
+  "sample": "select interval_cmp(\u00273 days\u0027,\u00271 year\u0027);"
+}

@@ -1,0 +1,21 @@
+{
+  "funcName": "COUNT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The target column or expression that the function operates on."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The COUNT function counts the rows defined by the expression.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_COUNT.html",
+  "sample": "select count (*) from users where state\u003d\u0027FL\u0027;"
+}

@@ -1,0 +1,27 @@
+{
+  "funcName": "CAST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression that evaluates to one or more values, such as a column name or a literal. Converting null values returns nulls. The expression cannot contain blank or empty strings."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "type",
+        "description": "One of the supported Data Types."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "You can do run-time conversions between compatible data types by using the CAST and CONVERT functions.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Data Type Formatting Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CAST_function.html",
+  "sample": "select cast(pricepaid as integer)\nfrom sales where salesid\u003d100;"
+}

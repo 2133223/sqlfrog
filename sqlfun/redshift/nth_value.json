@@ -1,0 +1,44 @@
+{
+  "funcName": "NTH_VALUE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr",
+        "description": "The target column or expression that the function operates on."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "offset",
+        "description": "Determines the row number relative to the first row in the window for which to return the expression. The offset can be a constant or an expression and must be a positive integer that is greater than 0."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window_partition",
+        "description": "Sets the range of records for each group in the OVER clause."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window_ordering",
+        "description": "Sorts the rows within each partition. If ORDER BY is omitted, the default frame consists of all rows in the partition."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "frame_clause",
+        "description": "If an ORDER BY clause is used for an aggregate function, an explicit frame clause is required. The frame clause refines the set of rows in a function\u0027s window, including or excluding sets of rows in the ordered result. The frame clause consists of the ROWS keyword and associated specifiers. See Window Function Syntax Summary."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The NTH_VALUE window function returns the expression value of the specified row of the window frame relative to the first row of the window.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_NTH.html"
+}

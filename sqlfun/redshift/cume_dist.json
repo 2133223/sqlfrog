@@ -1,0 +1,26 @@
+{
+  "funcName": "CUME_DIST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "partition_expression",
+        "description": "Optional. An expression that sets the range of records for each group in the OVER clause."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_list",
+        "description": "The expression on which to calculate cumulative distribution. The expression must have either a numeric data type or be implicitly convertible to one. If ORDER BY is omitted, the return value is 1 for all rows. If ORDER BY does not produce a unique ordering, the order of the rows is nondeterministic. For more information, see Unique Ordering of Data for Window Functions."
+      }
+    }
+  ],
+  "returnType": "FLOAT8",
+  "description": "Calculates the cumulative distribution of a value within a window or partition. Assuming ascending ordering, the cumulative distribution is determined using this formula:",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_CUME_DIST.html"
+}

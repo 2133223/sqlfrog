@@ -1,0 +1,14 @@
+{
+  "funcName": "RANDOM",
+  "arguments": [],
+  "returnType": "DOUBLE",
+  "description": "The RANDOM function generates a random value between 0.0 and 1.0.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_RANDOM.html",
+  "sample": "select cast (random() * 100 as int);"
+}

@@ -1,0 +1,39 @@
+{
+  "funcName": "DECODE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The source of the value that you want to compare, such as a column in a table."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "search",
+        "description": "The target value that is compared against the source expression, such as a numeric value or a character string. The search expression must evaluate to a single fixed value. You cannot specify an expression that evaluates to a range of values, such as age between 20 and 29; you need to specify separate search/result pairs for each value that you want to replace. The data type of all instances of the search expression must be the same or compatible. The expression and search parameters must also be compatible."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "result",
+        "description": "The replacement value that query returns when the expression matches the search value. You must include at least one search/result pair in the DECODE expression. The data types of all instances of the result expression must be the same or compatible. The result and default parameters must also be compatible."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "default",
+        "description": "The source of the value that you want to compare, such as a column in a table."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "A DECODE expression replaces a specific value with either another specific value or a default value, depending on the result of an equality condition. This operation is equivalent to the operation of a simple CASE expression or an IF-THEN-ELSE statement.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Conditional Expressions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DECODE_expression.html",
+  "sample": "select decode(caldate, \u00272008-06-01\u0027, \u0027June 1st, 2008\u0027)\nfrom date where month\u003d\u0027JUN\u0027 order by caldate;"
+}

@@ -1,0 +1,26 @@
+{
+  "funcName": "RATIO_TO_REPORT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "ratio_expression",
+        "description": "An expression, such as a column name, that provides the value for which to determine the ratio. The expression must have either a numeric data type or be implicitly convertible to one. You cannot use any other analytic function in ratio_expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "partition_expression",
+        "description": "Optional. An expression that sets the range of records for each group in the OVER clause."
+      }
+    }
+  ],
+  "returnType": "FLOAT8",
+  "description": "Calculates the ratio of a value to the sum of the values in a window or partition. The ratio to report value is determined using the formula:",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_RATIO_TO_REPORT.html"
+}

@@ -1,0 +1,26 @@
+{
+  "funcName": "DENSE_RANK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr_list",
+        "description": "Optional. One or more expressions that define the window."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_list",
+        "description": "Optional. The expression on which the ranking values are based. If no PARTITION BY is specified, ORDER BY uses the entire table. If ORDER BY is omitted, the return value is 1 for all rows. If ORDER BY does not produce a unique ordering, the order of the rows is nondeterministic. For more information, see Unique Ordering of Data for Window Functions."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "The DENSE_RANK window function determines the rank of a value in a group of values, based on the ORDER BY expression in the OVER clause. If the optional PARTITION BY clause is present, the rankings are reset for each group of rows. Rows with equal values for the ranking criteria receive the same rank. The DENSE_RANK function differs from RANK in one respect: If two or more rows tie, there is no gap in the sequence of ranked values. For example, if two rows are ranked 1, the next rank is 2.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_DENSE_RANK.html"
+}

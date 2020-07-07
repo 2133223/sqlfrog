@@ -1,0 +1,26 @@
+{
+  "funcName": "RIGHT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "Any character string or any expression that evaluates to a character string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "integer",
+        "description": "A positive integer."
+      }
+    }
+  ],
+  "returnType": "VARCHAR",
+  "description": "These functions return the specified number of leftmost or rightmost characters from a character string.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_LEFT.html"
+}

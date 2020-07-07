@@ -1,0 +1,27 @@
+{
+  "funcName": "MONTHS_BETWEEN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date1",
+        "description": "An expression, such as a column name, that evaluates to a valid date or time stamp value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "date2",
+        "description": "An expression, such as a column name, that evaluates to a valid date or time stamp value."
+      }
+    }
+  ],
+  "returnType": "FLOAT8",
+  "description": "MONTHS_BETWEEN determines the number of months between two dates.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_MONTHS_BETWEEN_function.html",
+  "sample": "select months_between(\u00271969-01-18\u0027, \u00271969-03-18\u0027)\nas months;"
+}

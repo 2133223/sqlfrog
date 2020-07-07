@@ -1,0 +1,33 @@
+{
+  "funcName": "HAS_TABLE_PRIVILEGE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "user",
+        "description": "Name of the user to check for table privileges. The default is to check the current user."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "table",
+        "description": "Table associated with the privilege."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "privilege",
+        "description": "Privilege to check. Valid values are: SELECT INSERT UPDATE DELETE REFERENCES"
+      }
+    }
+  ],
+  "returnType": "CHAR",
+  "description": "Returns true if the user has the specified privilege for the specified table.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_HAS_TABLE_PRIVILEGE.html",
+  "sample": "select has_table_privilege(\u0027guest\u0027, \u0027listing\u0027, \u0027select\u0027);"
+}

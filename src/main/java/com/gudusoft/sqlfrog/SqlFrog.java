@@ -28,14 +28,16 @@ import com.gudusoft.sqlfrog.model.CopyingStructure;
 import com.gudusoft.sqlfrog.model.DataType;
 import com.gudusoft.sqlfrog.model.FrogResult;
 import com.gudusoft.sqlfrog.model.Function;
-import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.JoinCondition;
 import com.gudusoft.sqlfrog.model.LimitResultSet;
 import com.gudusoft.sqlfrog.model.LocalTimestamp;
+import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.SequenceIdentifier;
 import com.gudusoft.sqlfrog.model.Table;
 import com.gudusoft.sqlfrog.model.Tuple;
+import com.gudusoft.sqlfrog.scanner.CommonScanner;
 import com.gudusoft.sqlfrog.scanner.ScannerFactory;
+import com.gudusoft.sqlfrog.transform.Transfrom;
 import com.gudusoft.sqlfrog.util.SQLUtil;
 
 public class SqlFrog
@@ -90,6 +92,14 @@ public class SqlFrog
 			return convertResult;
 		}
 
+		if ( source == target )
+		{
+			FrogResult convertResult = new FrogResult( );
+			convertResult.appendResult( sqlparser.getSqlstatements( )
+					.toScript( ) );
+			return convertResult;
+		}
+
 		return convert( source, target, ignoreConvertException, sqlparser );
 	}
 
@@ -113,8 +123,10 @@ public class SqlFrog
 			boolean ignoreConvertException, TGSqlParser sqlparser )
 	{
 		FrogResult convertResult = new FrogResult( );
-		List<ConvertPoint<? extends TParseTreeNode>> points = ScannerFactory.getScanner( )
-				.scan( sqlparser );
+		CommonScanner scanner = (CommonScanner) ScannerFactory.getScanner( );
+		List<ConvertPoint<? extends TParseTreeNode>> points = scanner.scan( sqlparser );
+		List<Transfrom> transforms = scanner.getTransfromPoints( );
+
 		List<TCustomSqlStatement> convertJoinToAnsi = new ArrayList<TCustomSqlStatement>( );
 
 		for ( ConvertPoint<? extends TParseTreeNode> point : points )
@@ -142,6 +154,14 @@ public class SqlFrog
 						return convertResult;
 					}
 				}
+			}
+		}
+
+		if ( !transforms.isEmpty( ) )
+		{
+			for ( int i = 0; i < transforms.size( ); i++ )
+			{
+				transforms.get( i ).transfrom( );
 			}
 		}
 
@@ -242,15 +262,22 @@ public class SqlFrog
 			}
 			if ( point instanceof LimitResultSet )
 			{
-				ConvertException e = new ConvertException( "F856, limiting result sets is incompatible with ANSI SQL, line:"
-						+ point.getPosition( ).getX( )
-						+ ", column:"
-						+ point.getPosition( ).getY( )
-						+ "." );
-				convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
-				if ( !ignoreConvertException )
+				try
 				{
-					return convertResult;
+					if ( ConverterFactory.getLimitConverter( point.getVender( ) )
+							.enableConvert( target ) )
+					{
+						ConverterFactory.getLimitConverter( point.getVender( ) )
+								.convert( (LimitResultSet) point, target );
+					}
+				}
+				catch ( ConvertException e )
+				{
+					convertResult.appendErrorMessage( sqlparser, e.getMessage( ) );
+					if ( !ignoreConvertException )
+					{
+						return convertResult;
+					}
 				}
 			}
 			if ( point instanceof CopyingStructure )

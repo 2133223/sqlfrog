@@ -1,0 +1,26 @@
+{
+  "funcName": "ROW_NUMBER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expr_list",
+        "description": "Optional. One or more expressions that define the ROW_NUMBER function."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_list",
+        "description": "Optional. The expression that defines the columns on which the row numbers are based. If no PARTITION BY is specified, ORDER BY uses the entire table. If ORDER BY is omitted, the return value is 1 through the total number of rows. If ORDER BY does not produce a unique ordering, the order of the rows is nondeterministic. For more information, see Unique Ordering of Data for Window Functions."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "Determines the ordinal number of the current row within a group of rows, counting from 1, based on the ORDER BY expression in the OVER clause. If the optional PARTITION BY clause is present, the ordinal numbers are reset for each group of rows. Rows with equal values for the ORDER BY expressions receive the different row numbers nondeterministically.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_ROW_NUMBER.html"
+}

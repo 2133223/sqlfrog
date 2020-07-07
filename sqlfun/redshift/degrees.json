@@ -1,0 +1,21 @@
+{
+  "funcName": "DEGREES",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The input parameter is a double precision number."
+      }
+    }
+  ],
+  "returnType": "double",
+  "description": "Converts an angle in radians to its equivalent in degrees.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DEGREES.html",
+  "sample": "select degrees(.5);"
+}

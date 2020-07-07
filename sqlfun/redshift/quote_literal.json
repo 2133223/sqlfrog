@@ -1,0 +1,20 @@
+{
+  "funcName": "QUOTE_LITERAL",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The input parameter is a CHAR or VARCHAR string."
+      }
+    }
+  ],
+  "returnType": "CHAR",
+  "description": "The QUOTE_LITERAL function returns the specified string as a quoted string so that it can be used as a string literal in a SQL statement. If the input parameter is a number, QUOTE_LITERAL treats it as a string. Appropriately doubles any embedded single quotes and backslashes.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_QUOTE_LITERAL.html"
+}

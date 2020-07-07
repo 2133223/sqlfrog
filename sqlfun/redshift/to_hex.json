@@ -1,0 +1,21 @@
+{
+  "funcName": "TO_HEX",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "A number to convert to its hexadecimal value."
+      }
+    }
+  ],
+  "returnType": "hexadecimal",
+  "description": "The TO_HEX function converts a number to its equivalent hexadecimal value.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TO_HEX.html",
+  "sample": "select to_hex(2147676847);"
+}

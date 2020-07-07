@@ -1,0 +1,21 @@
+{
+  "funcName": "INITCAP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The input parameter is a CHAR or VARCHAR string."
+      }
+    }
+  ],
+  "returnType": "VARCHAR",
+  "description": "Capitalizes the first letter of each word in a specified string. INITCAP supports UTF-8 multibyte characters, up to a maximum of four bytes per character.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_INITCAP.html",
+  "sample": "select catid, catdesc, initcap(catdesc)\nfrom category\norder by 1, 2, 3;"
+}

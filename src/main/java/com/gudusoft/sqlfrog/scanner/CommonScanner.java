@@ -16,6 +16,10 @@ import com.gudusoft.sqlfrog.model.LocalTimestamp;
 import com.gudusoft.sqlfrog.model.QuotedIdentifier;
 import com.gudusoft.sqlfrog.model.SequenceIdentifier;
 import com.gudusoft.sqlfrog.model.Table;
+import com.gudusoft.sqlfrog.transform.SQLServerTransfrom;
+import com.gudusoft.sqlfrog.transform.SQLServerTransfrom.TransformType;
+import com.gudusoft.sqlfrog.transform.Transfrom;
+import com.gudusoft.sqlfrog.util.ObjectNameUtils;
 
 import gudusoft.gsqlparser.EDbVendor;
 import gudusoft.gsqlparser.EDeclareType;
@@ -166,15 +170,23 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 {
 
 	private List<ConvertPoint<? extends TParseTreeNode>> convertPoints = new ArrayList<ConvertPoint<? extends TParseTreeNode>>( );
+	private List<Transfrom> transformPoints = new ArrayList<Transfrom>( );
 
 	public List<ConvertPoint<? extends TParseTreeNode>> scan( TGSqlParser parser )
 	{
+		ObjectNameUtils.clearCache( );
+		transformPoints.clear( );
 		convertPoints.clear( );
 		for ( int i = 0; i < parser.sqlstatements.size( ); i++ )
 		{
 			parser.sqlstatements.get( i ).accept( this );
 		}
 		return convertPoints;
+	}
+
+	public List<Transfrom> getTransfromPoints( )
+	{
+		return transformPoints;
 	}
 
 	public void postVisit( TConstraint node )
@@ -256,8 +268,11 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 				&& select.dbvendor == EDbVendor.dbvoracle
 				&& select.getJoins( ).getJoin( 0 ).getJoinItems( ).size( ) == 0 )
 		{
-			convertPoints.add( new JoinCondition( select.getWhereClause( )
-					.getCondition( ) ) );
+			if ( select.getWhereClause( ) != null )
+			{
+				convertPoints.add( new JoinCondition( select.getWhereClause( )
+						.getCondition( ) ) );
+			}
 		}
 	}
 
@@ -287,13 +302,22 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 
 	public void postVisit( TObjectName identifier )
 	{
+		if ( identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvmssql )
+		{
+			if ( !ObjectNameUtils.checkSQLName( identifier ) )
+			{
+				transformPoints.add( new SQLServerTransfrom( identifier,
+						TransformType.clean_variable_name ) );
+			}
+		}
+
 		if ( isQuotedIdentifier( identifier ) )
 		{
 			convertPoints.add( new QuotedIdentifier( identifier ) );
 		}
 
 		String partString = identifier.getPartString( ).toUpperCase( );
-		if ( identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvoracle 
+		if ( identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvoracle
 				|| identifier.getStartToken( ).getDbvendor( ) == EDbVendor.dbvdb2 )
 		{
 			if ( partString.equals( "CURRVAL" )
@@ -452,6 +476,13 @@ public class CommonScanner extends TParseTreeVisitor implements Scanner
 		if ( node.getAliasClause( ) != null )
 		{
 			node.getAliasClause( ).accept( this );
+		}
+
+		TExpression expression = node.getExpr( );
+		if ( expression.getExpressionType( ) == EExpressionType.sqlserver_proprietary_column_alias_t )
+		{
+			transformPoints.add( new SQLServerTransfrom( node,
+					TransformType.proprietary_column_alias ) );
 		}
 	}
 

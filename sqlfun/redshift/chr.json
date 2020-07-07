@@ -1,0 +1,20 @@
+{
+  "funcName": "CHR",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "The input parameter is an integer that represents an ASCII code point value."
+      }
+    }
+  ],
+  "returnType": "CHAR",
+  "description": "The CHR function returns the character that matches the ASCII code point value specified by of the input parameter.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CHR.html"
+}

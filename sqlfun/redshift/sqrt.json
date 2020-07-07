@@ -1,0 +1,21 @@
+{
+  "funcName": "SQRT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The expression must have an integer, decimal, or floating-point data type."
+      }
+    }
+  ],
+  "returnType": "DOUBLE",
+  "description": "The SQRT function returns the square root of a numeric value.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SQRT.html",
+  "sample": "select sqrt(commission)\nfrom sales where salesid \u003c10 order by salesid;"
+}

@@ -1,0 +1,32 @@
+{
+  "funcName": "JSON_EXTRACT_PATH_TEXT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "json_string",
+        "description": "A properly formatted JSON string."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "path_elem",
+        "description": "A path element in a JSON string. One path element is required. Additional path elements can be specified, up to five levels deep."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "null_if_invalid",
+        "description": "A Boolean value that specifies whether to return NULL if the input JSON string is invalid instead of returning an error. To return NULL if the JSON is invalid, specify true (t). To return an error if the JSON is invalid, specify false (f). The default is false."
+      }
+    }
+  ],
+  "returnType": "VARCHAR",
+  "description": "JSON_EXTRACT_PATH_TEXT returns the value for the key:value pair referenced by a series of path elements in a JSON string. The JSON path can be nested up to five levels deep. Path elements are case-sensitive. If a path element does not exist in the JSON string, JSON_EXTRACT_PATH_TEXT returns an empty string. If the null_if_invalid argument is set to true and the JSON string is invalid, the function returns NULL instead of returning an error.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "JSON Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/JSON_EXTRACT_PATH_TEXT.html"
+}

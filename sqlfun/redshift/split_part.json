@@ -1,0 +1,33 @@
+{
+  "funcName": "SPLIT_PART",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The string to be split. The string can be CHAR or VARCHAR."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "delimiter",
+        "description": "The delimiter string. If delimiter is a literal, enclose it in single quotes."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "part",
+        "description": "Position of the portion to return (counting from 1). Must be an integer greater than 0. If part is larger than the number of string portions, SPLIT_PART returns an empty string."
+      }
+    }
+  ],
+  "returnType": "string",
+  "description": "Splits a string on the specified delimiter and returns the part at the specified position.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/SPLIT_PART.html",
+  "sample": "select listtime, split_part(listtime,\u0027-\u0027,1) as year,\nsplit_part(listtime,\u0027-\u0027,2) as month, \nsplit_part(split_part(listtime,\u0027-\u0027,3),\u0027 \u0027,1) as date \nfrom listing limit 5;"
+}

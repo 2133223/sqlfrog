@@ -1,0 +1,26 @@
+{
+  "funcName": "DATE_CMP",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date1",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "date2",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp."
+      }
+    }
+  ],
+  "returnType": "INTEGER",
+  "description": "DATE_CMP compares two dates. The function returns 0 if the dates are identical, 1 if date1 is greater, and -1 if date2 is greater.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DATE_CMP.html"
+}

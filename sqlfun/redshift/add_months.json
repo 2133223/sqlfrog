@@ -1,0 +1,32 @@
+{
+  "funcName": "ADD_MONTHS",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp. If the date is the last day of the month, or if the resulting month is shorter, the function returns the last day of the month in the result. For other dates, the result contains the same day number as the date expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp. If the date is the last day of the month, or if the resulting month is shorter, the function returns the last day of the month in the result. For other dates, the result contains the same day number as the date expression."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "integer",
+        "description": "A positive or negative integer. Use a negative number to subtract months from dates."
+      }
+    }
+  ],
+  "returnType": "TIMESTAMP",
+  "description": "ADD_MONTHS adds the specified number of months to a date or time stamp value or expression. The DATEADD function provides similar functionality.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_ADD_MONTHS.html"
+}

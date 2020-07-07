@@ -1,0 +1,26 @@
+{
+  "funcName": "PERCENT_RANK",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "partition_expression",
+        "description": "Optional. An expression that sets the range of records for each group in the OVER clause."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "order_list",
+        "description": "Optional. The expression on which to calculate percent rank. The expression must have either a numeric data type or be implicitly convertible to one. If ORDER BY is omitted, the return value is 0 for all rows. If ORDER BY does not produce a unique ordering, the order of the rows is nondeterministic. For more information, see Unique Ordering of Data for Window Functions."
+      }
+    }
+  ],
+  "returnType": "FLOAT8",
+  "description": "Calculates the percent rank of a given row. The percent rank is determined using this formula:",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_PERCENT_RANK.html"
+}

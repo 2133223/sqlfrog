@@ -1,0 +1,13 @@
+{
+  "funcName": "VERSION",
+  "arguments": [],
+  "returnType": "CHAR",
+  "description": "The VERSION() function returns details about the currently installed release, with specific Amazon Redshift version information at the end.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_VERSION.html"
+}

@@ -1,0 +1,27 @@
+{
+  "funcName": "APPROXIMATE",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "percentile",
+        "description": "Numeric constant between 0 and 1. Nulls are ignored in the calculation."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "expr",
+        "description": "Clause that specifies numeric or date/time values to sort and compute the percentile over."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "APPROXIMATE PERCENTILE_DISC is an inverse distribution function that assumes a discrete distribution model. It takes a percentile value and a sort specification and returns an element from the given set. Approximation enables the function to execute much faster, with a low relative error of around 0.5 percent.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_APPROXIMATE_PERCENTILE_DISC.html",
+  "sample": "select top 10 date.caldate,\ncount(totalprice), sum(totalprice),\napproximate percentile_disc(0.5) \nwithin group (order by totalprice)\nfrom listing\njoin date on listing.dateid \u003d date.dateid\ngroup by date.caldate\norder by 3 desc;"
+}

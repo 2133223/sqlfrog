@@ -1,0 +1,33 @@
+{
+  "funcName": "LISTAGG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "aggregate_expression",
+        "description": "Any valid expression (such as a column name) that provides the values to aggregate. NULL values and empty strings are ignored."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "delimiter",
+        "description": "(Optional) The string constant to separate the concatenated values. The default is NULL."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "WITHIN GROUP (ORDER BY order_list)",
+        "description": "(Optional) A clause that specifies the sort order of the aggregated values."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "For each group in a query, the LISTAGG aggregate function orders the rows for that group according to the ORDER BY expression, then concatenates the values into a single string.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_LISTAGG.html",
+  "sample": "select listagg(sellerid, \u0027, \u0027) within group (order by sellerid) from sales\nwhere eventid \u003d 4337;"
+}

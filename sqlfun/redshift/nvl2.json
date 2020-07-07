@@ -1,0 +1,32 @@
+{
+  "funcName": "NVL2",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "An expression, such as a column name, to be evaluated for null status."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "not_null_return_value",
+        "description": "The value returned if expression evaluates to NOT NULL. The not_null_return_value value must either have the same data type as expression or be implicitly convertible to that data type."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "null_return_value",
+        "description": "The value returned if expression evaluates to NULL. The null_return_value value must either have the same data type as expression or be implicitly convertible to that data type."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns one of two values based on whether a specified expression evaluates to NULL or NOT NULL.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Conditional Expressions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_NVL2.html"
+}

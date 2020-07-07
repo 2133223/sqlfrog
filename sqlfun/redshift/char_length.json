@@ -1,0 +1,13 @@
+{
+  "funcName": "CHAR_LENGTH",
+  "arguments": [],
+  "returnType": "",
+  "description": "Synonym of the LEN function.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CHAR_LENGTH.html"
+}

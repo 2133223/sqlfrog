@@ -1,0 +1,20 @@
+{
+  "funcName": "LN",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The target column or expression that the function operates on. Note This function returns an error for some data types if the expression references an Amazon Redshift user-created table or an Amazon Redshift STL or STV system table. Expressions with the following data types produce an error if they reference a user-created or system table. Expressions with these data types run exclusively on the leader node: BOOLEAN CHAR DATE DECIMAL or NUMERIC TIMESTAMP VARCHAR Expressions with the following data types run successfully on user-created tables and STL or STV system tables: BIGINT DOUBLE PRECISION INTEGER REAL SMALLINT"
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns the natural logarithm of the input parameter. Synonym of the DLOG1 function.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_LN.html"
+}

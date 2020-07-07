@@ -1,0 +1,21 @@
+{
+  "funcName": "SUM",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression",
+        "description": "The target column or expression that the function operates on."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The SUM function returns the sum of the input column or expression values. The SUM function works with numeric values and ignores NULL values.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SUM.html",
+  "sample": "select sum(commission) from sales;"
+}

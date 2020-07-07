@@ -1,0 +1,39 @@
+{
+  "funcName": "DATEADD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "datepart",
+        "description": "The date part (year, month, or day, for example) that the function operates on. See Dateparts for Date or Time Stamp Functions."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "interval",
+        "description": "An integer that specified the interval (number of days, for example) to add to the target expression. A negative integer subtracts the interval."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "date",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp. The date or time stamp expression must contain the specified date part."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "timestamp",
+        "description": "A date or timestamp column or an expression that implicitly converts to a date or time stamp. The date or time stamp expression must contain the specified date part."
+      }
+    }
+  ],
+  "returnType": "TIMESTAMP",
+  "description": "Increments a date or time stamp value by a specified interval.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Date and Time Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_DATEADD_function.html",
+  "sample": "select dateadd(day,30,caldate) as novplus30\nfrom date\nwhere month\u003d\u0027NOV\u0027\norder by dateid;"
+}

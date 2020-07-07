@@ -1,0 +1,14 @@
+{
+  "funcName": "PI",
+  "arguments": [],
+  "returnType": "DOUBLE",
+  "description": "The PI function returns the value of PI to 14 decimal places.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_PI.html",
+  "sample": "select pi();"
+}

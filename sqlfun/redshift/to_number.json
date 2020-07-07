@@ -1,0 +1,27 @@
+{
+  "funcName": "TO_NUMBER",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "String to be converted. The format must be a literal value."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "format",
+        "description": "The second argument is a format string that indicates how the character string should be parsed to create the numeric value. For example, the format \u002799D999\u0027 specifies that the string to be converted consists of five digits with the decimal point in the third position. For example, to_number(\u002712.345\u0027,\u002799D999\u0027) returns 12.345 as a numeric value. For a list of valid formats, see Numeric Format Strings."
+      }
+    }
+  ],
+  "returnType": "DECIMAL",
+  "description": "TO_NUMBER converts a string to a numeric (decimal) value.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Data Type Formatting Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_TO_NUMBER.html",
+  "sample": "select to_number(\u002712,454.8-\u0027, \u002799G999D9S\u0027);"
+}

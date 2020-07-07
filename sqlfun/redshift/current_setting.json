@@ -1,0 +1,20 @@
+{
+  "funcName": "CURRENT_SETTING",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "parameter",
+        "description": "Parameter value to display. For a list of configuration parameters, see Configuration Reference"
+      }
+    }
+  ],
+  "returnType": "CHAR",
+  "description": "CURRENT_SETTING returns the current value of the specified configuration parameter.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Administration Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_CURRENT_SETTING.html"
+}

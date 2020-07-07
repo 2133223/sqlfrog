@@ -1,0 +1,38 @@
+{
+  "funcName": "LEAD",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "value_expr",
+        "description": "The target column or expression that the function operates on."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "offset",
+        "description": "An optional parameter that specifies the number of rows below the current row to return values for. The offset can be a constant integer or an expression that evaluates to an integer. If you do not specify an offset, Amazon Redshift uses 1 as the default value. An offset of 0 indicates the current row."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window_partition",
+        "description": "An optional argument that sets the range of records for each group in the OVER clause."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "window_ordering",
+        "description": "Sorts the rows within each partition."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The LEAD window function returns the values for a row at a given offset below (after) the current row in the partition.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Window Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_WF_LEAD.html"
+}

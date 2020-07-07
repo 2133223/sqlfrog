@@ -1,0 +1,27 @@
+{
+  "funcName": "REPEAT",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "string",
+        "description": "The first input parameter is the string to be repeated."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "integer",
+        "description": "The second parameter is an integer indicating the number of times to repeat the string."
+      }
+    }
+  ],
+  "returnType": "string",
+  "description": "Repeats a string the specified number of times. If the input parameter is numeric, REPEAT treats it as a string.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "String Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_REPEAT.html",
+  "sample": "select catid, repeat(catid,3)\nfrom category\norder by 1,2;"
+}

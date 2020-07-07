@@ -1,0 +1,21 @@
+{
+  "funcName": "ROUND",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "number",
+        "description": "INTEGER, DECIMAL, and FLOAT data types are supported. If the first argument is an integer, the parser converts the integer into a decimal data type prior to processing. If the first argument is a decimal number, the parser processes the function without conversion, resulting in better performance."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "The ROUND function rounds numbers to the nearest integer or decimal.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Math Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_ROUND.html",
+  "sample": "select commission, round(commission)\nfrom sales where salesid\u003d10000;"
+}

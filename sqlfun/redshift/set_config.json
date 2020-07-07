@@ -1,0 +1,33 @@
+{
+  "funcName": "SET_CONFIG",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "parameter",
+        "description": "Parameter to set."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "new_value",
+        "description": "New value of the parameter."
+      }
+    },
+    {
+      "argument": {
+        "arguName": "is_local",
+        "description": "If true, parameter value applies only to the current transaction. Valid values are true or 1 and false or 0."
+      }
+    }
+  ],
+  "returnType": "CHAR",
+  "description": "Sets a configuration parameter to a new setting.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Administration Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_SET_CONFIG.html",
+  "sample": "select set_config(\u0027query_group\u0027, \u0027test\u0027, true);"
+}

@@ -1,0 +1,14 @@
+{
+  "funcName": "STDDEV_POP",
+  "arguments": [],
+  "returnType": "",
+  "description": "The STDDEV_SAMP and STDDEV_POP functions return the sample and population standard deviation of a set of numeric values (integer, decimal, or floating-point). The result of the STDDEV_SAMP function is equivalent to the square root of the sample variance of the same set of values.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Aggregate Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_STDDEV_functions.html",
+  "sample": "select avg(venueseats),\ncast(stddev_samp(venueseats) as dec(14,2)) stddevsamp,\ncast(stddev_pop(venueseats) as dec(14,2)) stddevpop\nfrom venue;"
+}

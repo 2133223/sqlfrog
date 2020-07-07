@@ -1,0 +1,20 @@
+{
+  "funcName": "GREATEST",
+  "arguments": [
+    {
+      "argument": {
+        "arguName": "expression_list",
+        "description": "A comma-separated list of expressions, such as column names. The expressions must all be convertible to a common data type. NULL values in the list are ignored. If all of the expressions evaluate to NULL, the result is NULL."
+      }
+    }
+  ],
+  "returnType": "",
+  "description": "Returns the largest value from a list of any number of expressions.",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "Conditional Expressions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/r_GREATEST_LEAST.html"
+}

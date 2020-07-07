@@ -1,0 +1,13 @@
+{
+  "funcName": "PG_GET_LATE_BINDING_VIEW_COLS",
+  "arguments": [],
+  "returnType": "VARCHAR",
+  "description": "Returns the column metadata for all late-binding views in the database. For more information, see Late-Binding Views",
+  "targetDBs": [
+    "2012-12-01"
+  ],
+  "category": "System Information Functions",
+  "ansiCompatible": "",
+  "package": "",
+  "docLink": "https://docs.aws.amazon.com/redshift/latest/dg/PG_GET_LATE_BINDING_VIEW_COLS.html"
+}
